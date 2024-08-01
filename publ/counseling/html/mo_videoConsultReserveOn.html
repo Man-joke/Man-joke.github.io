@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script defer src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/swiper-bundle.min.js"></script>
+  <script defer src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../assets/js/style.js"></script>
+
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body>
+  <header class="d-flex justify-content-center position-relative mo border-bottom">
+    <a href="javascript:void(0)" class="position-absolute start-0 top-50 translate-middle-y prev" title="뒤로가기"></a>
+    <h1>예약 화상상담</h1>
+  </header>
+  <div class="wrap mobile">
+    <main>
+      <div class="mo-inner mt-2">
+        <div class="haveReserve mo">
+          <h3 class="haveReserve-tit mb-2">예약 화상 상담 신청 내역이 <span>1</span>건 있습니다.</h3>
+          <div class="haveReserve-item">
+            <dl>
+              <dt>관심서비스</dt>
+              <dd>금융상품 > 펀드 > 더 보기 0000</dd>
+            </dl>
+            <dl>
+              <dt>상담시간</dt>
+              <dd>11 : 00 ~ 11 : 59</dd>
+            </dl>
+            <dl>
+              <dt>상담원</dt>
+              <dd>박지은</dd>
+            </dl>
+            <dl>
+              <dt>상담상태</dt>
+              <dd class="state">상담대기</dd>
+            </dl>
+            <button class="counselRequest-btn btn btn-gray" data-bs-toggle="modal"
+              data-bs-target="#haveReserve-01">예약취소</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- 모달  -->
+  <!-- 예약취소 모달 -->
+  <div class="modal mo fade defalt" id="haveReserve-01" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog btn-two">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-cont" style="line-height: 1.9rem;">
+            <p>화상상담 예약을 <br>취소하시겠습니까?</p>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn col-6" data-bs-dismiss="modal">아니오</button>
+          <button type="button" class="btn col-6 color-1">예</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

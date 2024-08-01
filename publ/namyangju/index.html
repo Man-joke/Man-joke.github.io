@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>홈페이지</title>
+	<link rel="shortcut icon" href="./resources/images/favicon.ico" type="image/x-icon">
+	<!-- style -->
+  <link rel="stylesheet" href="./resources/css/jquery-ui.min.css">
+  <link rel="stylesheet" href="./resources/css/bootstrap.css">
+  <link rel="stylesheet" href="./resources/css/swiper.min.css">
+  <link rel="stylesheet" href="./resources/css/default.css">
+  <link rel="stylesheet" href="./resources/css/template.css">
+  <!-- //style -->
+  <!-- script -->
+  <script src="./resources/js/jquery-3.6.0.min.js"></script>
+  <script src="./resources/js/jquery-ui.min.js"></script>
+  <script src="./resources/js/bootstrap.min.js"></script>
+  <script src="./resources/js/swiper-bundle.min.js"></script>
+	<script src="./index.js"></script>
+  <!-- //script -->
+	<style>
+		body { font-size: 1.3rem; }
+		.badge { color: #000; }
+		.badge.mod { background: #fce9dc; }
+		.badge.add { background: #e1f5fe; }
+		table tr.mod { background: #fce9dc; }
+		table tr.add { background: #e1f5fe; }
+		table tr th,
+		table tr td { padding: .8rem !important; }
+	</style>
+</head>
+
+<body>
+	<!-- container -->
+	<div class="container py-5">
+		<header>
+			<h1>홈페이지 <small class="text-muted">Publishing List</small></h1>
+			<div class="d-flex justify-content-end pt-1">
+				<ul class="d-flex list-unstyled">
+					<li><span class="badge mod">수정</span></li>
+					<li><span class="badge add">추가</span></li>
+				</ul>
+				<p class="ms-4"><strong>22.09.22</strong> Last update</p>
+			</div>
+		</header>
+		<div class="mt-2">
+			<table class="table table-hover">
+				<thead class="table-primary">
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">4 Depth</th>
+						<th scope="col">URL</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!-- //container -->
+
+	<!-- script -->
+	<script>
+		$(function () {
+			// pagelist
+			var html = '';
+			var pagelistExtract = Object.values(pagelist)[0];
+			var pagelistEntries = Object.entries(pagelistExtract);
+			pagelistEntries.forEach(function (item) {
+				var pagelistArray = Object.entries(item[1]);
+				item[1] = pagelistArray;
+			});
+			pagelistEntries.sort((a, b) => a[0].localeCompare(b[0]));
+			pagelistEntries.forEach(function (item, index) {
+				item[1].forEach(function (subItem, subIndex) {
+					var count = item[1].length;
+					var link = './html/' + item[0] + '/' + subItem[0];
+					var data = subItem[1].toString().match(/<!--[\s\S]*?-->/g);
+					var removeComment = (text) => {
+						return text.replace('<!--', '').replace('-->', '');
+					}
+					html += '<tr class="' + removeComment(data[5]) + '">';
+					html += (subIndex == 0) && ('<td ' + (count > 1 ? ("rowspan=" + count) : "") + '>' + removeComment(data[0]) + '</td>');
+					html += '<td>' + removeComment(data[1]) + '</td>';
+					html += '<td>' + removeComment(data[2]) + '</td>';
+					html += '<td>' + removeComment(data[3]) + '</td>';
+					html += '<td><a href="' + link + '" target="_blank">' + link + '</a></td>';
+					html += '<td>' + removeComment(data[4]) + '</td>';
+					html += '</tr>';
+				});
+			});
+			$('.table').find('tbody').append(html);
+		});
+	</script>
+	<!-- //script -->
+</body>
+
+</html>

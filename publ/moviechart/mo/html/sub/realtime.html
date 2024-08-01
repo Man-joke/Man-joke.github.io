@@ -1,0 +1,434 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+
+	<script defer src="../../resources/js/common.js"></script>
+
+</head>
+
+<body>
+
+	<!-- tab 스킵네비 영역 -->
+	<div class="skip">
+		<a href="#content">본문 바로가기</a>
+		<a href="#header">네비게이션 바로가기</a>
+	</div>
+
+	<header id="header" class="header sub wArea">
+		<a href="#" class="backSpace"><img src="../../resources/images/common/back_space.png" alt="뒤로가기"></a>
+		<h2>영화순위</h2>
+		<div class="mobile_menu"></div>
+	</header>
+	<!-- //header -->
+	<div class="gnb_menu wArea" style="display: none;">
+		<div class="menu__conbox">
+			<div class="menu__top">
+				<a href="#" class="logo"><img src="../../resources/images/common/logo_On.png" alt="무비차트 로고"></a>
+				<div class="close"><img src="../../resources/images/common/close.png" alt="닫기"></div>
+			</div>
+			<!-- //topBar -->
+			<div class="mo-gnb">
+				<div class="gnb__wArea">
+					<ul class="gnb__wArea wArea">
+						<li class="mm01">
+							<a href="#"><p>영화순위</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">실시간 예매율</a>
+								<a href="#">박스오피스</a>
+							</div>
+						</li>
+						<li class="mm02">
+							<a href="#"><p>영화정보</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">현재상영작</a>
+								<a href="#">개봉예정작</a>	
+							</div>
+						</li>
+						<li class="mm03">
+							<a href="#"><p>영화예매</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">영화에매</a>
+							</div>
+						</li>
+						<li class="mm04">
+							<a href="#"><p>고객센터</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">공지사항</a>
+								<a href="#">자주묻는질문</a>
+								<a href="#">1:1문의</a>
+							</div>
+						</li>
+						<li class="mm05">
+							<a href="#"><p>이벤트</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">이벤트</a>
+							</div>
+						</li>
+						<li class="mm06">
+							<a href="#"><p>영화검색</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">영화검색</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+			<div class="header-topbar">
+				<div class="wArea">
+					<ul class="topbar-list">
+						<li><a href="#" class="login">로그인</a></li>
+						<li><a href="#" class="">회원가입</a></li>
+						<li><a href="#" class="">예매권/할인권등록</a></li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+		</div>
+	</div>
+	<!-- //gnb -->
+
+
+	<div id="content">
+		<div class="title-wrap">
+			<div class="title__txt">
+				<div class="title__subTab">
+					<a href="#" class="first active">실시간 예매율</a>
+					<a href="#" class="last">박스오피스</a>
+				</div>
+			</div>
+		</div>
+		<!-- //subTab -->
+		<div class="wArea space">
+			<div class="movieBox">
+				<ul class="movieBox-list">
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster1.png" alt="해적: 도깨비 깃발">
+							<p class="rank"><img src="../../resources/images/sub/rank_1.png" alt="1"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">해적: 도깨비 깃발</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster2.png" alt="킹메이커">
+							<p class="rank"><img src="../../resources/images/sub/rank_2.png" alt="2"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age15"></span>
+								<h3><a href="#">킹메이커</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster3.png" alt="스파이더맨: 노 웨이 홈">
+							<p class="rank"><img src="../../resources/images/sub/rank_3.png" alt="3"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age18"></span>
+								<h3><a href="#">스파이더맨: 노 웨이 홈</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster4.png" alt="극장판 안녕 자두야: 제주도의 비밀">
+							<p class="rank"><img src="../../resources/images/sub/rank_4.png" alt="4"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age ageall"></span>
+								<h3><a href="#">극장판 안녕 자두야: 제주도의 비밀</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster1.png" alt="해적: 도깨비 깃발">
+							<p class="rank"><img src="../../resources/images/sub/rank_5.png" alt="5"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">해적: 도깨비 깃발</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster2.png" alt="킹메이커">
+							<p class="rank"><img src="../../resources/images/sub/rank_6.png" alt="6"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">킹메이커</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster3.png" alt="스파이더맨: 노 웨이 홈">
+							<p class="rank"><img src="../../resources/images/sub/rank_7.png" alt="7"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">스파이더맨: 노 웨이 홈</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster4.png" alt="극장판 안녕 자두야: 제주도의 비밀">
+							<p class="rank"><img src="../../resources/images/sub/rank_8.png" alt="8"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">극장판 안녕 자두야: 제주도의 비밀</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster1.png" alt="해적: 도깨비 깃발">
+							<p class="rank"><img src="../../resources/images/sub/rank_9.png" alt="9"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">해적: 도깨비 깃발</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster2.png" alt="킹메이커">
+							<p class="rank"><img src="../../resources/images/sub/rank_10.png" alt="10"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">킹메이커</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster3.png" alt="스파이더맨: 노 웨이 홈">
+							<p class="rank"><img src="../../resources/images/sub/rank_11.png" alt="11"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">스파이더맨: 노 웨이 홈</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster4.png" alt="극장판 안녕 자두야: 제주도의 비밀">
+							<p class="rank"><img src="../../resources/images/sub/rank_12.png" alt="12"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">극장판 안녕 자두야: 제주도의 비밀</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster1.png" alt="해적: 도깨비 깃발">
+							<p class="rank"><img src="../../resources/images/sub/rank_13.png" alt="13"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">해적: 도깨비 깃발</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster2.png" alt="킹메이커">
+							<p class="rank"><img src="../../resources/images/sub/rank_14.png" alt="14"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">킹메이커</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster3.png" alt="스파이더맨: 노 웨이 홈">
+							<p class="rank"><img src="../../resources/images/sub/rank_15.png" alt="15"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">스파이더맨: 노 웨이 홈</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+					<li class="movieBox-item">
+						<a href="#">
+							<img src="../../resources/images/sub/movie_poster4.png" alt="극장판 안녕 자두야: 제주도의 비밀">
+							<p class="rank"><img src="../../resources/images/sub/rank_16.png" alt="16"></p>
+						</a>
+						<div class="movie-info">
+							<div class="movie-title">
+								<span class="movie-age age12"></span>
+								<h3><a href="#">극장판 안녕 자두야: 제주도의 비밀</a></h3>
+							</div>
+							<ul class="movie-txt">
+								<li class="ticketing">예매율 <span>44.5%</span></li>
+								<li class="movie-launch">개봉일 2022.01.26</li>
+							</ul>
+							<div class="movie-ticket"><a href="#">예매하기</a></div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<!-- //movieBox -->
+			<div class="movieEtc">
+				<div>
+					[실시간 예매율]은 조회시간을 기준으로 상영 2시 이후의 예매데이터를 실시간 집계하여 예매율 정보를 제공합니다.<br>실시간 예매율 산출기준 = A(예매관객수) / B(전체 예매관객수) * 100<br>( 출처 : 영화진흥위원회 )
+				</div>
+				<div class="movieEtc_img">
+					<img src="../../resources/images/sub/movieEtc.png" alt="#">
+				</div>
+			</div>
+		</div>
+		<!-- //wArea -->
+	</div>
+	<!-- //contant -->
+
+	<footer id="footer">
+		<div class="wArea">
+			<div class="footMenu">
+				<span><a href="#">이용약관</a></span>
+				<span><a href="#">개인정보취급방침</a></span>
+				<span><a href="#">제휴/광고문의</a></span>
+				<span><a href="#">예매권구매문의</a></span>
+				<span><a href="#">고객센터</a></span>
+			</div>
+			<p>
+				(03992) 서울특별시 마포구 월드컵북로4길 25, 2층 (동교동, ST빌딩) | ㈜메크로스 대표이사 이경수 <br>사업자등록번호 : 211-88-5000 
+				고객센터 : 1661-9265 (10:00~18:00) | <a href="help@moviechart.co.kr">help@moviechart.co.kr</a> <br> 통신판매업신고 [제2019-서울영등포-2112호]
+			</p>
+			<p>Copyright ⓒ Movie Chart. All Rights Reserved.</p>
+		</div>
+		<!-- //wArea -->
+	</footer>
+	<!-- //footer -->
+
+</body>
+
+</html>

@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+  <link rel="stylesheet" href="../assets/css/daterangepicker.css">
+
+  <script src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script src="../assets/js/swiper-bundle.min.js"></script>
+  <script src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/js/moment.min.js"></script>
+  <script src="../assets/js/daterangepicker.js"></script>
+  <script src="../assets/js/style.js"></script>
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header ">
+      <div class="inner d-flex">
+        <h1 class="header-logo d-flex">
+          <a href="javascript:void(0)" class="header-link">
+            <img src="../assets/images/logo.png" alt="유진투자증권">
+          </a>
+          <p>화상상담시스템</p>
+        </h1>
+        <div class="header-util d-flex">
+          <button type="button" class="header-util-btn">관리고객 화상상담 등록</button>
+          <ul class="header-util-list d-flex">
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                <img src="../assets/images/bell_ring_icon.svg" alt="알림">
+                <span class="badge-new">99+</span>
+              </a>
+            </li>
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/setting_icon.svg" alt="설정">
+              </a>
+            </li>
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/power_shutdown_icon.svg" alt="전원">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="consultHistory">
+          <div class="position-relative">
+            <h3 class="consultHistory-title mb-2">화상상담 내역</h3>
+            <a href="javascript:void(0)" class="consultHistory-prev"></a>
+          </div>
+          <div class="consultHistory-wrap">
+            <div class="consultHistory-search search-box d-flex">
+              <div class="selet-group mr-2">
+                <select>
+                  <option>전체</option>
+                  <option>인바운드</option>
+                  <option>아웃바운드</option>
+                </select>
+              </div>
+              <div class="inpBox mr-2">
+                <div class="input-group">
+                  <label for="inp_search">
+                    <input type="text" class="form-control" id="inp_search" placeholder="제목 / 내용을 입력하세요.">
+                    <img src="../assets/images/ico_serach.svg" alt="검색 아이콘">
+                  </label>
+                </div>
+              </div>
+              <div class="selet-group mr-2">
+                <select>
+                  <option>전체 기간</option>
+                  <option>3일</option>
+                  <option>1주</option>
+                  <option>2주</option>
+                  <option>1개월</option>
+                </select>
+              </div>
+              <div class="inpBox calendar mr-2">
+                <div class="input-group datapicker">
+                  <label for="inp_search ">
+                    <input type="text" class="form-control configCalendar" placeholder="날짜 선택">
+                  </label>
+                </div>
+              </div>
+              <button class="btn btn-black">조회</button>
+            </div>
+
+            <!-- 상담 필터 -->
+            <div class="consulFiller d-flex align-items-center">
+              <button type="button" class="consulFiller-refresh"></button>
+              <ul class="consulFiller-list nav nav-pills d-flex" id="pills-tab">
+                <li class="consulFiller-item nav-item">
+                  <button class="nav-link active" data-bs-toggle="pill">전체(99)</button>
+                </li>
+                <li class="consulFiller-item nav-item">
+                  <button class="nav-link" data-bs-toggle="pill">상담완료(96)</button>
+                </li>
+                <li class="consulFiller-item nav-item">
+                  <button class="nav-link" data-bs-toggle="pill">상담에정(3)</button>
+                </li>
+                <li class="consulFiller-item nav-item">
+                  <button class="nav-link" data-bs-toggle="pill">상담취소(3)</button>
+                </li>
+              </ul>
+            </div>
+
+            <table class="consultHistory-table dash-table">
+              <colgroup>
+                <col style="width:8%">
+                <col style="width:8%">
+                <col>
+                <col style="width:18%">
+                <col style="width:19%">
+                <col style="width:10%">
+                <col style="width:13%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>상담상태</th>
+                  <th>고객성함</th>
+                  <th>상담서비스</th>
+                  <th>계좌번호</th>
+                  <th>상담 시간</th>
+                  <th>상담 형태</th>
+                  <th>녹화 / 캡쳐</th>
+                </tr>
+              </thead>
+              <!-- 검색결과 없을경우 .active 추가 -->
+              <tbody class="">
+                <tr class="noSearch">
+                  <td colspan="7">
+                    <b>검색결과 없음.</b>
+                    <span>검색을 다시 시도해 주세요.</span>
+
+                  </td>
+                </tr>
+              </tbody>
+              <!-- 기본값 .active 상태 -->
+              <tbody class="active">
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-blue">상담예정</p>
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[금융상품매매〉펀드] </td>
+                  <td>001-12-******</td>
+                  <td>2022-11-07 오후 4:00~5:00</td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button type="button" class="btn btn-red">녹화</button>
+                    <button type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-blue">상담예정</p>
+
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[비대면업무〉파생ETF 교육수료 입력] </td>
+                  <td>001-12-******</td>
+                  <td>2022-11-07 오후 4:00~5:00</td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button type="button" class="btn btn-red">녹화</button>
+                    <button type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-red">상담취소</p>
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[비대면업무〉파생ETF 교육수료 입력] [비대면업무〉파생ETF 교육수료 입력] [비대면업무〉파생ETF 교육수료 입력]
+                    [비대면업무〉파생ETF 교육수료 입력] </td>
+                  <td>001-12-******</td>
+                  <td class="toReason">
+                    <p class="d-flex align-items-center justify-content-center">
+                      고객 개인 사정
+                      <button class="btn btn-gray ml-2" data-bs-toggle="modal"
+                        data-bs-target="#reasonCancel">상세보기</button>
+                    </p>
+
+                  </td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button disabled type="button" class="btn btn-red">녹화</button>
+                    <button disabled type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-gray">상담완료</p>
+
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[금융상품매매〉펀드] </td>
+                  <td>001-12-******</td>
+                  <td>2022-11-07 오전 10:01~10:30</td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button disabled type="button" class="btn btn-red">녹화</button>
+                    <button disabled type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-gray">상담완료</p>
+
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[금융상품매매〉펀드] </td>
+                  <td>001-12-******</td>
+                  <td>2022-11-07 오후 4:00~5:00</td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button disabled type="button" class="btn btn-red">녹화</button>
+                    <button disabled type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-red">상담취소</p>
+
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[금융상품매매〉펀드] </td>
+                  <td>001-12-******</td>
+                  <td class="toReason">
+                    <p class="d-flex align-items-center justify-content-center">
+                      고객 개인 사정
+                      <button class="btn btn-gray ml-2" data-bs-toggle="modal"
+                        data-bs-target="#reasonCancel">상세보기</button>
+                    </p>
+
+                  </td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button type="button" class="btn btn-red">녹화</button>
+                    <button type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-red">상담취소</p>
+
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[금융상품매매〉펀드] </td>
+                  <td>001-12-******</td>
+                  <td class="toReason">
+                    <p class="d-flex align-items-center justify-content-center">
+                      고객 개인 사정
+                      <button class="btn btn-gray ml-2" data-bs-toggle="modal"
+                        data-bs-target="#reasonCancel">상세보기</button>
+                    </p>
+
+                  </td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button type="button" class="btn btn-red">녹화</button>
+                    <button type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-blue">상담예정</p>
+
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[금융상품매매〉펀드] </td>
+                  <td>없음</td>
+                  <td>2022-11-07 오후 4:00~5:00</td>
+                  <td>아웃바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button disabled type="button" class="btn btn-red">녹화</button>
+                    <button disabled type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-blue">상담예정</p>
+
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[금융상품매매〉펀드] </td>
+                  <td>001-12-******</td>
+                  <td>2022-11-07 오후 4:00~5:00</td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button type="button" class="btn btn-red">녹화</button>
+                    <button type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="state">
+                    <p class="btn-border-blue">상담예정</p>
+
+                  </td>
+                  <td>박지은</td>
+                  <td class="tit truncate-1">[금융상품매매〉펀드] </td>
+                  <td>001-12-******</td>
+                  <td>2022-11-07 오후 4:00~5:00</td>
+                  <td>인바운드</td>
+                  <td class="d-flex justify-content-center">
+                    <!-- 비활성일때 disabled 추가 -->
+                    <button type="button" class="btn btn-red">녹화</button>
+                    <button type="button" class="btn btn-border-black ml-1" data-bs-toggle="modal"
+                      data-bs-target="#captureHistory">캡쳐</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="pagination justify-content-center mt-5">
+              <!-- 첫번째 페이지면 .first .prev 클래스에 disabled 추가 -->
+              <li><a class="page-link first disabled" href="#">
+                  <svg width="22" height="24" viewBox="0 0 149 175.5">
+                    <polygon class="st0" points="76.9,95 1,173.1 1,147 56.8,88.4 56.8,87.1 1,28.5 1,2.5 76.9,80.6 	" />
+                    <polygon class="st0"
+                      points="148,95 72.1,173.1 72.1,147 127.9,88.4 127.9,87.1 72.1,28.5 72.1,2.5 148,80.6 	" />
+                  </svg>
+                </a></li>
+              <li><a class="page-link prev disabled" href="#">
+                  <svg width="10" height="24" viewBox="0 0 77.9 175.5">
+                    <polygon class="st0" points="76.9,95 1,173.1 1,147 56.8,88.4 56.8,87.1 1,28.5 1,2.5 76.9,80.6 " />
+                  </svg>
+                </a></li>
+              <!-- .active 추가시 현제 페이지 활성화 -->
+              <li><a class="page-link active" href="#">1</a></li>
+              <li><a class="page-link" href="#">2</a></li>
+              <li><a class="page-link" href="#">3</a></li>
+              <li><a class="page-link" href="#">4</a></li>
+              <li><a class="page-link" href="#">5</a></li>
+              <li><a class="page-link" href="#">6</a></li>
+              <li><a class="page-link" href="#">7</a></li>
+              <li><a class="page-link" href="#">8</a></li>
+              <li><a class="page-link" href="#">9</a></li>
+              <li><a class="page-link" href="#">10</a></li>
+              <!-- 마지막페이지면 페이지면 .last .next 클래스에 disabled 추가 -->
+              <li><a class="page-link next" href="#">
+                  <svg width="10" height="24" viewBox="0 0 77.9 175.5">
+                    <polygon class="st0" points="76.9,95 1,173.1 1,147 56.8,88.4 56.8,87.1 1,28.5 1,2.5 76.9,80.6 " />
+                  </svg>
+                </a></li>
+              <li><a class="page-link last" href="#">
+                  <svg width="22" height="24" viewBox="0 0 149 175.5">
+                    <polygon class="st0" points="76.9,95 1,173.1 1,147 56.8,88.4 56.8,87.1 1,28.5 1,2.5 76.9,80.6 	" />
+                    <polygon class="st0"
+                      points="148,95 72.1,173.1 72.1,147 127.9,88.4 127.9,87.1 72.1,28.5 72.1,2.5 148,80.6 	" />
+                  </svg>
+                </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 모달 -->
+  <!-- 상담취소 사유팝업 -->
+  <div class="reasonCancel defalt modal fade" id="reasonCancel" data-bs-keyboard="false" tabindex="-1"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">
+            <span>박지은</span>
+            님의 상담 취소
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <!-- 입력사항 입력하지 않고 확인버튼 눌렀을시 notInput 추가 -->
+          <div class="table-tA">
+            <table class="table mb-4">
+              <tbody>
+                <tr>
+                  <th scope="row">사유선택</th>
+                  <td colspan="5">
+                    <p>고객 개인 사정</p>
+
+                  </td>
+                </tr>
+                <tr>
+                  <th scope="row">기타입력 사항</th>
+                  <td>
+                    <p style="width: 100%; height:9rem; overflow: auto;">
+                      갑작스러운 고객 개인 일정 변경으로 인한 취소.갑작스러운 고객 개인 일정 변경으로 인한 취소.갑작스러운 고객 개인 일정 변경으로 인한 취소.갑작스러운 고객 개인 일정 변경으로
+                      인한 취소.갑작스러운 고객 개인 일정 변경으로 인한 취소.갑작스러운 고객 개인 일정 변경으로 인한 취소.갑작스러운 고객 개인 일정 변경으로 인한 취소.갑작스러운 고객 개인 일정
+                      변경으로 인한 취소.갑작스러운 고객 개인 일정 변경으로 인한 취소.
+                    </p>
+
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 상담 캡쳐 내역 -->
+  <div class="captureHistory defalt modal fade" id="captureHistory" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="captureHistory-title modal-title">
+            <span>박지은</span>
+            님의 상담 캡쳐 내역
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <div class="w-100">
+            <p class="captureHistory-num d-flex">총 <span>30</span>장</p>
+            <ul class="captureHistory-list d-flex mt-1">
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+              <li class="captureHistory-item d-flex">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                <p class="mt-1">캡쳐이미지</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="captuerPop">
+          <button type="button" class="btn-close"></button>
+          <div class="d-flex flex-column justify-content-center align-items-center">
+            <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+            <p class="mt-2">캡쳐이미지</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

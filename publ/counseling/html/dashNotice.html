@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script defer src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/swiper-bundle.min.js"></script>
+  <script defer src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../assets/js/style.js"></script>
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header ">
+      <div class="inner d-flex">
+        <h1 class="header-logo d-flex">
+          <a href="javascript:void(0)" class="header-link">
+            <img src="../assets/images/logo.png" alt="유진투자증권">
+          </a>
+          <p>화상상담시스템</p>
+        </h1>
+        <div class="header-util d-flex">
+          <button type="button" class="header-util-btn">관리고객 화상상담 등록</button>
+          <ul class="header-util-list d-flex">
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                <img src="../assets/images/bell_ring_icon.svg" alt="알림">
+                <span class="badge-new">99+</span>
+              </a>
+            </li>
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/setting_icon.svg" alt="설정">
+              </a>
+            </li>
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/power_shutdown_icon.svg" alt="전원">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="dashNotice">
+          <div class="position-relative">
+            <h3 class="dashNotice-title mb-2">공지사항</h3>
+            <a href="javascript:void(0)" class="dashNotice-prev"></a>
+          </div>
+          <div class="dashNotice-wrap">
+            <div class="dashNotice-search search-box d-flex">
+              <div class="selet-group mr-2">
+                <select>
+                  <option>공지 전체</option>
+                  <option>오류/장애</option>
+                  <option>점검/업데이트</option>
+                  <option>기타</option>
+                </select>
+              </div>
+              <div class="inpBox">
+                <div class="input-group">
+                  <label for="inp_search">
+                    <input type="text" class="form-control" id="inp_search" placeholder="제목 / 내용을 입력하세요.">
+                    <img src="../assets/images/ico_serach.svg" alt="검색 아이콘">
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <table class="dashNotice-table dash-table mt-3">
+              <colgroup>
+                <col style="width:12%">
+                <col>
+                <col style="width:17%">
+                <col style="width:13%">
+              </colgroup>
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>제목</th>
+                  <th>공지 등록 시간</th>
+                  <th>조회수</th>
+                </tr>
+              </thead>
+              <!-- 검색결과 없을경우 .active 추가 -->
+              <tbody class="">
+                <tr class="noSearch">
+                  <td colspan="4">
+                    <b>검색결과 없음.</b>
+                    <span>검색을 다시 시도해 주세요.</span>
+                  </td>
+                </tr>
+              </tbody>
+              <!-- 기본값 .active 상태 -->
+              <tbody class="active">
+                <tr>
+                  <td>
+                    100
+                    <!-- 신규등록일때 div.new 추가 -->
+                    <div class="new">
+                      <img src="../assets/images/ico_new.png" alt="new 아이콘">
+                    </div>
+                  </td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="화상상담 서비스가 개설되었습니다.">
+                      화상상담 서비스가 개설되었습니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>
+                    99
+                    <div class="new">
+                      <img src="../assets/images/ico_new.png" alt="new 아이콘">
+                    </div>
+                  </td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="[네트워크 점검 안내] 2022-11-12(토) 선장애 네트워크 진단을 위해 서비스가 잠시 중단됩니다.[네트워크 점검 안내] 2022-11-12(토) 선장애 네트워크 진단을 위해 서비스가 잠시 중단됩니다.[네트워크 점검 안내] 2022-11-12(토) 선장애 네트워크 진단을 위해 서비스가 잠시 중단됩니다.">
+                      [네트워크 점검 안내] 2022-11-12(토) 선장애 네트워크 진단을 위해 서비스가 잠시 중단됩니다.[네트워크 점검 안내] 2022-11-12(토) 선장애 네트워크 진단을 위해 서비스가 잠시 중단됩니다.[네트워크 점검 안내] 2022-11-12(토) 선장애 네트워크 진단을 위해 서비스가 잠시 중단됩니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>98</td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="화상상담 서비스가 개설되었습니다.">
+                      화상상담 서비스가 개설되었습니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>97</td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="[네트워크 점검 안내] 2022-11-12(토) 선장애 네트워크 진단을 위해 서비스가 잠시 중단됩니다.">
+                      [네트워크 점검 안내] 2022-11-12(토) 선장애 네트워크 진단을 위해 서비스가 잠시 중단됩니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>96</td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="화상상담 서비스가 개설되었습니다.">
+                      화상상담 서비스가 개설되었습니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>95</td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="화상상담 서비스가 개설되었습니다.">
+                      화상상담 서비스가 개설되었습니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>94</td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="화상상담 서비스가 개설되었습니다.">
+                      화상상담 서비스가 개설되었습니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>93</td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="화상상담 서비스가 개설되었습니다.">
+                      화상상담 서비스가 개설되었습니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>92</td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="화상상담 서비스가 개설되었습니다.">
+                      화상상담 서비스가 개설되었습니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+                <tr>
+                  <td>91</td>
+                  <td class="tit truncate-1">
+                    <a href="javacsript:void(0)" title="화상상담 서비스가 개설되었습니다.">
+                      화상상담 서비스가 개설되었습니다.
+                    </a>
+                  </td>
+                  <td>2022-11-07 오후 4:01</td>
+                  <td>201</td>
+                </tr>
+              </tbody>
+            </table>
+            <ul class="pagination justify-content-center mt-5">
+              <!-- 첫번째 페이지면 .first .prev 클래스에 disabled 추가 -->
+              <li><a class="page-link first disabled" href="#">
+                  <svg width="22" height="24" viewBox="0 0 149 175.5">
+                    <polygon class="st0" points="76.9,95 1,173.1 1,147 56.8,88.4 56.8,87.1 1,28.5 1,2.5 76.9,80.6 	" />
+                    <polygon class="st0"
+                      points="148,95 72.1,173.1 72.1,147 127.9,88.4 127.9,87.1 72.1,28.5 72.1,2.5 148,80.6 	" />
+                  </svg>
+                </a></li>
+              <li><a class="page-link prev disabled" href="#">
+                  <svg width="10" height="24" viewBox="0 0 77.9 175.5">
+                    <polygon class="st0" points="76.9,95 1,173.1 1,147 56.8,88.4 56.8,87.1 1,28.5 1,2.5 76.9,80.6 " />
+                  </svg>
+                </a></li>
+              <!-- .active 추가시 현제 페이지 활성화 -->
+              <li><a class="page-link active" href="#">1</a></li>
+              <li><a class="page-link" href="#">2</a></li>
+              <li><a class="page-link" href="#">3</a></li>
+              <li><a class="page-link" href="#">4</a></li>
+              <li><a class="page-link" href="#">5</a></li>
+              <li><a class="page-link" href="#">6</a></li>
+              <li><a class="page-link" href="#">7</a></li>
+              <li><a class="page-link" href="#">8</a></li>
+              <li><a class="page-link" href="#">9</a></li>
+              <li><a class="page-link" href="#">10</a></li>
+              <!-- 마지막페이지면 페이지면 .last .next 클래스에 disabled 추가 -->
+              <li><a class="page-link next" href="#">
+                <svg width="10" height="24" viewBox="0 0 77.9 175.5">
+                  <polygon class="st0" points="76.9,95 1,173.1 1,147 56.8,88.4 56.8,87.1 1,28.5 1,2.5 76.9,80.6 " />
+                </svg>
+              </a></li>
+              <li><a class="page-link last" href="#">
+                <svg width="22" height="24" viewBox="0 0 149 175.5">
+                  <polygon class="st0" points="76.9,95 1,173.1 1,147 56.8,88.4 56.8,87.1 1,28.5 1,2.5 76.9,80.6 	" />
+                  <polygon class="st0"
+                    points="148,95 72.1,173.1 72.1,147 127.9,88.4 127.9,87.1 72.1,28.5 72.1,2.5 148,80.6 	" />
+                </svg>
+              </a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+
+</html>

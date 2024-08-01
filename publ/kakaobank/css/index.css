@@ -1,0 +1,11 @@
+html{ font-size: 15px;}
+body{font-size: 1rem;}
+
+.login{ padding: 0 1.666rem; height: 100vh; background: #ffd600; box-sizing: border-box; }
+.login h2{padding: 11.1111rem 0 16rem; height: 6rem; background: url(../images/logo.png) no-repeat center / 4.44rem auto;}
+.login ul{text-align: center; font-size: 0;}
+.login ul li:first-child a{ display: block; font-size: .8888rem; color: #000; font-weight: bold; text-decoration: underline; line-height: 3.77rem; border: 1px solid rgba(0,0,0,.1); border-radius:.1777rem;}
+.login ul li:first-child a span{display: inline-block; margin: 0 .2222rem 0 0;width: 1.3333rem; height: 1.1555rem; background: url(../images/kakao_logo.png) no-repeat center / 1.3333rem auto; vertical-align: middle; }
+.login ul li:last-child a{ display: block; font-size: 0.8rem; color: rgba(0,0,0,.6); line-height: 3.6666rem; text-decoration: underline;}
+.login p{ line-height: 1;}
+.login p a{ display: block; padding: 2.4888rem 0; font-size: .6666rem; color: rgba(0,0,0,.6); text-align: center; text-decoration: underline;}

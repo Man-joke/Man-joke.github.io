@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script defer src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/swiper-bundle.min.js"></script>
+  <script defer src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../assets/js/style.js"></script>
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body>
+  <div class="wrap">
+    <header class="header ">
+      <div class="inner d-flex">
+        <h1 class="header-logo d-flex">
+          <a href="javascript:void(0)" class="header-link">
+            <img src="../assets/images/logo.png" alt="유진투자증권">
+          </a>
+          <p>화상상담시스템</p>
+        </h1>
+        <div class="header-util d-flex">
+          <button type="button" class="header-util-btn">관리고객 화상상담 등록</button>
+          <ul class="header-util-list d-flex">
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">
+                <img src="../assets/images/bell_ring_icon.svg" alt="알림">
+                <span class="badge-new">99+</span>
+              </a>
+            </li>
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/setting_icon.svg" alt="설정">
+              </a>
+            </li>
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/power_shutdown_icon.svg" alt="전원">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="dashSetting">
+          <h3 class="dashSetting-title mb-2">설정</h3>
+          <div class="dashSetting-wrap d-flex">
+            <div class="dashSetting-left col-6">
+              <div class="personal">
+                <h4 class="title mb-3">개인정보 확인</h4>
+                <div class="personal-con">
+                  <dl>
+                    <dt>아이디</dt>
+                    <dd>Kim_1234</dd>
+                  </dl>
+                  <dl>
+                    <dt>이름</dt>
+                    <dd>김유진</dd>
+                  </dl>
+                  <dl>
+                    <dt>부서(지점)</dt>
+                    <dd>영업부1부(여의도점)</dd>
+                  </dl>
+                  <dl>
+                    <dt>직급</dt>
+                    <dd>대리</dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="businessCard">
+                <h4 class="title mb-1">명함 등록 / 변경</h4>
+                <p class="dec mb-2">* 등록된 명함은 화상상담 시에 사용됩니다. 반드시 등록해 주세요.</p>
+                <div class="businessCard-con">
+                  <figure>
+                    <img src="../assets/images/img_nameCard.png" alt="명함">
+                  </figure>
+                  <!-- 파일 등록시 10mb 넘으면 #setUploadFileOver 모달 호출 -->
+                  <!-- 명함이 등록되어있을 시 텍스트 '변경' 으로  -->
+                  <div>
+                    <input type="file" id="inp-businessCard">
+                    <label for="inp-businessCard" class="businessCard-btn ml-1 btn btn-black">등록</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dashSetting-right col-6">
+              <div class="CameraDefalt">
+                <h4 class="title mb-1">카메라 기본값 설정</h4>
+                <p class="dec mb-2">* 화상상담 시에 사용되는 카메라의 기본값을 설정해 주세요. 화상상담 중에는 변경이 불가능합니다.</p>
+                <div class="CameraDefalt-con">
+                  <div class="d-flex">
+                    <div class="radio_btn-box d-flex">
+                      <input type="radio" id="radio_01" name="radio_btn" checked>
+                      <label for="radio_01">
+                        <svg style="width: 32px; height:32px;">
+                          <path
+                            d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M16,29.7C8.4,29.7,2.3,23.6,2.3,16S8.4,2.3,16,2.3S29.7,8.4,29.7,16S23.6,29.7,16,29.7z" />
+                          <path d="M16,9.1c-3.8,0-6.9,3.1-6.9,6.9s3.1,6.9,6.9,6.9s6.9-3.1,6.9-6.9S19.8,9.1,16,9.1z" />
+                        </svg>
+                        <p>카메라</p>
+                      </label>
+                    </div>
+                    <div class="radio_btn-box d-flex">
+                      <input type="radio" id="radio_02" name="radio_btn">
+                      <label for="radio_02">
+                        <svg style="width: 32px; height:32px;">
+                          <path
+                            d="M16,0C7.2,0,0,7.2,0,16s7.2,16,16,16s16-7.2,16-16S24.8,0,16,0z M16,29.7C8.4,29.7,2.3,23.6,2.3,16S8.4,2.3,16,2.3S29.7,8.4,29.7,16S23.6,29.7,16,29.7z" />
+                          <path d="M16,9.1c-3.8,0-6.9,3.1-6.9,6.9s3.1,6.9,6.9,6.9s6.9-3.1,6.9-6.9S19.8,9.1,16,9.1z" />
+                        </svg>
+                        <p>명함</p>
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <h4 class="title mt-5 mb-3">디바이스 설정</h4>
+                <div class="CameraDefalt-select personal-con">
+                  <dl>
+                    <dt>마이크</dt>
+                    <dd>
+                      <select>
+                        <option>마이크 배열(Realtck® Audio)</option>
+                        <option>마이크 배열(Realtck® Audio)</option>
+                        <option>마이크 배열(Realtck® Audio)</option>
+                      </select>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>스피커</dt>
+                    <dd>
+                      <select>
+                        <option>스피커(Realtck® Audio)</option>
+                        <option>스피커(Realtck® Audio)</option>
+                        <option>스피커(Realtck® Audio)</option>
+                      </select>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>카메라</dt>
+                    <dd>
+                      <select>
+                        <option>LG Camera</option>
+                        <option>LG Camera</option>
+                        <option>LG Camera</option>
+                      </select>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>해상도</dt>
+                    <dd>
+                      <select>
+                        <option>VGA (640x480)</option>
+                        <option>VGA (640x480)</option>
+                        <option>VGA (640x480)</option>
+                      </select>
+                    </dd>
+                  </dl>
+                </div>
+                <div class="mt-4 d-flex justify-content-center position-absolute absolute">
+                  <button class="counselingTime-btn cancle btn ">취소</button>
+                  <button class="counselingTime-btn agree btn btn-red" data-bs-toggle="modal"
+                    data-bs-target="#businessCard">저장하기</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 모달 -->
+
+
+  <!-- 파일첨부 10MB넘었을 경우 팝업 -->
+  <div class="modal fade defalt" id="setUploadFileOver" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          JPEG, PNG 포맷만 지원이 가능합니다. <br>(10MB 이하)
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 명함을 등록 -->
+  <div class="modal fade defalt" id="businessCard" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          명함을 등록해 주세요.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+</body>
+
+</html>

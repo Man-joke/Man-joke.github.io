@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script defer src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/swiper-bundle.min.js"></script>
+  <script defer src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../assets/js/style.js"></script>
+
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body>
+  <div class="wrap mobile">
+    <main>
+      <div class="mo-inner" style=" background: #f5f5f5;">
+        <div class="roomheaher-util position-fixed d-flex">
+          <ul class="roomheaher-util-list d-flex">
+            <li class="roomheaher-util-item">
+              <input type="checkbox" id="inp-camera">
+              <label for="inp-camera">
+                카메라
+              </label>
+            </li>
+            <li class="roomheaher-util-item ml-1">
+              <input type="checkbox" id="inp-min">
+              <label for="inp-min">
+                마이크
+              </label>
+            </li>
+          </ul>
+          <button class="btn btn-black" data-bs-toggle="modal" data-bs-target="#outRoom">나가기</button>
+        </div>
+        <!-- 방입장했을시 토스트팝업 -->
+        <div class="toast15">
+          <p>상담실에 입장하셨습니다.</p>
+        </div>
+        <div class="mo-basicScreen">
+          <!-- 화상화면 -->
+          <img src="../assets/images/video_chat.png" alt="고객">
+          <!-- 기본화면 -->
+          <!-- <div class="basicImg">
+            <figure>
+              <img src="../assets/images/user_icon.svg" alt="기본이미지">
+            </figure>
+            <div class="name">
+              <p class="blue-color">고객</p>
+            </div>
+          </div> -->
+        </div>
+        <!-- 상담원 추가시 -->
+        <div class="mo-adviser-list position-absolute">
+          <div class="mo-adviser-item">
+            <div class="mo-adviser-box">
+              <img src="../assets/images/video_chat_01.png" alt="상담원">
+            </div>
+            <p class="green-color">지인</p>
+          </div>
+          <div class="mo-adviser-item">
+            <div class="mo-adviser-box">
+              <img src="../assets/images/video_chat_01.png" alt="상담원">
+            </div>
+            <p class="pink-color">전문가</p>
+          </div>
+          <div class="mo-adviser-item">
+            <div class="mo-adviser-box">
+              <!-- 화상화면 -->
+              <!-- <img src="../assets/images/video_chat_01.png" alt="상담원">-->
+              <!-- 기본화면 -->
+              <div class="basicScreen-adviser">
+                <img class="basicImg" src="../assets/images/user_icon.svg" alt="기본이미지">
+              </div>
+            </div>
+            <p class="black-color">고객</p>
+          </div>
+        </div>
+        <!-- 문서공유화면 -->
+        <!-- <div class="mo-documentShare">
+          <div class="mo-documentShare-wrap">
+            <p class="mo-documentShare-txt">문서공유화면</p>
+            <div class="document-util mo">
+              <ul class="document-util-list mo">
+                <li class="document-util-item mo">
+                  <button><img src="../assets/images/ico_add.png" alt="확대"></button>
+                </li>
+                <li class="document-util-item mo">
+                  <button><img src="../assets/images/ico_minus.png" alt="축소"></button>
+                </li>
+                <li class="document-util-item mo">
+                  <button><img src="../assets/images/ico_drag.png" alt="드래그"></button>
+                </li>
+              </ul>
+            </div>
+            <div class="documentPencle mo">
+              <ul class="documentPencle-list mo d-flex">
+                <li class="documentPencle-item mo">
+                  <button></button>
+                </li>
+                <li class="documentPencle-item mo">
+                  <button></button>
+                </li>
+                <li class="documentPencle-item mo">
+                  <button></button>
+                </li>
+                <li class="documentPencle-item mo del">
+                  <button></button>
+                </li>
+              </ul>
+            </div>
+            <div class="documentPage mo d-flex">
+              <button class="prev mr-1"></button>
+              <div class="documentPage-num mo d-flex">
+                <p>1</p>
+                <span>/</span>
+                <p>15</p>
+              </div>
+              <button class="next ml-1"></button>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </main>
+  </div>
+
+  <!-- 모달  -->
+
+  <!-- 로딩모달 -->
+  <div class="loading" id="loading">
+    <div class="loading-con">
+      <figure>
+        <img src="../assets/images/loading/loading00.png" alt="로딩">
+      </figure>
+      <p>상담원의 입장을 <br>기다리고 있습니다.</p>     
+    </div>
+  </div>
+
+
+  <!-- 나가기 -->
+  <div class=" defalt mo modal fade" id="outRoom" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog btn-two" style="max-width: 80%">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-cont">
+            <p>상담실을 나가시겠습니까?</p>
+          </div>
+        </div>
+        <div class="modal-footer" style="background-color: #f5f5f5;">
+          <button type="button" class="btn col-6" data-bs-target="#productSelection" data-bs-toggle="modal">취소</button>
+          <button type="button" class="btn col-6 color-1">나가기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" defalt mo modal fade" id="anotherCounselor" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog btn-two" style="max-width: 80%">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-cont">
+            <p>
+              상담원을 찾지 못했습니다.<br>
+              다른 상담원을 찾으시겠습니까?
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer" style="background-color: #f5f5f5;">
+          <button type="button" class="btn col-6" data-bs-target="#productSelection" data-bs-toggle="modal">계속
+            대기</button>
+          <button type="button" class="btn col-6 color-1">다른 상담원 찾기</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class=" defalt mo modal fade" id="consulFileDown" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog btn-two" style="max-width: 80%">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-cont">
+            <p>
+              상담원이 보낸파일을<br>
+              다운로드하시겠습니까?
+            </p>
+          </div>
+        </div>
+        <div class="modal-footer" style="background-color: #f5f5f5;">
+          <button type="button" class="btn col-6" data-bs-target="#productSelection" data-bs-toggle="modal">취소</button>
+          <button type="button" class="btn col-6 color-1" data-bs-toggle="modal" data-bs-target="#downSuccess">다운로드</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal mo fade defalt" id="downSuccess" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog" style="max-width: 80%">
+      <div class="modal-content">
+        <div class="modal-body">
+          다운로드가 완료되었습니다.
+        </div>
+        <button class="btn modal-btn">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal mo fade defalt" id="consulfinish" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog" style="max-width: 80%">
+      <div class="modal-content">
+        <div class="modal-body">
+          상담이 종료되었습니다.
+        </div>
+        <button class="btn modal-btn">확인</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script defer src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/swiper-bundle.min.js"></script>
+  <script defer src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../assets/js/style.js"></script>
+
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body>
+  <header class="d-flex justify-content-center position-relative mo border-bottom">
+    <a href="javascript:void(0)" class="position-absolute start-0 top-50 translate-middle-y prev" title="뒤로가기"></a>
+    <h1>화상상담 신청</h1>
+  </header>
+  <div class="wrap mobile">
+    <main>
+      <div class="mo-inner mt-2_5">
+        <!-- 관심서비스 -->
+        <div class="interest mo">
+          <h4 class="interest-title mo-title">관심서비스 <span>(중복선택 가능)</span></h4>
+          <ul class="interest-list d-flex mt-2 flex-wrap justify-content-start"  style="gap: 1rem;">
+            <li class="interest-item input-checkbox">
+              <input type="checkbox" id="interest-chk-01">
+              <label for="interest-chk-01">펀드</label>
+            </li>
+            <li class="interest-item input-checkbox">
+              <input type="checkbox" id="interest-chk-02">
+              <label for="interest-chk-02">ELS/DLS</label>
+            </li>
+            <li class="interest-item input-checkbox">
+              <input type="checkbox" id="interest-chk-03">
+              <label for="interest-chk-03">랩</label>
+            </li>
+            <li class="interest-item input-checkbox ">
+              <input type="checkbox" id="interest-chk-04">
+              <label for="interest-chk-04">신탁</label>
+            </li>
+            <li class="interest-item input-checkbox ">
+              <input type="checkbox" id="interest-chk-05">
+              <label for="interest-chk-05">장외채권</label>
+            </li>
+            <li class="interest-item input-checkbox ">
+              <input type="checkbox" id="interest-chk-06">
+              <label for="interest-chk-06">CP</label>
+            </li>
+            <li class="interest-item input-checkbox ">
+              <input type="checkbox" id="interest-chk-07">
+              <label for="interest-chk-07">전자단기사</label>
+            </li>
+            <li class="interest-item input-checkbox ">
+              <input type="checkbox" id="interest-chk-08">
+              <label for="interest-chk-08">주식상담</label>
+            </li>
+          </ul>
+        </div>
+        <!-- 추가문의사항 -->
+        <div class="additional mo mt-2_5">
+          <h4 class="additional-title mo-title">추가 문의 사항</h4>
+          <div class="additional-textarea mt-1">
+            <textarea class="form-control mo" placeholder="60자 내외 입력" style="height: 60px"></textarea>
+          </div>
+          <p class="additional-dec mo-dec color-1">※ 추가 문의사항이 있으신가요? <br>60자 내외로 간략하게 기재해 주세요. (띄어쓰기 포함)</p>
+        </div>
+        <div class="counselingTime mo mt-3">
+          <h4 class="counselingTime-title mo-title">상담시간</h4>
+          <ul class="counselingTime-list d-flex flex-wrap mt-1">
+            <!-- 예약 불가한 시간에는 disable 추가 -->
+            <li class="counselingTime-item chkList input-checkbox disalbe">
+              <input type="checkbox" id="counselingTime-chk-01" name="counselingTime-list">
+              <label for="counselingTime-chk-01">09:00~09:59</label>
+            </li>
+            <li class="counselingTime-item chkList input-checkbox">
+              <input type="checkbox" id="counselingTime-chk-02" name="counselingTime-list">
+              <label for="counselingTime-chk-02">10:00~10:59</label>
+            </li>
+            <li class="counselingTime-item chkList input-checkbox">
+              <input type="checkbox" id="counselingTime-chk-03" name="counselingTime-list">
+              <label for="counselingTime-chk-03">13:00~13:59</label>
+            </li>
+            <li class="counselingTime-item chkList input-checkbox">
+              <input type="checkbox" id="counselingTime-chk-04" name="counselingTime-list">
+              <label for="counselingTime-chk-04">14:00~14:59</label>
+            </li>
+            <li class="counselingTime-item chkList input-checkbox disalbe">
+              <input type="checkbox" id="counselingTime-chk-05" name="counselingTime-list">
+              <label for="counselingTime-chk-05">15:00~15:59</label>
+            </li>
+          </ul>
+          <p class="counselingTime-dec mo-dec color-1 mt-1">* 상담 시간은 오전 9시부터 오후 3시 59분까지입니다. <br>예약을 하실 경우 상담 30분 전에 예약하셔야 합니다.</p>
+        </div>
+        <div class="counselor mt-2">
+          <a href="javascript:void(0)" class="counselor-link"  data-bs-toggle="modal" data-bs-target="#applicationCom-01" >
+            <div class="mb-1">
+              <!-- 상담원 선택전 -->
+              <p style="display: none;">상담원을 선택하세요.</p> 
+              <!-- 상담원 선택후 -->
+              <div class="counselor-selectCon">
+                <h4 class="counselorSelect-name">박지은</h4>
+                <div class="counselorSelect-article mo-counselorSelect-article d-flex">
+                  <p class="btn-border-blue">주식</p>
+                  <p class="btn-border-green">금융상품</p>
+                </div>
+              </div>
+            </div>
+            <svg id="Stock_cut" class="profileSvg" width="24" height="24" viewBox="0 0 32 32" title="상담원선택아이콘">
+              <g>
+                <circle class="st0" cx="16" cy="16" r="15.1" />
+                <path class="st0" d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                <circle class="st0" cx="16" cy="12.2" r="5.7" />
+              </g>
+            </svg>
+          </a>
+          <button class="counselor-btn btn btn-border-black mt-1">자동배정</button>
+        </div>
+      </div>
+      <div class="btn-two mo custom justify-content-between">
+        <button class="counselRequest-btn mt-1 mb-1 btn btn-gray">취소</button>
+        <button class="counselRequest-btn mt-1 mb-1 btn btn-red" data-bs-target="#completed" data-bs-toggle="modal">상담신청</button>
+      </div>
+    </main>
+  </div>
+
+
+  <!-- 모달  -->
+  <!-- 관심서비스 미입력시 노출 -->
+  <div class="modal mo fade defalt" id="applicationCom-01">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          관심서비스를 먼저 선택하세요.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal mo fade defalt" id="applicationCom-02">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          상담 시간을 먼저 선택하세요
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- 신청완료 -->
+  <div class="modal mo fade defalt" id="completed">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          상담신청이 완료되었습니다.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- 상담신청 누를때 입력 안된 폼 -->
+  <div class="modal mo fade defalt" id="notSelected_02">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          상담원을 선택하세요.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal mo fade defalt" id="notSelected_04">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          추가문의사항 입력 범위를 <br>초과하셨습니다.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

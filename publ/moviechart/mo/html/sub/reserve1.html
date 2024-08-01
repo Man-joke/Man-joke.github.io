@@ -1,0 +1,446 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+
+	<script defer src="../../resources/js/common.js"></script>
+
+</head>
+
+<body>
+
+	<header id="header" class="header sub wArea">
+		<a href="#" class="backSpace"><img src="../../resources/images/common/back_space.png" alt="뒤로가기"></a>
+		<h2>영화예매</h2>
+		<div class="mobile_menu"></div>
+	</header>
+	<!-- //header -->
+	<div class="gnb_menu wArea" style="display: none;">
+		<div class="menu__conbox">
+			<div class="menu__top">
+				<a href="#" class="logo"><img src="../../resources/images/common/logo_On.png" alt="무비차트 로고"></a>
+				<div class="close"><img src="../../resources/images/common/close.png" alt="닫기"></div>
+			</div>
+			<!-- //topBar -->
+			<div class="mo-gnb">
+				<div class="gnb__wArea">
+					<ul class="gnb__wArea wArea">
+						<li class="mm01">
+							<a href="#">
+								<p>영화순위</p>
+							</a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">실시간 예매율</a>
+								<a href="#">박스오피스</a>
+							</div>
+						</li>
+						<li class="mm02">
+							<a href="#">
+								<p>영화정보</p>
+							</a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">현재상영작</a>
+								<a href="#">개봉예정작</a>
+							</div>
+						</li>
+						<li class="mm03">
+							<a href="#">
+								<p>영화예매</p>
+							</a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">영화에매</a>
+							</div>
+						</li>
+						<li class="mm04">
+							<a href="#">
+								<p>고객센터</p>
+							</a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">공지사항</a>
+								<a href="#">자주묻는질문</a>
+								<a href="#">1:1문의</a>
+							</div>
+						</li>
+						<li class="mm05">
+							<a href="#">
+								<p>이벤트</p>
+							</a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">이벤트</a>
+							</div>
+						</li>
+						<li class="mm06">
+							<a href="#">
+								<p>영화검색</p>
+							</a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">영화검색</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+			<div class="header-topbar">
+				<div class="wArea">
+					<ul class="topbar-list">
+						<li><a href="#" class="login">로그인</a></li>
+						<li><a href="#" class="">회원가입</a></li>
+						<li><a href="#" class="">예매권/할인권등록</a></li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+		</div>
+	</div>
+	<!-- //gnb -->
+	<div id="content">
+		<div class="img_tab">
+			<ul>
+				<li id="step1_guide_bg" class="big no_bg">
+					<dl>
+						<!-- 영화가 선택되면 -->
+						<!-- dt img  display: none; -->
+						<!-- data_btn 영화선택버튼 display: none; -->
+						<!-- change-btn 변경 버튼 display: block -->
+						<dt id="step1_guide_title"><img src="../../resources/images/sub/plusbg.png" alt="영화선택"
+								style="display: none;"></dt>
+						<dd id="step1_guide_edit">
+							<button class="date_btn" style="display: none;">영화선택</button>
+							<!-- 영화가 선택이 되면 change-btn block -->
+							<button class="date_btn change-btn btn1" style="display: block">변경</button>
+						</dd>
+					</dl>
+				</li>
+				<li id="step2_guide_bg" class="big">
+					<dl>
+						<!-- 극장선택시 극장만 출력 -->
+						<!-- 좌석 선택시 좌석 뒷 부분에 출력 -->
+						<dt id="step2_guide_title">
+							메가박스 남춘천<br>앞열 가운데
+						</dt>
+						<dd id="step2_guide_edit">
+							<button class="date_btn" style="display: none">극장선택</button>
+							<!-- 영화가 선택이 되면 change-btn block -->
+							<button class="date_btn change-btn btn2" style="display: block;">변경</button>
+						</dd>
+					</dl>
+				</li>
+				<li id="step3_guide_bg" class="big">
+					<dl>
+						<!-- 날짜 선력시 월,일,요일 출력 -->
+						<!-- 시간선력시 시간출력 -->
+						<!-- 인원 선력시 인원 출력 -->
+						<!-- 순차 출력 -->
+						<dt id="step3_guide_title">
+							02.12(일) <span>10:00</span><br>2명
+						</dt>
+						<dd id="step3_guide_edit">
+							<button class="date_btn" style="display: none;">날짜선택</button>
+							<!-- 영화가 선택이 되면 change-btn block -->
+							<button class="date_btn change-btn btn3" style="display: block;">변경</button>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<!-- //img_tab -->
+		<div class="space reserve">
+			<div class="previngBox">
+				<ul class="ff">
+					<li class="inputP">
+						<h3 class="bg">예매결과 전송정보 및 결제정보</h3>
+						<div class="textBox">
+							<div class="wArea sArea">
+								<ul>
+									<li>- 영화 예매번호를 전송하기 위한 휴대폰 번호를 입력해 주세요</li>
+									<li>- 상영시간 변경/취소 등 긴급한 경우 휴대푠으로 연락드립니다. <br><span>부정확한 정보로 인한 예매사고 발생 시 무비차트에서 잭임을
+											지지 않습니다.</span></li>
+								</ul>
+							</div>
+							<!-- //sArea -->
+						</div>
+						<!-- //textBox -->
+						<div class="wArea sArea">
+							<div class="inputBox tableType01">
+								<table>
+									<tr>
+										<th>예매 ID</th>
+										<td>abcd1234</td>
+									</tr>
+									<tr>
+										<th>휴대폰 번호</th>
+										<td class="phon-table">
+											<div style="width:30.8%">
+												<select name="" id="">
+													<option value>010</option>
+													<option>011</option>
+													<option>016</option>
+													<option>017</option>
+													<option>018</option>
+												</select>
+											</div>
+											<div style="padding: 0 5px;">-</div>
+											<div class="input-wrap">
+												<label for="phonNumberSecend" class="vs-hidden">핸드폰번호</label>
+												<input type="text" id="phonNumberSecend">
+											</div>
+											<div style="padding: 0 5px;">-</div>
+											<div class="input-wrap">
+												<label for="phonNumberlast" class="vs-hidden">핸드폰번호</label>
+												<input type="text" id="phonNumberlast">
+											</div>
+										</td>
+										<td>
+											<div class="input-wrap">
+												<label for="is_sns"><input type="checkbox" id="is_sns">SMS 알림을
+													받겠습니다.</label>
+											</div>
+											<p>예매권번호 전송을 위해 휴대폰번호를 정확히 기입해주세요</p>
+										</td>
+									</tr>
+									<tr>
+										<th>이메일</th>
+										<td class="email">
+											<div>
+												<div class="input-wrap">
+													<label for="inputEmailFirst" class="vs-hidden">이메일아이디</label>
+													<input type="text" id="inputEmailFirst">
+												</div>
+												<div style="padding: 0 5px;">@</div>
+												<div class="input-wrap">
+													<label for="inputEmailLast" class="vs-hidden">이메일주소</label>
+													<input type="text" id="inputEmailLast">
+												</div>
+												<div>
+													<select name="" id="" class="select-email">
+														<option value="">직접입력</option>
+														<option value="">naver.com</option>
+														<option value="">daum.net</option>
+														<option value="">gmail.com</option>
+													</select>
+												</div>
+											</div>
+										</td>
+									</tr>
+								</table>
+							</div>
+							<!-- //inputBox -->
+						</div>
+						<!-- //sArea-->
+						<div class="scrolBox tab01">
+							<div class="sArea">
+								<div class="exBox">
+									<div class="title">좌석요청</div>
+									<div class="exBox-text">
+										<p>- 좌석확인은 실제 예매사이트(또는 앱) 설치 후, 확인 해 주세요.</p>
+										<p>- 예: j열 10,11 또는 k열 9,10 / 예: 요청좌석 없으면 근처로 해주세요. <br>/ 예: 요청좌석 없으면 취소 해주세요.
+										</p>
+										<p>- 선택하신 좌석 : <span>중앙 가운데</span></p>
+									</div>
+									<div class="ticketMemo-wrap">
+										<div class="ticketMemo-input" style="padding-right: 20px;">
+											<label for="ticketMemo" class="vs-hidden">좌석</label>
+											<input type="text" id="ticketMemo" placeholder="예: K열 10, 11 또는 B열 3, 4">
+										</div>
+										<div class="ticketMemo-ex">
+											※ <span>CGV 좌석확인</span> / <span>롯데시네마 좌석확인</span> / <span>메가박스 좌석확인</span>
+										</div>
+									</div>
+								</div>
+								<!-- //exBox  -->
+							</div>
+							<!-- //sArea -->
+						</div>
+						<!-- //scrolBox tab01-->
+					</li>
+					<!-- //inputP 예매결과 전송정보 및 결제정보 -->
+					<li class="choiceMonitor">
+						<div class="wrap">
+							<h3 class="vs-hidden">예매현황</h3>
+							<div class="choiceMonitor-content">
+								<div class="choiceMonitor-poster">
+									<img src="../../resources/images/sub/post02.png" alt="">
+								</div>
+								<div class="monitorBox">
+									<div class="title">스파이더맨: 노 웨이 홈</div>
+									<table>
+										<tbody>
+											<tr>
+												<th>극장</th>
+												<td>롯데시네마 욕인역북</td>
+											</tr>
+											<tr>
+												<th>날짜</th>
+												<td>2022-03-08</td>
+											</tr>
+											<tr>
+												<th>시간</th>
+												<td>15:50</td>
+											</tr>
+											<tr>
+												<th>인원</th>
+												<td>1명</td>
+											</tr>
+											<tr style="padding: 5px 0;">
+												<td colspan="2" class="line"></td>
+											</tr>
+											<tr class="ticket-price">
+												<th>쿠폰</th>
+												<td><button href="#" class="cuponBtn">쿠폰사용</button></td>
+											</tr>
+											<tr class="ticket-price">
+												<th>캐시</th>
+												<td>
+													0원 &nbsp;<button href="#" class="cashBtn">캐시사용</butt>
+												</td>
+											</tr>
+											<tr class="ticket-price">
+												<th>할인</th>
+												<td>0원</td>
+											</tr>
+											<tr class="ticket-price">
+												<th>금액</th>
+												<td class="total">12,500원 <span>(예매수수료 장당 500원 포함)</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+								<!-- //monitorBox -->
+							</div>
+							<!-- choiceMonitor-content -->
+						</div>
+						<!-- //wrap -->
+					</li>
+					<!-- //choiceMonitor 예매현황 -->
+					<li class="transfer">
+						<div class="wArea transfer-list">
+							<div style="flex-basis: 75px;">
+								<p class="title">결제선택</p>
+							</div>
+							<div class="input-wrap" style="margin-left: 5px;">
+								<div class="transfer-item">
+									<label for="inputCard">
+										<input type="radio" name="ex" id="inputCard" class="mm01" checked="">신용카드
+									</label>
+								</div>
+								<div class="transfer-item">
+									<label for="inputPhon">
+										<input type="radio" name="ex" id="inputPhon" class="mm02">휴대폰
+									</label>
+								</div>
+								<div class="transfer-item">
+									<label for="inputTransfer">
+										<input type="radio" name="ex" id="inputTransfer" class="mm03">실시간 계좌이체
+									</label>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<div class="preving">
+					<a href="#">결제하기</a>
+				</div>
+			</div>
+			<!-- //previngBox -->
+			<div class="wArea explan">
+				<div class="title">무비차트 영화예매 시 주의사항</div>
+				<div class="explan-txt">
+					<p>- 일반상영관 예매만 가능하며, 예매가 완료되면 <span>최대 2시간 내에 극장에서 발권 가능한 예매번호를 메시지로 전송 드립니다.</span></p>
+					<p>- 발송된 예매번호는 상영당일 해당 극장의 무인발권기 또는 창구에서 영화 티켓으로 발권이 가능합니다.</p>
+					<p>- 예매 신청 후 예매번를 포함한 메시지가 발송되면 취소/환불/변경이 불가합니다.</p>
+					<p>- 예매완료 메시지를 받으시면 해당 극장과 결제/정산이 완료되므로 <span>현장에서도 취소가 불가하며 취소하셔도 환불 받으실 수 없습니다.</span></p>
+					<p>- 예매 후 5분 전에 즉시취소 할 경우 결제금액 및 사용한 쿠폰은 모두 환불되며, 5분 경과 후에는 취소수수료가 발생합니다.</p>
+					<p>- 예매취소는 상영시간 3시간 이전까지 가능하며, 상영시간이 지났거나 3시간 이내로 남은 경우는 예매취소가 불가능합니다.</p>
+					<p>- 예매번호 메시지를 2개 이상 받으신 경우, 마지막으로 전송된 예매번호가 최종 예매번호입니다. 착오 없으시기 바랍니다.</p>
+					<p>- 상영관은 일반관만 예매가 가능하며, 아이맥스 디지털 3D, 로맨틱, 골드, 샤롯데 등의 특별관은 예매가 불가합니다.</p>
+					<p>- 당사의 예매권과 할인권은 VIP카드 등과 혼용하여 이용할 수 없으며 조조할인, 통신사할인, 카드사할인, 청소년할인, 포인트 적립 등이 되지 않습니다.</p>
+				</div>
+			</div>
+			<!-- //explan 주의사항 -->
+		</div>
+		<!-- //wArea -->
+	</div>
+	<!-- //contant -->
+
+	<footer id="footer" style="background: #f8f8f8; text-align: center; line-height: 174px; font-size: 40px;">
+		푸터
+	</footer>
+	<!-- //footer -->
+
+	<div id="cuponpop" class="cuponpop">
+		<div class="dim"></div>
+		<div class="cuponbox">
+			<h4 class="cuponbox__title">쿠폰사용</h4>
+
+			<!-- 쿠폰이 없을 경우-->
+			<!-- <div class="cuponbox__con">
+				<p>보유 쿠폰이 없습니다.</p>
+			</div> -->
+
+			<!-- 쿠폰이 있을 경우-->
+			<div class="cuponbox__con selec">
+				<ul class="cupon__list">
+					<li class="cupon__item">
+						<div class="input-wrap">
+							<label for="coupon1"><input type="radio" id="coupon1" name="coupon1" checked>영화마일리지 3천원 할인권</label>
+						</div>
+						<select>
+							<option>수량선택</option>
+							<option>1</option>
+						</select>
+					</li>
+					<li class="cupon__item">
+						<div class="input-wrap">
+							<label for="coupon2"><input type="radio" id="coupon2" name="coupon1">영화마일리지 3천원 할인권</label>
+						</div>
+						<select>
+							<option>수량선택</option>
+							<option>1</option>
+						</select>
+					</li>
+				</ul>
+			</div>
+			<div class="cuponbox__bottom">
+				<div class="cuponbox__total">
+					<div>총 사용금액</div>
+					<div class="cuponbox__won">0 원</div>
+				</div>
+				<div class="cuponbox__btn">
+					<button class="cancle-btn">취소</button>
+					<button class="use-btn">쿠폰사용</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+<script>
+	$('.cuponBtn').click(function () {
+		$('#cuponpop').show()
+	})
+	$('.cancle-btn').click(function () {
+		$('#cuponpop').hide()
+	})
+</script>
+
+</html>

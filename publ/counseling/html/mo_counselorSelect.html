@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script defer src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/swiper-bundle.min.js"></script>
+  <script defer src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../assets/js/style.js"></script>
+
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body>
+  <header class="d-flex justify-content-center position-relative mo border-bottom">
+    <a href="javascript:void(0)" class="position-absolute start-0 top-50 translate-middle-y prev" title="뒤로가기"></a>
+    <h1>상담원 선택</h1>
+    <button class="mo-header">
+      <svg width="18" height="18" viewBox="0 0 26 26">
+        <style>
+          .cls-1 {
+            fill: #000;
+          }
+        </style>
+        <path class="cls-1"
+          d="M23.41,20.59l-5.08-5.08c1.05-1.58,1.66-3.47,1.66-5.51C20,4.49,15.51,0,10,0S0,4.49,0,10s4.49,10,10,10c2.04,0,3.93-.61,5.51-1.66l5.08,5.08c.78,.78,2.05,.78,2.83,0,.78-.78,.78-2.05,0-2.83ZM3,10c0-3.86,3.14-7,7-7s7,3.14,7,7-3.14,7-7,7-7-3.14-7-7Z" />
+      </svg>
+    </button>
+    <div class="header-search">
+      <div class="inpBox">
+        <div class="input-group">
+          <label for="inp_search">
+            <input type="text" class="form-control" id="inp_search" placeholder="검색어를 입력하세요.">
+            <img src="../assets/images/ico_serach.svg" alt="검색 아이콘">
+          </label>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="wrap mobile">
+    <main>
+      <div class="mo-inner mt-2">
+        <div class="d-flex align-items-baseline">
+          <!-- 검색 전 -->
+          <h3 class="mo-title" style="flex-shrink: 0;">전체</h3>
+          <!-- 검색 후 -->
+          <!-- <h3 class="mo-title" style="flex-shrink: 0;">검색결과 1건</h3> -->
+          <div class="mo-select selc">
+            <ul class="default_option">
+              <li class="option">
+                이름순
+              </li>
+            </ul>
+            <ul class="select_ul">
+              <li class="option">
+                이름순
+              </li>
+              <li class="option">
+                소속순
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="counselorSelect-wrap">
+          <!-- 검색결과 없을시 active 추가 -->
+          <div class="mo_noSearchResults active">
+            <b>검색결과 없음</b>
+            <p class="mt-1">검색을 다시 시도해주세요.</p>
+          </div>
+          <!-- 검색결과 없을시 active 삭제 -->
+          <div class="counselorSelect mo-counselorSelect accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-01">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse-01" aria-expanded="true">
+                  영등포 지점
+                </button>
+              </h2>
+              <div id="collapse-01" class="accordion-collapse collapse" aria-labelledby="heading-01"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="counselorSelect-list">
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_01" name="counselorSelect_list">
+                      <label for="counselorSelect_list_01" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_02" name="counselorSelect_list">
+                      <label for="counselorSelect_list_02" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박하우리</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_03" name="counselorSelect_list">
+                      <label for="counselorSelect_list_03" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_04" name="counselorSelect_list">
+                      <label for="counselorSelect_list_04" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_05" name="counselorSelect_list">
+                      <label for="counselorSelect_list_05" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박하우리</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_07" name="counselorSelect_list">
+                      <label for="counselorSelect_list_07" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_06" name="counselorSelect_list">
+                      <label for="counselorSelect_list_06" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-02">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse-02" aria-expanded="true">
+                  고객만족센터
+                </button>
+              </h2>
+              <div id="collapse-02" class="accordion-collapse collapse" aria-labelledby="heading-02"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="counselorSelect-list">
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_11" name="counselorSelect_list">
+                      <label for="counselorSelect_list_11" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_12" name="counselorSelect_list">
+                      <label for="counselorSelect_list_12" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박하우리</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_13" name="counselorSelect_list">
+                      <label for="counselorSelect_list_13" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_14" name="counselorSelect_list">
+                      <label for="counselorSelect_list_14" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_15" name="counselorSelect_list">
+                      <label for="counselorSelect_list_15" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박하우리</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_16" name="counselorSelect_list">
+                      <label for="counselorSelect_list_16" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_17" name="counselorSelect_list">
+                      <label for="counselorSelect_list_17" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-03">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse-03" aria-expanded="true">
+                  강남지점
+                </button>
+              </h2>
+              <div id="collapse-03" class="accordion-collapse collapse" aria-labelledby="heading-03"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="counselorSelect-list">
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_21" name="counselorSelect_list">
+                      <label for="counselorSelect_list_21" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_22" name="counselorSelect_list">
+                      <label for="counselorSelect_list_22" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박하우리</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_33" name="counselorSelect_list">
+                      <label for="counselorSelect_list_33" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_34" name="counselorSelect_list">
+                      <label for="counselorSelect_list_34" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_35" name="counselorSelect_list">
+                      <label for="counselorSelect_list_35" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박하우리</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_36" name="counselorSelect_list">
+                      <label for="counselorSelect_list_36" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_37" name="counselorSelect_list">
+                      <label for="counselorSelect_list_37" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="heading-04">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#collapse-04" aria-expanded="true">
+                  강남지점
+                </button>
+              </h2>
+              <div id="collapse-04" class="accordion-collapse collapse" aria-labelledby="heading-04"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <ul class="counselorSelect-list">
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_41" name="counselorSelect_list">
+                      <label for="counselorSelect_list_41" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_42" name="counselorSelect_list">
+                      <label for="counselorSelect_list_42" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박하우리</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_43" name="counselorSelect_list">
+                      <label for="counselorSelect_list_43" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_44" name="counselorSelect_list">
+                      <label for="counselorSelect_list_44" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_45" name="counselorSelect_list">
+                      <label for="counselorSelect_list_45" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박하우리</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-green">금융상품</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_46" name="counselorSelect_list">
+                      <label for="counselorSelect_list_46" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                    <li class="counselorSelect-item chkList">
+                      <input type="checkbox" id="counselorSelect_list_47" name="counselorSelect_list">
+                      <label for="counselorSelect_list_47" class="d-flex">
+                        <svg class="profileSvg" width="24" height="24" viewBox="0 0 35 35" title="유저프로필">
+                          <g>
+                            <circle class="st0" cx="16" cy="16" r="15.1" />
+                            <path class="st0"
+                              d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                            <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                          </g>
+                        </svg>
+                        <h4 class="counselorSelect-name">박지은</h4>
+                        <div class="counselorSelect-article d-flex">
+                          <p class="btn-border-blue">주식</p>
+                        </div>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="btn-two mo custom position-fixed fixed ">
+        <button class="counselRequest-btn mt-1 mb-1 btn btn-gray">취소</button>
+        <button class="counselRequest-btn mt-1 mb-1 btn btn-red" data-bs-target="#completed" data-bs-toggle="modal">상담신청</button>
+      </div>
+    </main>
+  </div>
+
+</body>
+
+</html>

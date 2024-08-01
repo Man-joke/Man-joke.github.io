@@ -1,0 +1,134 @@
+html {font-size: 20px;}
+body { position: relative; font-size: 1rem;}
+main { padding: 3rem 0 0;}
+
+body section:nth-child(1) .slider div{ width: 100%;}
+.slider div a{display: block; position: relative; height: 34.7rem; text-align: center; text-transform: uppercase;}
+.slider div.type1 a{background: url(../images/img_slider.png) no-repeat center / 100% auto; text-align: center; text-transform: uppercase;}
+.slider div.type1 div{position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.slider div.type1 p{ font-family: 'Merriweather', serif; font-size: 3.25rem; color: #000; line-height: 1; text-shadow: -5px 0 2px darkgrey;}
+.slider div.type1 p em{ display: block; padding: 0.6rem 0 0; color: #fe5e00; letter-spacing: 1px;  text-shadow: 5px 0 2px darkgrey;}
+.slider div.type1 div > span{display: block; padding: 2.6rem 0 0; font-size: 1rem; color: #868686; line-height: 1;}
+.slider div.type1 a > em{ position: absolute; left: 50%; bottom: 2.15rem; transform: translateX(-50%);font-size: 1.1rem; color: #000; font-weight: bold}
+.slider div.type1 a > em:after{ content: "\e913"; padding: 0 0 0 .6rem ; font-size: 14px; vertical-align: 3px}
+
+.slider div.type2 a{background: url(../images/img_slider1.jpg) no-repeat center / 100% auto;}
+.slider div.type3 a{background: url(../images/img_slider2.jpg) no-repeat center / 100% auto;}
+.slider div.type4 a{background: url(../images/img_slider3.jpg) no-repeat center / 100% auto;}
+.slider div.type5 a{background: url(../images/img_slider4.jpg) no-repeat center / 100% auto;}
+
+/* 이전 다음 */
+.bx-wrapper{position: relative;}
+.bx-wrapper .bx-controls .bx-controls-direction{position: absolute; left: 0; right: 0; top: 50%; transform: translateY(-50%); width: 100%; }
+.bx-wrapper .bx-controls .bx-controls-direction a{position: absolute; top: 50%; transform: translateY(-50%); font-size: 0; width: 2.9rem; height: 2.9rem;}
+.bx-wrapper .bx-controls .bx-controls-direction a:after{content: ""; display: block;margin: 1.45rem 0 0; width: 2.9rem; height: 4px; background: rgba(0,0,0,.8); transition: .3s;}
+.bx-wrapper .bx-controls .bx-controls-direction .bx-prev{left: 3.85rem; }
+.bx-wrapper .bx-controls .bx-controls-direction .bx-next{ right: 3.85rem;}
+.bx-wrapper .bx-controls .bx-controls-direction .bx-prev:hover:after{ transform:rotate(-45deg);}
+.bx-wrapper .bx-controls .bx-controls-direction .bx-next:hover:after{ transform:rotate(45deg);}
+
+.bx-wrapper .bx-controls .bx-pager div{font-size: 0;}
+
+
+/* 섹션 art_picture 그림 선물*/
+.art_picture{ position: relative; height: 43.8rem; background: url(../images/main_curator_bg.jpg) no-repeat center / cover;}
+.art_picture > div{ text-align: center; color: #222;}
+.art_picture h2{ padding: 4.15rem 0 1.35rem; font-size: 1.65rem; line-height: 1;}
+.art_picture p{ font-size: 1rem; line-height: 1;}
+.art_picture p br{display: none;}
+.art_picture ul{ margin: 0 auto; padding: 4.75rem 0 0; width: 81rem; font-size: 0; text-align: center;}
+.art_picture ul li{ display: inline-block; }
+.art_picture ul li~li{margin: 0 0 0 3rem;}
+.art_picture ul li a{display: block; padding: 1rem; width: 25rem; height: 25.35rem; background: #fff; color: #222; box-sizing: border-box; box-shadow: 1rem 1rem 0 #c9c9c9; transition: .3s;}
+.art_picture ul li a img{ width:100%}
+.art_picture ul li a em{ display: block; padding: 1.6rem 0 .65rem;  font-size: .85rem; line-height: 1;}
+.art_picture ul li a p{ font-size: 1.35rem; font-weight: bold; line-height: 1;}
+.art_picture ul li a:hover{background: #222;}
+.art_picture ul li a:hover em,
+.art_picture ul li a:hover p{ color: #fff;}
+.art_picture div + ul + div { display: none; position: absolute; left: 50%; bottom: 0; transform: translateX(-50%);}
+.art_picture div + ul + div button{margin: 0 .1rem; width: 1rem; height: 1rem; background: #fff; border: 1px solid #ec0044; border-radius: 100%; cursor: pointer; outline: 0;}
+.art_picture button.active{ background: #000; border: 1px solid #000;}
+
+/* 섹션 트랜드 그림*/
+.trend{ position: relative; height: 53.5rem; background: url(../images/main_keyword_bg.jpg) no-repeat center top; color: #222; text-align: center;}
+.trend p{ padding: 6.2rem 0 1.9rem; font-size: 1rem; line-height: 1;}
+.trend h2{font-size: 2rem; font-weight: bold; line-height: 1;}
+.trend ul.tab{padding: 4rem 0 0; font-size: 0;}
+.trend ul.tab li{display: inline-block;}
+.trend ul.tab li~li{ margin-left: .65rem;}
+.trend ul.tab li a{display: block; padding: 0 1.5rem;  font-size: .9rem; line-height: 2.4rem; font-weight: bold; border: 1px solid #222;  border-radius: 2.4rem; box-sizing: border-box;}
+.trend ul.tab li a.on{ background: #18533d; color: #fff; border: none; }
+
+.trend ul.swipe_img{ position: absolute; left: 50%; bottom: 7.35rem; transform: translateX(-50%); width: 63.5rem; font-size: 0;}
+.trend ul.swipe_img li{ display: inline-block; position: relative;}
+.trend ul.swipe_img li:last-child{display: none;}
+.trend ul.swipe_img li~li{ margin:0 0 0 2.5rem;}
+.trend ul.swipe_img li a{ display: block; padding: 0.5rem; width: 19.5rem; height: 21rem; background: #fff; box-sizing: border-box; box-shadow: 0 0 0 .5rem #000;}
+.trend ul.swipe_img li a img{ width: 100%;}
+.trend ul.swipe_img li a > div{display: none; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 100%; height: 100%; background: rgba(0, 0, 0, 0.5); color: #fff;}
+.trend ul.swipe_img li a div div{ position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.trend ul.swipe_img li a div h3{font-size: .9rem; line-height: 1;}
+.trend ul.swipe_img li a div p{ padding:1.45rem 0 .5rem; font-size: .65rem; line-height: 1;}
+.trend ul.swipe_img li a div em{ display: block; padding: 0 0 .5rem; font-size: .55rem; line-height: 1;}
+.trend ul.swipe_img li a div span{ font-size: .55rem; line-height: 1; font-weight: bold;}
+.trend ul.swipe_img li a:hover > div {display: block;}
+
+/* 섹션 서치 */
+.search div{ position: relative; text-align: center;}
+.search div a{display: block; height: 13rem;}
+.search div a div{ position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);width: 41rem; height: 3.65rem; line-height: 3.65rem; font-weight: bold; border:5px solid #222 }
+.search div a div:after{content: "\e97a"; position: absolute; right: 0; top: -3px; width: 4rem; background: #222; font-size: 1.65rem; color: #fff;  line-height: 4rem;}
+
+/* 섹션 인테리어 */
+.interior{position: relative; height: 49.15rem; background: url(../images/main_hash_bg.jpg) no-repeat center top; overflow: hidden;}
+.interior div.txt{ position: absolute; left: 50%; top: 0; transform: translateX(-50%); text-align: right; line-height: 1;}
+.interior div.txt p { padding: 6.2rem 0 2rem; font-size: 1rem; color: #000;}
+.interior div.txt p br{display: none;}
+.interior div.txt h2 {font-size: 2rem; color: #000;}
+.interior div.txt em{ display: block; padding: 2.75rem 0 0; font-size: 0.85rem; color: #4d4d4d; line-height: 1.5rem;}
+.interior ul.left{ position: absolute; left: 7.5rem; bottom: 4.6rem; width: 65.4rem; font-size: 0;}
+.interior ul.left li{ display: inline-block;}
+.interior ul.left li~li{ margin: 0 0 0 2.2rem;}
+.interior ul.left li a{ display: block; width: 14.7rem; height: 14.7rem; transition: .5s;}
+.interior ul.left li a img{ width: 100%;}
+.interior ul.left li p{ padding: 2.15rem 0 0; font-size: 1.15rem; color: #000; line-height: 2rem;}
+.interior ul.left li a:hover{ box-shadow: 0 0 0 .3rem darkgrey;}
+
+.interior ul.right{ display: none; position: absolute; right: -47.5rem; bottom: 4.6rem; width: 65.4rem; font-size: 0; opacity: .5;}
+.interior ul.right li{ display: inline-block;}
+.interior ul.right li~li{ margin: 0 0 0 2.2rem;}
+.interior ul.right li a{ display: block; width: 14.7rem; height: 14.7rem;}
+.interior ul.right li a img{ width: 100%;}
+.interior ul.right li p{ padding: 2.15rem 0 0; font-size: 1.15rem; color: #000; line-height: 2;}
+
+.interior .control{position: absolute; right: 10rem; top: 14.3rem;}
+.interior .control button{width: 1.1rem; height: 2.75rem; outline: 0; cursor: pointer;}
+.interior .control .prev{ display: none; background: url(../images/slider_arrow_prev.png) no-repeat center;}
+.interior .control .next{ display: none; background: url(../images/slider_arrow_next.png) no-repeat center;}
+.interior .control .prev.active{ display: block;}
+.interior .control .next.active{ display: block;}
+
+/* 섹션 서비스 */
+.service ul{ font-size: 0; text-align: center; color: #222;}
+.service li{ position: relative; display: inline-block; width: 33%;}
+.service li:before{content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 14.35rem; background: #999;}
+.service li:first-child:before{display: none;}
+.service li a{display: block; padding: 5.75rem 0 5.25rem;}
+.service li a:after{content: "\e913"; display: block; margin: 2.5rem 0 0; font-size:1.75rem;  transition: .5s;}
+.service li a span{ display: inline-block; padding:0 0 1.65rem ; font-size: 1.4rem; font-weight: bold; line-height: 1;}
+.service li a em{ display: block; font-size: 0.85rem; line-height: 1.4rem;}
+.service li a:hover{ color:#ff5f5f;}
+.service li a:hover:after{ transform: rotate(90deg);}
+
+/* 섹션 기획전 */
+.exhibitions a{ display: block; height: 27.2rem; background: url(../images/section_banner_03.jpg) no-repeat center / cover; color: #fff; text-align: center; line-height: 1;}
+.exhibitions a p{ padding: 10.65rem 0 2.15rem; font-size: 1.85rem; font-weight: bold;}
+.exhibitions a p br{display: none;}
+.exhibitions a em{display: inline-block; width: 18rem; background: #222; line-height: 3.75rem;}
+
+/* 팝업 */
+.pop{ position: fixed; right: 1rem; bottom: 1rem;}
+.pop div button{ display: block; margin: .3rem 0; width: 2rem; height: 2rem; cursor: pointer; outline: 0;}
+.pop .top{ background: url(../images/btn_top.png) no-repeat center;}
+.pop .talk{ background: url(../images/btn_talktalk.png) no-repeat center;}

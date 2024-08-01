@@ -1,0 +1,101 @@
+header > div{width: 100%; height: 3rem;}
+header h1{left: 50%; transform: translate(-50%, -50%);}
+header h1 a{ width: 3.4rem; height: 1.4rem;}
+header nav ul{ display:none;}
+header nav > a{display: block;}
+header nav > a:before { left: 2.4rem;}
+header div > div{right: 2.4rem;}
+header div ul li:empty,
+header div ul li:nth-child(4) a{display: none;}
+
+/* 서브1 상단 메뉴*/
+.con_menu p{ display: none;}
+.con_menu ul li{ position: relative; display: block; font-weight: bold;}
+.con_menu ul li~li{display: none;}
+.con_menu ul li~li:before{display: none;}
+.con_menu ul li:before{content: "\e941"; position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); font-size: 1rem; color: #000;}
+.con_menu ul li a{display: block; height: 3rem; line-height: 3rem; font-size: 1rem; color: #727171;}
+.con_menu ul li.click a,
+.con_menu ul li:hover a{ color: #000;}
+.con_menu ul li a:hover:after{display: none;}
+.con_menu ul li a.on:after{display: none;}
+
+/* 서브1 비주얼 */
+.visual {margin: 0; height: 79.25rem; background: url(../images/img_consulting_m.jpg) no-repeat center / 100% auto;}
+.visual div{ left: 28.3rem; top: 61.5rem; color: #fff;}
+.visual h2{font-size: 1.3rem; line-height: 1.65rem; }
+.visual h2 br{ display: block;}
+.visual p{ padding: 1rem 0 1.25rem; font-size: .75rem; line-height: 1.25rem;}
+
+/* 공통 h2*/
+.h2{ padding: 5.1rem 0 1.25rem;}
+.p{line-height: 1.25rem}
+
+/* brand */
+.brand { text-align: center;}
+.brand p{ color: #000; }
+.brand p br:first-child,
+.brand p br:nth-child(3),
+.brand p br:nth-child(4),
+.brand p br:nth-child(6),
+.brand p br:nth-child(7){ display: block;}
+.brand p span:nth-child(4){ display: none;}
+.brand p span:nth-child(6){ display: none;}
+.brand p span:nth-child(2){ display: block;}
+.brand ul{ padding: 3rem 0 10rem;}
+.brand ul li{overflow-x: hidden; overflow-y: hidden;}
+.brand ul li img{box-shadow: 0 0 10px 5px lightgray;}
+.brand .tab{display: block;}
+
+/* 서브1 기업 제안 레퍼런스 */
+.experience{height: 68.25rem;}
+.experience h2{ padding: 4.8rem 0 0 2.35rem; font-size: 1.5rem; color:rgba(255,255,255,.3);}
+.experience p{ padding: 1.25rem 0 0 2.35rem; font-size: .75rem;}
+.experience div.tab{ display: none;}
+.experience div.ourexperience{position: absolute; left: 2.35rem; top: 15.2rem;}
+.experience div.swipe2,
+.experience div.swipe3,
+.experience div.swipe4{display: block; padding: 1.35rem 0 0; }
+.experience div.txt em{font-size: .65rem; }
+.experience div.txt ul{padding: 1.5rem 0 0 1rem;}
+.experience div.txt ul li{font-size: .65rem;}
+
+/* 서브1 디렉팅 */
+.art_directing{ height: 146.4rem;}
+.art_directing h2 span{ display: none; padding: 4.9rem 0 2rem; line-height: 2rem;}
+.art_directing .h2 br{display: block;}
+.art_directing p{display: none;}
+.art_directing p + p{ display: block; text-align: center;}
+.art_directing ul li:last-child{display: none;}
+
+/* 서브 1 콘택트 */
+.contact_btn { position: relative; height: 15rem; background: url(../images/consulting_sec04_img.jpg) no-repeat center / cover}
+.contact_btn div{width: 80%;}
+.contact_btn a{display: block; padding: 0; width: 100%; line-height: 2.3rem; font-size: 1rem;}
+.contact_btn a~a{margin-left: 0; margin-top: 2rem;}
+
+
+
+/* 푸터 */
+footer{ background: #222; color: #fff;}
+footer div{padding: 3.5rem 0;width: 43.25rem;}
+footer div p{height: 1.4rem;}
+footer div ul.menu{ display: inline-block; padding: 0 0 0 1rem;}
+footer div em{display: block; padding: .6rem 0 0; font-size: .55rem;}
+footer div address{ padding: 1rem 0 0; font-size: .65rem; line-height: 1.1rem;}
+footer div address span:first-child{display: block;}
+footer div address br{display: block;}
+footer ul.sns{ float: none; padding: 1.5rem 0 0; font-size: 0;}
+
+/* 서브1 상담 신청*/
+.counseling table{ padding: 0 0 8rem; width: 41.9rem; border-spacing: 0 1.3rem;}
+.counseling tr th{display: block;}
+.counseling tr td{display: block; margin: .2rem 0 0;}
+.counseling tr td input{ line-height: 2.3rem;}
+.counseling tr td textarea{ height: 10rem; width: 100%;}
+.counseling tr:last-child th{ display: inline-block;}
+.counseling tr:last-child td{ float: right; vertical-align: 1.5px; }
+.counseling tr:last-child td label{text-align: right;}
+.counseling .control{ right: 50%; bottom: 5rem; transform: translateX(50%);width: 41.9rem;}
+.counseling .control button{width: 20.5rem; line-height: 1.65rem; font-size: .75rem;  }
+.counseling .control button~button{margin: 0 0 0 .6rem;}

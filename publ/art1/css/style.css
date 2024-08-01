@@ -1,0 +1,49 @@
+html {font-size: 20px;}
+body { position: relative; font-size: 1rem;}
+
+header{ position: fixed; width: 100%; background: #fff; z-index: 5; box-shadow: 0 1px .3rem lightgrey; box-sizing: border-box;}
+header > div{position: relative; margin: 0 auto; width: 80rem;}
+header h1{ position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+header h1 a{ display: block; width: 3.4rem; height: 1.4rem; background: url(../images/logo_for_link.png) no-repeat center / 100% auto;}
+header nav ul{ padding: 0 0 0 9.85rem; font-size: 0;}
+header nav ul li{ display: inline-block; }
+header nav ul li:empty{ width: 1px; height: 18px; background: #9fa0a0; vertical-align: -3px}
+header nav ul li a{ position: relative; display: block; margin: 0 21px; font-size: 16px; color: #000; line-height: 3rem; }
+header nav ul li a:before{content: ""; display: none; position: absolute; left: 0; right: 0; bottom: 0; height: 3px; background: #000;}
+header nav ul li a:hover:before{ display: block;}
+header nav > a{ display: none; line-height: 3rem;}
+header nav > a:before{content: "\e91c"; display: block; position: absolute; left: 0; top: 50%; transform: translateY(-50%); font-size: 1.25rem;}
+header > div > div{ position: absolute; right: 0; top: 50%; transform: translatey(-50%);}
+header div > ul{ font-size: 0;}
+header div > ul li{ display: inline-block; margin: 0 10px;}
+header div > ul li a{ line-height: 60px;}
+header div > ul li:nth-child(1) a{ display: block; width: 18px; height: 18px; background: url(../images/ico_search.png) no-repeat center / 18px auto;}
+header div > ul li:nth-child(2) a{ display: block; width: 15px; height: 19px; background: url(../images/ico_shoppingbag.png) no-repeat center /15px auto;}
+header div > ul li:nth-child(4) a{ padding-right: 0; font-size: 13px; color: #000;}
+header div > ul li:empty { display: inline-block; width: 1px; height: 18px; background: #9fa0a0; vertical-align: -2px}
+
+/* 푸터 */
+footer{ background: #222; color: #fff;}
+footer div{  position: relative; padding: 3.8rem 0; margin: 0 auto; width: 60rem;}
+footer div p{float: left; width: 2.5rem; height: 1.4rem; background: url(../images/footer_logo.png) no-repeat center / 100% auto;}
+footer div ul.menu{ display: inline-block; padding: 0 0 0 2.65rem; font-size: 0;}
+footer div ul.menu li{ display: inline-block; padding: 0 .3rem;}
+footer div ul.menu li a{ display: inline-block; font-size: .6rem; color: #888; line-height: 1;}
+footer div ul.menu li a.bold{ color: #fff; font-weight: bold;}
+footer div ul.menu li a:before{content: ""; display: inline-block; margin: 0 .6rem 0 0;width: 1px; height: 8px; background: #b5b5b6; vertical-align: 1px;}
+footer div ul.menu li:first-child a:before{display: none;}
+footer div em{display: inline-block; padding: 0 0 0 .55rem; font-size: .35rem; color:#818181; line-height: 1;}
+
+footer ul.sns{ float: right; padding: .5rem 0 0; font-size: 0;}
+footer ul.sns li{ display: inline-block;}
+footer ul.sns li~li{ margin: 0 0 0 1.3rem;}
+footer ul.sns li a{display: block;}
+footer .blog{width: 1.65rem; height: .75rem; background: url(../images/footer_sns_01.png) no-repeat center;}
+footer .post{ width: 2.3rem; height: .75rem; background: url(../images/footer_sns_02.png) no-repeat center;}
+footer .instar{ width: 2.85rem; height: .75rem; background: url(../images/footer_sns_03.png) no-repeat center;}
+footer .facebook{ width: 2.5rem; height: .75rem; background: url(../images/footer_sns_04.png) no-repeat center;}
+
+footer div address{ padding: 1.3rem 0 0; font-size: .4rem; color: #81807e; line-height: 1;}
+footer div address span:first-child{color: #81807e;}
+footer div address br{display: none;}
+footer div address span{color: #595757; }

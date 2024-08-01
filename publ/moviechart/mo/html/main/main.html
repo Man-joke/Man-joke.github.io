@@ -1,0 +1,822 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title>무비차트</title>
+	<meta name="description" content="영화순위, 예매율, 누적관객 정보, 영화예매, 무료영화예매권, 경품프로모션 제휴">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="무비차트" />
+	<meta property='mpts:user_id' content='' />
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/swiper.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+	
+	<script defer src="../../resources/js/common.js"></script>
+</head>
+
+<body>
+	
+	<!-- tab 스킵네비 영역 -->
+	<header id="header" class="header main wArea">
+		<h1><a href="#" class="logo"><img src="../../resources/images/common/logo.png" alt="무비차트 로고"></a></h1>
+		<div class="mobile_menu"></div>
+	</header>
+	<!-- //header -->
+	<div class="gnb_menu wArea" style="display: none;">
+		<div class="menu__conbox">
+			<div class="menu__top">
+				<a href="#" class="logo"><img src="../../resources/images/common/logo_On.png" alt="무비차트 로고"></a>
+				<div class="close"><img src="../../resources/images/common/close.png" alt="닫기"></div>
+			</div>
+			<!-- //topBar -->
+			<div class="mo-gnb">
+				<div class="gnb__wArea">
+					<ul class="gnb__wArea wArea">
+						<li class="mm01">
+							<a href="#"><p>영화순위</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">실시간 예매율</a>
+								<a href="#">박스오피스</a>
+							</div>
+						</li>
+						<li class="mm02">
+							<a href="#"><p>영화정보</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">현재상영작</a>
+								<a href="#">개봉예정작</a>	
+							</div>
+						</li>
+						<li class="mm03">
+							<a href="#"><p>영화예매</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">영화에매</a>
+							</div>
+						</li>
+						<li class="mm04">
+							<a href="#"><p>고객센터</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">공지사항</a>
+								<a href="#">자주묻는질문</a>
+								<a href="#">1:1문의</a>
+							</div>
+						</li>
+						<li class="mm05">
+							<a href="#"><p>이벤트</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">이벤트</a>
+							</div>
+						</li>
+						<li class="mm06">
+							<a href="#"><p>영화검색</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">영화검색</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+			<div class="header-topbar">
+				<div class="wArea">
+					<ul class="topbar-list">
+						<li><a href="#" class="login">로그인</a></li>
+						<li><a href="#" class="">회원가입</a></li>
+						<li><a href="#" class="">예매권/할인권등록</a></li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+		</div>
+	</div>
+	<!-- //gnb -->
+			
+	<section id="visual">
+		<h2 class="vs-hidden">메인 비주얼</h2>
+		<!-- 220509 슬라이드 비주얼 수정 -->
+		<div class="wArea">
+			<div class="visual-tab">
+				<ul class="ff tab-list">
+					<li class="tab-item mm01"><a href="#" class="active">예매율</a></li>
+					<li class="tab-item mm02"><a href="#">박스오피스</a></li>
+					<li class="tab-item mm03"><a href="#">개봉예정작</a></li>
+				</ul>
+				<p class="allView"><a href="#"><img src="../../resources/images/main/allView.png" alt="전체보기"></a></p>
+			</div>
+			<!-- //tab -->
+			<div class="slider01 slider swiper">
+				<ul class="slides swiper-wrapper">
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_1.png" alt="1위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 44.5%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie02.jpg" alt="킹메이커">
+							<p><img src="../../resources/images/main/rank_2.png" alt="2위"></p>
+						</a>
+						<div class="rate">
+							<p>킹메이커</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨: 노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_3.png" alt="3위"></p>
+						</a>
+						<div class="rate">
+							<p>스파이더맨: 노 웨이 홈</p>
+							<span>에매율 21.4%</span>
+						</div>
+					</li>
+					<!-- 1위부터 3위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_4.png" alt="4위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 44.5%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie02.jpg" alt="킹메이커">
+							<p><img src="../../resources/images/main/rank_5.png" alt="5위"></p>
+						</a>
+						<div class="rate">
+							<p>킹메이커</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨: 노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_6.png" alt="6위"></p>
+						</a>
+						<div class="rate">
+							<p>스파이더맨: 노 웨이 홈</p>
+							<span>에매율 21.4%</span>
+						</div>
+					</li>
+					<!-- 4위부터 6위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_7.png" alt="7위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 44.5%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie02.jpg" alt="킹메이커">
+							<p><img src="../../resources/images/main/rank_8.png" alt="8위"></p>
+						</a>
+						<div class="rate">
+							<p>킹메이커</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨: 노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_9.png" alt="9위"></p>
+						</a>
+						<div class="rate">
+							<p>스파이더맨: 노 웨이 홈</p>
+							<span>에매율 21.4%</span>
+						</div>
+					</li>
+					<!-- 7위부터 9위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨: 노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_10.png" alt="10위"></p>
+						</a>
+						<div class="rate">
+							<p>스파이더맨: 노 웨이 홈</p>
+							<span>에매율 21.4%</span>
+						</div>
+					</li>
+					<!-- 10위까지 -->
+				</ul>
+				<!-- //slider 예매율-->
+			</div>
+			<!-- slider01 예매율 -->
+			<div class="slider02 slider swiper">
+				<ul class="slides swiper-wrapper">
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨:노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_1.png" alt="1위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>100,000 명</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie04.jpg" alt="극장판 안녕 자두야:제주도의 비밀">
+							<p><img src="../../resources/images/main/rank_2.png" alt="2위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>40,000 명</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨:노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_3.png" alt="3위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>10,000 명</span>
+						</div>
+					</li>
+					<!-- 1위부터 3위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨:노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_4.png" alt="4위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>100,000 명</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie04.jpg" alt="극장판 안녕 자두야:제주도의 비밀">
+							<p><img src="../../resources/images/main/rank_5.png" alt="5위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>40,000 명</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨:노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_6.png" alt="6위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>10,000 명</span>
+						</div>
+					</li>
+					<!-- 4위부터 6위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨:노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_7.png" alt="7위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>100,000 명</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie04.jpg" alt="극장판 안녕 자두야:제주도의 비밀">
+							<p><img src="../../resources/images/main/rank_8.png" alt="8위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>40,000 명</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨:노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_9.png" alt="9위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>10,000 명</span>
+						</div>
+					</li>
+					<!-- 7위부터 9위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie03.jpg" alt="스파이더맨:노 웨이 홈">
+							<p><img src="../../resources/images/main/rank_10.png" alt="10위"></p>
+						</a>
+						<div class="rate">
+							<p>주말관객수</p>
+							<span>10,000 명</span>
+						</div>
+					</li>
+					<!-- 10위까지 -->
+				</ul>
+				<!-- //slider 박스오피스-->
+			</div>
+			<!-- slider02 박스오피스-->
+			<div class="slider03 slider swiper">
+				<ul class="slides  swiper-wrapper">
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_1.png" alt="1위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 44.5%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie02.jpg" alt="킹메이커">
+							<p><img src="../../resources/images/main/rank_2.png" alt="2위"></p>
+						</a>
+						<div class="rate">
+							<p>킹메이커</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_3.png" alt="3위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<!-- 1위부터 3위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_4.png" alt="4위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 44.5%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie02.jpg" alt="킹메이커">
+							<p><img src="../../resources/images/main/rank_5.png" alt="5위"></p>
+						</a>
+						<div class="rate">
+							<p>킹메이커</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_6.png" alt="6위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<!-- 1위부터 3위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_7.png" alt="7위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 44.5%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie02.jpg" alt="킹메이커">
+							<p><img src="../../resources/images/main/rank_8.png" alt="8위"></p>
+						</a>
+						<div class="rate">
+							<p>킹메이커</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_9.png" alt="9위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<!-- 1위부터 3위까지 -->
+					<li class="swiper-slide">
+						<a href="#">
+							<img src="../../resources/images/main/movie01.jpg" alt="해적:도깨비 깃발">
+							<p><img src="../../resources/images/main/rank_10.png" alt="10위"></p>
+						</a>
+						<div class="rate">
+							<p>해적:도깨비 깃발</p>
+							<span>예매율 21.4%</span>
+						</div>
+					</li>
+					<!-- 10위까지 -->
+				</ul>
+				<!-- //slider 개봉예정작-->
+			</div>
+			<!-- slider03 개봉예정작 -->
+		</div>
+		<!-- //220509 슬라이드 비주얼 수정 -->
+		<!-- //wArea -->
+		</div>
+		<!-- //visual -->
+	</section>
+
+	<section id="content" style="top: -25px; position: relative;">
+		<h2 class="vs-hidden">메인 컨텐츠</h2>
+		<div class="magazine">
+			<div class="wArea">
+				<h2 class="title">매거진</h2>
+				<p class="more"><a href="#"></a></p>
+				<ul class="magazine__list preview" id="sReportSlider1">
+					<li class="magazine__item">
+						<div class="magazine__conBox">
+							<a href="#" class="magazine__imgbox">
+								<img src="../../resources/images/main/magazine01.jpg" alt="[연애 빠진 로맨스]">
+								<span>영화정보</span>
+							</a>
+							<p><strong>[연애 빠진 로맨스]</strong> 이게 연애가 아니면 뭐지?</p>
+						</div>
+						<div class="magazine__conBox">
+							<a href="#" class="magazine__imgbox">
+								<img src="../../resources/images/main/magazine02.jpg" alt="[연애 빠진 로맨스]">
+								<span>영화정보</span>
+							</a>
+							<p><strong>[연애 빠진 로맨스]</strong> 이게 연애가 아니면 뭐지?</p>
+						</div>
+					</li>
+					<!-- 1page -->
+					<li class="magazine__item">
+						<div class="magazine__conBox">
+							<a href="#" class="magazine__imgbox">
+								<img src="../../resources/images/main/magazine02.jpg" alt="[연애 빠진 로맨스]">
+								<span>영화정보</span>
+							</a>
+							<p><strong>[연애 빠진 로맨스]</strong> 이게 연애가 아니면 뭐지?</p>
+						</div>
+						<div class="magazine__conBox">
+							<a href="#" class="magazine__imgbox">
+								<img src="../../resources/images/main/magazine01.jpg" alt="[연애 빠진 로맨스]">
+								<span>영화정보</span>
+							</a>
+							<p><strong>[연애 빠진 로맨스]</strong> 이게 연애가 아니면 뭐지?</p>
+						</div>
+					</li>
+					<!-- 2page -->
+					<li class="magazine__item">
+						<div class="magazine__conBox">
+							<a href="#" class="magazine__imgbox">
+								<img src="../../resources/images/main/magazine01.jpg" alt="[연애 빠진 로맨스]">
+								<span>영화정보</span>
+							</a>
+							<p><strong>[연애 빠진 로맨스]</strong> 이게 연애가 아니면 뭐지?</p>
+						</div>
+						<div class="magazine__conBox">
+							<a href="#" class="magazine__imgbox">
+								<img src="../../resources/images/main/magazine02.jpg" alt="[연애 빠진 로맨스]">
+								<span>영화정보</span>
+							</a>
+							<p><strong>[연애 빠진 로맨스]</strong> 이게 연애가 아니면 뭐지?</p>
+						</div>
+					</li>
+					<!-- 3page -->
+				</ul>
+				<div class="contNum">/ <span id="sliderCount1"></span></div>
+			</div>
+			<!-- //wArea -->
+
+		</div>
+
+		<div class="container01 sReport_ui">
+			<div class="wArea">
+				<h2 class="title">예고편/리뷰</h2>
+				<ul class="preview" id="sReportSlider2">
+					<li>
+						<div class="box">
+							<a href="#">
+								<div class="imgArea">
+									<img src="../../resources/images/main/preView01.jpg" alt="">
+									<span class="play"></span>
+								</div>
+								<p><strong>[킹메이커]</strong> 메인 에고편</p>
+							</a>
+						</div>
+						<div class="box">
+							<a href="#">
+								<div class="imgArea">
+									<img src="../../resources/images/main/preView02.jpg" alt="">
+									<span class="play"></span>
+								</div>
+								<p><strong>[스파이더맨: 노 웨이 홈]</strong> 2차 예고편</p>
+							</a>
+						</div>
+					</li>
+					<!-- 1page -->
+					<li>
+						<div class="box">
+							<a href="#">
+								<div class="imgArea">
+									<img src="../../resources/images/main/preView02.jpg" alt="">
+									<span class="play"></span>
+								</div>
+								<p><strong>[스파이더맨: 노 웨이 홈]</strong> 2차 예고편</p>
+							</a>
+						</div>
+						<div class="box">
+							<a href="#">
+								<div class="imgArea">
+									<img src="../../resources/images/main/preView01.jpg" alt="">
+									<span class="play"></span>
+									<span class="solo"></span>
+								</div>
+								<p><strong>[킹메이커]</strong> 메인 에고편</p>
+							</a>
+						</div>
+					</li>
+					<!-- 2page -->
+					<li>
+						<div class="box">
+							<a href="#">
+								<div class="imgArea">
+									<img src="../../resources/images/main/preView01.jpg" alt="">
+									<span class="play"></span>
+								</div>
+								<p><strong>[스파이더맨: 노 웨이 홈]</strong> 2차 예고편</p>
+							</a>
+						</div>
+						<div class="box">
+							<a href="#">
+								<div class="imgArea">
+									<img src="../../resources/images/main/preView02.jpg" alt="">
+									<span class="play"></span>
+									<span class="solo"></span>
+								</div>
+								<p><strong>[킹메이커]</strong> 메인 에고편</p>
+							</a>
+						</div>
+					</li>
+					<!-- 3page -->
+					<li>
+						<div class="box">
+							<a href="#">
+								<div class="imgArea">
+									<img src="../../resources/images/main/preView02.jpg" alt="">
+									<span class="play"></span>
+								</div>
+								<p><strong>[스파이더맨: 노 웨이 홈]</strong> 2차 예고편</p>
+							</a>
+						</div>
+						<div class="box">
+							<a href="#">
+								<div class="imgArea">
+									<img src="../../resources/images/main/preView01.jpg" alt="">
+									<span class="play"></span>
+									<span class="solo"></span>
+								</div>
+								<p><strong>[킹메이커]</strong> 메인 에고편</p>
+							</a>
+						</div>
+					</li>
+					<!-- 4page -->
+				</ul>
+				<div class="contNum">/ <span id="sliderCount2"></span></div>
+			</div>
+			<!-- //wArea -->
+		</div>
+		<!-- //container01 -->
+		<div class="container02 sReport_ui">
+			<div class="wArea">
+				<h2 class="title">포스터/스틸컷</h2>
+				<ul id="sReportSlider3">
+					<li>
+						<div class="photoCut">
+							<ul class="ff">
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post01.jpg" alt="">
+									</a>
+									<p>해적: 도깨비 깃발</p>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post02.jpg" alt="">
+									</a>
+									<p>킹메이커</p>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post03.jpg" alt="">
+									</a>
+									<p>스파이더맨: 노 웨이 홈</p>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post01.jpg" alt="">
+									</a>
+									<p>해적: 도깨비 깃발</p>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- 1page -->
+					<li>
+						<div class="photoCut">
+							<ul class="ff">
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post01.jpg" alt="">
+										<p>해적: 도깨비 깃발</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post01.jpg" alt="">
+										<p>해적: 도깨비 깃발</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post01.jpg" alt="">
+										<p>해적: 도깨비 깃발</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post01.jpg" alt="">
+										<p>해적: 도깨비 깃발</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- 2page -->
+					<li>
+						<div class="photoCut">
+							<ul class="ff">
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post04.jpg" alt="">
+										<p>극장판 안녕 자두야: 제주도의 비밀</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post04.jpg" alt="">
+										<p>극장판 안녕 자두야: 제주도의 비밀</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post04.jpg" alt="">
+										<p>극장판 안녕 자두야: 제주도의 비밀</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post04.jpg" alt="">
+										<p>극장판 안녕 자두야: 제주도의 비밀</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- 3page -->
+					<li>
+						<div class="photoCut">
+							<ul class="ff">
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post03.jpg" alt="">
+										<p>스파이더맨: 노 웨이 홈</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post03.jpg" alt="">
+										<p>스파이더맨: 노 웨이 홈</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post03.jpg" alt="">
+										<p>스파이더맨: 노 웨이 홈</p>
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<img src="../../resources/images/main/post03.jpg" alt="">
+										<p>스파이더맨: 노 웨이 홈</p>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</li>
+					<!-- 4page -->
+				</ul>
+				<div class="contNum">/ <span id="sliderCount3"></span></div>
+			</div>
+			<!-- //wArea -->
+		</div>
+		<!-- //container02 -->
+		<div class="container03">
+			<div class="wArea">
+				<ul class="ff">
+					<li>
+						<div class="container03-title">
+							<h2 class="title">공지사항</h2>
+							<p class="more"><a href="#">더보기</a></p>
+						</div>
+						<div class="box box01">
+							<ul>
+								<li>
+									<a href="#">설 연휴 고객센터 휴무</a>
+									<span>2022.01.24</span>
+								</li>
+								<li>
+									<a href="#">2021-12-31고객센터 운영시간 단축 안내</a>
+									<span>2021.09.11</span>
+								</li>
+								<li>
+									<a href="#">2021-12-31고객센터 운영시간 단축 안내</a>
+									<span>2021.09.11</span>
+								</li>
+							</ul>
+						</div>
+						<!-- //box01 -->
+					</li>
+					<li>
+						<div class="container03-title">
+							<h2 class="title" style="display: flex;">고객센터<div class="number">1661-9265</div></h2>
+						</div>
+						<div class="box box02">
+							<div class="time">
+								<p>평일 10:00~18:00 / 점심시간 12:00~13:00 (주말 및 공 휴일 고객센터 휴무)</p>
+							</div>
+						</div>
+						<!-- //box02 -->
+					</li>
+				</ul>
+				<!-- //ff -->
+			</div>
+			<!-- //wArea -->
+		</div>
+		<!-- //container03 -->
+	</section>
+	<!--//contant -->
+
+	<footer id="footer">
+		<div class="wArea">
+			<div class="footMenu">
+				<span><a href="#">이용약관</a></span>
+				<span><a href="#">개인정보취급방침</a></span>
+				<span><a href="#">제휴/광고문의</a></span>
+				<span><a href="#">예매권구매문의</a></span>
+				<span><a href="#">고객센터</a></span>
+			</div>
+			<p>
+				(03992) 서울특별시 마포구 월드컵북로4길 25, 2층 (동교동, ST빌딩) | ㈜메크로스 대표이사 이경수 <br>사업자등록번호 : 211-88-5000 
+				고객센터 : 1661-9265 (10:00~18:00) | <a href="help@moviechart.co.kr">help@moviechart.co.kr</a> <br> 통신판매업신고 [제2019-서울영등포-2112호]
+			</p>
+			<p>Copyright ⓒ Movie Chart. All Rights Reserved.</p>
+		</div>
+		<!-- //wArea -->
+	</footer>
+	<!-- //footer -->
+
+
+
+</body>
+
+</html>

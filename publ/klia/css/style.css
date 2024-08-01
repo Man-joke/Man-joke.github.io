@@ -1,0 +1,191 @@
+/* 웹 */
+html { font-size: 20px;}
+body { font-size: 1rem;}
+
+/* 임시레이아웃 나중에 수정해야함 */
+hr { display: block; margin: 30px 0;}
+header { height: 4rem;}
+.visual { height: 10rem; background: skyblue;}
+.container { padding: 2.35rem 0 20rem; width: 63rem; margin: 0 auto;}
+.snb { float: left; width: 16.45rem;}
+.content { float: left; width: 46.55rem;}
+
+/* 공통 마진 패딩*/
+.mt3{margin-top: 3rem;}
+.mb1{margin-bottom: 1rem;}
+.pb1{padding-bottom: 1rem;}
+.prl1{padding: 0 1rem; box-sizing: border-box;}
+.pt2{padding-top: 2rem;}
+/* 임시레이아웃 끝 */
+input,
+button{ cursor: pointer; outline: 0;}
+/* 헤더 */
+header{position: relative; margin: 0 auto; width: 63rem;}
+header h1{position: absolute; left: 0; top: 50%; transform: translateY(-50%);}
+header h1 a{display: block; width: 7.75rem; height: 1.55rem; background: url(../images/t_logo.jpg) no-repeat center / 100% auto;}
+header ul{ margin: 0 0 0 9.7rem; width: 35.95rem; font-size: 0;}
+header li{ display: inline-block; width: 25%; text-align: center;}
+header li a{display: block; font-size: 1rem; color: #000; line-height: 4rem;}
+header div{ position: absolute; right: 0; top: 50%; transform: translateY(-50%); font-size: 0;}
+header div label{ display: inline-block; position: relative; width: 8.6rem; height: 1.95rem; background: #e8e9eb; border-radius: 1.95rem; }
+header div label:after{content: ""; position: absolute; right: 0.7rem; top: 50%; transform: translateY(-50%); width: .8rem; height: .8rem; background: url(../images/ico_search.png) no-repeat center;}
+header div label input[type="text"]{ position: absolute; left: 0; top: 50%; transform: translateY(-50%);background: none; border:none; line-height: 1.95rem; text-indent: 1.25rem; vertical-align: 1px}
+header div label input[type="text"]::placeholder{ font-size: 18px; color: #000;}
+header div .site{ width: 5.6rem; height: 1.85rem;  background: #fff; font-size: .65rem; color: #000; border-radius: 1.85rem; border: 1px solid #ddd;}
+header div .site:after{content: ""; display: inline-block; margin: 0 0 0 .4rem; width: .7rem; height: .6rem; background: url(../images/ico_manu.png) no-repeat #0d2d4f center; vertical-align: -2px}
+header div .language{ display: inline-block; width: 1.95rem; height: 1.95rem; background: #0d2d4f; font-size: .55rem; color: #fff;  border-radius: 100%;}
+
+/* snb 영역*/
+.snb{ float: left; width: 16.45rem; font-size: 0;}
+.snb h2{ font-size: 1.5rem; color: #000; line-height: 4.05rem; font-weight: normal;}
+.snb nav{ width: 13.5rem;}
+.snb nav > ul{ border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.snb nav > ul > li{  border-bottom: 1px solid #ddd;}
+.snb nav > ul > li > a{ padding-left:.8rem; font-size: .75rem; color: #000;line-height: 3rem; }
+.snb li button{ position: relative; width: 100%; padding-left:.8rem; font-size: .8rem; color: #000; line-height: 3rem; background: none; text-align: left;}
+.snb li button:after,
+.snb nav ul li ul li a:before{ position: absolute; top: 50%; transform: translateY(-50%); }
+.snb nav ul li ul{ padding: 1.1rem 0 1.1rem .7rem; box-sizing: border-box;}
+.snb li button:after{content: ""; right: 1rem; width: .6rem; height: .6rem; background: url(../images/ico_add.png) no-repeat center;}
+.snb nav ul li button.open{ width: 100%; font-size: .75rem; line-height: 3rem; color: #fff; background: #108ad3; text-align: left; border-top: 3px solid #0d2d4f; box-sizing: border-box;}
+.snb li button.open:after{content:""; right: 1rem; background: url(../images/ico_line.png) no-repeat center; font-size: .6rem; color: #fff;}
+.snb nav ul li ul li{ position: relative; padding-left:.6rem; }
+.snb nav ul li ul li a{display: block; font-size: .75rem; line-height: 1.75rem;}
+.snb nav ul li ul li a:before{ content: "-"; left: 0;}
+.snb nav ul li ul li.on a{ color: #108ad3;}
+
+.snb .snb_img{ margin-top: 2rem;}
+.snb .snb_img li{ display: inline-block;}
+.snb .snb_img li:nth-child(even){ margin-left: .5rem;}
+.snb .snb_img li:nth-child(3),
+.snb .snb_img li:nth-child(4){ margin-top: .5rem;}
+.snb .snb_img li a{ display:block; padding-top: 4.7rem; width: 6.5rem; height: 6.9rem; font-size: .85rem; color: #000; border: 1px solid #d4d5d8; border-radius: .55rem; text-align: center; background:no-repeat center 1rem; box-sizing: border-box;}
+
+.snb .snb_img li a.img1{ background-image: url(../images/bg_thum1.png); background-color: #fff;}
+.snb .snb_img li a.img2{ background-image: url(../images/bg_thum2.png); background-color: #f6f8fa;}
+.snb .snb_img li a.img3{ background-image: url(../images/bg_thum3.png); background-color: #f6f8fa;}
+.snb .snb_img li a.img4{ background-image: url(../images/bg_thum4.png); background-color: #fff;}
+
+
+/* 컨텐츠 헤더영역 h2 + 현재위치 */
+.header { padding: 0 0 1.35rem; border-bottom: 1px solid #ddd;}
+.header h2 { float: left; padding: 0 0 0 1.5rem; background: url(../images/ico_circle.png) no-repeat left; font-size: 1.5rem; color:#171616; line-height: 1;}
+.header ul { float: right;}
+.header li { float: left; position: relative; padding: 0 .55rem;}
+.header li ~ li:after { content: ""; position: absolute; left:-2px; top:50%; width: 4px; height: 1px; background: #797979;}
+.header li:first-child a { width:1.2rem; height:1.2rem; background: url(../images/ico_home.png) no-repeat center;}
+.header li:last-child { padding-right:0;}
+.header li a { display: block; font-size: .75rem; color:#797979; line-height: 1.2rem;}
+
+/* 제목 */
+.h3 { font-size:1.15rem; color:#171616; line-height: 1;}
+.h3:before { content: ""; display: inline-block; margin: 0 .45rem 0 0; width: .4rem; height: 1.2rem; border-radius: .4rem; background: #108ad3; vertical-align:-0.15rem;}
+.h4 { font-size:.9rem; color:#171616; line-height: 1;}
+.h4:before { content: ""; display: inline-block; margin: 0 .4rem 0 0; width: .55rem; height: .55rem; border-radius: .15rem; background: #108ad3; vertical-align:.1rem;}
+.h5{ padding: 0 .7rem 0 0;font-size: .75rem; color: #000;}
+.h5:before { content: ""; display: inline-block;  margin: 0 .4rem 0 .7rem; width: .3rem; height: .3rem; border-radius: 100%; background: #108ad3; vertical-align:.1rem;}
+
+
+/* 리스트 스타일 */
+.list_type1{padding: 0 0 0 .75rem;}
+.list_type1 > li { position: relative; padding: 0 0 0 .75rem; font-size: .8rem; color:#666; line-height: 1.6rem; letter-spacing: -0.4px}
+.list_type1 > li:before { content: ""; position: absolute; left: 0; top:.65rem; width: .2rem; height: .2rem; background: #a5a8ac;}
+.list_type1 > li > ul > li {  padding: 0 0 0 .6rem; font-size: .8rem; color:#666; line-height: 1.4rem; text-indent: -0.6rem;}
+.list_type1 > li > ul > li:before { content: "-"; padding: 0 .15rem 0 0;}
+
+.list_type2 { border-top: 2px solid #0d2d4f;}
+.list_type2 > li { position: relative; padding: 1.5rem 1rem; border-bottom: 1px solid #ddd;}
+.list_type2 > li:after { content: ""; display: block; clear: both;}
+.list_type2 > li > a { position:absolute; right: 1rem; bottom: 2rem; width: 5.3rem; line-height:1.65rem; background: #0c2d4e; border-radius:1.65rem; color:#fff; font-size: .7rem; text-align: center;}
+.list_type2 > li > a:after { content: "▼"; padding: 0 0 0 .3rem;}
+.list_type2 > li > div { float: left;}
+.list_type2 .logo a { display: block; width: 14rem; height: 9.3rem; border: 1px solid #ddd; box-sizing: border-box;}
+.list_type2 .logo a img { width: 100%; height: 6.9rem;}
+.list_type2 .logo a span { display: block; line-height:2.25rem; border-top:1px solid #ddd; background: #f6f8fa; text-align: center; font-size: .6rem; color:#595959;}
+.list_type2 .con { padding: 0 0 0 2rem;}
+
+.list_type3 { border-top: 2px solid #0d2d4f;}
+.list_type3 > li { border-bottom: 1px solid #ddd;}
+.list_type3 .top { position: relative;}
+.list_type3 .top .title { padding: 0 0 0 1.25rem; width: 100%; line-height: 3.95rem; background:none; text-align: left;}
+.list_type3 .down { position: absolute; right: 1.45rem; top: 50%; width: 7.2rem; height: 1.65rem; background: #fff; border:1px solid #ddd; border-radius:1.65rem; transform: translateY(-50%);}
+.list_type3 .down:after { content: ""; display:inline-block; margin: 0 0 0 .55rem; width: .65rem; height: .65rem; background:url(../images/ico_down.png) no-repeat ;
+vertical-align: -0.1rem;}
+.list_type3 .btm { padding: 1.15rem 2.5rem; border-top:1px solid #ddd; background: #f6f8fa;}
+.list_type3.no2 .down { right: 3.75rem;}
+.list_type3.no2 .top .title { background: url(../images/down1.png) no-repeat right 1.75rem center;}
+
+/* 버튼가이드 */
+.btn { display: inline-block; color:#fff;}
+.btn.small { padding: 0 1rem; border-radius: 1.5rem; font-size: .7rem; line-height: 1.5rem; }
+.btn.mid { padding: 0 1.4rem; line-height: 2rem; font-size: .7rem;}
+.btn.big { padding: 0 1.75rem; line-height: 2.65rem; font-size: .85rem; border-radius:2.65rem}
+
+.btn.blue { background: #0d2d4f;}
+.btn.sky { background: #108ad3;}
+
+.btn.ico:after { content: ""; display: inline-block; margin: 0 0 0 .2rem; width: .85rem; height: .85rem; vertical-align:-0.15rem; }
+.btn.down:after { background: url(../images/ico_down1.png) no-repeat center;}
+.btn.arrow:after { background: url(../images/ico_arr2.png) no-repeat center;}
+.btn.arrow1:after { background: url(../images/ico_arr3.png) no-repeat center;}
+
+
+/* 테이블가이드 */
+.table_type1 table { border-top:2px solid #0d2d4f; font-size: .75rem;}
+.table_type1 thead th { background: #dfe6ed;}
+.table_type1 thead th ~ th { border-left:1px solid #ddd;}
+.table_type1 tbody th { background: #f6f8fa;}
+.table_type1 tr { border-bottom: 1px solid #ddd;}
+.table_type1 td { padding: .65rem 0; border-left: 1px solid #ddd; color:#666; text-align: center;}
+.table_type1 th { padding: .65rem 0; color:#222; font-weight: normal;}
+
+table.type2 { border-top:2px solid #0d2d4f; font-size: .75rem; color:#222; }
+table.type2 th { background: #dfe6ed; font-weight: normal;}
+table.type2 tr { height: 2.5rem; border-bottom: 1px solid #ddd;}
+table.type2 td { text-align: center;}
+table.type2 td.left { text-align: left;}
+table.type2 .down { position: absolute; right: 1.45rem; top: 50%; width: 7.2rem; height: 1.65rem; background: none; border:1px solid #ddd; border-radius:1.65rem; transform: translateY(-50%);}
+table.type2 .down:after { content: ""; display:inline-block; margin: 0 0 0 .55rem; width: .85rem; height: .85rem; background:url(../images/ico_down.png) no-repeat;
+vertical-align: -0.1rem;}
+
+
+/* 탭 가이드 */
+.tab_type1 button { display: none;}
+.tab_type1 ul { border-bottom: 1px solid #0d2d4f; font-size: 0;}
+.tab_type1 li { display: inline-block;}
+.tab_type1 li ~ li { margin: 0 0 0 2px;}
+.tab_type1 li a { display: block; padding: 0 1.35rem; font-size: .8rem; color:#333; line-height:2.35rem; border:1px solid #ddd; border-bottom: none; border-radius:.3rem .3rem 0 0;}
+.tab_type1 li.on a { background: #0d2d4f; color:#fff; border-color:#0d2d4f;}
+
+/* 정렬 가이드 */
+.align:after { content: ""; display: block; clear: both; font-size: 0; }
+.align.right div { float: right; }
+.align.right div > * { margin-left: .35rem; }
+.align.center { text-align: center; }
+.align.center div > * { display: inline-block; margin: 0 .175rem; }
+.align.justify div:first-child { float: left; }
+.align.justify div:first-child > * { margin-right: .35rem; }
+.align.justify div:last-child { float: right; }
+.align.justify div:last-child > * { margin-left: .35rem; }
+
+/* 푸터 */
+footer .f_top{ position: relative; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+footer .f_top > div{ position: relative; margin: 0 auto; width: 63rem;}
+
+footer .f_top ul{ padding: 0 1rem; font-size: 0;  box-sizing: border-box; width: 63rem;}
+footer .f_top li{ display: inline-block; width: 14.28%;}
+
+footer .f_top .btn{ position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 100%;}
+footer button{ position: absolute; top: 50%; transform: translateY(-50%); width: 0.75rem; height: 1.35rem; }
+footer .prev{ left: 0; background: url(../images/btn_prev.png) no-repeat center;}
+footer .next{ right: 0; background: url(../images/btn_next.png) no-repeat center;}
+
+footer .f_bot > div{position: relative; padding: 0 0 0 8.8rem; margin: 0 auto; width: 63rem; background: url(../images/b_logo.png) no-repeat 0 2rem / 6.75rem 1.35rem; box-sizing: border-box;}
+footer .f_bot p{ padding: 2.45rem 0 1.1rem; font-size: .65rem;  color: #000; line-height: 1;}
+footer .f_bot address{ font-size: .7rem; color: #828282; line-height: .8rem; }
+footer .f_bot em{ display: block; padding: .55rem 0 3.2rem; font-size: .55rem; color: #828282; line-height: 1;}
+
+footer .family{ position: absolute; right: .85rem; top: 3rem; font-size: 0; }
+footer .family span:first-child{display: inline-block; width: 5rem; height: 3.25rem; background: url(../images/bg_wa.png) no-repeat center / 5rem auto;}
+footer .family span:last-child{display: inline-block; width: 8.7rem; height: 3.25rem; background: url(../images/bg_good.png) no-repeat center / 8.7rem auto;}
+footer .family span~ span{margin: 0 0 0 1rem;}

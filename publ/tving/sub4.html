@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="js/style.js" charset="utf-8"></script>
+  <script src="js/sub.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/xeicon.css">
+
+  <title>티빙 VOD</title>
+</head>
+
+<body>
+  <header class="blue">
+    <div>
+      <h1><a href="index.html"><span class="hide">TVING</span></a></h1>
+      <h2 class="hide">메뉴</h2>
+      <nav>
+        <ul>
+          <li><a href="">LVIE</a></li>
+          <li class="on"><a href="sub4.html">VOD</a></li>
+          <li><a href="sub1.html">MOVIE</a></li>
+          <li><a href="#">CLIP</a></li>
+          <li><a href="#">MALL</a></li>
+        </ul>
+        <ul class="lnb">
+          <li class="on"><a href="#">홈</a></li>
+          <li><a href="#">인기</a></li>
+          <li><a href="#">최신</a></li>
+          <li><a href="#">장르추천</a></li>
+          <li><a href="#">테마</a></li>
+        </ul>
+      </nav>
+      <ul class="gnb">
+        <li><a href="sub.html">로그인</a></li>
+        <li><a href="#">이용권</a></li>
+        <li><a href="#">편성표</a></li>
+        <li><a href="#">이벤트</a></li>
+        <li><a href="#">다운로드</a></li>
+        <li><a href="#">티빙키즈</a></li>
+      </ul>
+      <div class="search">
+        <div class="box">
+            <input type="search" title="검색어 입력" placeholder="실시간 인기 검색" id="search">
+            <button class="searchBtn"><span class="hide">검색</span></button>
+        </div>
+        <div class="list on">
+          <h2>실시간 인기 검색어</h2>
+          <p>2019.11.05 12:45 기분</p>
+          <ol>
+            <li><a href="#">신서유기7</a></li>
+            <li><a href="#">아는형님</a></li>
+            <li><a href="#">더시그널</a></li>
+            <li><a href="#">쌉니다 천리마마트</a></li>
+            <li><a href="#">뭉쳐야찬다</a></li>
+            <li><a href="#">유령을잡아라</a></li>
+            <li><a href="#">놀라운 토요일</a></li>
+            <li><a href="#">날 녹여주오</a></li>
+            <li><a href="#">동백꽃 필 무렵</a></li>
+            <li><a href="#">썸바디2</a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="visual vod">
+     <h2 class="hide">vod비주얼</h2>
+    <div>
+      <div class="top_visual slide">
+        <ul class="trans-10 ">
+          <li>
+            <a href="#">
+              <img src="images/vod_visual_main4.png" alt="돈키호테">
+              <div>
+                <strong>잃어버린 세계를 찾아서</strong>
+                <p>링크와 라이오넬의 스펙터클!<span>글로벌 어드벤처가 시작된다!</span></p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/vod_visual_main1.jpg" alt="tvN드라마 날 녹여주오">>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/vod_visual_main3.jpg" alt="최신유행 프로그램">
+              <div>
+                <strong>두번할까요</strong>
+                <p>다시 얽혀버린 세 남녀의<span>출구없는 싱글라이프가 펼쳐진다</span></p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <ul class="trans-10 ">
+          <li>
+            <a href="#">
+              <img src="images/vod_visual_main3.jpg" alt="최신유행 프로그램">
+              <div>
+                <strong>두번할까요</strong>
+                <p>다시 얽혀버린 세 남녀의<span>출구없는 싱글라이프가 펼쳐진다</span></p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/vod_visual_main1.jpg" alt="tvN드라마 날 녹여주오">>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <img src="images/vod_visual_main4.png" alt="돈키호테">
+              <div>
+                <strong>잃어버린 세계를 찾아서</strong>
+                <p>링크와 라이오넬의 스펙터클!<span>글로벌 어드벤처가 시작된다!</span></p>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <main class="m0auto">
+    <section class="border_1">
+      <h2 class="h2">최신 VOD</h2>
+      <div>
+        <ul class="trans-10 vod width_224 clear">
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list1.jpg" alt="">
+              </div>
+              <h3 class="h3_19">엄마의 봄날 217화</h3>
+              <em>TV CHOSUN 2019.11.10</em>
+              <p>Quick VOD</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list2.jpg" alt="">
+              </div>
+              <h3 class="h3_19">다큐플러스 87화</h3>
+              <em>JTBC 2019.11.10</em>
+              <p>Quick VOD</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list3.jpg" alt="">
+              </div>
+              <h3 class="h3_19">내 몸 플러스 170화</h3>
+              <em>TV CHOSUN 2019.11.10</em>
+              <p>Quick VOD</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list4.jpg" alt="">
+              </div>
+              <h3 class="h3_19">신대동여지도 318화</h3>
+              <em>채널A 2019.11.10</em>
+              <p>Quick VOD</p>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list5.jpg" alt="">
+              </div>
+              <h3 class="h3_19">최신유행 프로그램2 10화</h3>
+              <em>XtvN 2019.11.10</em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list6.jpg" alt="">
+              </div>
+              <h3 class="h3_19">속풀이쇼 동치미 365화</h3>
+              <em>MBN 2019.11.09</em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list7.jpg" alt="">
+              </div>
+              <h3 class="h3_19">나의 나라 12화</h3>
+              <em>JTBC 2019.11.09</em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list8.jpg" alt="">
+              </div>
+              <h3 class="h3_19">부라더 시스터 17화</h3>
+              <em>TV CHOSUN 2019.11.09</em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list9.jpg" alt="">
+              </div>
+              <h3 class="h3_19">보컬플레이 - 캠퍼스 뮤직 올림피아드</h3>
+              <em>채널A 2019.11.09</em>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/new_vod_list10.jpg" alt="">
+              </div>
+              <h3 class="h3_19">돈키호테 2화</h3>
+              <em>tvN 2019.11.09</em>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <section class="border_1">
+      <h2 class="h2 red">인기 VOD</h2>
+      <ul class="tab_list clear">
+        <li class="on"><button>전체</button></li>
+        <li><button>드라마</button></li>
+        <li><button>예능</button></li>
+        <li><button>해외 시리즈</button></li>
+        <li><button>교양</button></li>
+      </ul>
+      <div class="ch_list">
+        <ul class="trans-10 height_180 clear on">
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod1.jpg" alt="">
+              </div>
+              <h3 class="h3_19">신서유기</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod2.jpg" alt="">
+              </div>
+              <h3 class="h3_19">쌉니다 천리마마트</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod3.jpg" alt="">
+              </div>
+              <h3 class="h3_19">썸바디2</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod4.jpg" alt="">
+              </div>
+              <h3 class="h3_19">아는 형님</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod5.jpg" alt="">
+              </div>
+              <h3 class="h3_19">시베리아 선발대</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod6.jpg" alt="">
+              </div>
+              <h3 class="h3_19">맛있는 녀석들</h3>
+            </a>
+          </li>
+        </ul>
+        <ul class="trans-10 height_180 clear">
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod6.jpg" alt="">
+              </div>
+              <h3 class="h3_19">맛있는 녀석들</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod5.jpg" alt="">
+              </div>
+              <h3 class="h3_19">시베리아 선발대</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod2.jpg" alt="">
+              </div>
+              <h3 class="h3_19">쌉니다 천리마마트</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod1.jpg" alt="">
+              </div>
+              <h3 class="h3_19">신서유기</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod4.jpg" alt="">
+              </div>
+              <h3 class="h3_19">아는 형님</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod3.jpg" alt="">
+              </div>
+              <h3 class="h3_19">썸바디2</h3>
+            </a>
+          </li>
+        </ul>
+        <ul class="trans-10 height_180 clear">
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod1.jpg" alt="">
+              </div>
+              <h3 class="h3_19">신서유기</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod2.jpg" alt="">
+              </div>
+              <h3 class="h3_19">쌉니다 천리마마트</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod3.jpg" alt="">
+              </div>
+              <h3 class="h3_19">썸바디2</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod4.jpg" alt="">
+              </div>
+              <h3 class="h3_19">아는 형님</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod5.jpg" alt="">
+              </div>
+              <h3 class="h3_19">시베리아 선발대</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod6.jpg" alt="">
+              </div>
+              <h3 class="h3_19">맛있는 녀석들</h3>
+            </a>
+          </li>
+        </ul>
+        <ul class="trans-10 height_180 clear">
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod6.jpg" alt="">
+              </div>
+              <h3 class="h3_19">맛있는 녀석들</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod5.jpg" alt="">
+              </div>
+              <h3 class="h3_19">시베리아 선발대</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod2.jpg" alt="">
+              </div>
+              <h3 class="h3_19">쌉니다 천리마마트</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod1.jpg" alt="">
+              </div>
+              <h3 class="h3_19">신서유기</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod4.jpg" alt="">
+              </div>
+              <h3 class="h3_19">아는 형님</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod3.jpg" alt="">
+              </div>
+              <h3 class="h3_19">썸바디2</h3>
+            </a>
+          </li>
+        </ul>
+        <ul class="trans-10 height_180 clear">
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod1.jpg" alt="">
+              </div>
+              <h3 class="h3_19">신서유기</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod2.jpg" alt="">
+              </div>
+              <h3 class="h3_19">쌉니다 천리마마트</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod3.jpg" alt="">
+              </div>
+              <h3 class="h3_19">썸바디2</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod4.jpg" alt="">
+              </div>
+              <h3 class="h3_19">아는 형님</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod5.jpg" alt="">
+              </div>
+              <h3 class="h3_19">시베리아 선발대</h3>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div>
+                <img src="images/popular_vod6.jpg" alt="">
+              </div>
+              <h3 class="h3_19">맛있는 녀석들</h3>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="top">
+      <div class="clear">
+        <div class="left">
+          <h2>공지사항</h2>
+          <p><a href="#">[안내] 새로워진 ALL NEW TVING을 소개합니다.</a></p>
+        </div>
+        <div class="right">
+          <a href="#" class="facebook"><span class="hide">페이스북</span></a>
+          <div class="select">
+            <button>패밀리사이트</button>
+            <ul>
+              <li><a href="http://tvn.tving.com/tvn">tvN</a></li>
+              <li><a href="http://otvn.tving.com/otvn">OtvN</a></li>
+              <li><a href="http://www.cjem.net/business/music">Mnet</a></li>
+              <li><a href="http://onstyle.tving.com/onstyle/">OnStyle</a></li>
+              <li><a href="http://olive.tving.com/olive/">OLIVE</a></li>
+            </ul>
+          </div>
+          <div class="select">
+            <button class="on">계열사 바로가기</button>
+            <ul>
+              <li><a href="http://tvn.tving.com/tvn">CJ주식회사</a></li>
+              <li><a href="http://otvn.tving.com/otvn">CJ주식회사</a></li>
+              <li><a href="http://www.cjem.net/business/music">CJ ENM(E&M)</a></li>
+              <li><a href="http://onstyle.tving.com/onstyle/">CJ CGV</a></li>
+              <li><a href="http://olive.tving.com/olive/">CJ Hello</a></li>
+              <li><a href="http://olive.tving.com/olive/">CJ 파워캐스트</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="btm">
+      <ul class="big">
+        <li><a href="#">고객센터</a></li>
+        <li><a href="#">사이트맵</a></li>
+        <li><a href="#">이용약관</a></li>
+        <li><a href="#" class="b">개인정보 처리 방침</a></li>
+        <li><a href="#">청소년 보호정책</a></li>
+        <li><a href="#">법적고지</a></li>
+        <li><a href="#">이벤트</a></li>
+        <li><a href="#" class="b">다운로드</a></li>
+        <li><a href="#">티빙몰 바로가기</a></li>
+      </ul>
+      <ul class="small">
+        <li>대표이사 : 허민회, 허민호</li>
+        <li><a href="#">사업자정보확인</a></li>
+        <li>개인정보관리책임자 : 고창남</li>
+        <li>사업자등록번호 : 106-81-51510</li>
+        <li>통신판매신고번호 : 서초 제 000015호</li>
+        <li></li>
+        <li>본점 : 서울특별시 서초구 과천대로 870-13 (방배동)</li>
+        <li>사업장 : 서울특별시 마포구 상암산로 66 (상암동)</li>
+        <li>호스팅사업자 : 씨제이올리브네트웍스(주)</li>
+        <li></li>
+        <li>고객센터 : 1670-1525(평일 09시~18시)</li>
+        <li>ENM 시청자 상담실 (편성 문의 및 시청자 의견) : 080-080-0780</li>
+        <li>Mnet 고객센터(방송편성문의) : 1855-1631</li>
+        <li>대표메일 : tving@cj.net</li>
+        <li>티빙몰 문의 : tving.mall@cj.net</li>\
+      </ul>
+      <p class="copy">Copyright (C) CJ ENM All right reserved.</p>
+      <span class="ch no2"><i class="hide">CJ ENM</i></span>
+    </div>
+
+  </footer>
+</body>
+
+</html>
+tml>

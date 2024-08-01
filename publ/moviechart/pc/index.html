@@ -1,0 +1,717 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=1300">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>무비차트 Publishing List</title>
+	<script src="./resources/js/jquery-1.12.4.min.js"></script>
+	<style type="text/css">
+		* { margin: 0; padding: 0; font-family: 'Noto Sans KR', 'Malgun Gothic', '맑은 고딕', Apple Gothic; font-weight: 400; word-break: keep-all;}
+		body { min-width: 980px; font-size: 12px; }
+		li { list-style: none; }
+		a { color: #444; text-decoration: none; }
+		a:hover { color: #444; }
+		a:visited,
+		a:focus,
+		a:active { color: #444; }
+		h1 { font-size: 30px; margin: 45px 0 25px 0; line-height: 40px; letter-spacing: -1px; font-weight: 600; }
+		h1 img { height: 27px; margin: 10px 5px 0 0; vertical-align: top; }
+		.info { position: absolute; right: 0; top: 40px; }
+		.guide { margin: 10px 0 5px 0; text-align: right; }
+		#wrap { position: relative; margin: 0 auto; position: relative; width: 1200px; margin: 0 auto; padding: 120px 20px 50px 20px; }
+		header { position: absolute; left: 0; top: 0; width: 100%; height: 120px; background: #fff; }
+		header .cont_area { position: relative; margin: 0 auto; width: 1200px; }
+		h2 { padding: 10px 0 10px 15px; font-size: 13px; border: 1px solid #444; border-bottom: none; background: #595959; color: #fff; font-weight: 600; }
+		caption { display: none; }
+		div.cont { border-top: 1px solid #444; }
+		table { border-collapse: collapse; width: 100%; border-spacing: 0; }
+		table thead th { padding: 7px 3px; border: 1px solid #ccc; background: #eee; font-size: 13px; }
+		table tbody td { padding: 7px 3px; background: #e4e4e4; border: 1px solid #ccc; text-align: center; color: #898989; font-size: 11px; /*display:none; */}
+		table tbody td.left { padding: 7px 10px; text-align: left; }
+		table tbody td.url { padding: 7px 10px; text-align: left; }
+		table tbody tr.hidden td { background: #e4e4e4; color: #898989; text-decoration: line-through; }
+		table tbody tr.mod td { background: #fce9dc; color: #444; }
+		table tbody tr.add td { background: #e1f5fe; color: #444; }
+		table tbody tr.end td { background: #fff; color: #666; }
+		.red { color: #e80000 !important; text-decoration: none !important; }
+		.tab_nav { margin-bottom: 5px; }
+		.tab_nav li { float: left; margin-right: 5px; }
+		.tab_nav li a { display: block; padding: 4px 10px 5px 10px; border: 1px solid #B4B6B9; border-radius: 4px; background: #B4B6B9; color: #fff; font-size: 14px; transition: all 0.4s; }
+		.tab_nav li a:hover { background: #57ADD9; border-color: #57ADD9; }
+		.tab_nav li a.on { background: #0033A0; border-color: #021742; }
+		.tab_nav:after { display: block; clear: both; height: 0; content: ""; overflow: hidden; }
+		.guide { text-align: right; position: absolute; top: 28px; right: 148px; }
+		.guide ul { font-size: 0; text-align: center; }
+		.guide li { display: inline-block; margin: 0 15px; font-size: 14px; color: #1f1f1f; }
+		.guide li i { display: inline-block; margin-right: 5px; width: 7px; height: 7px; border-radius: 50%; background: #bbb; vertical-align: 2px; }
+		.guide li.mod i { background: #fbb07d; }
+		.guide li.add i { background: #35c0ff; }
+	</style>
+	<script type="text/javascript">
+		$(function() {
+			$('.tab_nav a').click(function() {
+				var activeTab = $(this).attr("href");
+				$('html, body').stop().animate({
+					scrollTop: $(activeTab).offset().top - 110
+				}, 800);
+				return false;
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<!-- wrap -->
+	<div id="wrap">
+		<header>
+			<div class="cont_area">
+				<h1>무비차트 PC Publishing List</h1>
+				<p class="info"><strong>22.04.25</strong> Last update</p>
+				<div class="guide">
+					<ul>vv
+						<li class="end"><i></i>완료</li>
+						<li class="mod"><i></i>수정</li>
+						<li class="add"><i></i>추가</li>
+					</ul>
+				</div>
+			</div>
+		</header>
+		<h2>레이어</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td>레이아웃</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/layer/sublayer.html" target="_blank">./html/layer/sublayer.html</a></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<h2>메인</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td>메인</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/main/main.html" target="_blank">./html/main/main.html</a></td>
+						<td>22.04.15</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		
+		<h2>영화순위</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="2">영화순위</td>
+						<td>실시간예매율</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/realtime.html" target="_blank">./html/sub/realtime.html</a></td>
+						<td>22.04.18</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>박스오피스</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/movieList.html" target="_blank">./html/sub/movieList.html</a></td>
+						<td>22.04.18</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+				
+		<h2>영화정보</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="5">영화정보</td>
+						<td>영화상세</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/movieIner.html" target="_blank">./html/sub/movieIner.html</a></td>
+						<td>22.04.19</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>개봉예정작</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/movieplan.html" target="_blank">./html/sub/movieplan.html</a></td>
+						<td>22.04.19</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>현재상역작</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/moviecurrent.html" target="_blank">./html/sub/moviecurrent.html</a></td>
+						<td>22.04.19</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td rowspan="2">영화검색</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/searchmovie.html" target="_blank">./html/sub/searchmovie.html</a></td>
+						<td>22.04.19</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/searchnotmovie.html" target="_blank">./html/sub/searchnotmovie.html</a></td>
+						<td>22.04.19</td>
+						<td>검색결과 없을때</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+
+		<h2>영화예매</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="3">영화예매</td>
+						<td>영화예매</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/moviePreving01.html" target="_blank">./html/sub/moviePreving01.html</a></td>
+						<td>22.04.20</td>
+						<td>영화예매 해당섹션 클릭하면 다음 섹션 활성화<br>개발시 스크립트 수정</td>
+					</tr>
+					<tr class="end">
+						<td>결제</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/reserve1.html" target="_blank">./html/sub/reserve1.html</td>
+						<td>22.04.20</td>
+						<td>
+							<p style="color:red"> 220523 누락된 쿠폰사용 쿠폰 퍼블추가 </p>
+						</td>
+					</tr>
+					<tr class="end">
+						<td>결제완료</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/reserve2.html" target="_blank">./html/sub/reserve2.html</a></td>
+						<td>22.04.20</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+
+		<h2>매거진</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="2">매거진</td>
+						<td>매거진</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/magazine.html" target="_blank">./html/sub/magazine.html</a></td>
+						<td>22.04.21</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>매거진-상세</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/magazinedetail.html" target="_blank">./html/sub/maimagazinendetail.html</a></td>
+						<td>22.04.21</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+
+		<h2>고객센터</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="6">고객센터</tdr>
+						<td>공지사항</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/customcenter.html" target="_blank">./html/sub/customcenter.html</a></td>
+						<td>22.04.21</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>공지사항-상세</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/customCenterView.html" target="_blank">./html/sub/customCenterView.html</a></td>
+						<td>22.04.21</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>1:1문의</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/inquiry.html" target="_blank">./html/sub/inquiry.html</a></td>
+						<td>22.04.21</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>자주묻는질문</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/faq.html" target="_blank">./html/sub/faq.html</a></td>
+						<td>22.04.21</td>
+						<td>자주묻는질문, 자주묻는질문-상세페이지 병합</td>
+					</tr>
+					<tr class="end">
+						<td>예매권구매문의</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/footPrev.html" target="_blank">./html/sub/footPrev.html</a></td>
+						<td>22.04.21</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+
+		<h2>이벤트</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="2">이벤트</td>
+						<td>이벤트</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/event.html" target="_blank">./html/sub/event.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>이벤트-상세</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/eventdetail.html" target="_blank">./html/sub/eventdetail.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+
+		<h2>이용약관</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="3">이용약관</td>
+						<td>이용약관</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/etc01.html" target="_blank">./html/sub/etc01.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>개인정보취급방침</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/etc02.html" target="_blank">./html/sub/etc02.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>제휴광고문의</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/partnership.html" target="_blank">./html/sub/partnership.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+
+		<h2>마이페이지</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="8">마이페이지</td>
+						<td>예매취소내역</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/mypage01.html" target="_blank">./html/sub/mypage01.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>1:1문의</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/mypage06.html" target="_blank">./html/sub/mypage06.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>1:1문의-상세</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/mypage06in.html" target="_blank">./html/sub/mypage06in.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>캐시목록</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/mypage03.html" target="_blank">./html/sub/mypage03.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>캐시사용내역</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/mypage04.html" target="_blank">./html/sub/mypage04.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>쿠폰목록</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/mypage02.html" target="_blank">./html/sub/mypage02.html</a></td>
+						<td>22.04.22</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>회원정보</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/mypage05.html" target="_blank">./html/sub/mypage05.html</a></td>
+						<td>22.04.25</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>쿠폰등록</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/cupon.html" target="_blank">./html/sub/cupon.html</a></td>
+						<td>22.04.25</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+
+		<h2>로그인</h2>
+		<div class="cont">
+			<table>
+				<caption></caption>
+				<colgroup>
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:30%;">
+					<col span="1" style="width:10%;">
+					<col span="1" style="width:20%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col">1 Depth</th>
+						<th scope="col">2 Depth</th>
+						<th scope="col">3 Depth</th>
+						<th scope="col">Etc.</th>
+						<th scope="col">URL</th>
+						<th scope="col">Date</th>
+						<th scope="col">비고</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="end">
+						<td rowspan="5">로그인</td>
+						<td>로그인</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/login.html" target="_blank">./html/sub/login.html</a></td>
+						<td>22.04.25</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>회원가입</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/member.html" target="_blank">./html/sub/member.html</a></td>
+						<td>22.04.25</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>아이디비번찾기</td>
+						<td></td>
+						<td></td>
+						<td class="url"><a href="./html/sub/find_idpw.html" target="_blank">./html/sub/find_idpw.html</a></td>
+						<td>22.04.25</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td rowspan="2">아이디비번찾기-결과</td>
+						<td>아이디</td>
+						<td></td>
+						<td class="url"><a href="./html/sub/searchId.html" target="_blank">./html/sub/searchId.html</a></td>
+						<td>22.04.25</td>
+						<td></td>
+					</tr>
+					<tr class="end">
+						<td>비밀번호</td>
+						<td></td>
+						<td class="url"><a href="./html/sub/searchPass.html" target="_blank">./html/sub/searchPass.html</a></td>
+						<td>22.04.25</td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>		
+	</div>
+
+	<!-- //wrap -->
+	<script type="text/javascript">
+		jQuery(function($) {
+			$.each($("td.url > a"), function(i, v) {
+				$(v).text($(v).attr("href"));
+			});
+		});
+	</script>
+</body>
+
+</html>

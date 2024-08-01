@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+
+	<script defer src="../../resources/js/common.js"></script>
+
+</head>
+
+<body>
+
+	<!-- tab 스킵네비 영역 -->
+	<div class="skip">
+		<a href="#content">본문 바로가기</a>
+		<a href="#header">네비게이션 바로가기</a>
+	</div>
+
+	<header id="header" class="header sub"
+		style="line-height: 107px; background: #f8f8f8; text-align: center; font-size: 40px;">
+		해더
+	</header>
+	<!-- //header -->
+
+	<div id="content">
+		<div class="wArea navi">
+			<h2 class="vs-hidden">네비게이션</h2>
+			<ul class="ff">
+				<li><img src="../../resources/images/sub/homeIcon.png" alt="홈아이콘"></li>
+				<li>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</li>
+				<li>고객센터</li>
+				<li>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</li>
+				<li>공지사항</li>
+			</ul>
+		</div>
+		<div class="wArea space customcenter ">
+			<div class="title-wrap">
+				<div class="title__txt">
+					<div class="title__subTab">
+						<h2>고객센터</h2>
+						<a href="#" class="first active">공지사항</a>
+						<a href="#" class="last">자주묻는질문</a>
+						<a href="#" class="last">1:1 문의</a>
+					</div>
+					<div class="movieSrch">
+						<label for="movieSrch">
+							<input type="text" id="movieSrch" placeholder="제목을 검색하세요.">
+						</label>
+						<button class="movie-search">검색</button>
+					</div>
+				</div>
+			</div>
+			<!-- //subTab -->
+			<div class="subTitle">
+				<h3>고객센터 1:1 문의</h3>
+				<p>평일 10:00~18:00 (점심시간 12:00~13:00, 주말 및 공휴일 휴무)</p>
+			</div>
+			<!-- //subTitle -->
+			<div class="tableType02">
+				<table>
+					<colgroup>
+						<col>
+						<col style="width: 74.89%;">
+						<col style="width: 11.35%">
+						<col>
+					</colgroup>
+					<thead>
+						<tr>
+							<th>번호</th>
+							<th>제목</th>
+							<th>작성일</th>
+							<th>조회</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>76</td>
+							<td class="title"><a href="#">[설 연휴 고객센터 휴무 안내]</a></td>
+							<td>2022.01.26</td>
+							<td>60</td>
+						</tr>
+						<tr>
+							<td>75</td>
+							<td class="title"><a href="#">[2021-12-31 고객센터 운영시간 단축 안내]</a></td>
+							<td>2021.12.26</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td>74</td>
+							<td class="title"><a href="#">[고객센터 휴무 안내]</a></td>
+							<td>2021.12.24</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td>73</td>
+							<td class="title"><a href="#">[고객센터 운영시간 단축 안내]</a></td>
+							<td>2021.12.20</td>
+							<td>30</td>
+						</tr>
+						<tr>
+							<td>72</td>
+							<td class="title"><a href="#">[고객센터 휴무 안내]</a></td>
+							<td>2021.12.24</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td>71</td>
+							<td class="title"><a href="#">[고객센터 운영시간 단축 안내]</a></td>
+							<td>2021.12.20</td>
+							<td>30</td>
+						</tr>
+						<tr>
+							<td>71</td>
+							<td class="title"><a href="#">[고객센터 휴무 안내]</a></td>
+							<td>2021.12.24</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td>70</td>
+							<td class="title"><a href="#">[고객센터 휴무 안내]</a></td>
+							<td>2021.12.24</td>
+							<td>90</td>
+						</tr>
+						<tr>
+							<td>69</td>
+							<td class="title"><a href="#">[고객센터 운영시간 단축 안내]</a></td>
+							<td>2021.12.20</td>
+							<td>30</td>
+						</tr>
+						<tr>
+							<td>68</td>
+							<td class="title"><a href="#">[고객센터 휴무 안내]</a></td>
+							<td>2021.12.24</td>
+							<td>90</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //tableType02 -->
+			<div class="pagination">
+				<ul class="pagination__list">
+					<!-- 첫페이지 마지막페이지면 prve next 클릭 안됨 -->
+					<li class="pagination__item prev disabled">
+						<a href="#"><img src="../../resources/images/sub/prev.png" alt="이전"></a>
+					</li>
+					<li class="pagination__item active">
+						<a href="#">1</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">2</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">3</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">4</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">5</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">6</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">7</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">8</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">9</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">10</a>
+					</li>
+					<li class="pagination__item next">
+						<a href="#"><img src="../../resources/images/sub/next.png" alt="다음"></a>
+					</li>
+				</ul>
+			</div>
+			<!-- //pagination -->
+		</div>
+		<!-- //wArea -->
+	</div>
+	<!-- //contant -->
+
+	<footer id="footer" style="background: #f8f8f8; text-align: center; line-height: 174px; font-size: 40px;">
+		푸터
+	</footer>
+	<!-- //footer -->
+
+</body>
+
+</html>

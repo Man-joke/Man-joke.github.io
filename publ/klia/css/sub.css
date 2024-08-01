@@ -1,0 +1,52 @@
+/* 웹 */
+html { font-size: 20px;}
+body { font-size: 1rem;}
+
+.content{position: relative;}
+
+/* 비주얼 영역*/
+.visual{background: url(../images/bg_top.png) no-repeat center / auto 100% ;}
+
+/* 통계목록 찾기 */
+.select{ margin: 2rem 0 1.35rem; background: #f6f8fa; font-size: 0; border-top: 1px solid #ddd; border-bottom: 1px solid #ddd;}
+.select > div{display: inline-block; padding: 1rem 0.7rem;}
+.select > div div{display: inline-block;}
+.select h5{display: inline-block;}
+.select select{text-indent: .7rem; width: 5.05rem; height: 2.1rem; border-radius: 0; vertical-align: 0;}
+.select select ~ select{margin: 0 0 0 5px;}
+.select .answer{ width: 20.05rem; margin: 0 .35rem 0 0;}
+.select button{ vertical-align: 0;}
+
+/* 버튼 */
+.align.justify{position: relative;}
+.align.justify .txt{font-size:.75rem; color: #666;}
+.btn.small { padding: 0 .65rem; font-size: .7rem; line-height: 1.5rem; border-radius: 1.25rem;}
+.poin.btn.down:after { background: url(../images/ico_down1.png) no-repeat center / .5rem auto;}
+
+/* 서브2 */
+.list_type3{margin: 3rem 0 0;}
+.list_type3 .top{height: 3.4rem; background: #f6f8fa;}
+.list_type3 .top > div > span{display: inline-block; padding: 0 0 0 1.75rem; width: 12.5rem; font-size: .85rem; color: #000; line-height: 3.4rem;}
+.list_type3 .top em{ font-size: .7rem; color: #666; line-height: 3.4rem;}
+button.btn.big.ico.blue.down{position: absolute; left: 50%; bottom: -4.35rem; transform: translateX(-50%);}
+
+/* 서브3 리스트 */
+.list_type1.after > li:before{display: none;}
+.list_type1.after > li { padding: 0; line-height: 1.45rem;}
+.list_type1 > li { padding: 0 0 0 .8rem; line-height: 1.45rem;}
+
+.table_type1 tbody th{font-weight: bold;}
+
+.content h4{position: relative;}
+.content h4 span{float: right; position: relative; right: 0; top: 12px; font-size: .6rem; color: #666; font-weight: normal; vertical-align: -2px}
+.content > a{display: inline-block; padding: 0 1.2rem 0; margin: 1.3rem 0 0; font-size: .7rem; line-height: 2.15rem; border: 1px solid #ddd; border-radius: 4px; }
+.content > a:after{ content: ""; display: inline-block; padding:0 4px 0 0; width: .85rem; height: .85rem; vertical-align:-0.15rem; background: url(../images/ico_arr3.png) no-repeat center;}
+.content a img{margin: 0 .75rem 0 0; vertical-align: -5.5px;}
+.content p.terms{padding: 1rem 0 0 1rem; font-size: .75rem; text-indent: -0.8rem;color: #666; line-height: 1;}
+
+/* 서브4 리스트 */
+.content .btn.small{font-size: .6rem;}
+.content p.beauty_secret{ background: #eef0f2; font-size: 1rem; color: #108ad3; line-height: 3.35rem; text-align: center; border-radius: .45rem;}
+
+.list_type1 .bold{display: inline-block;color: #000;}
+.list_type1 li a.s{margin: 0 0 0 .6rem;}

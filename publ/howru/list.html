@@ -1,0 +1,434 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>모바일</title>
+  <script type='text/javascript'>
+    var agent = navigator.userAgent.toLowerCase();
+    if (agent.match(/iphone/) != null || agent.match(/ipod/) || agent.match(/ipad/) || agent.match(/android/) != null) {
+      document.write('<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi">');
+    } else {}
+  </script>
+  <style>
+    ul,
+    li {
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      padding: 10px;
+      font: 10px tahoma;
+      color: #666666;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 15px;
+      font-weight: bold;
+      color: #222;
+    }
+
+    .popup {
+      color: #3F3085 !important;
+    }
+
+    a {
+      text-decoration: none;
+      color: #666666;
+    }
+
+    table {
+      min-width: 950px;
+      width: 100%;
+      border-top: 1px solid #CCCCCC;
+      border-bottom: 1px solid #333;
+      border-collapse: collapse;
+    }
+
+    table th {
+      color: #fff;
+      height: 25px;
+      font-size: 11px;
+      background: #333;
+      padding: 2px 0 0 0;
+      text-align: center;
+    }
+
+    table td {
+      border-bottom: 1px solid #E3E3E3;
+      color: #777777;
+      font-size: 11px;
+      padding-top: 5px;
+      padding-bottom: 5px;
+      text-align: center;
+    }
+
+    table tr.line td {
+      border-top: 2px solid #333;
+    }
+
+    tr:hover td {
+      background: #e9e9e9;
+    }
+
+    table td:first-child {
+      color: #DF0404;
+      font-size: 12px;
+      padding-left: 10px;
+    }
+
+    table td:nth-child(2) {
+      width: 170px;
+      color: #3C3C3C;
+    }
+
+    table td:nth-child(3) {
+      color: #3C3C3C;
+    }
+
+    table td:nth-last-child(4) {
+      color: #096;
+      text-align: center;
+    }
+
+    table td:nth-last-child(3) {
+      color: #63F;
+    }
+
+    table td:last-child {
+      font-family: verdana;
+      font-size: 10px;
+      color: #ed1c24;
+      text-align: center;
+    }
+
+    .ha {
+      color: #ed1c24;
+    }
+
+    .go,
+    table td.go {
+      color: #96F;
+    }
+
+    .jo,
+    table td.jo {
+      color: #0C9;
+    }
+
+    table td del {
+      display: block;
+      color: #999;
+    }
+
+    .title {
+      color: #668caf;
+      font-weight: bold;
+      font-size: 16px;
+      font-family: tahoma;
+    }
+
+    .title a:hover {
+      color: #668caf;
+    }
+
+    p {
+      text-align: right;
+      margin-bottom: -0px;
+      font-family: dotum;
+      font-size: 11px;
+      color: #CCC;
+    }
+
+    .del {
+      background: #CCC;
+      text-decoration: line-through;
+      color: #fff;
+    }
+
+    .del a {
+      color: #FFF;
+    }
+
+    .bum {
+      position: absolute;
+      right: 5px;
+      top: 55px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .bum em {
+      font-style: normal;
+      padding: 0 5px;
+    }
+
+    .cross {
+      text-align: center;
+    }
+
+    .cross img {
+      width: 30px;
+    }
+
+    @media screen and (max-width:800px) {
+      table {
+        min-width: 1000px;
+      }
+
+      table th:nth-child(5),
+      table th:nth-child(6),
+      table th:nth-child(8),
+      table th:last-child,
+      table td:nth-child(5),
+      table td:nth-child(6),
+      table td:nth-child(8),
+      table td:last-child {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>모바일</h1>
+  <table>
+    <colgroup>
+      <col style="width:px">
+      <col style="width:px">
+      <col style="width:px">
+      <col style="width:px">
+      <col style="width:px">
+      <col style="width:px">
+      <col style="width:px">
+      <col style="width:px">
+      <col style="width:px">
+    </colgroup>
+    <thead>
+      <tr>
+        <th>1Depth</th>
+        <th>2Depth</th>
+        <th>3Depth</th>
+        <th>4Depth</th>
+        <th>5Depth</th>
+        <th>6Depth</th>
+        <th>Popup</th>
+        <th>w3c</th>
+        <th>Mobile</th>
+        <th>File Name</th>
+        <th>History</th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr>
+        <td>메인화면</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('index.html','375','812')" target="_blank">index.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>친구 요청</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub1.html','375','812')" target="_blank">sub1.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>최근 활동친구</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub2.html','375','812')" target="_blank">sub2.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>친구알림</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub3.html','375','812')" target="_blank">sub3.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>계정만들기</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub4.html','375','812')" target="_blank">sub4.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>이용안내</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub5.html','375','812')" target="_blank">sub5.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>상세입력</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub6.html','375','812')" target="_blank">sub6.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>인증번호</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub7.html','375','812')" target="_blank">sub7.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>프로필 설정</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub8.html','375','812')" target="_blank">sub8.html</a></td>
+        <td>0.5일</td>
+      </tr>
+      <tr>
+        <td>개인프로필</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <img src="http://validator.kldp.org/w3cimgs/validate/html5-blue.png" alt="Valid HTML 5"></a>
+          <img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="올바른 CSS입니다!">
+        </td>
+        <td class="cross">
+          <img src="../../img/ico_android.png" alt="안드로이드">
+          <img src="../../img/ico_apple.png" alt="애플">
+        </td>
+        <td><a href="" onclick="pop_center('sub9.html','375','812')" target="_blank">sub9.html</a></td>
+        <td>0.5일</td>
+      </tr>
+    </tbody>
+  </table>
+  <script>
+   function pop_center(fname,wth,hgt){
+      var W = wth;
+      var H = hgt;
+      var X = screen.availWidth/2 - W/2;
+      var Y = screen.availHeight/2 - H/2;
+      var wname = fname.split(".")[0];
+      while(wname.indexOf("/")!=-1){
+         wname = wname.replace("/","_");
+      }
+      newWin = window.open(fname,wname,"width="+W+",height="+H+",left="+X+",top="+Y);
+      newWin.focus();
+   }
+   </script>
+</body>
+
+</html>

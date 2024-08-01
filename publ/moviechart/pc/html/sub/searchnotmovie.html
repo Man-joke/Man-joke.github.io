@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+
+	<script defer src="../../resources/js/common.js"></script>
+
+</head>
+
+<body>
+
+	<!-- tab 스킵네비 영역 -->
+	<div class="skip">
+		<a href="#content">본문 바로가기</a>
+		<a href="#header">네비게이션 바로가기</a>
+	</div>
+
+	<header id="header" class="header sub" style="line-height: 107px; background: #f8f8f8; text-align: center; font-size: 40px;">
+		해더
+	</header>
+	<!-- //header -->
+
+
+	<div id="content">
+		<div class="wArea navi">
+			<h2 class="vs-hidden">네비게이션</h2>
+			<ul class="ff">
+				<li><img src="../../resources/images/sub/homeIcon.png" alt="홈아이콘"></li>
+				<li>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</li>
+				<li>영화검색</li>
+			</ul>
+		</div>
+		<div class="wArea space space-height">
+			<div class="title-wrap">
+				<div class="title__txt">
+					<div class="title__subTab">
+						<h2>영화검색</h2>
+						<p class="">‘가’(으)로 검색된 영화 <span class="search-num">0개</span></p>
+					</div>
+				</div>
+				<div class="movieSrch">
+					<label for="movieSrch">
+						<input type="text" id="movieSrch" value="가" placeholder="영화검색">
+					</label>
+					<button class="movie-search">검색</button>
+				</div>
+			</div>
+			<!-- //subTab -->
+			<div class="searchMovie">
+				<div>‘<span class="serachWord">가</span>’에 대한 검색 결과가 없습니다.</div>
+				<div>영화 제목을 붙여 썼거나 철자가 틀리진 않았는지 다시 한 번 확인해주시기 바랍니다.</div>
+			</div>
+		</div>
+		<!-- //wArea -->
+	</div>
+	<!-- //contant -->
+
+	<footer id="footer" style="background: #f8f8f8; text-align: center; line-height: 174px; font-size: 40px;">
+		푸터
+	</footer>
+	<!-- //footer -->
+</body>
+
+</html>

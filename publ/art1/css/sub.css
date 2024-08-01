@@ -1,0 +1,120 @@
+main { padding: 3rem 0 0;}
+
+/* 서브1 상단 메뉴*/
+.con_menu {text-align: center;}
+.con_menu p{ margin: 2.5rem 0; height: 1.2rem; background: url(../images/logo_for_link.png) no-repeat center / auto 100%;}
+.con_menu ul{ font-size: 0;}
+.con_menu li{ display: inline-block;}
+.con_menu li~li:before{ content: ""; display: inline-block; margin: 0 1.25rem; width: 1px; height: 8px; background: #d1d1d1; vertical-align: 2px;}
+.con_menu li a{ position: relative; display: inline-block; height: 1.6rem; line-height: 1.6rem; font-size: .8rem; color: #000;}
+.con_menu li a:after{content: ""; display: none; position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 2px; background: #000; }
+.con_menu li a.on:after{display: block;}
+.con_menu li a:hover:after{display: block;}
+
+/* 서브1 비주얼 */
+.visual { position: relative; margin:  2.5rem 0 0; height: 52rem; background: url(../images/img_consulting.jpg) no-repeat center / cover;}
+.visual div{ position: absolute; left: 14.25rem; top: 15.2rem; color: #000;  line-height: 1; text-align: right;}
+.visual h2{font-size: 2.1rem;}
+.visual h2 br{ display: none;}
+.visual p{ padding: 1.3rem 0 1.25rem;font-size: 1rem; line-height: 1.65rem; font-weight: bold;}
+.visual em{font-size: .85rem; color: #c30d23; font-weight: bold;}
+
+/* 공통 h2*/
+.h2{ padding: 6.15rem 0 2.5rem; font-size: 1.5rem; color: #000; text-align: center;}
+.h2 br{display: none;}
+.p{ font-size: .75rem; line-height: 1.3rem; text-align: center;}
+
+/* brand */
+.brand {position: relative; text-align: center;}
+.brand p{ color: #000; }
+.brand p br:first-child,
+.brand p br:nth-child(3),
+.brand p br:nth-child(4),
+.brand p br:nth-child(6),
+.brand p br:nth-child(7){ display: none;}
+.brand p span:nth-child(1){ display: inline-block;}
+.brand p span:nth-child(2){ display: none;}
+.brand ul{ padding: 3rem 0 8.2rem; margin: 0 auto; width: 88rem; font-size: 0;}
+.brand ul li{ display: inline-block; font-size: .6rem; color: #999; text-align: left;}
+.brand ul li~li{margin: 0 0 0 2rem}
+.brand ul li img{display: block; margin: 0 0 1.15rem; box-shadow: 0 0 0.5rem 0.1rem lightgray;}
+.brand .tab{ display: none; position: absolute; left: 50%; bottom: 6.2rem; transform: translateX(-50%);}
+.brand .tab button{margin: 0 .4rem; width: .75rem; height: .75rem; background: #a6a6a6; border-radius: 100%; line-height: 1;cursor: pointer; outline: 0;}
+.brand .tab button:nth-child(4),
+.brand .tab button:nth-child(5){display: none;}
+.brand .tab button.on{ background: #000;}
+
+/* 서브1 기업 제안 레퍼런스 */
+.experience{position: relative; height: 40.75rem; background: #ad8348; color: #fff;}
+.experience h2{padding: 5.75rem 0 0 12.85rem; font-size: 2rem; color: rgba(255,255,255,.3); line-height: 2rem; text-transform: uppercase;}
+.experience p{ padding: 1.2rem 0 0 12.85rem; font-size: .9rem; line-height: 1;}
+.experience div.tab{ display: none;  position: absolute; left: 50%; bottom: 7.6rem; transform: translateX(-50%); font-size: 0;}
+.experience div.tab button{display: inline-block; width: .8rem; height: .8rem; background: rgba(255,255,255,.5); border-radius: 100%; outline: 0; cursor: pointer;}
+.experience div.tab button~button{margin: 0 0 0 2.75rem;}
+.experience div.tab button.on{ background: #fff;}
+.experience div.ourexperience{position: absolute; left: 12.85rem; top: 16.05rem;}
+.experience div.swipe1,
+.experience div.swipe2,
+.experience div.swipe3,
+.experience div.swipe4{display: inline-block; margin: 0 2.5rem 0 0; vertical-align: top;}
+.experience div.swipe4{margin-right: 0;}
+.experience div.txt em{font-size: 1rem; font-weight: bold;}
+.experience div.txt ul{padding: .5rem 0 13.3rem;}
+.experience div.txt ul li{font-size: .65rem; line-height: 1.2rem;}
+
+/* 서브1 디렉팅 */
+.art_directing{background: #3e3a39;}
+.art_directing h2{color:rgba(255,255,255,0.4);}
+.art_directing p{color:rgba(255,255,255,0.4);}
+.art_directing p + p{ display: none;}
+.art_directing ul{ padding: 3rem 0 8.9rem; font-size: 0; text-align: center;}
+.art_directing ul li{display: inline-block; margin: 0.5rem; width: 17.5rem; height: 15rem; overflow: hidden;}
+.art_directing ul li img{width: 100%;}
+
+/* 서브 1 콘택트 */
+.contact_btn { position: relative; height: 15rem; background: url(../images/consulting_sec04_img.jpg) no-repeat center / cover}
+.contact_btn div{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 0; }
+.contact_btn a{display: inline-block; padding: 0 3.75rem; line-height: 2.75rem; font-size: 1.1rem; color: #fff; font-weight: bold; border: 2px solid #fff; text-align: center;}
+.contact_btn a~a{margin-left: 10rem;}
+.contact_btn a:hover {color: #000; border: 2px solid #000;}
+
+/* 서브1 상담 신청*/
+.counseling{position: relative;}
+.counseling table{ margin: 0 auto; padding: 0 0 10rem; width: 59.4rem; border-collapse: separate; border-spacing: 0 .45rem;}
+.counseling tr th{ font-size: 0.75rem; color: #535353; text-align: left; font-weight: normal;}
+.counseling tr td input{ padding: .8rem 0 .8rem .5rem; width: 100%; line-height: 2.25rem; outline: 0;box-sizing: border-box;}
+.counseling tr td textarea{ padding: .5rem; width: 100%; height: 7.3rem; line-height: 1.2rem; outline: 0; box-sizing: border-box;}
+.counseling tr td textarea::-webkit-input-placeholder{ font-size: .55rem; color: rgba(0,0,0,.5); line-height: .9rem;}
+.counseling tr:last-child td label{ font-size: .6rem; color: #4d4d4d;}
+.counseling tr:last-child td input{ margin: 0 5px 0 0 ; width: auto; }
+.counseling .control{ position: absolute; right: 17.25rem; bottom: 6rem;}
+.counseling .control button{width: 7.5rem; line-height: 1.75rem; font-size: .6rem;  border: 1px solid #999; border-radius: .75rem 0 0 0; cursor: pointer; outline: 0;}
+.counseling .control button.cancel{ background: #fff; color: #000;}
+.counseling .control button.submit{ background: #000; color: #fff;}
+.counseling .control button~button{margin: 0 0 0 .35rem;}
+
+/* 팝업 */
+.pop{ position: fixed; right: 1rem; bottom: 1rem; z-index: 50;}
+.pop div button{ display: block; margin: .3rem 0; width: 2rem; height: 2rem; cursor: pointer; outline: 0;}
+.pop .top{ background: url(../images/btn_top.png) no-repeat center;}
+.pop .talk{ background: url(../images/btn_talktalk.png) no-repeat center;}
+
+/* 로그인 */
+form div{ margin: 0 auto; width: 19rem; text-align: center;}
+form div h2{ padding: 4.5rem 0 3.15rem; font-size: 1rem; color: #333;line-height: 1;}
+form .txt li~li{margin: .5rem 0 0;}
+form .txt input{ display: block; padding: 1.15rem .5rem; width: 100%; line-height: 2.4rem; border: 1px solid #cfcfcf; border-radius: .25rem; box-sizing: border-box; outline: 0; cursor: pointer;}
+form .line{padding: 1rem 0 1.2rem ; line-height: 1; }
+form .line li{display: inline-block;}
+form .line li~li{margin: 0 0 0 1.9rem; }
+form .line li{font-size: .65rem; color: #818181; }
+form .line li label{outline: 0; cursor: pointer;}
+form .line li label input{margin: 0 .35rem 0 0}
+form .login li~li{margin: .75rem 0 0;}
+form .login li button{ width: 100%; line-height: 2.5rem; background: #333; font-size: .75rem; color: #fff; border-radius: .75rem 0 0; border: 1px solid #333; outline: 0; cursor: pointer;}
+form .login li:last-child button{background: #fff; color: #333;}
+form .find li button{ background: #fff; font-size: .65rem; outline: 0; cursor: pointer;}
+form .sns{padding: 0 0 4.2rem; }
+form .sns li~li{margin: 0 .55rem}
+form .sns li:first-child a{display: inline-block; width: 2.35rem; height: 2.35rem; background: url(../images/ico_facebook.png) no-repeat center;}
+form .sns li:last-child a{display: inline-block; width: 2.35rem; height: 2.35rem; background: url(../images/ico_google.png) no-repeat center;}

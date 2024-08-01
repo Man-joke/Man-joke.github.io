@@ -1,0 +1,117 @@
+header > div{width: 100%; height: 3rem;}
+header h1{left: 50%; transform: translate(-50%, -50%);}
+header h1 a{ width: 3.4rem; height: 1.4rem;}
+header nav ul{display: none;}
+header nav > a{display: block;}
+header nav > a:before{ display: block; left: 1.25rem; font-size: 1.25rem;}
+header div div{ right: 1.25rem;}
+header div ul li{ display: inline-block; margin: 0 0 0 1rem;}
+header div ul li:empty,
+header div ul li:nth-child(4){ display: none;}
+
+/* 서브1 상단 메뉴*/
+.con_menu p{ display: none;}
+.con_menu ul li{ position: relative; display: block; font-weight: bold;}
+.con_menu ul li~li{display: none;}
+.con_menu ul li~li:before{display: none;}
+.con_menu ul li:before{content: "\e941"; position: absolute; right: 1rem; top: 50%; transform: translateY(-50%); font-size: 1rem; color: #000;}
+.con_menu ul li a{display: block; height: 3rem; line-height: 3rem; font-size: 1rem; color: #727171;}
+.con_menu ul li.click a,
+.con_menu ul li:hover a{ color: #000;}
+.con_menu ul li a:hover:after{display: none;}
+.con_menu ul li a.on:after{display: none;}
+
+/* 서브1 비주얼 */
+.visual {margin: 0; height: 42.5rem; background: url(../images/img_consulting_m.jpg) no-repeat center / cover;}
+.visual div{ left: 7.8rem; top: 28.65rem; color: #fff;}
+.visual h2{font-size:  1.25rem; line-height: 1.65rem; }
+.visual h2 br{ display: block;}
+.visual p{ font-size: .8rem; line-height: 1.25rem;}
+.brand .tab{display: block;}
+
+/* 공통 h2*/
+.h2{ padding: 5.1rem 0 1.25rem;}
+.h2 br{display: block;}
+.p{line-height: 1.25rem}
+
+/* brand */
+.brand { text-align: center;}
+.brand p{ color: #000; }
+.brand p br:first-child,
+.brand p br:nth-child(3),
+.brand p br:nth-child(4),
+.brand p br:nth-child(6),
+.brand p br:nth-child(7){ display: block;}
+.brand p span:nth-child(4){ display: none;}
+.brand p span:nth-child(6){ display: none;}
+.brand p span:nth-child(2){ display: block;}
+.brand ul{ padding: 3rem 0 10.2rem;}
+.brand ul li{overflow-x: hidden; overflow-y: hidden;}
+.brand .tab{ display: block; left: 50%; bottom: 5.8rem; transform: translateX(-50%);}
+.brand .tab button:nth-child(4),
+.brand .tab button:nth-child(5){ display: inline-block; }
+
+/* 서브1 기업 제안 레퍼런스 */
+.experience{ height: 68.2rem;}
+.experience h2{ padding: 5.15rem 0 0 1.25rem; font-size: 1.35rem;}
+.experience p{ padding: 1.7rem 0 0 1.25rem; font-size: .75rem;}
+.experience div.tab{ display: none;}
+.experience div.ourexperience{ left: 1.25rem; top: 15.25rem;}
+.experience div.swipe2,
+.experience div.swipe3,
+.experience div.swipe4{display: block;}
+.experience div.txt em{font-size: .75rem; }
+.experience div.txt ul{padding: 1.5rem 0 1.35rem 1rem;}
+.experience div.txt ul li{font-size: .6rem;}
+
+/* 서브1 디렉팅 */
+.art_directing{ height: auto;}
+.art_directing h2 span{ display: none; padding: 4.9rem 0 2rem; line-height: 2rem;}
+.art_directing .h2 br{display: block;}
+.art_directing p{display: none;}
+.art_directing p + p{ display: block; text-align: center;}
+.art_directing ul{ padding: 3rem 0 5rem;}
+.art_directing ul li:last-child{display: none;}
+.art_directing ul li{ margin: 0.25rem; width: 11.25rem; height: 8.9rem;}
+.art_directing ul li:last-child{display: none;}
+
+/* 서브 1 콘택트 */
+.contact_btn { position: relative; height: 15rem; background: url(../images/consulting_sec04_img.jpg) no-repeat center / cover}
+.contact_btn div{width: 80%;}
+.contact_btn a{display: block; padding: 0; width: 100%; line-height: 2.3rem; font-size: 1rem;}
+.contact_btn a~a{margin-left: 0; margin-top: 2rem;}
+
+/* 푸터 */
+footer div{  position: relative; padding: 3.5rem 0 0; margin: 0 auto; width: 22.5rem;}
+footer div p{height: 1.4rem;}
+footer div ul.menu{ padding: 0 0 0 1rem;}
+footer div ul.menu li{ padding: 0 .1rem;}
+footer div ul.menu li a:before{margin: 0 .2rem 0 0;}
+
+footer div em{display: block; padding: 1rem 0 0; font-size: .55rem;}
+footer ul.sns{ float: none; margin: 1.4rem 0 1rem;}
+footer ul.sns li~li{ margin: 0 0 0 1.15rem;}
+footer .blog{width: 2.2rem; height: 1rem;}
+footer .post{ width: 3rem; height: 1rem;}
+footer .instar{ width: 3.5rem; height: 1rem;}
+footer .facebook{ width: 3rem; height: 1rem;}
+
+footer div address{ padding: 0 1.9rem .8rem 0; font-size: .7rem; line-height: 1.1rem;}
+footer div address br{display: block;}
+footer div address span:first-child{ display: block;}
+
+/* 서브1 상담 신청*/
+.counseling table{ padding: 0 0 8rem; width: 22.5rem; border-spacing: 0 1.3rem;}
+.counseling tr th{display: block;}
+.counseling tr td{display: block; margin: .2rem 0 0;}
+.counseling tr td input{ line-height: 2.3rem;}
+.counseling tr td textarea{ height: 10rem; width: 100%;}
+.counseling tr:last-child th{ display: inline-block;}
+.counseling tr:last-child td{ float: right; vertical-align: 1.5px; }
+.counseling tr:last-child td label{text-align: right;}
+.counseling .control{ right: 50%; bottom: 5rem; transform: translateX(50%);width: 22.5rem;}
+.counseling .control button{ width: 11rem;}
+.counseling .control button~button{margin: 0  0 0 .2rem;}
+
+/* 팝업 */
+.pop{ position: fixed; right: .7rem; bottom: .7rem;}

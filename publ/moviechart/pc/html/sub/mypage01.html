@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+
+	<script defer src="../../resources/js/common.js"></script>
+
+</head>
+
+<body>
+
+	<!-- tab 스킵네비 영역 -->
+	<div class="skip">
+		<a href="#content">본문 바로가기</a>
+		<a href="#header">네비게이션 바로가기</a>
+	</div>
+
+	<header id="header" class="header sub"
+		style="line-height: 107px; background: #f8f8f8; text-align: center; font-size: 40px;">
+		해더
+	</header>
+	<!-- //header -->
+
+	<div id="content">
+		<div class="wArea navi">
+			<h2 class="vs-hidden">네비게이션</h2>
+			<ul class="ff">
+				<li><img src="../../resources/images/sub/homeIcon.png" alt="홈아이콘"></li>
+				<li>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</li>
+				<li>마이페이지</li>
+				<li>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</li>
+				<li>예매/취소내역</li>
+			</ul>
+		</div>
+		<div class="wArea space customcenterView">
+			<div class="title-wrap">
+				<div class="title__txt">
+					<div class="title__subTab">
+						<h2>마이페이지</h2>
+						<a href="#" class="first active">예매/취소내역</a>
+						<a href="#" class="last">쿠폰목록</a>
+						<a href="#" class="last">캐시목록</a>
+						<a href="#" class="last">캐시사용내역</a>
+						<a href="#" class="last">회원정보</a>
+						<a href="#" class="last">1:1문의</a>
+					</div>
+				</div>
+			</div>
+			<!-- //subTab -->
+			<div class="subTitle">
+				<h3>고객센터 1:1 문의</h3>
+				<p>평일 10:00~18:00 (12:00~13:00 점심시간) 공휴일/휴일 휴무</p>
+			</div>
+			<!-- //subTitle -->
+			<div class="tableType02 cancleTiket">
+				<table>
+					<colgroup>
+						<col style="width:109px">
+						<col style="width:193px">
+						<col style="width:168px">
+						<col style="width:60px">
+						<col style="width:67px">
+						<col style="width:185px">
+						<col style="width:74px">
+						<col style="width:103px">
+					</colgroup>
+					<thead>
+						<tr>
+							<th>예매일</th>
+							<th>예매영화</th>
+							<th>상영일/상영관</th>
+							<th>매수</th>
+							<th>결제내역</th>
+							<th>발권정보</th>
+							<th>상태</th>
+							<th></th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>2022.09.04<p>13:38:49</p></td>
+							<td>극장판 주술회전</td>
+							<td>CGV청라<br>2002.02.17 / 10:00</td>
+							<td>1매</td>
+							<td>신용카드</td>
+							<td>예매준비중입니다.</td>
+							<td>결제완료</td>
+							<td class="btn01"><a href="#">취소</a></td>
+						</tr>
+						<tr>
+							<td>2022.09.04<p>13:38:49</p></td>
+							<td>킹메이커</td>
+							<td>CGV청라<br>2002.02.17 / 10:00</td>
+							<td>1매</td>
+							<td>신용카드</td>
+							<td>-</td>
+							<td>환불완료</td>
+							<td>취소수수료<br>(1,500원)</td>
+						</tr>
+						<tr>
+							<td>2022.09.04<p>13:38:49</p></td>
+							<td>007 노 타임 투 다이</td>
+							<td>롯데시네마 상주<br>2002.02.17 / 10:00</td>
+							<td>1매</td>
+							<td>휴대폰</td>
+							<td>
+								예매번호3716804<br>상영일시2020-04-15(수)<br>17:55 ~ 19:34 상영관합정 1관 관람인원성인 2좌석 K3, K4
+							</td>
+							<td>주문실패</td>
+							<td></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- //tableType02 -->
+			<div class="pagination">
+				<ul class="pagination__list">
+					<!-- 첫페이지 마지막페이지면 prve next 클릭 안됨 -->
+					<li class="pagination__item prev disabled">
+						<a href="#"><img src="../../resources/images/sub/prev.png" alt="이전"></a>
+					</li>
+					<li class="pagination__item active">
+						<a href="#">1</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">2</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">3</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">4</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">5</a>
+					</li>
+					<li class="pagination__item">
+						<a href="#">6</a>
+					</li>
+					<li class="pagination__item next">
+						<a href="#"><img src="../../resources/images/sub/next.png" alt="다음"></a>
+					</li>
+				</ul>
+			</div>
+			<!-- //pagination -->
+			<div class="explan cancle">
+				<div class="title">예매취소/환불 관련 안내</div>
+				<div style="margin-top: 10px;">
+					<p>- 일반상영관 예매만 가능하며 예매가 완료되면 최대 2시간 후에 극장에서 발권 가능한 예매번호 문자가 전송됩니다.</p>
+					<p>- 예매번호 전송 시 당사 예매 대행 담당자 이름으로 전송되고, 극장 무인발권기 또는 창구에서 티켓 발권이 가능합니다.</p>
+					<p>- 영화 예매 신청 후 예매번호가 문자 발송되면 취소/환불/변경이 불가합니다. 현장 취소의 경우도 환불되지 않는 점을 유의하시기 바랍니다.</p>
+					<p>- 예매를 잘못하신 경우 예매 후 5분이내에 즉시취소가 가능하며, 사용하신 쿠폰과 결제금액은 모두 환불됩니다.</p>
+					<p>- 예매 후 5분이 경과된 뒤에 취소하는 경우 영화상영시간 3시간 이전 취소 신청건에 한하여 예매인원 1인당 1,500원, 2인 이상 최대 3,000원의 취소수수료가 부과됩니다.</p>
+					<p>- 취소가 완료된 영화는 관람이 불가능하며, 사용쿠폰은 재사용이 가능하도록 반환됩니다.</p>
+				</div>
+			</div>
+			<!-- //explan -->
+			
+		</div>
+		<!-- //wArea -->
+	</div>
+	<!-- //contant -->
+
+	<footer id="footer" style="background: #f8f8f8; text-align: center; line-height: 174px; font-size: 40px;">
+		푸터
+	</footer>
+	<!-- //footer -->
+
+	<!-- jQuery or skript 적용부분 -->
+	<script>
+
+	</script>
+
+</body>
+
+</html>

@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+
+	<script defer src="../../resources/js/common.js"></script>
+
+</head>
+
+<body>
+
+	<!-- tab 스킵네비 영역 -->
+	<div class="skip">
+		<a href="#content">본문 바로가기</a>
+		<a href="#header">네비게이션 바로가기</a>
+	</div>
+
+	<header id="header" class="header sub"
+		style="line-height: 107px; background: #f8f8f8; text-align: center; font-size: 40px;">
+		해더
+	</header>
+	<!-- //header -->
+
+	<div id="content">
+		<div class="wArea navi">
+			<h2 class="vs-hidden">네비게이션</h2>
+			<ul class="ff">
+				<li><img src="../../resources/images/sub/homeIcon.png" alt="홈아이콘"></li>
+				<li>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</li>
+				<li>고객센터</li>
+				<li>&nbsp;&nbsp;&gt;&nbsp;&nbsp;</li>
+				<li>1:1 문의</li>
+			</ul>
+		</div>
+		<div class="wArea space customcenterView">
+			<div class="title-wrap">
+				<div class="title__txt">
+					<div class="title__subTab">
+						<h2>고객센터</h2>
+						<a href="#" class="first">공지사항</a>
+						<a href="#" class="last">자주묻는질문</a>
+						<a href="#" class="last active">1:1 문의</a>
+					</div>
+				</div>
+			</div>
+			<!-- //subTab -->
+			<div class="subTitle">
+				<h3>고객센터 1:1 문의</h3>
+				<p>평일 10:00~18:00 (점심시간 12:00~13:00, 주말 및 공휴일 휴무)</p>
+			</div>
+			<!-- //subTitle -->
+			<div class="inquiry tableType02">
+				<div class="inquiry__topsec">
+					<h3>문의 내용</h3>
+				</div>
+				<div class="inquiry__con">
+					<div class="inquiry__title">
+						<p>제목</p>
+						<div class="input-warp">
+							<label for="inputtitle" class="vs-hidden">제목</label>
+							<input type="text" id="inputtitle" placeholder="제목">
+						</div>
+					</div>
+					<div class="inquiry__txt">
+						<p>내용</p>
+						<div class="input-warp">
+							<label for="inquiryTxt" class="vs-hidden">내용</label>
+							<textarea id="inquiryTxt" cols="30" rows="10" placeholder="내용"></textarea>
+						</div>
+						<p class="wordcount"><span>0</span> / 2000</p>
+					</div>
+				</div>
+			</div>
+			<!-- //text_table02 -->
+			<div class="inquiry__btn list-btn">
+				<a href="#">취소</a>
+				<button class="submit">등록</button>
+			</div>	
+		</div>
+		<!-- //wArea -->
+	</div>
+	<!-- //contant -->
+
+	<footer id="footer" style="background: #f8f8f8; text-align: center; line-height: 174px; font-size: 40px;">
+		푸터
+	</footer>
+	<!-- //footer -->
+
+</body>
+
+</html>

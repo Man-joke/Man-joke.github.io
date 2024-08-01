@@ -1,0 +1,298 @@
+.m0auto{ width: 1200px; margin: 0 auto;}
+.m0auto400{ width: 400px; margin: 0 auto;}
+.left{float: left;}
+.right{ float: right;}
+.visual > div{position: relative; margin: 0 auto; width: 1200px;}
+
+
+/******* 이전 다음 화살표*********/
+.tving .arr button{ display: none; position: absolute; top: 50%; width: 54px;height: 54px; border-radius: 100%; transform: translateY(-50%); background: rgba(0,0,0,.2); font-size: 15px; color: rgba(255,255,255,.2); }
+.tving .arr .prev{ left: -30px;}
+.tving .arr .prev:before{ content: "\e93b";}
+.tving .arr .next{ right: -30px;}
+.tving .arr .next:before{ content: "\e93e";}
+.tving .ch_list:hover .arr button{display: block;}
+
+
+/******  연령대  ********/
+.ch_list li a > p{ position: absolute; left: 0; top: 0; width: 38px; line-height: 38px; font-size: 20px; color: #fff; text-align: center; border-radius:0 0 4px 0/ 0 0 4px 0;}
+
+/*** 스프라이트 이미지 ***/
+.sns1{ display: block; width: 58px; height: 58px; border-radius: 100%; background: url(../images/login-sns-icon.png) 0 0;}
+.sns2{ display: block; width: 58px; height: 58px; border-radius: 100%; background: url(../images/login-sns-icon.png) -78px 0;}
+.sns3{ display: block; width: 58px; height: 58px; border-radius: 100%; background: url(../images/login-sns-icon.png) -155px 0;}
+.sns4{ display: block; width: 58px; height: 58px; border-radius: 100%; background: url(../images/login-sns-icon.png) -233px 0;}
+.sns5{ display: block; width: 58px; height: 58px; border-radius: 100%; background: url(../images/login-sns-icon.png) -310px 0;}
+
+/***** 프로그램 간격 24********/
+.width_282 li~li, .height_180 li~li{margin: 0 0 0 24px}
+.width_224 li~li{ padding: 0 0 0 20px;}
+.width_224 li~li:nth-child(6n){padding-left: 0;}
+
+/****** 움직임********/
+.trans-10 li{transition: transform 0.6s;}
+.trans-10 li:hover{transform: translateY(-10px);}
+.trans-10 div{border-radius: 4px; overflow: hidden;}
+
+/****** 사이즈*********/
+.width_384{font-size: 0;}
+.width_384 li{display: inline-block; width: 384px;}
+.width_384 li img{ width: 100%;}
+.width_282{ font-size: 0;}
+.width_282 li{ display: inline-block; width: 282px;}
+.width_282 li img{ width: 100%;}
+.width_224{ font-size: 0;}
+.width_224 li{ display: inline-block; width: 224px;}
+.width_224 li img{ width: 100%;}
+.height_180{ font-size: 0;}
+.height_180 li{ display: inline-block; width: 180px;}
+.height_180 li img{ width: 100%;}
+
+/******* 공통 hn*********/
+.h2{font-size: 22px; color: #fff; line-height: 1;}
+.h2 span{ padding-left: 17px; font-size: 12px; color: #676a6c;}
+.h2.red span{color: #f81f44;}
+.h3{display: inline-block; padding: 0 0 28px; font-size: 14px; color: #fff; line-height: 1;}
+.h3_19 {padding: 19px 0 0; font-size: 14px; color: #fff; font-weight: normal; line-height: 19px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
+
+
+
+/* 서브 비쥬얼 슬라이드 버튼*/
+.visual .bx-viewport{height: auto !important; }
+.visual > div {position: relative;}
+.visual .bx-controls .bx-controls-direction{display: none; position: absolute; left: 0; right: 0; top: 45%; transform: translateY(-50%); font-size: 0; transition: .5s;}
+.visual .bx-controls .bx-controls-direction a:after{position: absolute; margin: 0 0 0 6px; width: 54px; height: 54px; border-radius: 100%; line-height: 54px; font-size: 30px; color: rgba(255,255,255,.7); border: 1px solid rgba(255,255,255,.7); text-align: center;}
+.visual .bx-controls .bx-controls-direction .bx-prev::after{content: "\e93b"; left: -90px;}
+.visual .bx-controls .bx-controls-direction .bx-next::after{content: "\e93e"; right:-90px; }
+.visual:hover .bx-controls .bx-controls-direction{display: block;}
+
+.visual .bx-controls .bx-pager{position: absolute; left: 50%; bottom: -50px; transform: translateY(-50%);}
+.visual .bx-controls .bx-pager .bx-pager-item{display: inline-block; padding: 0 5px;}
+.visual .bx-controls .bx-pager .bx-pager-item a{display:block; width: 8px; height: 8px; border-radius: 100px; background: #4c4c4c; font-size: 0; transition: all .5s;}
+.visual .bx-controls .bx-pager .bx-pager-item a.active{ width: 30px; background: white;}
+
+/* 서브 메인요소  슬라이드 버튼 */
+  /*메인요소 height 오류*/
+.border_1 .bx-wrapper .bx-viewport{height: auto !important;}
+
+.border_1 > div {position: relative;}
+.border_1 .bx-controls .bx-controls-direction{display: none; position: absolute; left: 0; right: 0; top: 45%; transform: translateY(-50%); font-size: 0; transition: .5s;}
+.border_1 .bx-controls .bx-controls-direction a:after{position: absolute; margin: 0 0 0 6px; width: 30px; height: 30px; background:rgba(0,0,0,.3); border-radius: 100%; line-height: 30px; font-size: 15px; color: rgba(255,255,255,.3); text-align: center;}
+.border_1 .bx-controls .bx-controls-direction .bx-prev::after{content: "\e93b"; left:-20px;}
+.border_1 .bx-controls .bx-controls-direction .bx-next::after{content: "\e93e"; right:-15px; }
+.border_1:hover .bx-controls .bx-controls-direction{display: block;}
+
+.border_1 .bx-controls .bx-pager{ display: none;}
+
+
+/*******로그인 페이지 **********/
+header.black{ background: linear-gradient(to bottom, #161616, #161616  30px, #191919 30px, #191919);}
+header.black .gnb li~li:before{content: ""; display: inline-block; margin: 0 10px;width: 1px; height: 10px; background: #3a3a3a;}
+
+.form {text-align: center;}
+.form .tab li{ float: left; padding:74px 0 0; width: 50%;}
+.form .tab li a{ display: block; padding: 0 42px; font-size: 12px; color: #6e6e6e; font-weight: bold; line-height: 42px;}
+.form .tab li a.click{color: #fff;}
+.form .tab li a.click:after{ content: ""; display: block; width: 100%; height: 2px; background: #fff; }
+
+.enter{ padding:28px 0; border-top: 1px solid #323232;}
+.enter li{position: relative; margin: 0 0 10px 0; font-size: 0;}
+.enter .input li a:before{ content: "\e924"; position: absolute; right: 18px; top: 22px; font-size: 22px; color: #3c3c3c;}
+.enter li:last-child{margin-bottom: 0}
+.enter input{display: block; padding: 0 37px; width: 400px; height: 64px; background: #101010; color: #fff; border-radius: 64px; border: none; box-sizing:border-box; outline: 0;}
+.enter input::placeholder{font-size: 17px; color: #464645; line-height: 64px; }
+.enter label{ display: block; padding: 0 15px 7px 0; font-size: 13px; color: #6e6e6e; text-align: right; line-height: 33px;}
+.enter label:before{ content:""; display: inline-block; margin: 0 8px 0 0; width: 8px; height: 8px; background: #6e6e6e; border-radius: 100%;}
+.enter input[type="checkbox"]:checked + label{ color: #fff;}
+.enter input[type="checkbox"]:checked + label:before{ background: #d90000;}
+.enter button{width: 400px; background: #d90000; font-size: 15px; color: #fff; font-weight: bold; line-height: 64px; border-radius: 64px; }
+.enter button{outline: 0;}
+
+.login > div{ border-bottom: 1px solid #323232;}
+.login h2{padding: 82px 0 21px; font-size: 21px; color: #fff;}
+.login_link{ padding: 34px 0 28px; font-size: 0;}
+.login_link li{ display: inline-block; padding: 0 10px;}
+.login_link li a{font-size: 14px; color: #6e6e6e; line-height: 1;}
+.login_link li a.bold{ font-weight: bold; color: #fff;}
+.login_sns{padding: 0 0 88px; border-top:1px solid #323232;}
+.login_sns P{ padding: 34px 0 0; font-size: 15px; color: #fff;}
+.login_sns ul{ font-size: 0;}
+.login_sns li{ display: inline-block; padding: 23px 10px 0; }
+
+/**** vod movie 페이지   ****/
+header.violet{ background: linear-gradient(to bottom, #704ee3, #704ee3  30px, #7d57fc 30px, #7d57fc);}
+header.violet > div{ height: 100px; }
+header.violet nav ul li a{display: block; padding: 0 14px; font-size: 20px; color:rgba(255,255,255,0.5); line-height: 67px;  font-weight: bold; transition: transition .6s;}
+header.violet nav ul li.on a{ color: #fff;}
+header.violet nav ul li:hover a{ color: #fff;}
+header.violet .gnb li~li:before{content: ""; display: inline-block; margin: 0 10px;width: 1px; height: 10px; background: #8267de;}
+header.violet .lnb{position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
+header.violet .lnb li a{ display: block; padding: 0 17px; font-size: 17px; color: rgba(255,255,255,0.5); line-height: 27px;  font-weight: bold; }
+header.violet .lnb li.on:after{ content: ""; display: block; width: 100%; height: 3px; background: #fff; }
+
+header.blue{ background: linear-gradient(to bottom, #006ae5, #006ae5  30px, #0076ff 30px, #0076ff);}
+header.blue > div{ height: 100px; }
+header.blue nav ul li a{display: block; padding: 0 14px; font-size: 20px; color:rgba(255,255,255,0.5); line-height: 67px;  font-weight: bold; transition: transition .6s;}
+header.blue nav ul li.on a{ color: #fff;}
+header.blue nav ul li:hover a{ color: #fff;}
+header.blue .gnb li~li:before{content: ""; display: inline-block; margin: 0 10px;width: 1px; height: 10px; background: #287de0;}
+header.blue .lnb{position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
+header.blue .lnb li a{ display: block; padding: 0 17px; font-size: 17px; color: rgba(255,255,255,0.5); line-height: 27px;  font-weight: bold; }
+header.blue .lnb li.on:after{ content: ""; display: block; width: 100%; height: 3px; background: #fff; }
+
+.visual.movie{padding: 60px 0 65px; background: linear-gradient(to bottom,#7d57fc, #7d57fc 100px, #212121 100px, #212121)}
+.visual.movie .top_visual ul,
+.visual.vod .top_visual ul{width: 1200px !important; font-size: 0; }
+.visual.movie .top_visual li,
+.visual.vod .top_visual li{ display: inline-block; border-radius: 8px; overflow: hidden;}
+.visual.movie .top_visual li~li,
+.visual.vod .top_visual li~li{margin: 0 0 0 30px;}
+.visual.movie .top_visual a,
+.visual.vod .top_visual a{ position: relative; display: block; }
+.visual.movie .top_visual div,
+.visual.vod .top_visual div{ position: absolute; left: 0; bottom: 0; padding: 0 24px 27px; box-sizing: border-box;}
+.visual.movie .top_visual div strong,
+.visual.vod .top_visual div strong{ padding: 0 0 13px; font-size: 29px; color: #fff; line-height: 1;}
+.visual.movie .top_visual div p,
+.visual.vod .top_visual div p{padding: 14px 0 0; font-size: 14px; color: rgba(255,255,255,.7); line-height: 21px;}
+.visual.movie .top_visual div p span,
+.visual.vod .top_visual div p span{display: block;}
+.visual.movie > div .controls button,
+.visual.vod > div .controls button{ position: absolute; top: 50%; width: 54px;height: 54px; border: 2px solid #646464; border-radius: 100%; transform: translateY(-50%); background: none; font-size: 23px; color: #646464; }
+.visual.movie > div .prev{ left: -84px;}
+.visual.movie > div .prev:before{ content: "\e93b";}
+.visual.movie > div .next{ right: -84px;}
+.visual.movie > div .next:before{ content: "\e93e";}
+
+.visual.vod{padding: 60px 0 65px; background: linear-gradient(to bottom,#0076ff, #0076ff 100px, #212121 100px, #212121)}
+.visual.vod > div .prev{ left: -84px;}
+.visual.vod > div .prev:before{ content: "\e93b";}
+.visual.vod > div .next{ right: -84px;}
+.visual.vod > div .next:before{ content: "\e93e";}
+
+/***** 섹션 보더 탑 1px ******/
+.border_1{ padding: 40px 0 ; border-top: 1px solid #373737;}
+
+.ch_list{ position: relative; padding: 20px 0 0;}
+.ch_list ul{width: 1200px !important;}
+.ch_list li{ float: left; position: relative;  border-radius: 5px; overflow: hidden;}
+.ch_list li a > p{background: #7d57fc;}
+.ch_list li a > span.blue{ position: absolute; right: 6px; top: 6px; width: 34px; background: rgba(55,192,255,.9);   line-height: 34px; font-size: 11px; font-weight: bold; text-align: center; color: #fff; border-radius: 100%; }
+.ch_list li a > span.yell{ position: absolute; right: 6px; top: 6px; width: 34px; background: rgba(255,189,70,.9);   line-height: 34px; font-size: 11px; font-weight: bold; text-align: center; color: #fff; border-radius: 100%; }
+.ch_list li a > span.green{ position: absolute; right: 6px; top: 6px; width: 34px; background: rgba(106,251,113,.9);   line-height: 34px; font-size: 11px; font-weight: bold; text-align: center; color: #fff; border-radius: 100%; }
+
+.moviech_bg h3{ padding: 19px 0 9px; font-size: 14px; color: #fff; line-height: 1;}
+.moviech_bg p{font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1;}
+.moviech_bg em{ display: block; margin: 11px 0 0; width: 77px; background: #303030; font-size: 12px; color: rgba(255,255,255,0.4); border-radius: 32px; line-height: 32px; text-align: center;}
+.movie_ch .ch_list .ch_bg{position: relative; padding: 0 0 0 75px; height: 86px; background: #2e2e2e;}
+.movie_ch .ch_list .ch_bg p{padding: 27px 0 12px; font-size: 13px; color: #fff; }
+
+.ch_list .ch_bg .circle{ position: absolute; left: 14px; top: 20px; display: flex; align-items: center;  justify-content: center; width: 52px; height: 52px; background: linear-gradient(-80deg, #2e2e2e 50%, transparent 0), linear-gradient(170deg, #c12621 50%, transparent 0); border-radius: 100%}
+.ch_list .ch_bg .circle div{ display: inline-block; width: 46px; height: 46px; background: url(../images/sprite.png) no-repeat #c12621 -267px -14px / 340px auto; border: 1px solid #2e2e2e; border-radius: 100%; }
+
+.movie_ch .ch_list .ch_bg .circle.red{ position: absolute; left: 14px; top: 20px; display: flex; align-items: center;  justify-content: center; width: 52px; height: 52px; background: linear-gradient(-80deg, #2e2e2e 50%, transparent 0), linear-gradient(120deg, #dc0814 50%, transparent 0); border-radius: 100%}
+.movie_ch .ch_list .ch_bg .circle.red div{ display: inline-block; width: 46px; height: 46px; background: url(../images/sprite.png) no-repeat #dc0814  -268px -15px / 400px auto; border: 1px solid #2e2e2e; border-radius: 100%; }
+.movie_ch .ch_list .ch_bg .circle.yell{ position: absolute; left: 14px; top: 20px; display: flex; align-items: center;  justify-content: center; width: 52px; height: 52px; background: linear-gradient(-80deg, #2e2e2e 50%, transparent 0), linear-gradient(120deg, #fcb316 50%, transparent 0); border-radius: 100%}
+.movie_ch .ch_list .ch_bg .circle.yell div{ display: inline-block; width: 46px; height: 46px; background: url(../images/sprite.png) no-repeat #fcb316  4px -11px / 350px auto; border: 1px solid #2e2e2e; border-radius: 100%; }
+.movie_ch .ch_list .ch_bg .circle.pink{ position: absolute; left: 14px; top: 20px; display: flex; align-items: center;  justify-content: center; width: 52px; height: 52px; background: linear-gradient(-80deg, #2e2e2e 50%, transparent 0), linear-gradient(120deg, #ff153c 50%, transparent 0); border-radius: 100%}
+.movie_ch .ch_list .ch_bg .circle.pink div{ display: inline-block; width: 46px; height: 46px; background: url(../images/sprite.png) no-repeat #ff153c  4px -29px / 230px auto; border: 1px solid #2e2e2e; border-radius: 100%; }
+
+.movie_news .ch_list li{ float: left; position: relative; margin: 0 24px 65px 0;  border-radius: 5px; overflow: hidden;}
+.movie_news .ch_list li:nth-child(3n){margin-right: 0;}
+.movie_news .ch_list li a:before{ content: "\ea40"; position: absolute; left: 50%; top: 40%; transform: translate(-50%, -50%); font-size: 65px; color: rgba(255,255,255,0.8); }
+.movie_news .ch_list li a > p{background: #7d57fc;}
+.movie_news .ch_list li{ width: 384px;}
+.movie_news .ch_list li img{ width: 100%;}
+.movie_news .ch_list .ch_bg .news{position: relative; padding: 0 0 0 53px;}
+.movie_news .ch_list .ch_bg .news span{display: block; position: absolute; left: 3px; top: 15px; overflow: hidden; width: 42px; height: 42px; background: url(../images/sprite.png ) no-repeat -1px -140px / 400px auto; border-radius: 100%; }
+.movie_news .ch_list .ch_bg .news.mub span{ background: url(../images/sprite.png ) no-repeat -164px -69px / 400px auto; }
+.movie_news .ch_list .ch_bg .news.gobul span{ background: url(../images/sprite.png ) no-repeat -234px -71px / 410px auto; }
+.movie_news .ch_list .ch_bg p{padding: 23px 0 9px; font-size: 13px; color: #fff; line-height: 1;}
+.movie_news .ch_list .ch_bg em{display: block; font-size: 12px; color:#676667; line-height: 1;}
+.movie_news .ch_list .ch_bg > span{ display: block; padding: 15px 0 0 3px; font-size: 14px; color: rgba(255,255,255,.6); line-height: 1;}
+
+/********* search 페이지*************/
+.m0auto890{ width: 890px; margin: 0 auto}
+.search_tab {position: relative;}
+.search_tab ol{display: none; position: absolute; left: 15px; top: 82px; padding: 27px 47px; width: 860px; background: rgba(38,38,38,.9); border-radius: 10px; box-shadow: 0 0 .5px; box-sizing: border-box; z-index: 10;}
+.search_tab ol li{display: block;}
+.search_tab ol li a{ font-size: 18px; color: #fff; font-weight: normal; line-height: 40px;}
+.search_tab ol li span{color: #fa0101;}
+.search_tab{padding: 60px 0 0; background: #1b1b1b;  border-top:1px solid #2c2c2c}
+.search_tab >div{ position: relative;}
+.search_tab input{display: block; padding: 0 40px 0 50px; width: 890px; height: 66px; font-size: 22px; color: #000; line-height: 66px; border-radius: 66px; box-sizing: border-box; outline: 0;}
+.search_tab > a::before{ content: "\e97a"; position: absolute; right: 40px; top: 18px; font-size: 33px; color: #000;}
+
+.search_tab ul{padding: 23px 0 0; font-size: 0; text-align: center;}
+.search_tab li {display: inline-block;}
+.search_tab li a{ display: block; padding: 0 17px; font-size: 17px; color: rgba(255,255,255,0.5); line-height: 56px;  font-weight: bold; }
+.search_tab li.on a{ color: #fff;}
+.search_tab li.on:after{ content: ""; display: block; width: 100%; height: 1px; background: #fff; }
+.search_main { text-align: center;}
+.search_main h2{ padding: 70px 0 83px; font-size: 27px; color: rgba(255,255,255,.6); font-weight: normal}
+.search_main h2 span{ font-size: 28px; color: #fff; font-weight: bold}
+
+
+/*****  이용권  ********/
+.voucher h2{padding: 62px 0 20px;line-height: 1;}
+.ticket_list{padding: 40px 0 0; text-align: center; border-top : 1px solid #383838;}
+.ticket_list li{ float: left; ;padding: 60px 50px 50px; width: 380px; height: 410px; border-radius: 8px; box-sizing: border-box; letter-spacing: -1px;}
+.ticket_list li a{ position: relative; display: block; padding: 0 22px; width: 280px; font-size: 12px; color: #fff; border-radius: 52px; line-height: 52px; text-align: left;box-sizing: border-box;}
+.ticket_list li.blue{ background: #3e59d2;}
+.ticket_list li.pink{ background: #ff1f45;}
+.ticket_list li.purple{ background: #7d57fc;}
+.ticket_list li.blue a{ background: #3247a8;}
+.ticket_list li.pink a{ background: #cc1937;}
+.ticket_list li.purple a{ margin: 57px 0 0; background: #6446ca;}
+.ticket_list li~li{margin: 0 0 0 30px;}
+.ticket_list li h3{padding: 0 0 27px; font-size: 29px; color: #fff; line-height: 1;}
+.ticket_list li.pink h3 span:before{content: "\ea0f"; padding: 0 0 0 5px; font-size: 5px; vertical-align:top;}
+.ticket_list li p{font-size: 13px; color:#fff; line-height: 20px;}
+.ticket_list li div{padding: 36px 0 0;}
+.ticket_list li a~a{margin: 6px 0 0;}
+.ticket_list li a span{ position: absolute; right: 22px; top: 50%; transform: translateY(-50%); font-size: 17px;color:#fff; text-align: right; font-weight: bold;}
+
+.content_list caption{padding: 55px 0 19px; font-size: 15px; color: #fff; text-align: left;}
+.content_list col~col{border-left: 1px solid #818181;}
+.content_list { border-top: 2px solid #818181;}
+.content_list thead th{font-size: 15px; color: #fff; line-height: 36px; font-weight: normal; border-top: 2px solid #818181; border-bottom: 1px solid #818181;}
+.content_list tbody tr{ font-size: 12px; color: #fff; line-height: 36px; border-bottom: 1px solid #818181;}
+.content_list tbody tr.part td{ padding: 13px 21px; line-height: 19px;}
+.content_list tbody th{font-weight: normal;}
+.content_list tbody td{ text-align: center;}
+.content_list tbody td.t_left{ position: relative; padding: 0 21px; color: #c7c4c7; text-align: left;}
+.content_list tbody td a{ position: absolute; right: 16px; top: 50%; transform: translateY(-50%);}
+.content_list tbody td a::before{content: "\e93f"; font-size: 15px; color: #787878;}
+.content_list tbody td span{display: block; color: #969696;}
+.content_list tbody td span.yes{ display: block; margin: 0 auto;width: 10px; height: 10px; background: #ff1f45; border-radius: 100%;}
+.content_list tbody td span.no:before{content: "\e921"; font-size: 15px; color: #787878;}
+
+.banner{ padding: 65px 0 70px;}
+
+.operation_guide {padding: 0 40px;}
+.operation_guide h3{ font-size: 17px; color: #fff; line-height: 1;}
+.operation_guide h4{ padding: 21px 0 12px 8px; font-size: 13px; color: #fff; line-height: 1;font-weight: normal;}
+.operation_guide ul{ font-size: 0;}
+.operation_guide li{ padding: 0 0 0 16px; font-size: 13px; color: rgba(255,255,255,.3); text-indent: -13px; line-height:23px; font-weight: 200;}
+.operation_guide li:before{content: ""; display: inline-block; margin: 0 5px 0; width: 3px; height: 3px; background: rgba(255,255,255,.3); vertical-align: middle;}
+.operation_guide li span{display: inline-block; color: rgba(255,255,255,.7); text-indent: 0;}
+.operation_guide li~li span{ padding: 9px 0 0;}
+
+.tab_list{ padding: 20px 0 0; text-align: center;}
+.tab_list li{ float: left;}
+.tab_list li~li{ margin: 0 0 0 6px}
+.tab_list li button{ display: block; padding: 0 16px; background: #303030; font-size: 13px; color: rgba(255,255,255,.3); line-height: 32px; border-radius:4px }
+.tab_list li.on button{ background: #fff; color: #000;}
+
+.vod.width_224 {padding: 20px 0 0;}
+.vod.width_224 li{ position: relative; margin: 0 0 40px;}
+.vod.width_224 li:nth-child(6),
+.vod.width_224 li:nth-child(7),
+.vod.width_224 li:nth-child(8),
+.vod.width_224 li:nth-child(9),
+.vod.width_224 li:nth-child(10){ margin-bottom: 0;}
+.width_224 li a em{font-size: 12px; color: rgba(255,255,255,0.4); line-height: 2;}
+.vod li a > p{ position: absolute; top: 0; width: 81px; background: #ff674b; line-height: 26px; font-size: 9px; color: #fff; text-align: center; border-radius:0 0 4px 0/ 0 0 4px 0;}
+
+.trans-10.height_180.clear{ display: none;}
+.trans-10.height_180.clear.on{ display: block;}

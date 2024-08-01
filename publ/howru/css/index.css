@@ -1,0 +1,7 @@
+html{font-size: 20px;}
+body{ display: flex; height: 100vh; font-size: 1rem; background: #7552c4; text-align: center; color: #fff;}
+
+.intro { position: absolute; left: 50%; top: 50%; transform: translate(-50%,-50%);}
+.intro h1{margin:0 auto ; width: 7.9666rem; height: 2.05rem; background: url(../images/logo.png) no-repeat 0 0 / 100% auto;}
+.intro p{ padding: .6333rem 0  2.7333rem; font-size: 0.6rem; line-height: 1;}
+.intro div{padding: 3.8666rem 0 0; background: url(../images/ico_food.png) no-repeat center top / 3.2833rem auto; font-size: .5833rem;}

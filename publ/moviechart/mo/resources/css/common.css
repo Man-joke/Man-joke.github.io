@@ -1,0 +1,157 @@
+@charset "utf-8";
+
+.pl10{padding-left: 10px !important;}
+.vs-hidden{position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;}
+
+/* 기본 베이스 */
+html,body{width: 100% !important; word-break: keep-all !important;}
+html{overflow-y:scroll}
+body{font-family: 'Noto Sans KR','Nanum Gothic'; transform: scale(1); -moz-transform: scale(1);}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,form,fieldset,p,button{margin:0;padding:0}
+body,h1,h2,h3,h4,input,button{font-size:12px;color:#222; line-height: 1;}
+body{position: relative; background-color:#fff; word-break:break-all; -ms-word-break:break-all}
+img,fieldset,iframe{border:0 none; width: 100%;}
+li{list-style:none}
+input,select,button{vertical-align:middle; }
+input,select:focus{background: none;outline: none;}
+select{padding: 0 8px; background: #fff; color: #222;}
+
+input,textarea{padding: 0 10px;font-size: 14px; font-family: 'Noto Sans KR','Nanum Gothic';}
+input::placeholder{font-size:14px;}
+img{vertical-align:top}
+i,em,address{font-style:normal}
+label,button{cursor:pointer}
+button{margin:0;padding:0; font-family: 'Noto Sans KR','Nanum Gothic'; border: none; background: #fff;}
+a{color:#666;text-decoration:none}
+a:hover{color:#222 !important; text-decoration:none;}
+button *{position:relative}
+button img{left:-3px;*left:auto}
+html:first-child select{height:20px;padding-right:6px}
+option{padding-right:6px}
+textarea{padding: 5px; resize:none;}
+hr{display:none}
+legend{*width:0}
+table{border-collapse:collapse;border-spacing:0; box-sizing: border-box }
+table th{font-weight: 500;}
+.blind{display: block;position: absolute;top: -9999em;left: 0;}
+.skip a{display: block;position: absolute;left: 0;top: -9999em;z-index: 9999;width: 100%;background: lime;color: black;font: 1.8em/3em arial,sans-serif;}
+.skip a:focus{top: 0}
+.ff{zoom: 1}
+.ff:after{clear: both;content: '';display: block}
+.ff > li{float: left}
+.ff > dd{float: left}
+
+.wArea{width: calc(100% - 40px); margin: 0 auto; position: relative;}
+
+
+/* common css 영역*/
+.header{position: relative; height: 50px; z-index: 9999;}
+.header h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+.logo {display: inline-block; width: 82px; height: 25px;}
+.logo img{width: 100%;;}
+
+.gnb_menu{position: absolute; left: 50%; top: 0; transform: translateX(-50%); width: 100%; height: 100vh; min-height: 100%; z-index: 9999; background: rgba(0,0,0,.1);}
+.menu__conbox{background: #fff;}
+.menu__conbox .menu__top{display: flex; justify-content: space-between; align-items: center; width: calc(100% - 40px); height: 50px; margin: 0 auto;}
+.menu__conbox .close{width: 15px; height: 15px;}
+.mo-gnb{width: 100%;}
+.mo-gnb__wArea{display: flex; justify-content: space-between; margin:unset; width: 100%;}
+.mo-gnb ul{display: flex; flex-wrap: wrap; align-content: flex-start;}
+.mo-gnb li {width: 33.3333%; display: flex; justify-content: center; flex-direction: column;}
+.mo-gnb li > a{display: inline-block;  border-bottom: 1px solid #ededed;}
+.mo-gnb li > a p{display: inline-block; font-size: 12px; color: #222; line-height: 50px; font-weight: 500;}
+.mo-gnb .gnb__depth{padding: 10px 0; box-sizing: border-box; border-bottom: 1px solid #ededed; display: flex; flex-direction: column;}
+.mo-gnb .gnb__depth a{line-height: 30px;}
+.topbar-list{display: flex; padding-bottom: 15px;}
+.topbar-list li + li{margin-left: 34px;}
+.topbar-list li:last-child a{font-weight: 500;}
+.topbar-list li a{line-height: 40px;}
+.topbar-list li a.on{color: #f15353;}
+
+.mo-gnb .search{position: relative; width: 200px;}
+.mo-gnb .search:after,
+.mo-gnb .search:before{content: ""; position: absolute;  top: 53%; transform: translateY(-50%); width: 1px; height: 40%; background: #707070;}
+.mo-gnb .search:after{left: 0;}
+.mo-gnb .search:before{right: 0;}
+.mo-gnb .search input{width: calc(200px - 38px); height: 46px;border: none;background: transparent; font-size: 16px; color: #fff; outline: none; text-indent: 8px;}
+.mo-gnb .search label{position: absolute; right: 10px; top: 50%; transform: translateY(-50%); }
+.mo-gnb .search img{vertical-align: middle}
+
+
+.header.sub *{color: #222 !important;}
+.header.sub h2{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 20px; line-height: 1; width: 100%; text-align: center;}
+.header.sub .header-topbar li a{ color: #666 !important;}
+.header.sub .gnb .search:after,
+.header.sub .gnb .search:before{background: #b2b2b2;}
+.header.sub .gnb li{transition: all 0.3s;}
+.header.sub .gnb li:hover a{ color: #f15353; transition: all 0.3s; text-shadow: none;} 
+.header.sub.gnb .search input{color: #222;;}
+
+#content{ min-height: 450px; overflow: hidden;}
+
+#footer{background: #f8f8f8;}
+#footer .footMenu{position: relative; text-align: center; border-bottom: 1px solid #ededed;}
+#footer .footMenu span{margin-right: 9px;}
+#footer .footMenu span:last-child{margin-right: 0;}
+#footer .footMenu a{color: #666; font-weight: 500; font-size: 10px; display: inline-block; line-height: 30px;}
+
+
+#footer .footMenu a.last{padding-right: 0; background: none;}
+#footer p{color: #666; font-weight: 400; font-size: 10px; text-align: center; padding: 10px 0 0;}
+#footer p + p{padding: 0; margin-top: 5px;    padding-bottom: 20px;}
+/* 달력표시 */
+.red{color: red !important;}
+
+.header-line{margin-bottom: 13px; width: 100%; height: 5px; background-color: #f5f5f5;}
+
+/* 네비게이션 */
+.pagination{margin-top: 20px;}
+.pagination__list{ display: flex; justify-content: center; align-items: center;}
+.pagination__item{ text-align: center;}
+
+.pagination__item a{ display: inline-block; padding: 0 7px; font-size: 14px; line-height: 27px;}
+.pagination__item:hover a,
+.pagination__item.active a{color: #f15353 !important;}
+.pagination__item.prev{margin-right: 14px;}
+.pagination__item.next{margin-left: 14px;}
+.pagination__item.prev a,
+.pagination__item.next a{padding: 0;}
+
+.disabled{pointer-events: none !important;}
+.rank{position: absolute; left: 10px; bottom: -1px; width: 100%; height: 44px; overflow: hidden;}
+.rank img{width: auto;}
+table .line{padding: 0; width: 100%; height: 1px; background: #ebebeb;}
+
+/* btn */
+.preving button{display: block; width: 100%; background: #f15353; font-size: 14px; color: #fff !important; line-height: 40px; text-align: center; border-radius: 5px;}
+.ticketAgain{display: block; margin-bottom: 20px; background: #fff; font-size: 14px; color: #222; line-height: 40px; text-align: center; border: 1px solid #222; box-sizing: border-box; border-radius: 5px; width: 100%;}
+
+
+.list-btn{text-align: center;}
+.list-btn a,
+.list-btn button{display: inline-block; padding: 0 25px; margin: 25px auto 0; background: #fff; font-size: 12px; color: #222; line-height: 30px; font-weight: 500; text-align: center; border: 1px solid #222; box-sizing: border-box; border-radius: 5px;}
+
+/* 테이블공통 */
+.tableType02{font-size: 12px;}
+.tableType02 table{display: flex; width: 100%;}
+.tableType02 table tbody{display: inline-block; width: 100%;}
+.tableType02 table tbody tr{display: flex;}
+.tableType02 .title{text-align: left; overflow: hidden;white-space: nowrap;text-overflow: ellipsis;}
+.tableType02 .title a{display: inline-block; padding: 0 20px; width: 700px; color: #222; white-space: nowrap; text-overflow: ellipsis; overflow: hidden; box-sizing: border-box;}
+.tableType02 thead th{padding: 15px 0; border-bottom: 1px solid #222;}
+.tableType02 td{border-bottom: 1px solid #ccc;padding: 15px 0; text-align:center;}
+.tableType02 .ans{color: #666;}
+
+/* 모바일 메뉴 */
+.mobile_menu{position: absolute; right: 0; top: 50%; transform: translateY(-50%); width: 20px; height: 15px; background: url(../../resources/images/common/menubar.png) no-repeat center/ 100%;}
+.main .mobile_menu{background: url(../../resources/images/common/menubar.png) no-repeat center/ 100%;}
+.sub .mobile_menu{background: url(../../resources/images/common/menubar_black.png) no-repeat center/ 100%;}
+.backSpace{position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 7.5px; height: 100%; z-index: 100; display: flex; align-items: center;}
+
+/* 모바일 휴대폰 / 이메일 */
+.phon-table{display: table !important; text-align: center;}
+.phon-table > div{display: table-cell; padding-top: 6px; padding-bottom: 15px;}
+.phon-table input,
+.phon-table select{width: 100%;}
+.email > div{display: table; text-align: center; width: 100%;}
+.email > div > div{display: table-cell; padding-top: 6px; padding-bottom: 5px;}

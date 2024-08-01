@@ -1,0 +1,64 @@
+@font-face{
+	font-family:'SCDream4';
+	src: url('./fonts//SCDream4.eot');
+	src: url('./fonts//SCDream4.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/SCDream4.woff') format('woff'),
+	 url('../fonts/SCDream4.svg#SCDream5') format('svg'),
+     url('../fonts/SCDream4.ttf') format('truetype')
+}
+@font-face{
+	font-family:'SCDream5';
+	src: url('./fonts//SCDream5.eot');
+	src: url('./fonts//SCDream5.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/SCDream5.woff') format('woff'),
+	 url('../fonts/SCDream5.svg#SCDream6') format('svg'),
+     url('../fonts/SCDream5.ttf') format('truetype')
+}
+@font-face {
+	font-family: 'NotoKrR';
+	font-style: normal;
+	font-weight: 500;
+	src: local('Noto Sans Medium'), local('NotoSansKR-Regular'), url('../fonts/NotoSansKR-Regular.eot');
+	src: url('../fonts/NotoSansKR-Regular.eot?#iefix') format('embedded-opentype'),
+	url('../fonts/NotoSansKR-Regular.woff2') format('woff2'),
+	url('../fonts/NotoSansKR-Regular.woff') format('woff');
+}
+
+@font-face
+{
+	font-family:'NanumBarunGothic';
+	src: url('./fonts//NanumBarunGothic.eot');
+	src: url('./fonts//NanumBarunGothic.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/NanumBarunGothic.woff') format('woff'),
+	 url('../fonts/NanumBarunGothic.svg#NanumBarunGothic') format('svg'),
+     url('../fonts/NanumBarunGothic.ttf') format('truetype')
+}
+
+@font-face
+{
+	font-family:'NanumBarunGothicBold';
+	src: url('./fonts//NanumBarunGothicBold.eot');
+	src: url('./fonts//NanumBarunGothicBold.eot?#iefix') format('embedded-opentype'),
+     url('../fonts/NanumBarunGothicBold.woff') format('woff'),
+	 url('../fonts/NanumBarunGothicBold.svg#NanumBarunGothicBold') format('svg'),
+     url('../fonts/NanumBarunGothicBold.ttf') format('truetype')
+}
+
+@font-face {
+    font-family: 'GamrketSansMedium';
+    src: url('../fonts/GmarketSansTTFMedium.eot');
+    src: url('../fonts/GmarketSansTTFMedium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/GmarketSansTTFMedium.woff') format('woff');
+}
+
+html body{padding:0; margin:0;}
+#content_inner
+{
+	position:absolute;
+	top:-50%;
+	left:-50%;
+	width:1280px;
+	height:720px;
+	margin-top:-330px;
+	margin-left:-500px;
+}

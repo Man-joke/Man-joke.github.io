@@ -1,0 +1,701 @@
+<!DOCTYPE hcheckbox>
+<html lang="ko">
+<p></p>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script defer src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/swiper-bundle.min.js"></script>
+  <script defer src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../assets/js/style.js"></script>
+
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body>
+  <div class="wrap screen">
+    <header class="header ">
+      <div class="inner d-flex">
+        <h1 class="header-logo d-flex">
+          <a href="javascript:void(0)" class="header-link">
+            <img src="../assets/images/logo.png" alt="유진투자증권">
+          </a>
+        </h1>
+        <div class="d-flex">
+          <ul class="scr-util-list d-flex">
+            <li class="scr-util-item" data-bs-toggle="modal" data-bs-target="#share">
+              <input type="checkbox" id="inp-min">
+              <label for="inp-min"></label>
+              <p class="mt-1">마이크</p>
+            </li>
+            <li class="scr-util-item">
+              <input type="checkbox" id="inp-scr">
+              <label for="inp-scr"></label>
+              <p class="mt-1">화면공유</p>
+            </li>
+            <li class="scr-util-item">
+              <input type="checkbox" id="inp-cap">
+              <label for="inp-cap"></label>
+              <p class="mt-1">화면캡쳐</p>
+            </li>
+            <li class="scr-util-item">
+              <input type="file" id="inp-file">
+              <label for="inp-file"></label>
+              <p class="mt-1">파일송신</p>
+            </li>
+            <li class="scr-util-item" data-bs-target="#productSelection" data-bs-toggle="modal">
+              <input type="checkbox" id="inp-pro">
+              <label for="inp-pro"></label>
+              <p class="mt-1">상품선택</p>
+            </li>
+          </ul>
+          <div class="select-form d-flex align-items-center">
+            <!-- 드롭박스 -->
+            <div class="select_wrap selc">
+              <ul class="default_option">
+                <li class="option">
+                  문서공유
+                </li>
+              </ul>
+              <ul class="select_ul">
+                <li class="option">
+                  투자설명서.pdf
+                </li>
+                <li class="option">
+                  핵심설명서.pdf
+                </li>
+                <li class="option">
+                  고객성향등급등록.pdf
+                </li>
+                <li class="option">
+                  핵심설명서.pdf
+                </li>
+                <li class="option">
+                  고객성향등급등록.pdf
+                </li>
+              </ul>
+            </div>
+            <div>
+              <input type="file" id="inpfile">
+              <label for="inpfile" class="btn btn-border-black ml-1">문서등록</label>
+            </div>
+          </div>
+          <div class="d-flex align-items-center">
+            <div class="timer">00:01</div>
+            <button class="finish btn btn-black" data-bs-toggle="modal" data-bs-target="#finish-chat">상담종료</button>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="videoChat d-flex">
+        <div class="scr-left">
+          <div class="videoChatLeft">
+            <div class="videoChatLeft-cont">
+              <!-- 화상화면 -->
+              <img src="../assets/images/video_chat.png" alt="고객">
+              <!-- 기본화면 -->
+              <!-- <div class="basicScreen">
+                <svg width="340" height="425" viewBox="11 0 30 55">
+                  <circle class="st5" cx="26" cy="14.7" r="13.7" />
+                  <path class="st5" d="M17.6,25.6c0.2,0.7,0,1.5,0,1.5l-5,2.4C5.4,32.4,6.2,42,6.2,42c9.1,9.9,30.7,9.9,39.8,0c0,0,0.8-9.6-6.4-12.5
+                  l-5-2.4c0,0-0.3-0.8-0.1-1.5c0,0-2.6,2.8-8.5,2.8S17.6,25.6,17.6,25.6z" />
+                  <path class="st6" d="M28.3,42.8" />
+                </svg>
+              </div> -->
+              <div class="name d-flex">
+                <p>고객</p>
+                <!-- 음성인식 on 추가 -->
+                <div class="mic position-absolute on">
+                  <svg width="32" height="32" viewBox="0 0 32 32">
+                    <path
+                      d="M16,21.9c3.3,0,6-2.7,6-6h-5c-0.6,0-1-0.5-1-1c0-0.6,0.4-1,1-1h5v-2h-5c-0.6,0-1-0.5-1-1c0-0.6,0.4-1,1-1h5V7.8h-5c-0.6,0-1-0.4-1-1s0.4-1,1-1l5,0.1c0-3.3-2.7-6-6-6s-6,2.7-6,6v10C10,19.2,12.6,21.9,16,21.9z M25.5,11.9c-0.8,0-1.5,0.7-1.5,1.4v2.6c0,4.6-3.9,8.3-8.5,8C11.4,23.7,8,19.7,8,15.6v-2.2c0-0.8-0.7-1.4-1.5-1.4S5,12.8,5,13.4v2c0,5.6,4,10.6,9.5,11.4v2.2H12c-1.1,0-2.1,0.9-2,2.1c0,0.5,0.5,0.9,1,0.9h10c0.5,0,1-0.4,1-0.9c0.1-1.1-0.9-2.1-2-2.1h-2.5v-2.1c5.4-0.7,9.5-5.3,9.5-10.9v-2.6C27,12.6,26.3,11.9,25.5,11.9z" />
+                  </svg>
+                </div>
+              </div>
+            </div>
+            <!-- 상담원 추가시 -->
+            <div class="adviser-list position-absolute">
+              <div class="adviser-item">
+                <div class="adviser-box">
+                  <img src="../assets/images/video_chat_01.png" alt="상담원">
+                  <!-- 음성인식 on 추가 -->
+                  <div class="mic position-absolute on">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                      <path
+                        d="M16,21.9c3.3,0,6-2.7,6-6h-5c-0.6,0-1-0.5-1-1c0-0.6,0.4-1,1-1h5v-2h-5c-0.6,0-1-0.5-1-1c0-0.6,0.4-1,1-1h5V7.8h-5c-0.6,0-1-0.4-1-1s0.4-1,1-1l5,0.1c0-3.3-2.7-6-6-6s-6,2.7-6,6v10C10,19.2,12.6,21.9,16,21.9z M25.5,11.9c-0.8,0-1.5,0.7-1.5,1.4v2.6c0,4.6-3.9,8.3-8.5,8C11.4,23.7,8,19.7,8,15.6v-2.2c0-0.8-0.7-1.4-1.5-1.4S5,12.8,5,13.4v2c0,5.6,4,10.6,9.5,11.4v2.2H12c-1.1,0-2.1,0.9-2,2.1c0,0.5,0.5,0.9,1,0.9h10c0.5,0,1-0.4,1-0.9c0.1-1.1-0.9-2.1-2-2.1h-2.5v-2.1c5.4-0.7,9.5-5.3,9.5-10.9v-2.6C27,12.6,26.3,11.9,25.5,11.9z" />
+                    </svg>
+                  </div>
+                </div>
+                <p class="blue-color">상담원</p>
+              </div>
+              <div class="adviser-item">
+                <div class="adviser-box">
+                  <img src="../assets/images/video_chat_01.png" alt="상담원">
+                  <!-- 음성인식 on 추가 -->
+                  <div class="mic position-absolute">
+                    <svg width="32" height="32" viewBox="0 0 32 32">
+                      <path
+                        d="M16,21.9c3.3,0,6-2.7,6-6h-5c-0.6,0-1-0.5-1-1c0-0.6,0.4-1,1-1h5v-2h-5c-0.6,0-1-0.5-1-1c0-0.6,0.4-1,1-1h5V7.8h-5c-0.6,0-1-0.4-1-1s0.4-1,1-1l5,0.1c0-3.3-2.7-6-6-6s-6,2.7-6,6v10C10,19.2,12.6,21.9,16,21.9z M25.5,11.9c-0.8,0-1.5,0.7-1.5,1.4v2.6c0,4.6-3.9,8.3-8.5,8C11.4,23.7,8,19.7,8,15.6v-2.2c0-0.8-0.7-1.4-1.5-1.4S5,12.8,5,13.4v2c0,5.6,4,10.6,9.5,11.4v2.2H12c-1.1,0-2.1,0.9-2,2.1c0,0.5,0.5,0.9,1,0.9h10c0.5,0,1-0.4,1-0.9c0.1-1.1-0.9-2.1-2-2.1h-2.5v-2.1c5.4-0.7,9.5-5.3,9.5-10.9v-2.6C27,12.6,26.3,11.9,25.5,11.9z" />
+                    </svg>
+                  </div>
+                </div>
+                <p class="pink-color">전문가</p>
+              </div>
+              <div class="adviser-item">
+                <div class="adviser-box">
+                  <!-- 화상화면 -->
+                  <!-- <img src="../assets/images/video_chat_01.png" alt="상담원"> -->
+                  <!-- 기본화면 -->
+                  <div class="basicScreen-adviser">
+                    <img src="../assets/images/user_icon.svg" alt="기본이미지">
+                    <!-- 음성인식 on 추가 -->
+                    <div class="mic position-absolute">
+                      <svg width="32" height="32" viewBox="0 0 32 32">
+                        <path
+                          d="M16,21.9c3.3,0,6-2.7,6-6h-5c-0.6,0-1-0.5-1-1c0-0.6,0.4-1,1-1h5v-2h-5c-0.6,0-1-0.5-1-1c0-0.6,0.4-1,1-1h5V7.8h-5c-0.6,0-1-0.4-1-1s0.4-1,1-1l5,0.1c0-3.3-2.7-6-6-6s-6,2.7-6,6v10C10,19.2,12.6,21.9,16,21.9z M25.5,11.9c-0.8,0-1.5,0.7-1.5,1.4v2.6c0,4.6-3.9,8.3-8.5,8C11.4,23.7,8,19.7,8,15.6v-2.2c0-0.8-0.7-1.4-1.5-1.4S5,12.8,5,13.4v2c0,5.6,4,10.6,9.5,11.4v2.2H12c-1.1,0-2.1,0.9-2,2.1c0,0.5,0.5,0.9,1,0.9h10c0.5,0,1-0.4,1-0.9c0.1-1.1-0.9-2.1-2-2.1h-2.5v-2.1c5.4-0.7,9.5-5.3,9.5-10.9v-2.6C27,12.6,26.3,11.9,25.5,11.9z" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <p class="green-color">지인</p>
+              </div>
+            </div>
+          </div>
+          <!-- 문서공유화면 -->
+          <!-- <div class="documentShare">
+            <div class="documentShare-wrap">
+              <p class="documentShare-txt">문서공유화면</p>
+              <div class="document-util">
+                <button class="close mb-3">
+                  <img src="../assets/images/ico_close.png" alt="닫기">
+                </button>
+                <ul class="document-util-list">
+                  <li class="document-util-item">
+                    <button><img src="../assets/images/ico_add.png" alt="확대"></button>
+                  </li>
+                  <li class="document-util-item">
+                    <button><img src="../assets/images/ico_minus.png" alt="축소"></button>
+                  </li>
+                  <li class="document-util-item">
+                    <button><img src="../assets/images/ico_drag.png" alt="드래그"></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="documentPencle">
+                <ul class="documentPencle-list d-flex">
+                  <li class="documentPencle-item">
+                    <button></button>
+                  </li>
+                  <li class="documentPencle-item">
+                    <button></button>
+                  </li>
+                  <li class="documentPencle-item">
+                    <button></button>
+                  </li>
+                  <li class="documentPencle-item del">
+                    <button></button>
+                  </li>
+                </ul>
+              </div>
+              <div class="documentPage d-flex">
+                <button class="prev mr-1"></button>
+                <div class="documentPage-num d-flex">
+                  <p>1</p>
+                  <span>/</span>
+                  <p>15</p>
+                </div>
+                <button class="next ml-1"></button>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="scr-right">
+          <div class="videoChatRight">
+            <div class="videoChatRight-figure">
+              <div class="videoChatRight-figure-con">
+                <img src="../assets/images/capture_icon.png" alt="캡쳐영역">
+                <p>캡쳐이미지</p>
+              </div>
+            </div>
+            <ul class="capture-list">
+              <li class="capture-item">
+                <div class="videoChatRight-figure-con">
+                  <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                  <p>캡쳐이미지</p>
+                </div>
+              </li>
+              <li class="capture-item">
+                <div class="videoChatRight-figure-con">
+                  <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                  <p>캡쳐이미지</p>
+                </div>
+              </li>
+              <li class="capture-item">
+                <div class="videoChatRight-figure-con">
+                  <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                  <p>캡쳐이미지</p>
+                </div>
+              </li>
+              <li class="capture-item">
+                <div class="videoChatRight-figure-con">
+                  <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                  <p>캡쳐이미지</p>
+                </div>
+              </li>
+              <li class="capture-item">
+                <div class="videoChatRight-figure-con">
+                  <img src="../assets/images/capture_icon.png" alt="캡쳐이미지">
+                  <p>캡쳐이미지</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 모달 -->
+  <div class=" defalt modal fade" id="finish-chat" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog btn-two">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-cont">
+            <p>상담을 종료하시겠습니까?</p>
+          </div>
+        </div>
+        <div class="modal-footer" style=" background-color: #f5f5f5;">
+          <button class="btn col-6" data-bs-dismiss="modal">취소</button>
+          <button class="btn col-6 color-1" style="color: #f37274;">종료</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 파일전송 실패 -->
+  <div class="modal fade defalt" id="fileTransFailed" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          파일 전송을 실패했습니다.
+        </div>
+        <button class="btn modal-btn" data-bs-toggle="modal" data-bs-target="#productSelection">확인</button>
+      </div>
+    </div>
+  </div>
+  <!-- 파일전송 완료 -->
+  <div class="modal fade defalt" id="fileTransCompleted" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          파일전송이 완료되었습니다.
+        </div>
+        <button class="btn modal-btn" data-bs-toggle="modal" data-bs-target="#productSelection">확인</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PDF 포맷만 지원이 가능합니다. -->
+  <div class="modal fade defalt" id="uploadFileOver" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          PDF 포맷만 지원이 가능합니다. <br>(10MB 이하)
+        </div>
+        <button class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 직원추가하기 팝업 -->
+  <div class="productSelection defalt wh modal fade" id="productSelection" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">상품선택</h5>
+          <button class="btn-close" data-bs-target="#openConsultation" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="productSelection-body modal-body" style="overflow: initial;">
+          <div class="w-100">
+            <div class="inpBox mb-3">
+              <div class="input-group">
+                <label for="inp_search">
+                  <input type="text" class="form-control" id="inp_search" placeholder="검색어를 입력하세요.">
+                  <img src="../assets/images/ico_serach.svg" alt="검색 아이콘">
+                </label>
+              </div>
+            </div>
+            <!-- 상품없을시 active 추가-->
+            <div class="noSearchResults ">
+              <b>검색결과 없음</b>
+              <p class="mt-2">
+                검색을 다시 시도해주세요.
+              </p>
+            </div>
+            <!-- 상품선택 -->
+            <div class="productSelection-accordion accordion active" id="accordionFlushExample">
+              <div class="productSelection-items accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#productSelection-01">
+                    펀드
+                  </button>
+                </h2>
+                <div id="productSelection-01" class="productSelection-contents accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne">
+                  <ul class="accordion-body">
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">베어링고배당증권투자회사(주식)Ce</li>
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">유진챔피언단기채증권자투자신탁(채권)C-E</li>
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">미래에셋솔로몬장기국공채증권자투자신탁1호</li>
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li data-bs-toggle="modal" data-bs-target="#productSelectPop">삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="productSelection-items accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#productSelection-02">
+                    랩
+                  </button>
+                </h2>
+                <div id="productSelection-02" class="productSelection-contents accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne">
+                  <ul class="accordion-body">
+                    <li>베어링고배당증권투자회사(주식)Ce</li>
+                    <li>유진챔피언단기채증권자투자신탁(채권)C-E</li>
+                    <li>미래에셋솔로몬장기국공채증권자투자신탁1호</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="productSelection-items accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#productSelection-03">
+                    신탁
+                  </button>
+                </h2>
+                <div id="productSelection-03" class="productSelection-contents accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne">
+                  <ul class="accordion-body">
+                    <li>베어링고배당증권투자회사(주식)Ce</li>
+                    <li>유진챔피언단기채증권자투자신탁(채권)C-E</li>
+                    <li>미래에셋솔로몬장기국공채증권자투자신탁1호</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="productSelection-items accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#productSelection-04">
+                    신탁
+                  </button>
+                </h2>
+                <div id="productSelection-04" class="productSelection-contents accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne">
+                  <ul class="accordion-body">
+                    <li>베어링고배당증권투자회사(주식)Ce</li>
+                    <li>유진챔피언단기채증권자투자신탁(채권)C-E</li>
+                    <li>미래에셋솔로몬장기국공채증권자투자신탁1호</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="productSelection-items accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#productSelection-05">
+                    신탁
+                  </button>
+                </h2>
+                <div id="productSelection-05" class="productSelection-contents accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne">
+                  <ul class="accordion-body">
+                    <li>베어링고배당증권투자회사(주식)Ce</li>
+                    <li>유진챔피언단기채증권자투자신탁(채권)C-E</li>
+                    <li>미래에셋솔로몬장기국공채증권자투자신탁1호</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="productSelection-items accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#productSelection-06">
+                    신탁
+                  </button>
+                </h2>
+                <div id="productSelection-06" class="productSelection-contents accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne">
+                  <ul class="accordion-body">
+                    <li>베어링고배당증권투자회사(주식)Ce</li>
+                    <li>유진챔피언단기채증권자투자신탁(채권)C-E</li>
+                    <li>미래에셋솔로몬장기국공채증권자투자신탁1호</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="productSelection-items accordion-item">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed" data-bs-toggle="collapse"
+                    data-bs-target="#productSelection-07">
+                    신탁
+                  </button>
+                </h2>
+                <div id="productSelection-07" class="productSelection-contents accordion-collapse collapse"
+                  aria-labelledby="flush-headingOne">
+                  <ul class="accordion-body">
+                    <li>베어링고배당증권투자회사(주식)Ce</li>
+                    <li>유진챔피언단기채증권자투자신탁(채권)C-E</li>
+                    <li>미래에셋솔로몬장기국공채증권자투자신탁1호</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                    <li>하이ALL바른ESG채권증권투자신탁(채권)Ce</li>
+                    <li>마이다스거북이90증권자투자신탁1호(주식)Ce</li>
+                    <li>삼성밀당다람쥐글로벌EMP증권자투자신탁</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 상품선택 팝업 -->
+  <div class=" defalt modal fade" id="productSelectPop" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog btn-two" style="max-width: 42rem;">
+      <div class="modal-content">
+        <div class="modal-body">
+          <div class="modal-cont">
+            <h3 class="mb-2" style="font-size: 1.8rem;">유진챔피언단기채증권자투자신탁(채권)C-E.pdf</h3>
+            <p style="font-size: 1.8rem;">문서를 열까요?</p>
+          </div>
+        </div>
+        <div class="modal-footer" style="background-color: #f5f5f5;">
+          <button type="button" class="btn col-6" data-bs-target="#productSelection" data-bs-toggle="modal">취소</button>
+          <button type="button" class="btn col-6 color-1">확인</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- 상담실개설모달 -->
+  <!-- 크롬 기본 기능 -->
+  <div class="screenShare wh defalt modal fade" id="screenShare" data-bs-keyboard="false" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">화면 공유하기</h5>
+          <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mt-2 mb-3">* call.dadreamins.com 앱이 내 화면의 콘텐츠를 공유하려고 합니다. 공유할 항목을 선택하세요.</p>
+          <div class="screenShare-con">
+            <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+              <li class="nav-item" role="presentation">
+                <button class="nav-link active" data-bs-toggle="pill" data-bs-target="#full-screen">
+                  전체화면
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#application">
+                  애플리케이션 창
+                </button>
+              </li>
+              <li class="nav-item" role="presentation">
+                <button class="nav-link" data-bs-toggle="pill" data-bs-target="#browser-tab">
+                  Chrome 탭
+                </button>
+              </li>
+            </ul>
+            <div class="screenShare-content tab-content">
+              <div class="tab-pane fade show active" id="full-screen">
+                <ul class="screenShare-list d-flex mb-3">
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="application">
+                <ul class="screenShare-list d-flex mb-3">
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-pane fade" id="browser-tab">
+                <ul class="screenShare-list d-flex mb-3">
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">(2023-01-06)_000000000000000</p>
+                  </li>
+                  <li class="screenShare-item">
+                    <!-- 컨텐츠 화면 -->
+                    <div class="screenShare-conBox"></div>
+                    <p class="mt-1 truncate-1">인터넷_사용자 매뉴얼</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="screenShare-footer modal-footer custom">
+          <button class="btn btn-gray">취소</button>
+          <button class="btn btn-black">공유</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>

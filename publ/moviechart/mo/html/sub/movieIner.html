@@ -1,0 +1,329 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+
+	<!-- 갤러리 -->
+	<script type="text/javascript" src="../../resources/js/jquery.jcarousel.min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jcarousel.connected-carousels.js"></script>
+	<script type="text/javascript" src="../../resources/js/jcarousel.responsive.js"></script>
+
+	<script defer src="../../resources/js/common.js"></script>
+</head>
+
+<body>
+
+	<!-- tab 스킵네비 영역 -->
+	<div class="skip">
+		<a href="#content">본문 바로가기</a>
+		<a href="#header">네비게이션 바로가기</a>
+	</div>
+
+	<header id="header" class="header sub wArea">
+		<a href="#" class="backSpace"><img src="../../resources/images/common/back_space.png" alt="뒤로가기"></a>
+		<h2>영화정보</h2>
+		<div class="mobile_menu"></div>
+	</header>
+	<div class="gnb_menu wArea" style="display: none;">
+		<div class="menu__conbox">
+			<div class="menu__top">
+				<a href="#" class="logo"><img src="../../resources/images/common/logo_On.png" alt="무비차트 로고"></a>
+				<div class="close"><img src="../../resources/images/common/close.png" alt="닫기"></div>
+			</div>
+			<!-- //topBar -->
+			<div class="mo-gnb">
+				<div class="gnb__wArea">
+					<ul class="gnb__wArea wArea">
+						<li class="mm01">
+							<a href="#"><p>영화순위</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">실시간 예매율</a>
+								<a href="#">박스오피스</a>
+							</div>
+						</li>
+						<li class="mm02">
+							<a href="#"><p>영화정보</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">현재상영작</a>
+								<a href="#">개봉예정작</a>	
+							</div>
+						</li>
+						<li class="mm03">
+							<a href="#"><p>영화예매</p></a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">영화에매</a>
+							</div>
+						</li>
+						<li class="mm04">
+							<a href="#"><p>고객센터</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">공지사항</a>
+								<a href="#">자주묻는질문</a>
+								<a href="#">1:1문의</a>
+							</div>
+						</li>
+						<li class="mm05">
+							<a href="#"><p>이벤트</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">이벤트</a>
+							</div>
+						</li>
+						<li class="mm06">
+							<a href="#"><p>영화검색</p></a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">영화검색</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+			<div class="header-topbar">
+				<div class="wArea">
+					<ul class="topbar-list">
+						<li><a href="#" class="login">로그인</a></li>
+						<li><a href="#" class="">회원가입</a></li>
+						<li><a href="#" class="">예매권/할인권등록</a></li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+		</div>
+	</div>
+	<!-- //gnb -->
+
+
+	<div id="content">
+		<div class="info">
+			<div class="wArea">
+				<div class="movieIner">
+					<div class="poster" class="img">
+						<a href="#">
+							<img src="../../resources//images/sub/movie_poster5.png" alt="나일 강의 죽음">
+						</a>
+					</div>
+					<div class="movieIner__text">
+						<h3 class="movieIner__title"><div href="#">나일 강의 죽음</div></h3>
+						<div class="movieIner__info">
+							<ul class="movieInerInfo-list">
+								<li>평점 <img src="../../resources/images/sub/starFull.png" alt="별점" style="width: 9px;height: 9px;vertical-align: -1px;">7.9</li>
+								<li>예매율 1위 16.9%</li>
+								<li>누적관객수  2,237,425명</li>
+							</ul>
+							<div class="line"></div>
+							<p>
+								<strong>장르</strong>
+								<span>범죄, 드라마, 미스터리 / 미국</span>
+								<span>2022.02.09 개봉</span>
+								<span>12세이상관람가</span>
+								<span>127분</span>
+							</p>
+							<p>
+								<strong>감독</strong>
+								<span>
+									<span>케네스 브래너</span>
+								</span>
+							</p></p>
+						</div>
+					</div>
+				</div>
+				<!-- //movieBox -->
+				<div class="mainInfor">
+					<div class="contentBox">
+						<div class="title">시놉시스</div>
+						<div class="text">
+							&lt;오리엔트 특급 살인&gt;을 이을 또 하나의 완벽한 살인 사건<br>
+							살인은 시작에 불과했다!<br>
+							행복한 신혼부부를 태운 나일 강의 초호화 여객선<br>
+							그곳에서 끔찍한 살인 사건이 벌어진다.<br>
+							위태롭고 불길한 분위기의 선상에서 탑승객들을 심문하는 탐정 ‘에르큘 포와로’<br>
+							모두가 범인으로 의심되는 가운데,<br>
+							연이어 발생한 살인 사건은 그의 영혼을 송두리째 뒤흔들고,<br>
+							관객은 마지막 순간까지 예기치 못한 반전으로 놀라운 결말에 이르게 된다.
+						</div>
+					</div>
+					<!-- //contentBox -->
+					<div class="contentBox">
+						<div class="title">배우/제작진</div>
+						<div class="actor">
+							<ul class="ff actor__list">
+								<li class="actor__item">
+									<a href="#">
+										<img src="../../resources/images/sub/actor/actor01.jpg" alt="">
+										<div class="infor">
+											<p class="name">케네스 브래너</p>
+											<p class="position">감독</p>
+										</div>
+									</a>
+								</li>
+								<li class="actor__item">
+									<a href="#">
+										<img src="../../resources//images/sub/actor/actor01.jpg" alt="">
+										<div class="infor">
+											<p class="name">케너스 브래너</p>
+											<p class="position">주연<span>에르큘 포와르</span></p>
+										</div>
+									</a>
+								</li>
+								<li class="actor__item">
+									<a href="#">
+										<img src="../../resources//images/sub/actor/actor02.jpg" alt="">
+										<div class="infor">
+											<p class="name">갤 가돗</p>
+											<p class="position">조연<span>리넷</span></p>
+										</div>
+									</a>
+								</li>
+								<li class="actor__item">
+									<a href="#">
+										<img src="../../resources//images/sub/actor/actor03.jpg" alt="">
+										<div class="infor">
+											<p class="name">에마 매키</p>
+											<p class="position">조연<span>재클린</span></p>
+										</div>
+									</a>
+								</li>
+								<li class="actor__item">
+									<a href="#">
+										<img src="../../resources//images/sub/actor/actor04.jpg" alt="">
+										<div class="infor">
+											<p class="name">톰 베이트먼</p>
+											<p class="position">조연<span>부크</span></p>
+										</div>
+									</a>
+								</li>
+								<li class="actor__item">
+									<a href="#">
+										<img src="../../resources//images/sub/actor/actor05.jpg" alt="">
+										<div class="infor">
+											<p class="name">레티티아 라이트</p>
+											<p class="position">조연<span>로잘리</span></p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //actor/actor -->
+					</div>
+					<!-- //contentBox -->
+					<div class="contentBox">
+						<div class="title">포스터/스틸컷<p><span>1</span>/18</p></div>
+						<div class="connected-carousels">
+							<div class="stage">
+								<div class="carousel carousel-stage carousel-stage1 jcarousel">
+									<ul class=" ff">
+										<li><img src="../../resources/images/sub/cut01.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut02.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut03.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut04.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut05.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut01.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut02.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut03.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut04.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut05.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut01.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut02.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut03.png" alt=""></li>
+										<li><img src="../../resources/images/sub/cut04.png" alt=""></li>
+									</ul>
+								</div>
+								<!-- //carousel carousel-stage -->
+								<div class="arrow">
+									<a href="#" class="prev prev-navigation prev-navigation1"></a>
+									<a href="#" class="next next-navigation next-navigation1"></a>
+								</div>
+								<!-- arrow -->
+								<div class="arrow arrow02"><!--썸네일-->
+									<a href="#" class="prev prev-navigation prev-navigation1"></a>
+									<a href="#" class="next next-navigation next-navigation1"></a>
+								</div>
+								<!-- arrow -->
+							</div>
+							<!-- //stage -->
+						</div>
+						<!-- //connected-carousels -->
+					</div>
+					<!-- //contentBox -->
+					<div class="contentBox">
+						<div class="title">포스터/스틸컷</div>
+						<div class="mainInfor">
+							<div class="movieMore">
+								<div class="connected-carousels trailer">
+									<div class="stage">
+										<div class="carousel carousel-stage carousel-stage2 jcarousel">
+											<ul class="ff">
+												<li>
+													<div>
+														<iframe src="https://www.youtube.com/embed/ebO37MbksIY" frameborder="0" allowfullscreen></iframe>
+													</div>
+												</li>
+											</ul>
+										</div>
+										<!-- //carousel carousel-stage -->
+										<div class="arrow arrow02"><!--썸네일-->
+											<a href="#" class="prev prev-navigation prev-navigation2"></a>
+											<a href="#" class="next next-navigation next-navigation2"></a>
+										</div>
+										<!-- arrow -->
+									</div>
+									<!-- //stage -->
+								</div>
+								<!-- //connected-carousels -->
+
+							</div>
+							<!-- //contentBox -->
+						</div>
+						<!-- //mainInfor -->
+					</div>
+					<!-- //contentBox -->
+				</div>
+				<!-- //mainInfor -->
+			</div>
+		</div>
+		<!-- //wArea -->
+	</div>
+	<!-- //contant -->
+
+	<footer id="footer">
+		<div class="wArea">
+			<div class="footMenu">
+				<span><a href="#">이용약관</a></span>
+				<span><a href="#">개인정보취급방침</a></span>
+				<span><a href="#">제휴/광고문의</a></span>
+				<span><a href="#">예매권구매문의</a></span>
+				<span><a href="#">고객센터</a></span>
+			</div>
+			<p>
+				(03992) 서울특별시 마포구 월드컵북로4길 25, 2층 (동교동, ST빌딩) | ㈜메크로스 대표이사 이경수 <br>사업자등록번호 : 211-88-5000 
+				고객센터 : 1661-9265 (10:00~18:00) | <a href="help@moviechart.co.kr">help@moviechart.co.kr</a> <br> 통신판매업신고 [제2019-서울영등포-2112호]
+			</p>
+			<p>Copyright ⓒ Movie Chart. All Rights Reserved.</p>
+		</div>
+		<!-- //wArea -->
+	</footer>
+	<!-- //footer -->
+
+
+</body>
+
+</html>

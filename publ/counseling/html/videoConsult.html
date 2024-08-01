@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="../assets/css/common.css">
+
+  <script defer src="../assets/js/jquery-3.6.0.min.js"></script>
+  <script defer src="../assets/js/swiper-bundle.min.js"></script>
+  <script defer src="../assets/js/bootstrap.bundle.min.js"></script>
+  <script defer src="../assets/js/style.js"></script>
+
+  <title>유진투자증권 - 화상상담 시스템</title>
+</head>
+
+<body class="videoConsult-body">
+  <div class="wrap">
+    <header class="header ">
+      <div class="inner d-flex">
+        <h1 class="header-logo d-flex">
+          <a href="javascript:void(0)" class="header-link">
+            <img src="../assets/images/logo.png" alt="유진투자증권">
+          </a>
+          <p>화상상담시스템</p>
+        </h1>
+        <div class="header-util d-flex">
+          <button type="button" class="header-util-btn">관리고객 화상상담 등록</button>
+          <ul class="header-util-list d-flex">
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/bell_ring_icon.svg" alt="알림">
+                <span class="badge-new">5</span>
+              </a>
+            </li>
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/setting_icon.svg" alt="설정">
+              </a>
+            </li>
+            <li class="header-util-item">
+              <a href="javascript:void(0)" class="header-util-link">
+                <img src="../assets/images/power_shutdown_icon.svg" alt="전원">
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="container-fluid">
+        <div class="videoConsult">
+          <h3 class="videoConsult-title mb-2">고객 상담 등록</h3>
+          <div class="videoConsult-wrap d-flex">
+            <div class="videoConsult-left">
+              <div class="videoConsult-inpBox d-flex">
+                <!-- 검색 결과시 on 추가시 노출 -->
+                <p class="position-absolute start-0 mb-3 on">검색결과 <span>2</span> 건</p>
+                <div class="inpBox mb-3">
+                  <div class="input-group">
+                    <label for="inp_search">
+                      <input type="text" class="form-control" id="inp_search" placeholder="검색어를 입력하세요.">
+                      <img src="../assets/images/ico_serach.svg" alt="검색 아이콘">
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <!-- 검색 결과 없을시 active 추가 -->
+              <div class="noSearchResults">
+                <b>검색결과 없음</b>
+                <p class="mt-1">
+                  검색을 다시 시도해주세요.
+                </p>
+              </div>
+              <!-- 검색결과 없을시 active 삭제 -->
+              <div style="position:relative">
+                <ul class="videoConsult-list check-member-list active" style=" position: absolute; left: 0; top: 0; width: 100%; height: 64rem;">
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_01" name="customer_list">
+                    <label for="customer_list_01" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_02" name="customer_list">
+                    <label for="customer_list_02" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_03" name="customer_list">
+                    <label for="customer_list_03" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_04" name="customer_list">
+                    <label for="customer_list_04" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_05" name="customer_list">
+                    <label for="customer_list_05" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_06" name="customer_list">
+                    <label for="customer_list_06" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_07" name="customer_list">
+                    <label for="customer_list_07" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_08" name="customer_list">
+                    <label for="customer_list_08" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_09" name="customer_list">
+                    <label for="customer_list_09" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_10" name="customer_list">
+                    <label for="customer_list_10" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_11" name="customer_list">
+                    <label for="customer_list_11" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_12" name="customer_list">
+                    <label for="customer_list_12" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_13" name="customer_list">
+                    <label for="customer_list_13" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_14" name="customer_list">
+                    <label for="customer_list_14" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_15" name="customer_list">
+                    <label for="customer_list_15" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_16" name="customer_list">
+                    <label for="customer_list_16" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_17" name="customer_list">
+                    <label for="customer_list_17" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_18" name="customer_list">
+                    <label for="customer_list_18" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_19" name="customer_list">
+                    <label for="customer_list_19" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_20" name="customer_list">
+                    <label for="customer_list_20" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_21" name="customer_list">
+                    <label for="customer_list_21" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_22" name="customer_list">
+                    <label for="customer_list_22" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_23" name="customer_list">
+                    <label for="customer_list_23" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_24" name="customer_list">
+                    <label for="customer_list_24" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_25" name="customer_list">
+                    <label for="customer_list_25" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                  <li class="videoConsult-item check-member-item chkList">
+                    <input type="checkbox" id="customer_list_26" name="customer_list">
+                    <label for="customer_list_26" class="d-flex">
+                      <svg id="Stock_cut" class="profileSvg" viewBox="0 0 32 32" title="유저프로필">
+                        <g>
+                          <circle class="st0" cx="16" cy="16" r="15.1" />
+                          <path class="st0"
+                            d="M26.1,27.7L26.1,27.7c0-5.3-4.5-9.7-10.1-9.7l0,0c-5.6,0-10.1,4.3-10.1,9.7l0,0" />
+                          <circle class="st0" cx="16" cy="12.2" r="5.7" />
+                        </g>
+                      </svg>
+                      <h4 class="videoConsult-name">박지은</h4>
+                      <p class="videoConsult-number">(010-<sub>****</sub>-5678)</p>
+                    </label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="videoConsult-right">
+              <!-- 관심서비스 -->
+              <div class="interest">
+                <h4 class="interest-title title">관심서비스 <span>(중복선택 가능)</span></h4>
+                <ul class="interest-list d-flex mt-2 flex-wrap justify-content-start" style="gap: 2.65rem;">
+                  <li class="interest-item input-checkbox">
+                    <input type="checkbox" id="interest-chk-01">
+                    <label for="interest-chk-01">펀드</label>
+                  </li>
+                  <li class="interest-item input-checkbox">
+                    <input type="checkbox" id="interest-chk-02">
+                    <label for="interest-chk-02">ELS/DLS</label>
+                  </li>
+                  <li class="interest-item input-checkbox">
+                    <input type="checkbox" id="interest-chk-03">
+                    <label for="interest-chk-03">랩</label>
+                  </li>
+                  <li class="interest-item input-checkbox ">
+                    <input type="checkbox" id="interest-chk-04">
+                    <label for="interest-chk-04">신탁</label>
+                  </li>
+                  <li class="interest-item input-checkbox ">
+                    <input type="checkbox" id="interest-chk-05">
+                    <label for="interest-chk-05">장외채권</label>
+                  </li>
+                  <li class="interest-item input-checkbox ">
+                    <input type="checkbox" id="interest-chk-06">
+                    <label for="interest-chk-06">CP</label>
+                  </li>
+                  <li class="interest-item input-checkbox ">
+                    <input type="checkbox" id="interest-chk-07">
+                    <label for="interest-chk-07">전자단기사</label>
+                  </li>
+                  <li class="interest-item input-checkbox ">
+                    <input type="checkbox" id="interest-chk-08">
+                    <label for="interest-chk-08">주식상담</label>
+                  </li>
+                </ul>
+              </div>
+              <!-- 추가문의사항 -->
+              <div class="additional mt-3">
+                <div class="d-flex justify-content-between align-item-center">
+                  <h4 class="additional-title title">추가 문의 사항</h4>
+                  <p class="additional-dec dec">※ 추가 문의사항이 있으신가요? 60자 내외로 간략하게 기재해 주세요. (띄어쓰기 포함)</p>
+                </div>
+                <div class="additional-textarea mt-2">
+                  <textarea class="form-control" placeholder="60자 내외 입력" style="height: 90px"></textarea>
+                  <!-- 60자 초과 했을 경우 알림 출력 -->
+                  <p class="dec mt-1">* 입력 범위를 초과하셨습니다. 60자 내외로 간략하게 기재해 주세요. (띄어쓰기 포함)</p>
+                </div>
+
+              </div>
+              <!-- 상담시간 -->
+              <div class="counselingTime mt-3">
+                <h4 class="counselingTime-title title">상담시간</h4>
+                <ul class="counselingTime-list d-flex flex-wrap mt-2">
+                  <!-- 예약 불가한 시간에는 disable 추가 -->
+                  <li class="counselingTime-item chkList input-checkbox disalbe">
+                    <input type="checkbox" id="counselingTime-chk-01" name="counselingTime-list">
+                    <label for="counselingTime-chk-01">09:00~09:59</label>
+                  </li>
+                  <li class="counselingTime-item chkList input-checkbox">
+                    <input type="checkbox" id="counselingTime-chk-02" name="counselingTime-list">
+                    <label for="counselingTime-chk-02">10:00~10:59</label>
+                  </li>
+                  <li class="counselingTime-item chkList input-checkbox">
+                    <input type="checkbox" id="counselingTime-chk-05" name="counselingTime-list">
+                    <label for="counselingTime-chk-05">13:00~13:59</label>
+                  </li>
+                  <li class="counselingTime-item chkList input-checkbox">
+                    <input type="checkbox" id="counselingTime-chk-06" name="counselingTime-list">
+                    <label for="counselingTime-chk-06">14:00~14:59</label>
+                  </li>
+                  <li class="counselingTime-item chkList input-checkbox disalbe">
+                    <input type="checkbox" id="counselingTime-chk-07" name="counselingTime-list">
+                    <label for="counselingTime-chk-07">15:00~15:59</label>
+                  </li>
+                </ul>
+                <p class="dec mt-2">※ 상담 시간은 오전 9시부터 오후 3시 59분까지 입니다. 예약을 하실 경우 상담 30분 전에 예약하셔야 합니다.</p>
+              </div>
+              <div class="mt-4 d-flex justify-content-center position-absolute absolute">
+                <button class="counselingTime-btn cancle btn ">취소</button>
+                <button class="counselingTime-btn agree btn btn-red" data-bs-toggle="modal"
+                  data-bs-target="#applicationCom-01">상담신청</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <!-- 모달  -->
+  <div class="modal fade defalt" id="applicationCom-01" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          상담신청이 완료 되었습니다.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade defalt" id="applicationCom-02" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          고객을 선택하세요.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade defalt" id="applicationCom-03" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          관심서비스를 선택하세요.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade defalt" id="applicationCom-04" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          상담시간을 선택하세요.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade defalt" id="applicationCom-05" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          추가문의사항 입력 범위를 초과하셨습니다.
+        </div>
+        <button type="button" class="btn modal-btn" data-bs-dismiss="modal">확인</button>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>

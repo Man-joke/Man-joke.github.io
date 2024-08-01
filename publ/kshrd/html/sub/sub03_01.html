@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="한국안전평생교육원">
+  <meta property="og:description" content="온라인교육서비스업/응용 소프트웨어 개발 및 공급업/콘텐츠개발 및 판매업/평생교육시설운영업 등 일반 교과 학원">
+  <meta property="og:image" content="../../resources/images/common/meta_logo.png">
+  <meta name="format-detection" content="telephone=no, address=no, email=no">
+  <link rel="shortcut icon" href="../../resources/images/common/favicon.ico">
+  <title>한국안전평생교육원</title>
+  <link rel="stylesheet" href="../../resources/css/style.css">
+
+  <script src="../../resources/js/jquery-1.12.4.min.js"></script>
+  <script src="../../resources/js/jquery.easing.1.3.js"></script>
+  <script src="../../resources/js/ui.js"></script>
+  <script src="../../resources/js/swiper.min.js"></script>
+  <script src="../../resources/js/common.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header style="text-align: center; line-height: 100px; background: #444; opacity:.6;color: #fff">
+    헤더
+  </header>
+  <!-- //header -->
+  <div class="dim"></div>
+  <div id="sub">
+    <!-- sub_visual -->
+    <div class="sub_visual visual03">
+      <h2 class="tit">교육과정</h2>
+      <p class="txt">curriculum</p>
+    </div>
+    <!-- //sub_visual -->
+    <!-- sub_wrap -->
+    <div class="sub_wrap">
+      <!-- lnb -->
+      <div class="lnb">
+        <div class="inner">
+          <ul class="menu">
+            <li class="home"><a href="#">home</a>
+            </li>
+            <!-- 1뎁스 영역 -->
+            <li class="nav_list nav1">
+              <a href="#none">교육과정안내</a>
+              <ul class="list"
+                style="display: none; height: auto; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+                <li><a href="#">교육원소개</a></li><!-- 현재위치 current -->
+                <li><a href="#">교육안내</a></li><!-- 현재위치 current -->
+                <li><a href="#" class="current">교육과정안내</a></li> <!-- 마우스 오버 시 on 클래스 추가-->
+                <li><a href="#">안전보건교육</a></li>
+                <li><a href="#">학습유의사항</a></li>
+                <li><a href="#">학습지원센터</a></li>
+              </ul>
+            </li>
+            <!--2뎁스 영역 -->
+            <li class="nav_list nav2">
+              <a href="#none">교육과정</a>
+              <ul class="list"
+                style="display: none; height: auto; padding-top: 0px; margin-top: 0px; padding-bottom: 0px; margin-bottom: 0px;">
+                <li><a href="#" class="current">교육과정</a></li> <!-- 현재위치 current -->
+                <li><a href="#">법정의무교육</a></li>
+                <li><a href="#">안전보건교육</a></li>
+                <li><a href="#">교육신청 및 문의</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- //lnb -->
+      <!-- sub_cont -->
+      <div class="sub_cont " id="container">
+        <div class="inner">
+          <section class="searchbar">
+            <h2 class="searchbar__title">교육과정</h2>
+            <p class="searchbar_txt">총<span class="current-num"> 99</span>개의 과정이 검색되었습니다.</p>
+            <div class="serachbar-form">
+              <div class="searchbar-group">
+                <label for="formSelect" style="display: none;">과정명선택</label>
+                <select class="form-select" id="formSelect">
+                  <option value="" selected>과정명</option>
+                  <option value="">내용</option>
+                </select>
+              </div>
+              <div class="searchbar-group">
+                <label for="search" class="vs-hidden">검색어를 입력해주세요.</label>
+                <input type="text" placeholder="검색어를 입력해주세요." title="검색어를 입력해주세요." id="search">
+                <button class="searchbar-btn" type="submit">검색</button>
+              </div>
+            </div>
+          </section>
+
+          <section class="curriculum">
+            <h2 class="curriculum__title h2-title">커리큘럼 목록</h2>
+            <ul class="curriculum__list">
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img1.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">데이터 경제시대의 디지털 융합</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>0원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img7.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">장애인 학대 신고 의무자 교육</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>0원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href=""><img src="../../resources/images/sub/curriculum_img8.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">직무의 정석-커뮤니케이션</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>10,472원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img9.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">언택트 시대의 소통하는 법</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>0원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img10.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">언택트 시대, e-비즈니스 인사이트</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>0원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img2.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">매장 세일즈를 위한 기본 지침서</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>12,936원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img3.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">해킹과 침투의 시대, 보안을 배우다</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>0원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img4.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">스마트워크 시대! ON 정보 보호가이드</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>0원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img5.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">초연결시대, 고객경험을 디자인하라</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>0원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+              <li class="curriculum__item">
+                <div class="items-con">
+                  <div class="img-warp">
+                    <a href="#"><img src="../../resources/images/sub/curriculum_img6.png" alt="#"></a>
+                  </div>
+                  <div class="items-txt">
+                    <ul class="items-hash">
+                      <li>일반</li>
+                      <li>모바일</li>
+                    </ul>
+                    <a href="#">
+                      <h3 class="curriculum__title h3-title">자주 이기는 일잘러의 제안 스킬</h3>
+                    </a>
+                    <p>
+                      <span>교육비 <em>0원</em></span>
+                      <span>교육기간 <em>1개월</em></span>
+                    </p>
+                  </div>
+                </div>
+                <ul class="curriculum__btnlist">
+                  <li>
+                    <a href="#"><em>상세보기</em></a>
+                  </li>
+                  <li>
+                    <a href="#"><em>과정맛보기</em></a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <div class="pagination">
+              <!-- ul에 first, last 클래스가 들어오면 각 해당 버튼 ban -->
+              <ul class="pagination__list">
+                <li class="pagination__item slide first disable">
+                  <a href="#">first</a>
+                </li>
+                <li class="pagination__item slide prev disable">
+                  <a href="#">prev</a>
+                </li>
+                <li class="pagination__item on">
+                  <!-- 해당 li.on 활성화 -->
+                  <a href="#">1</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">2</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">3</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">4</a>
+                </li>
+                <li class="pagination__item">
+                  <a href="#">5</a>
+                </li>
+                <li class="pagination__item slide next">
+                  <a href="#">next</a>
+                </li>
+                <li class="pagination__item slide last">
+                  <a href="#">last</a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+    <!-- //inner -->
+  </div>
+  <!-- //sub_cont -->
+  <!-- //sub_wrap -->
+  <footer id="footer" style="text-align: center; height: 150px; background: #e7e7e7;">
+    푸터
+  </footer>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+@media screen and (-ms-high-contrast:active), (-ms-high-contrast:none){
+
+}
+
+input, select{outline: 0;}
+
+.m0auto{ margin: 0 auto; width: 1160px; }
+.b_right{float: right;}
+
+header {border-bottom: 1px solid #d3d3d3;}
+header h1{float: left; padding: 22px 84px 0 0;}
+header nav {float: left;}
+header nav li {float: left;}
+header nav li a{ display: block; padding: 0 40px; height: 100px; line-height: 100px;  color: #000; font-size: 18px; transition: color .5s;}
+header nav li a:hover{ color: #368932; }
+header nav li a span{ position: relative;}
+header nav li a span:after{ content: ""; position: absolute; left: 0; bottom: 0; width:0; height: 3px; background: #368932; transition: width .5s; bottom: -39px;}
+header nav li a:hover span:after{ width: 100%; }
+header .right {float: right; padding: 33px 0 0;}
+header .right .search{ float: left; padding:0 0 0 9px; height: 31px; border: 1px solid #ddd; border-radius: 31px; font-size: 0;}
+header .right .search input{ padding: 0 0 0 3px; width: 129px; border: none; border-radius: 31px 0 0 31px;}
+header .right .search input::placeholder,
+header .right .search input::-webkit-input-placeholder{ text-indent: 0; font-size: 12px; color: rgba(130,132,130,1); transition: all .5s;}
+header .right .search input:focus::placeholder,
+header .right .search input:focus::-webkit-input-placeholder{ text-indent: 10px;  color: rgba(130,132,130,0);}
+header .right .search button{ width: 31px; height: 31px; background: url(../images/icon_search.png) no-repeat center; outline: 0;}
+header .right ul { float: left;}
+header .right li  { float: left; padding: 0 0 0 10px;}
+header .right li a{ display: block; height: 33px; line-height: 33px; color: #8f918f; font-size: 12px; }
+
+.bottom{ margin:0 0 100px; border-top: 1px solid #e4e4e4;}
+.bottom > div > div{ padding: 0 90px; }
+.bottom .b_menu { display: inline-block; width: 741px;}
+.bottom .b_menu ul{ float: left;  }
+.bottom .b_menu h2{padding: 105px 0 33px; font-size: 19px; font-weight: normal; color: #444; line-height: 1;}
+.bottom .b_menu ul{ width: 25%;}
+.bottom .b_menu ul li{ padding:0 0 9px;}
+.bottom .b_menu ul li a{ font-size: 15px; color: #929492; }
+.bottom .b_menu ul li a:hover{color:#368932; font-weight: bold;}
+
+.bottom .b_SNS{padding: 105px 0 0; display: inline-block;}
+.bottom .b_SNS h2{ padding: 0 0 30px; font-size: 19px; font-weight: normal;color: #444; line-height: 1;}
+.bottom .b_SNS a{  margin: 0 5px 0; text-indent: -9999px; width: 46px; height: 46px; display: inline-block; }
+
+.bottom .b_SNS a.youtube { background: url(../images/icon_youtube_off.png) no-repeat}
+.bottom .b_SNS a.insta{ background: url(../images/icon_insta_off.png) no-repeat;}
+.bottom .b_SNS a.facebook{ background: url(../images/icon_facebook_off.png) no-repeat;}
+.bottom .b_SNS a.blog{ background: url(../images/icon_blog_off.png) no-repeat;}
+
+.bottom .b_SNS a.youtube:hover{ background: url(../images/icon_youtube_on.png) no-repeat;}
+.bottom .b_SNS a.insta:hover{ background: url(../images/icon_insta_on.png) no-repeat;}
+.bottom .b_SNS a.facebook:hover{ background: url(../images/icon_facebook_on.png) no-repeat;}
+.bottom .b_SNS a.blog:hover{ background: url(../images/icon_blog_on.png) no-repeat;}
+
+.bottom .family_site h2{ padding:0 0 25px; margin: 48px 0 0;font-weight: normal; font-size: 19px; color: #444; line-height: 1;}
+.bottom .family_site .family{ position: relative; background: url(../images/ico_arr.png) no-repeat right 20px center / 13px 8px;  width: 228px; height: 60px; line-height: 60px; border-top: none; border-left: none; border-right: none; border-bottom: 1px solid #cfcfcf; font-size: 15px; color: #abacab; font-weight: normal;  -webkit-appearance: none;-moz-appearance: none; appearance: none; outline: 0;}
+.family::-ms-expand{display: none;}
+.bottom .family_site .family.on{ background-image:url(../images/ico_arr1.png);}
+
+footer{ background: #444;}
+footer .footer{ padding: 44px 90px 63px;}
+footer ul li{display: inline-block; padding: 0 25px 0 0;}
+footer ul li a{display: block; font-size: 13px; color: #fff;}
+footer address { padding: 23px 0 0; font-size: 13px; color: rgba(255,255,255,.5);}

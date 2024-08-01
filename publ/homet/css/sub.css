@@ -1,0 +1,189 @@
+/* 메뉴바 */
+
+/* weight */
+.product_con {
+    background: #fff;
+}
+
+.product_con h2 {
+    padding: 90px 0px 65px;
+}
+
+.product_con h2 p {
+    margin-top: 10px;
+    font-size: 15px;
+    color: #ccc;
+    line-height: 20px;
+}
+
+/* community */
+.product_con {
+    background: #f2f2f2;
+    padding: 72px 0;
+}
+
+#community .community {
+    margin-top: 120px;
+    margin-bottom: 25px;
+    font-size: 26px;
+    color: #222;
+    text-align: center;
+}
+
+#community p {
+    font-size: 14px;
+    text-indent: 5px;
+    color: #aaa;
+}
+
+#community ul {
+    margin-bottom: 72px;
+}
+
+#community li {
+    display: inline-block;
+    margin: 0 18px;
+    margin-top: 45px;
+    width: calc( 50% - 40px);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+
+}
+
+#community li:hover {
+    box-shadow: 5px 5px 20px rgba(35, 35, 35, .2);
+}
+
+#community li img {
+    width: 100%;
+    transition: 0.3s;
+}
+
+#community li:hover img {
+    transform: scale(1.03);
+    transition: 0.3s;
+}
+
+#community li p {
+    font-family: "yg-jalnan";
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    color: #666;
+}
+
+/* 로그인 */
+form{
+    margin: 72px 0 40px
+}
+
+form div {
+    margin: 0 auto;
+    width: 19rem;
+    text-align: center;
+}
+
+form .login_warp {
+    /* margin-top: 100px; */
+}
+
+form div>h2 {
+    padding: 4.5rem 0 3.15rem;
+    font-size: 2.5rem;
+    color: #333;
+    line-height: 1;
+}
+
+form .txt li~li {
+    margin: .5rem 0 0;
+}
+
+form .txt input {
+    display: block;
+    padding: 1.15rem .5rem;
+    width: 100%;
+    line-height: 2.4rem;
+    border: 1px solid #cfcfcf;
+    border-radius: .25rem;
+    box-sizing: border-box;
+    outline: 0;
+    cursor: pointer;
+}
+
+form .line {
+    padding: 1rem 0 1.2rem;
+    line-height: 1;
+}
+
+form .line li {
+    display: inline-block;
+}
+
+form .line li~li {
+    margin: 0 0 0 1.9rem;
+}
+
+form .line li {
+    font-size: .65rem;
+    color: #818181;
+}
+
+form .line li label {
+    outline: 0;
+    cursor: pointer;
+}
+
+form .line li label input {
+    margin: 0 .35rem 0 0
+}
+
+form .login li~li {
+    margin: .75rem 0 0;
+}
+
+form .login li button {
+    width: 100%;
+    line-height: 2.5rem;
+    background: #333;
+    font-size: .75rem;
+    color: #fff;
+    border-radius: .75rem 0 0;
+    border: 1px solid #333;
+    outline: 0;
+    cursor: pointer;
+}
+
+form .login li:last-child button {
+    background: #fff;
+    color: #333;
+}
+
+form .find li button {
+    background: #fff;
+    font-size: .65rem;
+    outline: 0;
+    cursor: pointer;
+}
+
+form .sns {
+    padding: 0 0 4.2rem;
+}
+
+form .sns li~li {
+    margin: 0 .55rem
+}
+
+form .sns li:first-child a {
+    display: inline-block;
+    width: 2.35rem;
+    height: 2.35rem;
+    background: url(../images/ico_facebook.png) no-repeat center;
+}
+
+form .sns li:last-child a {
+    display: inline-block;
+    width: 2.35rem;
+    height: 2.35rem;
+    background: url(../images/ico_google.png) no-repeat center;
+}

@@ -1,0 +1,60 @@
+@charset "utf-8";
+@font-face { font-family: 'NanumGothic'; font-style: normal; font-weight: normal;
+	src: url(../fonts/NanumGothic.eot?#iefix) format('embedded-opentype');
+	src: url(../fonts/NanumGothic.woff2) format('font-woff2'),
+			 url(../fonts/NanumGothic.woff) format('font-woff'),
+			 url(../fonts/NanumGothic.ttf) format('truetype '); } 
+ 
+ @font-face { font-family: 'NanumGothic'; font-style: normal; font-weight: normal;
+	src: url(../fonts/NanumGothicBold.eot?#iefix) format('embedded-opentype');
+	src: url(../fonts/NanumGothicBold.woff2) format('font-woff2'),
+			 url(../fonts/NanumGothicBold.woff) format('font-woff'),
+			 url(../fonts/NanumGothicBold.ttf) format('truetype '); } 
+
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary, time, mark, audio, video { margin: 0; padding: 0; border: 0; font-size: 100%; font-family: "NanumGothic", sans-serif; font-weight: 400; color:#000; vertical-align: baseline; word-break: keep-all; box-sizing: border-box; letter-spacing: -0.1rem;} 
+h1, h2, h3, h4, h5, h6 { font-weight: bold;}
+a { text-decoration: none; color:#000; } 
+a:hover { color:#333; } 
+b { font-weight: bold; } 
+button { background: transparent; border: transparent; padding: 0; margin: 0; color: #000; } 
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; } 
+html { font-size: 10px; } 
+body { font-size: 1rem; line-height: 1; } 
+html, body { height: 100%; } 
+ol, ul, li { list-style: none; } 
+blockquote, q { quotes: none; } 
+textarea{ resize: none;;}
+blockquote:before, blockquote:after, q:before, q:after { content: ""; content: none; } 
+table { border-collapse: collapse; border-spacing: 0; } 
+.row, .row > * { --bs-gutter-x: 0rem; } 
+
+hr{ margin: 5rem 0;}
+
+.wrap{ height: 100%; overflow: hidden;}
+.container-fluid{ padding: 0; left: 0;}
+
+.wrap.mobile{ padding: 0 1.2rem; margin: 0 auto; width: 100%; height: auto;}
+
+.btn-check:focus+.btn,
+.btn:focus { box-shadow: none; }
+
+.form-select:focus{ border-color: unset; outline: 0; box-shadow: unset; }
+
+input[type=tel],
+input[type=time],
+input[type=search],
+input[type=email],
+input[type=file],
+input[type=url],
+input[type=radio],
+input[type=checkBox] { position: absolute; clip: rect(0,0,0,0); pointer-events: none;}
+
+/* 스크롤디자인 */
+body *::-webkit-scrollbar{ width: 0.6rem; height: 0.6rem;}
+body *::-webkit-scrollbar-thumb{ height: 60%; background: #666; border-radius: 0.3rem;}
+body *::-webkit-scrollbar-track{ background: transparent;}

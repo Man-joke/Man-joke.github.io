@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>체크카드신청</title>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js" charset="utf-8"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+  <script src="js/sub.js" charset="utf-8"></script>
+  <link rel="stylesheet" href="css/default.css">
+  <link rel="stylesheet" href="css/sub.css">
+  <link rel="stylesheet" href="css/xeicon.css">
+</head>
+<body>
+  <main>
+    <section class="top">
+      <h2>체크카드신청</h2>
+      <a href="" class="underline">취소</a>
+    </section>
+    <section class="p1">
+      <ul class="card_list slide">
+        <li class="on"><span class="hide">라이언카드</span></li>
+        <li><span class="hide">어피치카드</span></li>
+        <li><span class="hide">무지카드</span></li>
+        <li><span class="hide">라이언카드</span></li>
+        <li><span class="hide">어피치카드</span></li>
+        <li><span class="hide">무지카드</span></li>
+      </ul>
+      <ul class="tab">
+        <li>카드종류<span>해외겸용(Master)</span></li>
+        <li>
+          후불교통카드
+          <div>
+            <input type="checkbox" id="chk_1" class="hide">
+            <label for="chk_1"><span></span></label>
+          </div>
+        </li>
+      </ul>
+      <div class="ptext">
+        <p class="p_text1 p1">&#8251; 해외겸용 카드는 발급 후, 카드관리에서 해외 이용 여부를 설정할 수 있습니다.</p>
+        <p class="p_text1 p1">&#8251; 후불교통 기능은 만 18세 이상부터 제공가능하며, 발급심사는 KB국민카드를 통해 진행됩니다. 타 금융기관은 연체이력 등이 있는 경우 후불교통카드의 발급이 불가능 할 수 있습니다.</p>
+      </div>
+      <div class="pass">
+        <input type="password" id="password" value="0000">
+        <label for="password">통장비밀번호 만들기</label>
+      </div>
+      <div class="sign_alram">
+        <h4 class="h4">결제계좌 </h4>
+        <ul class="find">
+          <li>
+            <label for="write"><span>계좌선택</span></label>
+            <input type="text" id="write" value="카카오의 통장(2019)">
+          </li>
+          <li>캐시백 적립일 <span>매월 10일</span></li>
+          <li>교통이용 결제일 <span>매월 10일</span></li>
+        </ul>
+        <h4 class="h4">카드결제 알림</h4>
+        <ul class="tab">
+          <li>
+            앱푸시
+            <div>
+              <input type="checkbox" id="chk_2" checked class="hide">
+              <label for="chk_2"><span></span></label>
+            </div>
+          </li>
+          <li>
+            알림톡<i><span class="hide">도움말</span></i>
+            <div>
+              <input type="checkbox" id="chk_3" class="hide">
+              <label for="chk_3"><span></span></label>
+            </div>
+          </li><li>
+            SMS(문자)
+            <label for="txt"><span></span></label>
+            <input type="text" id="txt" value="신청 안함">
+          </li>
+        </ul>
+        <div class="ptext">
+          <p class="p_text1 p1">&#8251; 카드결제 및 입출금 알림은 설정메뉴에서 변경 할 수 있습니다.</p>
+          <p class="p_text1 p1">&#8251; 유료 SMS 알림은 정액제로 부과됩니다. <a href="">자세히보기</a></p>
+        </div>
+        <p class="yellow"><a href="sub7.html">다음</a></p>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

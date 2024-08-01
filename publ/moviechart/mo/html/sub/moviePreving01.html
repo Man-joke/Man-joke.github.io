@@ -1,0 +1,588 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+	<meta charset="utf-8">
+	<!-- 익스 엣지 메타테그 -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title> 무비차트 </title>
+
+	<!-- css -->
+	<link href="../../resources/css/style.css" rel="stylesheet" type="text/css">
+
+	<!-- jQuery -->
+	<script src="../../resources/js/jquery-1.11.2.min.js"></script>
+	<script src="../../resources/js/jquery.easing.1.3.js"></script>
+	<script src="../../resources/js/jquery-ui.min.js"></script>
+
+	<!-- 메인 슬라이드 jQuery -->
+	<script src="../../resources/js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="../../resources/js/selectbox-min.js"></script>
+	<script type="text/javascript" src="../../resources/js/jquery.bxslider.js"></script>
+
+	<script defer src="../../resources/js/common.js"></script>
+
+</head>
+
+<body>
+
+	<header id="header" class="header sub wArea">
+		<a href="#" class="backSpace"><img src="../../resources/images/common/back_space.png" alt="뒤로가기"></a>
+		<h2>영화예매</h2>
+		<div class="mobile_menu"></div>
+	</header>
+	<!-- //header -->
+	<div class="gnb_menu wArea" style="display: none;">
+		<div class="menu__conbox">
+			<div class="menu__top">
+				<a href="#" class="logo"><img src="../../resources/images/common/logo_On.png" alt="무비차트 로고"></a>
+				<div class="close"><img src="../../resources/images/common/close.png" alt="닫기"></div>
+			</div>
+			<!-- //topBar -->
+			<div class="mo-gnb">
+				<div class="gnb__wArea">
+					<ul class="gnb__wArea wArea">
+						<li class="mm01">
+							<a href="#">
+								<p>영화순위</p>
+							</a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">실시간 예매율</a>
+								<a href="#">박스오피스</a>
+							</div>
+						</li>
+						<li class="mm02">
+							<a href="#">
+								<p>영화정보</p>
+							</a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">현재상영작</a>
+								<a href="#">개봉예정작</a>
+							</div>
+						</li>
+						<li class="mm03">
+							<a href="#">
+								<p>영화예매</p>
+							</a>
+							<div class="gnb__depth" style=" height: 82px;">
+								<a href="#">영화에매</a>
+							</div>
+						</li>
+						<li class="mm04">
+							<a href="#">
+								<p>고객센터</p>
+							</a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">공지사항</a>
+								<a href="#">자주묻는질문</a>
+								<a href="#">1:1문의</a>
+							</div>
+						</li>
+						<li class="mm05">
+							<a href="#">
+								<p>이벤트</p>
+							</a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">이벤트</a>
+							</div>
+						</li>
+						<li class="mm06">
+							<a href="#">
+								<p>영화검색</p>
+							</a>
+							<div class="gnb__depth" style="height: 114px;">
+								<a href="#">영화검색</a>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+			<div class="header-topbar">
+				<div class="wArea">
+					<ul class="topbar-list">
+						<li><a href="#" class="login">로그인</a></li>
+						<li><a href="#" class="">회원가입</a></li>
+						<li><a href="#" class="">예매권/할인권등록</a></li>
+					</ul>
+				</div>
+				<!-- //wArea -->
+			</div>
+		</div>
+	</div>
+	<!-- //gnb -->
+	<div id="content">
+		<div class="img_tab">
+			<ul>
+				<li id="step1_guide_bg" class="big no_bg">
+					<dl>
+						<!-- 영화가 선택되면 -->
+						<!-- dt img  display: none; -->
+						<!-- data_btn 영화선택버튼 display: none; -->
+						<!-- change-btn 변경 버튼 display: block -->
+						<dt id="step1_guide_title"><img src="../../resources/images/sub/plusbg.png" alt="영화선택" style="display: none;"></dt>
+						<dd id="step1_guide_edit">
+							<button class="date_btn" style="display: none;">영화선택</button>
+							<!-- 영화가 선택이 되면 change-btn block -->
+							<button class="date_btn change-btn btn1" style="display: block">변경</button>
+						</dd>
+					</dl>
+				</li>
+				<li id="step2_guide_bg" class="big">
+					<dl>
+						<!-- 극장선택시 극장만 출력 -->
+						<!-- 좌석 선택시 좌석 뒷 부분에 출력 -->
+						<dt id="step2_guide_title">
+							메가박스 남춘천<br>앞열 가운데
+						</dt>
+						<dd id="step2_guide_edit">
+							<button class="date_btn" style="display: none">극장선택</button>
+							<!-- 영화가 선택이 되면 change-btn block -->
+							<button class="date_btn change-btn btn2" style="display: block;">변경</button>
+						</dd>
+					</dl>
+				</li>
+				<li id="step3_guide_bg" class="big">
+					<dl>
+						<!-- 날짜 선력시 월,일,요일 출력 -->
+						<!-- 시간선력시 시간출력 -->
+						<!-- 인원 선력시 인원 출력 -->
+						<!-- 순차 출력 -->
+						<dt id="step3_guide_title">
+							02.12(일) <span>10:00</span><br>2명
+						</dt>
+						<dd id="step3_guide_edit">
+							<button class="date_btn" style="display: none;">날짜선택</button>
+							<!-- 영화가 선택이 되면 change-btn block -->
+							<button class="date_btn change-btn btn3" style="display: block;">변경</button>
+						</dd>
+					</dl>
+				</li>
+			</ul>
+		</div>
+		<!-- //img_tab -->
+		<div class="space reserve">
+			<div class="previngBox">
+				<ul class="ff">
+					<!-- 각각 step n 번째 선택시 다음 step display:block -->
+					<li class="choiceMovie step1" style="display: block;">
+						<h3 class="bg choiceMovie__title">영화선택</h3>
+						<div class="scrolBox wArea">
+							<ul>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge12.png"alt="12세관람가"></span>스파이더맨: 노 웨이 홈
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge15.png" alt="15세관람가"></span>드라이브 마이 카
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge18.png" alt="청소년관람불가"></span>씽2게더
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAgeAll.png" alt="전체관람가"></span>어다너 라운드
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge12.png" alt="12세관람가"></span>미싱타는 여자들
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge15.png" alt="15세관람가"></span>도쿄 리벤저스
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge18.png" alt="청소년관람불가"></span>극장판 안녕 자두야: 제주도의 비밀
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAgeAll.png" alt="전체관람가"></span>나일 강의 죽음
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge12.png" alt="12세관람가"></span>스파이더맨: 노 웨이 홈
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge15.png" alt="15세관람가"></span>드라이브 마이 카
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge18.png" alt="청소년관람불가"></span>씽2게더
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAgeAll.png" alt="전체관람가"></span>어다너 라운드
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge12.png" alt="12세관람가"></span>미싱타는 여자들
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge15.png" alt="15세관람가"></span>도쿄 리벤저스
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAge18.png" alt="청소년관람불가"></span>극장판 안녕 자두야: 제주도의 비밀
+									</a>
+								</li>
+								<li>
+									<a href="#">
+										<span><img src="../../resources/images/sub/prevAgeAll.png" alt="전체관람가"></span>나일 강의 죽음
+									</a>
+								</li>
+							</ul>
+						</div>
+						<!-- //scrolBox -->
+					</li>
+					<!-- //choiceMovie 영화선택 -->
+					<li class="choiceScreen step2" style="display: none;">
+						<h3 class="bg choiceMovie__title">극장선택</h3>
+						<!-- 영화 미선택 비 활성화 -->
+						<!-- <p class="noneBox">영화를 선택해주세요.</p> -->
+						<!-- //영화 미선택 비 활성화 -->
+					
+						<!-- 영화 선택 활성화 -->
+						<div class="scrolBox" style="display: block">
+							<ul>
+								<li>
+									<a href="#">
+										서울
+										<span>(01)</span>
+
+									</a>
+									<ul>
+										<li><a href="#">[강북구] 메가박스 수유</a></li>
+										<li><a href="#">[강서구] 롯데시네마 - 김포공항</a></li>
+										<li><a href="#">[강북구] 메가박스 수유</a></li>
+										<li><a href="#">[강서구] 롯데시네마 - 김포공항</a></li>
+										<li><a href="#">[강북구] 메가박스 수유</a></li>
+										<li><a href="#">[강서구] 롯데시네마 - 김포공항</a></li>
+										<li><a href="#">[강북구] 메가박스 수유</a></li>
+										<li><a href="#">[강서구] 롯데시네마 - 김포공항</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										대구
+										<span>(01)</span>
+									</a>
+									<ul>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										부산
+										<span>(01)</span>
+									</a>
+									<ul>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">
+										광주
+										<span>(01)</span>
+									</a>
+									<ul>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+										<li><a href="#">메가박스 수유</a></li>
+										<li><a href="#">롯데시네마 - 김포공항</a></li>
+									</ul>
+								</li>
+							</ul>
+						</div>
+						<!-- //영화 선택 활성화 -->
+						<!-- //scrolBox -->
+					</li>
+					<!-- //choiceScreen 극장선택 -->
+					<li class="choiceDate step3" style="display: none;">
+						<h3 class="bg choiceMovie__title">날짜선택</h3>
+						<!-- 극장 미선택 비 활성화 -->
+						<!-- <p class="noneBox">극장을 선택해 주세요.</p> -->
+						<!-- 극장 미선택 비 활성화 -->
+						<!-- 극장 선택 활성화 -->
+						<div class="scrolBox" style="display: block;">
+							<div class="chalendar">
+								<p class="controller">
+									<a href="#" class="prev"><img src="../../resources/images/sub/prevBtn.png" alt="이전달" /></a>
+									<span>04월</span>
+									<a href="#" class="next"><img src="../../resources/images/sub/nextBtn.png" alt="다음달" /></a>
+								</p>
+								<table>
+									<caption class="blind">달력</caption>
+									<colgroup>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+										<col>
+									</colgroup>
+									<thead>
+										<tr>
+											<th scope="col">일</th>
+											<th scope="col">월</th>
+											<th scope="col">화</th>
+											<th scope="col">수</th>
+											<th scope="col">목</th>
+											<th scope="col">금</th>
+											<th scope="col">토</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a href="#" class="red">1</a></td>
+											<td><a href="#">2</a></td>
+											<td><a href="#">3</a></td>
+											<td><a href="#">4</a></td>
+											<td><a href="#">5</a></td>
+											<td><a href="#">6</a></td>
+											<td><a href="#">7</a></td>
+										</tr>
+										<tr>
+											<td><a href="#" class="red">8</a></td>
+											<td><a href="#">9</a></td>
+											<td><a href="#">10</a></td>
+											<td><a href="#">11</a></td>
+											<td><a href="#">12</a></td>
+											<td><a href="#">13</a></td>
+											<td><a href="#">14</a></td>
+										</tr>
+										<tr>
+											<td class="canDay"><a href="#">15</a></td>
+											<td class="canDay"><a href="#" class="curent">16</a></td>
+											<td class="canDay"><a href="#">17</a></td>
+											<td class="canDay"><a href="#">18</a></td>
+											<td class="canDay"><a href="#">19</a></td>
+											<td class="canDay"><a href="#">20</a></td>
+											<td class="canDay"><a href="#">21</a></td>
+										</tr>
+										<tr>
+											<td class="canDay"><a href="#">22</a></td>
+											<td><a href="#">23</a></td>
+											<td><a href="#">24</a></td>
+											<td><a href="#">25</a></td>
+											<td><a href="#">26</a></td>
+											<td><a href="#">27</a></td>
+											<td><a href="#">28</a></td>
+										</tr>
+										<tr>
+											<td><a href="#" class="red">29</a></td>
+											<td><a href="#">30</a></td>
+											<td><a href="#">31</a></td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+											<td>&nbsp;</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<!-- //chalendar -->
+						</div>
+						<!-- 극장 선택 활성화 -->
+						<!-- //scrolBox  -->
+					</li>
+					<!-- //choiceDate 날짜선택 -->
+					<li class="choiceTimePeaple step4" style="display: block;">
+						<div class="choiceTP choiceTP01">
+							<h3 class="choiceMovie__title">상영시간</h3>
+							<!-- 날짜 미선택 비 활성화 -->
+							<!-- <p class="noneBox">날짜을 선택해 주세요.</p> -->
+							<!-- //날짜 미선택 비 활성화 -->
+							<!-- 날짜 선택 활성화 -->
+							<div class="scrolBox">
+								<div class="stBox">
+									<span><a href="#">09:55</a></span>
+									<span><a href="#">12:30</a></span>
+									<span><a href="#">15:05</a></span>
+									<span><a href="#">20:20</a></span>
+
+									
+									
+								</div>
+							</div>
+							<!-- //날짜 선택 활성화 -->
+							<!-- //scrolBox -->
+						</div>
+						<!-- //choiceTP 상영시간 -->
+						<div class="choiceTP choiceTP02">
+							<h3 class="choiceMovie__title" style="border-top:1px solid #373737">인원선택</h3>
+							<p class="noneBox">상영시간을 선택해주세요.</p>
+							<div class="scrolBox" style="display: none;">
+								<div class="stBox personnel">
+									<span><a href="#">1</a></span>
+									<span><a href="#">2</a></span>
+									<span><a href="#">3</a></span>
+									<span><a href="#">4</a></span>
+									<span><a href="#">5</a></span>
+									<span><a href="#">6</a></span>
+									<span><a href="#">7</a></span>
+									<span><a href="#">8</a></span>
+									<span><a href="#">9</a></span>
+									<span><a href="#">10</a></span>
+								</div>
+							</div>
+							<!-- //상영시간 선택 활성화 -->
+							<!-- //scrolBox -->
+						</div>
+						<!-- //choiceTP 인원선택 -->
+						<div class="choiceTP choiceTP03">
+							<h3 class="choiceMovie__title" style="border-top:1px solid #373737">좌석선택<span>(선택 좌석 우선 배정. 단, 예매 상황에 따라 좌석 변동 가능)</span></h3>
+							<p class="noneBox">인원을 선택해 주세요.</p>
+							<div class="scrolBox" style="margin-bottom: 50px; display: none;" >
+								<div class="positionBox">
+									<table>
+										<thead>
+											<tr>
+												<th colspan="3">screen</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td><a href="#">앞열 좌측</a></td>
+												<td><a href="#">앞열 가운데</a></td>
+												<td><a href="#">앞열 우측</a></td>
+											</tr>
+											<tr>
+												<td><a href="#">중앙 좌측</a></td>
+												<td><a href="#">중앙 가운데</a></td>
+												<td><a href="#">중앙 우측</a></td>
+											</tr>
+											<tr>
+												<td><a href="#">뒷열 좌측</a></td>
+												<td><a href="#">뒷열 가운데</a></td>
+												<td><a href="#">뒷열 우측</a></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<!-- //상영시간 선택 활성화 -->
+							<!-- //scrolBox -->
+						</div>
+					</li>
+					<!-- //choiceTimePeaple 상영시간, 인원선택 좌석선택-->
+				</ul>
+			</div>
+			<!-- //previngBox -->
+			<div class="wArea explan">
+				<div class="title">무비차트 영화예매 시 주의사항</div>
+				<div class="explan-txt">
+					<p>- 일반상영관 예매만 가능하며, 예매가 완료되면 <span>최대 2시간 내에 극장에서 발권 가능한 예매번호를 메시지로 전송 드립니다.</span></p>
+					<p>- 발송된 예매번호는 상영당일 해당 극장의 무인발권기 또는 창구에서 영화 티켓으로 발권이 가능합니다.</p>
+					<p>- 예매 신청 후 예매번를 포함한 메시지가 발송되면 취소/환불/변경이 불가합니다.</p>
+					<p>- 예매완료 메시지를 받으시면 해당 극장과 결제/정산이 완료되므로 <span>현장에서도 취소가 불가하며 취소하셔도 환불 받으실 수 없습니다.</span></p>
+					<p>- 예매 후 5분 전에 즉시취소 할 경우 결제금액 및 사용한 쿠폰은 모두 환불되며, 5분 경과 후에는 취소수수료가 발생합니다.</p>
+					<p>- 예매취소는 상영시간 3시간 이전까지 가능하며, 상영시간이 지났거나 3시간 이내로 남은 경우는 예매취소가 불가능합니다.</p>
+					<p>- 예매번호 메시지를 2개 이상 받으신 경우, 마지막으로 전송된 예매번호가 최종 예매번호입니다. 착오 없으시기 바랍니다.</p>
+					<p>- 상영관은 일반관만 예매가 가능하며, 아이맥스 디지털 3D, 로맨틱, 골드, 샤롯데 등의 특별관은 예매가 불가합니다.</p>
+					<p>- 당사의 예매권과 할인권은 VIP카드 등과 혼용하여 이용할 수 없으며 조조할인, 통신사할인, 카드사할인, 청소년할인, 포인트 적립 등이 되지 않습니다.</p>
+				</div>
+			</div>
+			<!-- //explan 주의사항 -->
+		</div>
+		<!-- //wArea -->
+	</div>
+	<!-- //contant -->
+
+	<footer id="footer" style="background: #f8f8f8; text-align: center; line-height: 174px; font-size: 40px;">
+		푸터
+	</footer>
+	<!-- //footer -->
+
+	<script>
+
+		// 영화 선택
+		$('.choiceMovie .scrolBox li').click(function (e) {
+			e.preventDefault();
+			$(this).addClass('active').siblings('li').removeClass('active');
+		})
+
+		// 극장선택
+		$('.choiceScreen .scrolBox > ul > li > a').click(function (e) {
+			e.preventDefault();
+			$(this).toggleClass('arrow').next('ul').toggle()
+		})
+
+		$('.choiceScreen .scrolBox > ul > li > ul li a').click(function (e) {
+			e.preventDefault();
+			$(this).addClass('active').parent('li').siblings('li').children('a').removeClass('active')
+			$(this).parent('li').parent('ul').parent('li').siblings('li').children('ul').children('li').children('a').removeClass('active')
+		})
+
+		// 날짜 선택
+		$('.chalendar table td.canDay a').click(function (e) {
+			e.preventDefault();
+			$(this).addClass('active').parent('td').siblings('td.canDay').children('a').removeClass('active')
+			$(this).addClass('active').parents('tr').siblings('tr').children('td.canDay').children('a').removeClass('active')
+		})
+
+		// 상영시간선택
+		$('.choiceTP01 .stBox span').click(function (e) {
+			e.preventDefault();
+			$(this).addClass('active').siblings('span').removeClass('active')
+			$('.choiceTP02 .scrolBox').show();
+			$('.choiceTP02 .noneBox').hide();
+		})
+		// 인원선택
+		$('.choiceTP02 .stBox span').click(function (e) {
+			e.preventDefault();
+			$(this).addClass('active').siblings('span').removeClass('active')
+			$('.choiceTP03 .scrolBox').show();
+			$('.choiceTP03 .noneBox').hide();
+		})
+
+		// 좌석선택
+		$('.positionBox td').click(function (e) {
+			e.preventDefault();
+			$(this).parents('tbody').children('tr').find('td').removeClass('active')
+			$(this).addClass('active')
+		})
+	</script>
+
+</body>
+
+</html>

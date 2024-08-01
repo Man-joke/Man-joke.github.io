@@ -1,0 +1,83 @@
+html { font-size: 20px;}
+body { font-size: 1rem;}
+
+/* 헤더 영역 */
+header{width: 100%;}
+header h1{ display: none;}
+header ul{ margin: 0; width: auto;}
+header div{ display: none;}
+
+.snb{ display: none;}
+.container{ padding: 3.8rem 0 4.6rem; width: 100%;}
+.content{ float: none; width: 100%;}
+
+/* 컨텐츠 헤더영역  h2 + 현재 위치*/
+.header h2{ float: none; padding: 0 0 0 1.2rem; background: none; font-size: 1.2rem; text-align: center;}
+.header ul{ display: none;}
+
+/* 제목 */
+.h3{ font-size: .85rem; color: #171616; }
+.h3:before{ content: ""; display: inline-block; margin:  0 .25rem 0; width: .25rem; height: .8rem; background: #108ad3;  border-radius: .25rem; vertical-align: -.15rem;}
+
+.h4{ font-size: .7rem;}
+.h4:before{ margin:  0 .3rem 0; width: .3rem; height: .3rem; border-radius: .1rem;}
+
+/* 리스트 타입 */
+.list_type > li{ padding: 0 0 0 .25rem; font-size: .7rem; line-height: 1.15rem}
+.list_type > li::before{top: .55rem; width: .15rem; height: .15rem;}
+.list_type > li > ul > li{ padding: 0 0 0 .35rem; font-size: .7rem; line-height: 1.15rem; text-indent: -0.35rem;}
+.list_type > li > ul > li::before{ padding: 0 .1rem 0 0;}
+
+.list_type2 > li > div{float: none;}
+.list_type2 > li > a{right: .75rem; bottom: 1rem;}
+.list_type2 .logo a{ margin: 0 auto;}
+
+.list_type2 .con{padding: 1rem 0 0;}
+
+.list_type3 .top .title{ line-height: 3rem;}
+.list_type3 .btm { padding:.75rem;}
+.list_type3.no2 .down{right: 1.2rem;}
+.list_type3.no2 .top .title{ background-position: right .7rem auto; background-size: .7rem auto;}
+
+
+/* 테이블 가이드*/
+.table_type1{overflow: auto;}
+.table_type1 table{ width: 1000px;}
+
+table.type2{ font-size: .65rem;}
+table.type2 tr{height: 1.9rem;}
+table.type2 th,
+table.type2 td{display:none;}
+table.type2 .show{display: table-cell;}
+
+/* 탭 가이드*/
+.tab_type1{ position: relative;}
+.tab_type1 button{display: block; position: relative; width: 100%; height: 2rem; background: none; text-indent:  .75rem; font-size: .7rem; text-align: left; border: 1px solid #d5d9de;}
+.tab_type1 button::after{content: ""; position: absolute; right: 0; top: -1px; width: 2rem; height: 2rem; border-left: 1px solid #d5d9de; background: url(../images/ico_arr1.png) no-repeat center /.8rem auto;}
+
+.tab_type1 ul{ display: none; position: absolute; width: 100%; background: #fff;border-bottom: none;}
+.tab_type1 li{ display: block;}
+.tab_type1 li~ li{margin: 0;}
+.tab_type1 li a{ padding: 0 .75rem; font-size: 0.7rem; line-height: 2rem; border-bottom: none; border-radius: 0;}
+.tab_type1 li.on a{ background: none; color: #333; border-color: #ddd;}
+
+/* 푸터 영역 */
+footer .f_top > div{ position: relative; margin: 0 auto; width: 100%;}
+footer .f_top ul{ padding: 0 1rem; box-sizing: border-box;}
+footer .f_top ul li{display: inline-block; width: 6rem;}
+footer .f_top ul li~li{margin: 0 1rem;}
+footer .f_top ul li a{ height: 2.5rem;}
+
+footer .prev{ left: .85rem; background: url(../images/btn_prev.png) no-repeat center / .4rem .75rem;}
+footer .next{ right: .85rem; background: url(../images/btn_next.png) no-repeat center / .4rem .75rem;}
+
+footer .f_bot{width: 100%;}
+footer .f_bot > div{padding:0 0 0 1.15rem; background:none;}
+footer .f_bot .family {position: absolute; right: auto; left:1.15rem; top: 5.2rem;}
+footer .f_bot .family span~span{margin: 0 0 0 4px;}
+footer .f_bot .family span:first-child{ width: 2.5rem; height: 1.65rem; background: url(../images/bg_wa.png) no-repeat center / 100% auto; }
+footer .f_bot .family span:last-child{  width: 4.35rem; height: 1.25rem; background: url(../images/bg_good.png) center / 100% auto; }
+
+footer .f_bot div p{ padding: 1.15rem 0 .35rem; font-size: .55rem;}
+footer .f_bot div address{ font-size: .5rem; line-height: .85rem;}
+footer .f_bot div em{ padding: .25rem 0 3.5rem; font-size: .45rem;}

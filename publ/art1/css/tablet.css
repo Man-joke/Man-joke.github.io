@@ -1,0 +1,77 @@
+html {font-size: 20px;}
+body {font-size: 1rem;}
+
+header > div{width: 100%; height: 3rem;}
+header h1{left: 50%; transform: translate(-50%, -50%);}
+header h1 a{ width: 3.4rem; height: 1.4rem;}
+header nav ul{ display:none;}
+header nav > a{display: block;}
+header nav > a:before { left: 2.4rem;}
+header div > div{right: 2.4rem;}
+header div ul li:empty,
+header div ul li:nth-child(4) a{display: none;}
+
+.slider div.type1 a{height: 17.25rem;}
+.slider div.type1 p{ font-size: 1.3rem; text-shadow: -2px 0 2px darkgrey;}
+.slider div.type1 p em{ padding: 0.3rem 0 0; text-shadow: 2px 0 2px darkgrey;}
+.slider div.type1 div > span{padding: 1rem 0 0; font-size: .55rem;}
+.slider div.type1 a > em{ bottom: 1rem; font-size: .6rem;}
+.slider div.type1 a > em:after{ padding: 0 0 0 .2rem; font-size: .4rem; vertical-align: 1px}
+
+/* 섹션 art_picture 그림 선물*/
+.art_picture{height: 39.85rem; background: #f2f2f2;}
+.art_picture h2{ padding: 2.25rem 0 1.6rem; font-size: 1.7rem;}
+.art_picture ul{ padding: 2.5rem 0 0; width: 100%;}
+.art_picture ul li:nth-child(3) {display: none;}
+.art_picture ul li~li{margin: 0 0 0 1.5rem;}
+.art_picture ul li a{ width: 20.1rem; height: 21.85rem; box-shadow: .75rem .75rem 0 #c9c9c9;}
+.art_picture div + ul + div { display: block;  bottom: 4.5rem;}
+.art_picture div + ul + div button:nth-child(3){ display: none;}
+
+/* 섹션 트랜드 그림*/
+.trend{ position: relative ; height: 46.4rem; background-size: 95.15rem; color: #222; text-align: center;}
+.trend p{ padding: 3.3rem 0 1.9rem;}
+.trend ul.tab{padding: 2.2rem 0 0;}
+.trend ul.tab li{margin: .25rem 0;}
+
+.trend ul.swipe_img{bottom: 7.25rem; width: 45.5rem; font-size: 0;}
+.trend ul.swipe_img li~li{ margin:0 0 0 2rem;}
+.trend ul.swipe_img li a{ width: 13.5rem; height: 14.5rem;}
+
+/* 섹션 서치 */
+.search {display: none;}
+
+/* 섹션 인테리어 */
+.interior{height: 39.25rem;}
+.interior div.txt{ right: 6.1rem; width: 34rem; text-align: center;}
+.interior div.txt p { padding: 5rem 0 2rem;}
+.interior div.txt em{ padding: 2rem 0 0; font-size: 0.9rem;}
+.interior ul.left{left: 50%; bottom: 6rem; transform: translateX(-50%); width: 34.8rem;}
+.interior ul.left li a{ width: 7rem; height: 7rem;}
+.interior ul.left li p{ font-size: 1rem; line-height: 1.7rem;}
+.interior ul.right{ display: none;}
+.interior .control{position: absolute; right: 4.4rem; top: 8.3rem;}
+
+/* 섹션 서비스 */
+.service li{ padding: 0 2rem;box-sizing: border-box;}
+.service li:before{content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%); width: 1px; height: 1 4.35rem; background: #999;}
+.service li:first-child:before{display: none;}
+.service li a{ padding: 5.6 5rem 0 8rem;}
+.service li a:after{font-size:1.25rem;}
+.service li a span{ padding:0 0 1.25rem ; font-size: 1rem;}
+.service li a em{ display: block; font-size: 0.6rem; line-height: 1rem;}
+.service li a em br{display: none;}
+
+/* 섹션 기획전 */
+.exhibitions{display: none;}
+
+/* 푸터 */
+footer{ background: #222; color: #fff;}
+footer div{padding: 3.5rem 0;width: 43.25rem;}
+footer div p{height: 1.4rem;}
+footer div ul.menu{ display: inline-block; padding: 0 0 0 1rem;}
+footer div em{display: block; padding: .6rem 0 0; font-size: .55rem;}
+footer div address{ padding: 1rem 0 0; font-size: .65rem; line-height: 1.1rem;}
+footer div address span:first-child{display: block;}
+footer div address br{display: block;}
+footer ul.sns{ float: none; padding: 1.5rem 0 0; font-size: 0;}
