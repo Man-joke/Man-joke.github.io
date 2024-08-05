@@ -30,7 +30,7 @@ header {
   background: #f1eded;
   width: 100%;
   z-index: 5;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 header.on {
@@ -470,7 +470,7 @@ h2 span {
   height: 21.5rem;
   font-size: 1.8rem;
   color: #9e9e9e;
-  box-shadow: 0 0 1px 1px rgba(100, 100, 100, 0.1);
+  box-shadow: 0 0 1px 1px rgba(100, 100, 100, 0.3);
   text-align: center;
   font-weight: bold;
   line-height: 1;
@@ -492,7 +492,7 @@ h2 span {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
+  width: 17rem;
   height: auto;
   text-align: center;
   line-height: 24rem;
@@ -517,6 +517,15 @@ h2 span {
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+.popup:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
   background: rgba(0, 0, 0, 0.4);
 }
 
@@ -535,6 +544,7 @@ h2 span {
   background: #fff;
   box-sizing: border-box;
   border-radius: 1rem;
+  z-index: 10;
 }
 
 .pop .top {
@@ -715,16 +725,17 @@ h2 span {
 }
 
 .works {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
-  max-width: 114.4rem;
-  padding-bottom: 4rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
   margin: 0 auto;
-  grid-gap: 1rem;
+  padding: 0 1rem 4rem;
+  gap: 1rem;
 }
 
 .works li {
   position: relative;
+  width: calc(33% - 1.5rem);
   text-align: center;
   overflow: hidden;
 }
@@ -868,7 +879,7 @@ h2 span {
   transition: all 0.3s;
 }
 
-@media screen and (max-width: 102.4rem) {
+@media screen and (max-width: 1024px) {
   .navbar {
     flex-direction: column;
     justify-content: center;
@@ -900,19 +911,24 @@ h2 span {
   .experience > ul > li {
     min-width: 32rem;
     max-width: 32rem;
-    margin-top: 2rem;
+    margin-top: 3rem;
   }
 
   .maincontents .living_wrap {
-    grid-template-columns: repeat(auto-fit, minmax(17.5rem, 1fr));
-    justify-content: space-around;
+    justify-content: flex-start;
     margin: 0 auto;
     padding: 0 1rem 15rem;
     box-sizing: border-box;
   }
+  .maincontents .living {
+    width: calc(50% - 0.75rem);
+  }
 
   .work .mywork {
     padding: 12rem 0 12rem;
+  }
+  .works li {
+    width: calc(50% - 0.75rem);
   }
 
   .pop {
@@ -959,9 +975,9 @@ h2 span {
   }
 }
 
-@media screen and (max-width: 76.8rem) {
+@media screen and (max-width: 768px) {
   header ul li {
-    padding: 0.8rems;
+    padding: 0.8rem;
   }
 
   header ul li a {
@@ -991,14 +1007,16 @@ h2 span {
     width: 15rem;
     height: 15rem;
   }
-  .maincontents .living_wrap {
-    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
-  }
   .maincontents .living {
-    font-size: 1.8rems;
+    width: 100%;
+    height: 19rem;
+    font-size: 1.8rem;
   }
-  .works {
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  .maincontents .living a {
+    height: 13rem;
+  }
+  .works li {
+    width: 100%;
   }
   .works li a div {
     height: auto;
@@ -1006,5 +1024,9 @@ h2 span {
 
   .pop {
     top: 56%;
+  }
+
+  .experience {
+    padding-top: 0;
   }
 }

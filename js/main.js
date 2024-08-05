@@ -136,9 +136,13 @@ function clickPop() {
     $("body").addClass("over");
   });
 
-  $(".clo, .popup").on("click", function () {
+  $(".clo, .popup").on("click", function (e) {
+    e.stopPropagation();
     content_warp.removeClass("on");
     $("body").removeClass("over");
+  });
+  $('.popup .pop').on("click",function (event){
+    event.stopPropagation();
   });
 }
 
