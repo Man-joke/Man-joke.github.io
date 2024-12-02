@@ -1,1 +1,1 @@
-https://man-joke.github.io/)
+https://man-joke.github.io/
