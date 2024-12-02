@@ -33,7 +33,7 @@ function scrollAni() {
     var $home = $("#home").offset().top;
     var $introduce = $("#introduce").offset().top;
     var $contents = $("#contents").offset().top;
-    var $mywork = $("#mywork").offset().top;
+    var $etc = $("#etc").offset().top;
 
     var st = $(this).scrollTop();
     var left = (st / (scHeight - winHeight - 140)) * 100;
@@ -56,12 +56,12 @@ function scrollAni() {
     if ($introduce <= st && st <= $contents - 5) {
       classToggle();
       $(".Profile").addClass("on");
-    } else if ($contents <= st && st <= $mywork - 5) {
+    } else if ($contents <= st && st <= $etc - 5) {
       classToggle();
       $(".Portfolio").addClass("on");
-    } else if ($mywork <= st) {
+    } else if ($etc <= st) {
       classToggle();
-      $(".Design").addClass("on");
+      $(".etc").addClass("on");
     } else {
       classToggle();
       $(".home").addClass("on");
@@ -166,7 +166,7 @@ function pop_center(fname, wth, hgt) {
 
 // 작업물 팝업창
 function workPop() {
-  var $button = $(".works li a");
+  var $button = $(".etc-list li a");
   var $target = $(".lightbox-overlay");
   var $targetImg = $target.find("img");
 
@@ -205,14 +205,17 @@ function tabClick_moveTop() {
 }
 
 function workImgLength() {
-  $("#mywork .works li").hide().slice(0, 6).show();
+  let etcLi = $("#etc .etc-list li");
+  let itemMaxLength = etcLi.length;
+  
+  etcLi.hide().slice(0, 8).show();
 
-  let count = 6;
-  $("#mywork .more").click(function () {
-    const $this = $("#mywork .more");
-    count += 6;
-    $("#mywork .works li").slice(0, count).fadeIn();
-    if (count >= 21) {
+  let count = 8;
+  $("#etc .more").click(function () {
+    const $this = $("#etc .more");
+    count += 4;
+    etcLi.slice(0, count).fadeIn();
+    if (count >= itemMaxLength) {
       $this.hide();
     }
   });

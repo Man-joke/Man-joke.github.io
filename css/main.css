@@ -454,7 +454,7 @@ h2 span {
 }
 
 /* content 시작 */
-.maincontents .living_wrap {
+.mainContents .living_wrap {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
@@ -464,7 +464,7 @@ h2 span {
   gap: 1.5rem;
 }
 
-.maincontents .living {
+.mainContents .living {
   position: relative;
   width: calc(25% - 1.2rem);
   height: 21.5rem;
@@ -477,7 +477,7 @@ h2 span {
   border-radius: 0.7rem;
 }
 
-.maincontents .living a {
+.mainContents .living a {
   display: block;
   position: relative;
   width: 100%;
@@ -487,7 +487,7 @@ h2 span {
   cursor: pointer;
 }
 
-.maincontents .living a img {
+.mainContents .living a img {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -499,12 +499,12 @@ h2 span {
   transition: 0.3s;
 }
 
-.maincontents .living:hover {
+.mainContents .living:hover {
   box-shadow: 0.5rem 0.7rem 2rem rgb(0 81 255 / 15%);
   transition: 0.3s;
 }
 
-.maincontents .living:hover img {
+.mainContents .living:hover img {
   transform: scale(1.1) translate(-40%, -40%);
   transition: 0.3s;
 }
@@ -709,13 +709,16 @@ h2 span {
 }
 
 /* work_section */
-#mywork {
+#etc{
   background: #eee;
+}
+
+.etc-work {
   padding-bottom: 10rem;
   text-align: center;
 }
 
-.work .mywork {
+.etc-work h2 {
   padding: 12rem 0 6rem;
   font-size: 5rem;
   color: #2d2d2d;
@@ -724,43 +727,44 @@ h2 span {
   z-index: 1;
 }
 
-.works {
+.etc-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0 auto;
   padding: 0 1rem 4rem;
+  max-width: 121rem;
   gap: 1rem;
 }
 
-.works li {
+.etc-list li {
   position: relative;
-  width: calc(33% - 1.5rem);
+  width: calc(25% - 1.5rem);
   text-align: center;
   overflow: hidden;
 }
 
-.works li a {
+.etc-list li a {
   display: inline-block;
 }
 
-.works li a div {
+.etc-list li a div {
   height: calc(100% / 0.5 * 0.8);
   background: #fff;
   border: 1px solid #646464;
 }
 
-.works li a div img {
+.etc-list li a div img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-/* .works li a div img.wid {
+/* .etc-list li a div img.wid {
   width: 92%;
 } */
 
-.works li a div.ab_box {
+.etc-list li a div.ab-box {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -773,7 +777,7 @@ h2 span {
   font-weight: bold;
 }
 
-.works li a div.ab_box p.cen {
+.etc-list li a div.ab-box p.cen {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -784,30 +788,30 @@ h2 span {
   transition: 0.3s;
 }
 
-.works li a div.ab_box p.cen {
+.etc-list li a div.ab-box p.cen {
   top: 50%;
   transform: translate(-50%, -50%);
   text-transform: uppercase;
 }
 
-.works li a div.ab_box p.cen span {
+.etc-list li a div.ab-box p.cen span {
   display: block;
   font-size: 1.8rem;
 }
 
-.works li:hover div.ab_box {
+.etc-list li:hover div.ab-box {
   opacity: 1;
 }
 
-.works li:hover div.ab_box p.top {
+.etc-list li:hover div.ab-box p.top {
   top: 1rem;
 }
 
-.works li:hover div.ab_box p.bom {
+.etc-list li:hover div.ab-box p.bom {
   bottom: 1rem;
 }
 
-#mywork .more {
+#etc .more {
   border: 1px solid #000;
   border-radius: 0.3rem;
   color: #000;
@@ -818,7 +822,7 @@ h2 span {
   transition: all 0.3s;
 }
 
-#mywork .more:hover {
+#etc .more:hover {
   background: #dd7732;
   color: #fff;
   transition: all 0.3s;
@@ -914,21 +918,22 @@ h2 span {
     margin-top: 3rem;
   }
 
-  .maincontents .living_wrap {
+  .mainContents .living_wrap {
     justify-content: flex-start;
     margin: 0 auto;
     padding: 0 1rem 15rem;
     box-sizing: border-box;
   }
-  .maincontents .living {
+  .mainContents .living {
     width: calc(50% - 0.75rem);
   }
 
-  .work .mywork {
+  .etc .etc-list {
     padding: 12rem 0 12rem;
   }
-  .works li {
-    width: calc(50% - 0.75rem);
+
+  .etc-list li{
+    width: calc(33.3333% - 0.75rem);
   }
 
   .pop {
@@ -1007,18 +1012,19 @@ h2 span {
     width: 15rem;
     height: 15rem;
   }
-  .maincontents .living {
+  .mainContents .living {
     width: 100%;
-    height: 19rem;
+    height: 22rem;
     font-size: 1.8rem;
   }
-  .maincontents .living a {
+  .mainContents .living a {
     height: 13rem;
   }
-  .works li {
-    width: 100%;
+  .etc-list li {
+    margin: 0 auto;
+    width: calc(50% - 1.5rem);
   }
-  .works li a div {
+  .etc-list li a div {
     height: auto;
   }
 
