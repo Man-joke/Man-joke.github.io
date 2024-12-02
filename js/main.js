@@ -208,12 +208,12 @@ function workImgLength() {
   let etcLi = $("#etc .etc-list li");
   let itemMaxLength = etcLi.length;
   
-  etcLi.hide().slice(0, 8).show();
+  etcLi.hide().slice(0, 9).show();
 
-  let count = 8;
+  let count = 9;
   $("#etc .more").click(function () {
     const $this = $("#etc .more");
-    count += 4;
+    count += 3;
     etcLi.slice(0, count).fadeIn();
     if (count >= itemMaxLength) {
       $this.hide();
