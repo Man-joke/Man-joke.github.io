@@ -9,7 +9,7 @@ body.over {
   overflow: hidden;
 }
 
-/* 공통 */
+/* 공통 */  
 hr {
   display: block;
 }
@@ -355,7 +355,6 @@ h2 span {
   align-items: center;
   max-width: 120rem;
   margin: 0 auto;
-  padding: 0 5rem;
   box-sizing: border-box;
 }
 

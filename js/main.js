@@ -126,7 +126,7 @@ function typingTextAni() {
 // 포폴 팝업창
 function clickPop() {
   var popupChk = $(".living");
-  var content_warp = $(".popup_rwap > div");
+  var content_warp = $(".popup_wrap > div");
 
   popupChk.click(function (e) {
     e.preventDefault();
@@ -212,6 +212,7 @@ function workImgLength() {
 
   let count = 9;
   $("#etc .more").click(function () {
+    scrollAni();
     const $this = $("#etc .more");
     count += 3;
     etcLi.slice(0, count).fadeIn();
