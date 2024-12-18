@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="종합금융정보서비스" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="description" content="종합금융정보서비스" />
+    <meta name="keywords" content="종합금융정보서비스" />
+    <title>종합금융정보서비스</title>
+    <link rel="stylesheet" href="../../css/style/style.css?v=3.6.4">
+    <script src="../../js/lib/front.lib.js?v=1.15.6"></script>
+    <script src="../../js/ui/front.common.js?v=1.4"></script>
+</head>
+
+<body>
+	<div class="wrap renewal">
+		<div class="header _sticky">
+			<a href="#" class="sprite btn_back"></a>
+			<h2>자산 직접입력</h2>
+		</div>
+		<div class="contents expenditure">
+			<div class="expenditure-box assets-input">
+				<div class="box_my_income_add">
+					<form action="#">
+
+						<!-- 유형 -->
+						<!-- 필수값 .need 추가 -->
+						<div class="custom-light _focus">
+							<label class="title need">유형</label>
+							<input title="value" type="text" maxlength="20" onkeyup="countCharDelete(this,'_val')"
+								placeholder="선택해주세요" value="대출・빌린돈" />
+							<i class="ico_list_arrow_small"></i>
+						</div>
+
+						<!-- 상세분류 -->
+						<div class="custom-light _focus">
+							<label class="title need">상세분류</label>
+							<input title="value" type="text" maxlength="20" onkeyup="countCharDelete(this,'_val')"
+								placeholder="선택해주세요" value="빌린돈" />
+							<i class="ico_list_arrow_small"></i>
+						</div>
+
+						<!-- 이름 -->
+						<div class="custom-light _focus">
+							<label class="title need">이름</label>
+							<input title="value" type="text" maxlength="20" onkeyup="countCharDelete(this,'_val')"
+								placeholder="입력해주세요" />
+							<div class="input-byte mt-0"><span class="byte _val">0</span><span class="total">
+									/20</span></div>
+						</div>
+
+						<!-- 빌린돈 잔액 -->
+						<div class="custom-light monetary-unit _focus">
+							<label class="title need">빌린돈 잔액</label>
+							<input onkeyup="countCharDelete(this)" title="value" type="number" placeholder="입력해주세요" />
+						</div>
+
+						<!-- 빌린돈 원금 -->
+						<div class="custom-light monetary-unit _focus">
+							<label class="title">빌린돈 원금</label>
+							<input onkeyup="countCharDelete(this)" title="value" type="number" placeholder="입력해주세요" />
+						</div>
+
+						<!-- 만기일 -->
+						<div class="custom-light _focus">
+							<label class="title">만기일</label>
+							<input title="value" type="date" maxlength="20" onkeyup="countCharDelete(this,'_val')"
+								aria-required="true" required date-placeholder="선택해주세요" />
+							<i class="ico_list_arrow_small"></i>
+						</div>
+
+						<!-- 메모 -->
+						<div class="custom-light ">
+							<label class="title">메모</label>
+							<div class="textarea-label">
+								<textarea name="지출메모" id="val-textarea" class="textarea" maxlength="60" rows="1"
+									onkeyup="countCharDelete(this,'_val')" placeholder="메모를 입력해주세요"></textarea>
+								<div class="input-byte mt-0"><span class="byte _val">0</span>
+									<span class="total">/60</span>
+								</div>
+							</div>
+						</div>
+
+						<!-- 필수 입력 안됐을 경우 .disabled -->
+						<div class="btn_area gap">
+							<a class="btn btn-big btn-purple-bg btn-block disabled" href="#">등록하기</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(document).ready(function () {
+		$(".custom-control-input").on("click", function () {
+			$(this).toggleClass("off");
+			if ($(this).hasClass("off")) {
+				$("._off").addClass("active");
+				$("._on").removeClass("active");
+			} else {
+				$("._on").addClass("active");
+				$("._off").removeClass("active");
+			}
+		});
+	})
+
+	const DEFAULT_HEIGHT = 0;
+	const $textarea = document.querySelector('.textarea');
+
+	$textarea.oninput = (e) => {
+		const $target = e.target;
+		$target.style.height = 0;
+		$target.style.height = DEFAULT_HEIGHT + $target.scrollHeight + 'px';
+	};
+
+</script>
+<script>
+    function countCharDelete(val, target) {
+        var len = $(val).val().length;
+        var targetItem = $('.' + target);
+        var nextEle = $(val).next();
+
+
+        if ($(val).siblings('.btn-clear-input').length === 0) {
+            $(val).parent().append('<button class="btn-clear-input">삭제</button>');
+        }
+
+        targetItem.text(len);
+
+        if (len == 0) {
+            targetItem.css("color", "#afaeb8");
+            nextEle.hide();
+        } else {
+            targetItem.css("color", "#37354e");
+            nextEle.show();
+        }
+        $(val).on("focus", function () {
+            setTimeout(function () {
+                nextEle.show();
+                $(val).parent().find('.btn-clear-input').show();
+            }, 100)
+        });
+        $(val).on("blur", function () {
+            setTimeout(function () {
+                nextEle.hide();
+                $(val).parent().find('.btn-clear-input').hide();
+            }, 100)
+        });
+    }
+
+    function countTextarea(val) {
+        let $this = $(val)
+        let content = $this.val()
+        const textLValue = $this.siblings().find('.val')
+
+        if (content.length === 0) {
+            textLValue.removeClass('active')
+        } else {
+            textLValue.addClass('active')
+        }
+
+        textLValue.text(content.length)
+    }
+
+    $('.custom-light, .step-box, .item-form').on('click', '.btn-clear-input', function () {
+        $(this).siblings('input').val('')
+            .siblings('.input-byte').find('._val').text('0')
+        $(this).remove()
+    })
+</script>
+
+</html>

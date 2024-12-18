@@ -1,0 +1,53 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="종합금융정보서비스" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="description" content="종합금융정보서비스" />
+    <meta name="keywords" content="종합금융정보서비스" />
+    <title>종합금융정보서비스</title>
+    <link rel="stylesheet" href="../../css/style/style.css?v=3.6.4">
+    <script src="../../js/lib/front.lib.js?v=1.15.6"></script>
+    <script src="../../js/ui/front.common.js?v=1.4"></script>
+</head>
+<body>
+<div class="wrap renewal">
+    <div class="contents connection-management disconnected-institutions">
+        <div class="expenditure-box certify">
+            <div class="empty">
+                <div class="img"><img src="../../img/common/ico_kakao@2x.png" alt="카카오"></div>
+                <p>카카오 인증을 진행합니다</p>
+            </div>
+        </div>
+        <div class="btn-wrap fixed-bottom">
+            <a href="#" class="btn btn-block btn-lg btn-big  btn-purple-bg">인증방법 다시 선택하기</a>
+        </div>
+    </div>
+
+
+</div>
+<script>
+
+    $('.btn-connect').click(function (){
+        $(this).toggleClass('on');
+    })
+
+    $('.btn-delete').click(function (){
+        $(this).parents('.item').remove();
+    })
+
+    $('.connect_at_once').click(function (){
+        $(this).next('.ex-list').find('.btn-connect').addClass('on');
+    })
+
+    $('.header .btn-delete').click(function (){
+        $('.ex-list').find('.item').remove();
+    })
+
+</script>
+</body>
+</html>

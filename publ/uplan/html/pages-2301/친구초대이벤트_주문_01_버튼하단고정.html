@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="종합금융정보서비스" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="description" content="종합금융정보서비스" />
+    <meta name="keywords" content="종합금융정보서비스" />
+    <title>종합금융정보서비스</title>
+    <link rel="stylesheet" href="../../css/style/style.css?v=3.6.4">
+    <script src="../../js/lib/front.lib.js?v=1.15.6"></script>
+    <script src="../../js/ui/front.common.js?v=1.4"></script>
+</head>
+
+<body>
+	<div class="wrap renewal event-area">
+		<div class="header _sticky">
+			<a href="#" class="sprite btn_back"></a>
+			<h2>친구 초대</h2>
+		</div>
+		<div class="contents expenditure">
+			<div class="expenditure-tab _expenditureTab block-tab">
+				<ul>
+					<li><a href="#">이벤트 소개</a></li>
+					<li class="active"><a href="#">상품 주문</a></li>
+				</ul>
+			</div>
+
+			<div class="event-box">
+				<div class="order order-notice">
+					<h3 class="h3">주문할 상품을 선택해주세요</h3>
+					<ul>
+						<li>
+							<i class="dot"></i>주문 가능한 기간 내에 쿠폰을 주문하지 않으면, <br />
+							<span class="f-alert">교환권이 소멸돼요.</span>
+						</li>
+						<li>
+							<i class="dot"></i>교환한 쿠폰은 상품 선택 기간이 끝난 이후 <br />
+							문자로 발송돼요.
+						</li>
+					</ul>
+				</div>
+
+				<div class="divider"></div>
+
+				<div class="order order-period">
+					<h3 class="h3">상품 주문기간</h3>
+					<div class="date">
+						2023.09.25 ~ 2023.10.18 23시
+						<p class="badge badge-pink">D-6</p>
+					</div>
+
+					<div class="coupon-box bg-purple text-white">
+						<p>사용가능 교환권</p>
+						<p class="number use">
+							<span class="rang">10장</span> <span class="total"> /10장</span>
+						</p>
+					</div>
+					<ul class="coupon-list mt-20">
+						<li>
+							<div class="top">
+								<div class="img-wrap">
+									<img src="../../img/common/event/invite/img_gift_coffee@2x.png" alt="이미지">
+								</div>
+								<div class="info">
+									<h4 class="h4">교환권 1장</h4>
+									<p>메가MGC커피 (ICE) 아메리카노 1잔</p>
+									<div class="quantity font-weight-bolder">주문수량 : <span>0개</span></div>
+								</div>
+							</div>
+							<div class="bottom">
+								<p>
+									교환권 1장 X 0개 = <span>총 교환권 0장 사용</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="top">
+								<div class="img-wrap">
+									<img src="../../img/common/event/invite/img_gift_cu@2x.png" alt="이미지">
+								</div>
+								<div class="info">
+									<h4 class="h4">교환권 3장</h4>
+									<p>CU 모바일 금액권 6,000원</p>
+									<div class="quantity font-weight-bolder">주문수량 : <span>0개</span></div>
+								</div>
+							</div>
+							<div class="bottom">
+								<p>
+									교환권 1장 X 0개 = <span>총 교환권 0장 사용</span>
+								</p>
+							</div>
+						</li>
+						<li>
+							<div class="top">
+								<div class="img-wrap">
+									<img src="../../img/common/event/invite/img_gift_emart@2x.png" alt="이미지">
+								</div>
+								<div class="info">
+									<h4 class="h4">교환권 5장</h4>
+									<p>[이마트_GS칼텍스] 10,000원</p>
+									<div class="quantity font-weight-bolder">주문수량 : <span>0개</span></div>
+								</div>
+							</div>
+							<div class="bottom">
+								<p>
+									교환권 1장 X 0개 = <span>총 교환권 0장 사용</span>
+								</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-wrap btn-floating">
+					<a href="#" class="btn btn-block btn-lg btn-big btn-purple-bg">주문하기</a>
+				</div>
+
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	$(".custom-control-input").on("click", function () {
+		$(this).toggleClass("off");
+		if ($(this).hasClass("off")) {
+			$("._off").addClass("active");
+			$("._on").removeClass("active");
+		} else {
+			$("._on").addClass("active");
+			$("._off").removeClass("active");
+		}
+	});
+</script>
+<script>
+    function countCharDelete(val, target) {
+        var len = $(val).val().length;
+        var targetItem = $('.' + target);
+        var nextEle = $(val).next();
+
+
+        if ($(val).siblings('.btn-clear-input').length === 0) {
+            $(val).parent().append('<button class="btn-clear-input">삭제</button>');
+        }
+
+        targetItem.text(len);
+
+        if (len == 0) {
+            targetItem.css("color", "#afaeb8");
+            nextEle.hide();
+        } else {
+            targetItem.css("color", "#37354e");
+            nextEle.show();
+        }
+        $(val).on("focus", function () {
+            setTimeout(function () {
+                nextEle.show();
+                $(val).parent().find('.btn-clear-input').show();
+            }, 100)
+        });
+        $(val).on("blur", function () {
+            setTimeout(function () {
+                nextEle.hide();
+                $(val).parent().find('.btn-clear-input').hide();
+            }, 100)
+        });
+    }
+
+    function countTextarea(val) {
+        let $this = $(val)
+        let content = $this.val()
+        const textLValue = $this.siblings().find('.val')
+
+        if (content.length === 0) {
+            textLValue.removeClass('active')
+        } else {
+            textLValue.addClass('active')
+        }
+
+        textLValue.text(content.length)
+    }
+
+    $('.custom-light, .step-box, .item-form').on('click', '.btn-clear-input', function () {
+        $(this).siblings('input').val('')
+            .siblings('.input-byte').find('._val').text('0')
+        $(this).remove()
+    })
+</script>
+
+</html>

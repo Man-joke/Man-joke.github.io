@@ -1,0 +1,156 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="종합금융정보서비스" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="description" content="종합금융정보서비스" />
+    <meta name="keywords" content="종합금융정보서비스" />
+    <title>종합금융정보서비스</title>
+    <link rel="stylesheet" href="../../css/style/style.css?v=3.6.4">
+    <script src="../../js/lib/front.lib.js?v=1.15.6"></script>
+    <script src="../../js/ui/front.common.js?v=1.4"></script>
+</head>
+
+<body>
+    <div class="wrap renewal">
+        <div class="header _sticky">
+            <a href="#" class="sprite btn_back"></a>
+            <h2>일정 등록하기</h2>
+        </div>
+        <div class="contents expenditure">
+            <div class="expenditure-calendar">
+                <div class="expenditure-story-wrap schedule-story-wrap">
+
+                    <div class="custom-light _focus">
+                        <div class="title">일자</div>
+                        <label class="val-date" for="dateInput"></label>
+                        <input class="value" title="value" type="date" id="dateInput" value="">
+                        <img src="../../img/sprite/common/ico_input_calendar@2x.png" alt="캘린더아이콘" class="calendar">
+                        <script>
+                            const dateInput = document.getElementById('dateInput');
+                            const valDate = document.querySelector('.val-date');
+
+                            // input 클릭 시 출력
+                            dateInput.addEventListener('input', function () {
+                                // 오늘 날짜를 가져옴
+                                const selectedDate = new Date(dateInput.value);
+
+                                // 요일을 가져오기 위해 날짜 객체를 사용하여 날짜를 형식화함
+                                const options = { weekday: 'long' };
+                                const dayOfWeek = new Intl.DateTimeFormat('ko-KR', options).format(selectedDate);
+
+                                // 오늘 날짜와 요일을 YYYY-MM-DD 형식에 추가하여 value로 설정
+                                let inputVal = selectedDate.getFullYear() + `년 ` + String(selectedDate.getMonth() + 1).padStart(2, '0') + `월 ` + String(selectedDate.getDate()).padStart(2, '0') + `일 ` + dayOfWeek;
+                                dateInput.value = inputVal
+                                valDate.textContent = inputVal
+                            });
+
+                            // 화면 초기 진입값
+                            function initialValue() {
+                                const defaultDate = new Date();
+                                const options = { weekday: 'long' };
+                                const dayOfWeek = new Intl.DateTimeFormat('ko-KR', options).format(defaultDate);
+                                valDate.textContent = defaultDate.getFullYear() + `년 ` + String(defaultDate.getMonth() + 1).padStart(2, '0') + `월 ` + String(defaultDate.getDate()).padStart(2, '0') + `일 ` + dayOfWeek;
+                                console.log(valDate.textContent);
+                            }
+                            initialValue()
+                        </script>
+                    </div>
+
+                    <div class="custom-light _focus">
+                        <label class="title need">제목</label>
+                        <input title="value" type="text" maxlength="12" placeholder="일정 제목을 입력해주세요" value="등산🏔️">
+                        <div class="input-byte"><span class="byte _val">0</span><span class="total"> / 12</span>
+                        </div>
+                    </div>
+
+                    <!-- 캘린더 스토리와 동일 -->
+                    <div class="textarea removal mt-n4">
+                        <label for="context">내용</label>
+                        <textarea class="custom" name="context" id="context" maxlength="200" placeholder="일정내용을 입력해주세요">
+도영이와 함께 아침 8시에 출발하여 청계산 등반을 즐기는 일정이다. 산행을 시작한 후에는 중간에 휴식을 취하고 점심은 청계산 입구 오리백숙을 즐길 예정이다. 등산로에서는 친구들과 함께 즐거운 시간을 보내며 자연
+속에서 활력을 얻을 것같아 기대된다!
+                        </textarea>
+                        <p class="length">
+                            <span class="txt-limit"><em class="_val">138</em> / 200</span>
+                            <button class="del disable">전체삭제</button>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                <div class="expenditure-story-wrap schedule-story-wrap">
+                    <div class="color-category mt-20">
+                        <label>색상 범주</label>
+                        <ul>
+                            <li class="active"><span class="color color-blue"></span></li>
+                            <li><span class="color color-green"></span></li>
+                            <li><span class="color color-purple"></span></li>
+                            <li><span class="color color-pink"></span></li>
+                            <li><span class="color color-orange"></span></li>
+                            <li><span class="color color-red"></span></li>
+                        </ul>
+                    </div>
+
+                    <div class="mood mt-40">
+                        <label>기분</label>
+                        <ul class="clearfix mx-0 my-0">
+                            <li class="on"><i class="emoji excited"></i></li>
+                            <li><i class="emoji smile"></i></li>
+                            <li><i class="emoji nothing"></i></li>
+                            <li><i class="emoji surprise"></i></li>
+                            <li><i class="emoji cry"></i></li>
+                            <li><i class="emoji angry"></i></li>
+                            <li><i class="emoji vomit"></i></li>
+                        </ul>
+                    </div>
+
+                    <div class="gallery">
+                        <label>사진 업로드</label>
+                        <ul class="clearfix">
+                            <li><img src="../../img/@temp/@temp-spring.png" alt=""><a href="#" class="btn-delete"></a>
+                            </li>
+                            <li class="add"><a href="#"><i class="btn-gallery-add"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="expenditure-story-wrap schedule-story-wrap">
+                    <div class="share-check mt-20 mb-20">
+                        <div class="box-top">
+                            <p>공유여부</p>
+                            <div class="custom-switch custom-switch-relative">
+                                <input type="checkbox" class="custom-control-input" id="switch1" checked="checked">
+                                <label class="custom-control-label" for="switch1"></label>
+                            </div>
+                        </div>
+                        <p class="desc">공동과닐 상대방과 일정을 공유할 수 있어요</p>
+                    </div>
+                </div>
+
+                <div class="btn-area bg-white">
+                    <a class="btn btn-big btn-purple-bg btn-block" href="#">저장하기</a>
+                </div>
+                <!-- //expenditure-box -->
+            </div>
+        </div>
+    </div>
+    <script>
+
+        $('.mood li').click(function () {
+            $(this).addClass('on').siblings().removeClass('on')
+        })
+
+        $('.color-category li').click(function () {
+            $(this).addClass('active').siblings().removeClass('active')
+        })
+    </script>
+</body>
+
+</html>

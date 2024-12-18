@@ -1,0 +1,842 @@
+<!DOCTYPE HTML>
+<html lang="ko" xmlns="">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="apple-mobile-web-app-title" content="종합금융정보서비스" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="description" content="종합금융정보서비스" />
+    <meta name="keywords" content="종합금융정보서비스" />
+    <title>종합금융정보서비스</title>
+    <link rel="stylesheet" href="../../css/style/style.css?v=3.6.4">
+    <script src="../../js/lib/front.lib.js?v=1.15.6"></script>
+    <script src="../../js/ui/front.common.js?v=1.4"></script>
+</head>
+
+<body>
+    <div class="wrap renewal">
+        <div class="header _sticky">
+            <a href="#" class="sprite btn_back"></a>
+            <h2>캘린더</h2>
+            <div class="sum-area">
+                <p class="update mb-0">30분 전<i class="ico-refresh-mini"></i></p>
+            </div>
+        </div>
+        <div class="contents expenditure">
+            <div class="expenditure-calendar share-calendar">
+                <div class="ex-calendar mb-0">
+                    <div class="box-ex-calendar-header">
+                        <div class="date"><a href="#">2022년 10월<i class="icon-arrow-bottom"> </i></a></div>
+                    </div>
+
+                    <div class="expenditure-tab manage-tab _expenditureTab  mb-20">
+                        <ul class="clearfix justify-content-start">
+                            <li class="active"><a href="#">#공동</a></li>
+                            <li><a href="#">#김꼼꼼</a></li>
+                            <li><a href="#">#유똑똑</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="expenditure-management">
+                        <div class="box mb-0">
+                            <div class="total-list">
+                                <div class="income d-flex align-center justify-content-between">
+                                    <p class="name">총 수입</p>
+                                    <p class="total">83,610,000<span>원</span></p>
+                                </div>
+                                <div class="expenditure d-flex align-center  justify-content-between">
+                                    <p class="name">총 지출</p>
+                                    <p class="total">2,610,000<span>원</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="box_ex_calendar ex-calendar-v3">
+                        <div id='calendar'></div>
+                    </div>
+                </div>
+                <!-- expenditure-box -->
+                <div class="expenditure-box bg_light_gray">
+                    <div class="calendar-history">
+                        <div class="date-detail pt-20">
+                            <div class="t-day">
+                                <span class="day">1일</span>
+                                <span class="badge badge-gray">토</span>
+                            </div>
+                            <div class="detail">
+                                <div class="rise">
+                                    <span class="tit">수입</span><span class="price">+2,500,000원</span>
+                                </div>
+                                <div class="fail">
+                                    <span class="tit">지출</span><span class="price">-2,500,000원</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="history-list-calendar">
+                            <ul>
+                                <!-- 일정일 경우 .schedule-item 추가 -->
+                                <!-- 등록할때 컬러값에 맞춰 .bg-pink추가 -->
+                                <!-- ".bg-green", ".bg-pink", ".bg-blue", ".bg-red", ".bg-orange", ".bg-puple" -->
+                                <li class="schedule-item bg-pink">
+                                    <div class="info-head">
+                                        <i class="icon-user icon-user-me">
+                                            <img src="../../img/common/ico_mypage_profile_img03@2x.png" width="30"
+                                                alt="아이콘">
+                                        </i>
+                                        <p class="title">등산등산등산등산등산등산등산등산</p>
+                                    </div>
+                                    <span class="detail">
+                                        <span class="emotion">
+                                            <img src="../../img/common/ic_con_pic@2x.png" width="26" alt="아이콘">
+                                            <img src="../../img/common/ico-emoji-excited@2x.png" width="26" alt="아이콘">
+                                        </span>
+                                    </span>
+                                    <div class="desc">
+                                        청계산 입구역 오전 7시까지 모여요 청계산 입구역 오전 7시까지 모여요 청계산 입구역 오전 7시까지 모여요
+                                    </div>
+                                </li>
+                                <li class="schedule-item bg-blue">
+                                    <div class="info-head">
+                                        <i class="icon-user icon-user-me">
+                                            <img src="../../img/common/ico_mypage_profile_img03@2x.png" width="30"
+                                                alt="아이콘">
+                                        </i>
+                                        <p class="title">쇼핑</p>
+                                    </div>
+                                    <span class="detail">
+                                        <span class="emotion">
+                                            <img src="../../img/common/ico-emoji-excited@2x.png" width="26" alt="아이콘">
+                                        </span>
+                                    </span>
+                                    <div class="desc">
+                                        청계산 입구역 오전 7시까지 모여요
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info-head">
+                                        <i class="icon-user icon-user-me"><img
+                                                src="../../img/common/ico_mypage_profile_img03@2x.png" width="30"
+                                                alt="아이콘"></i>
+                                        <span class="time">13:50 <em>|</em> 신한계좌254</span>
+                                    </div>
+                                    <span class="detail">
+                                        <span class="tit">아파트관리비</span>
+                                        <span class="price">-15,000원</span>
+                                    </span>
+                                    <div class="tag">
+                                        <span>칭구들돼지파티</span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="info-head">
+                                        <i class="icon-user icon-user-me"><img
+                                                src="../../img/common/ico_mypage_profile_img03@2x.png" width="30"
+                                                alt="아이콘"></i>
+                                        <span class="time">13:50 <em>|</em> 신한계좌254</span>
+                                    </div>
+                                    <span class="detail">
+                                        <span class="tit">Netflix</span>
+                                        <span class="price">-14,500원</span>
+                                        <span class="emotion"><img src="../../img/common/ico-emoji-excited@2x.png"
+                                                alt=""></span>
+
+                                    </span>
+                                    <div class="desc">
+                                        드디어 넷플 다시 결제!ㅋㅋ<br>
+                                        기묘한이야기 시즌4 달려보쟈~
+                                    </div>
+                                    <div class="swiper-container _pageSlider2">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="img-area">
+                                                    <img src="../../img/@temp/@temp-slider-img-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="img-area">
+                                                    <img src="../../img/@temp/@temp-slider-img-01.png" alt="">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <script>
+                                        var swiper = new Swiper("._pageSlider2", {
+                                            autoHeight: true,
+                                            calculateHeight: true,
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                            },
+                                            on: {
+                                                activeIndexChange: function () {
+                                                }
+                                            }
+                                        });
+                                    </script>
+                                </li>
+                                <li>
+                                    <div class="info-head">
+                                        <i class="icon-user icon-user-me"><img
+                                                src="../../img/common/ico_mypage_profile_img03@2x.png" width="30"
+                                                alt="아이콘"></i>
+                                        <span class="time">13:50 <em>|</em> 신한계좌254</span>
+                                    </div>
+                                    <span class="detail">
+                                        <span class="tit">본비빔밥</span>
+                                        <span class="price">-14,500원</span>
+                                        <span class="emotion"><img src="../../img/common/ico-emoji-excited@2x.png"
+                                                alt=""></span>
+                                    </span>
+                                    <div class="tag">
+                                        <span>클린한저녁</span>
+                                    </div>
+                                    <div class="desc">
+                                        건강을 위해 야채가득한 비빔밥으로 저녁해결 <br>
+                                        사이드도 넘 맛나보여서 추가ㅠ
+                                    </div>
+                                    <div class="swiper-container _pageSlider">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="img-area">
+                                                    <img src="../../img/@temp/@temp-slider-img-01.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="img-area">
+                                                    <img src="../../img/@temp/@temp-spring.png" height="271"
+                                                        width="300" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="swiper-pagination"></div>
+                                    </div>
+                                    <script>
+                                        var swiper = new Swiper("._pageSlider", {
+                                            autoHeight: true,
+                                            calculateHeight: true,
+                                            pagination: {
+                                                el: ".swiper-pagination",
+                                            },
+                                            on: {
+                                                activeIndexChange: function () {
+                                                }
+                                            }
+                                        });
+                                    </script>
+                                </li>
+                                <li>
+                                    <div class="info-head">
+                                        <i class="icon-user icon-user-me"><img
+                                                src="../../img/common/ico_mypage_profile_img03@2x.png" width="30"
+                                                alt="아이콘"></i>
+                                        <span class="time">13:50 <em>|</em> 신한계좌254</span>
+                                    </div>
+                                    <span class="detail">
+                                        <span class="tit">아파트관리비</span>
+                                        <span class="price">-15,000원</span>
+                                    </span>
+                                    <div class="tag">
+                                        <span>칭구들돼지파티</span>
+                                    </div>
+                                </li>
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- //expenditure-box -->
+            </div>
+        </div>
+    </div>
+    <script>
+        var storyTag = [
+            {
+                start: '2024-01-16'
+            },
+            {
+                start: '2024-01-20'
+            },
+        ]
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var weekList = ['일', '월', '화', '수', '목', '금', '토'];
+            var calendarEl = document.getElementById('calendar');
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['interaction', 'dayGrid'],
+                showNonCurrentDates: true,
+                fixedWeekCount: false,
+                header: false,
+                height: 'auto',
+                defaultDate: '2024-01-01',  // 날짜 입력시, 달력 show
+                editable: false,
+                eventLimit: false,
+                navLinks: true,
+                timeZone: 'Asia/Seoul',
+                columnHeaderText: function (date) {
+                    return weekList[date.getDay()];
+                },
+                navLinkDayClick: function (date, jsEvent) {
+                    console.log(date.toISOString().slice(0, 10));
+                    console.log(jsEvent.target)
+                },
+                dayRender: function (date, cell) {
+                    //gallery 데이터와 일치하는 날짜에 이미지 추가
+                    var theDate = $(date.el).data('date');
+                    for (var i = 0; i < storyTag.length; i++) {
+                        if (theDate === storyTag[i].start) {
+                            $(date.el).addClass('has-data');
+                            $(date.el).prepend("<span class='story_tag'><img src='../../img/common/icon_tag_cal_story@2x.png' id='스토리 작성' width='8'/></span>");
+                        }
+                    }
+                },
+                // events 순차 적용시 필요
+                eventOrder: 'sortIdx',
+                events: [
+                    {
+                        eventOrder: 1,
+                        className: 'schedule schedule-green',
+                        title: ["러닝👟"],
+                        start: '2024-01-01',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'schedule schedule-pink',
+                        title: "일정",
+                        start: '2024-01-01',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'schedule schedule-more',
+                        title: '+1',
+                        start: '2024-01-01',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+106,000',
+                        start: '2024-01-01',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-50,000',
+                        start: '2024-01-01',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-02',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-02',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-02',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-02',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'rise-data',
+                        title: '+100,000',
+                        start: '2024-01-02',
+                    },
+
+
+                    {
+                        eventOrder: 1,
+                        className: 'schedule schedule-orange',
+                        title: "일정",
+                        start: '2024-01-03',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'schedule schedule-purple',
+                        title: "일정",
+                        start: '2024-01-03',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-03',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+3.2억',
+                        start: '2024-01-03',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-6.4천',
+                        start: '2024-01-03',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-04',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-04',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-04',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-04',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '',
+                        start: '2024-01-04',
+                    },
+
+
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-05',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-05',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-05',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+1,600,000',
+                        start: '2024-01-05',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-500,000',
+                        start: '2024-01-05',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'schedule schedule-blue',
+                        title: "일정",
+                        start: '2024-01-06',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'schedule schedule-red',
+                        title: "일정",
+                        start: '2024-01-06',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-06',
+                    },
+                    // 예정일경우 .opacity 추가
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data opacity',
+                        title: '+100,000',
+                        start: '2024-01-06',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data opacity',
+                        title: '-200,000',
+                        start: '2024-01-06',
+                    },
+
+
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-07',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-07',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-07',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-07',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-200,000',
+                        start: '2024-01-07',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-09',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-09',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-09',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+35,555',
+                        start: '2024-01-09',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-200,000',
+                        start: '2024-01-09',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-11',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-11',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-11',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+35,555',
+                        start: '2024-01-11',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-200,000',
+                        start: '2024-01-11',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'schedule schedule-orange',
+                        title: "일정일정일정",
+                        start: '2024-01-12',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-12',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-12',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+1,935,555',
+                        start: '2024-01-12',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-200',
+                        start: '2024-01-12',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'schedule schedule-pink',
+                        title: "일정",
+                        start: '2024-01-14'
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-date',
+                        title: "",
+                        start: '2024-01-14'
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-date',
+                        title: "",
+                        start: '2024-01-14'
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'empty-date',
+                        title: "",
+                        start: '2024-01-14'
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'rise-data',
+                        title: '+100',
+                        start: '2024-01-14'
+                    },
+                    {
+                        eventOrder: 1,
+                        className: 'schedule schedule-green',
+                        title: ["러닝👟"],
+                        start: '2024-01-16',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: "",
+                        start: '2024-01-16',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-16',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+106,000',
+                        start: '2024-01-16',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-50,000',
+                        start: '2024-01-16',
+                    },
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-20',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-20',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-20',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+100,000',
+                        start: '2024-01-20',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-1,000,000',
+                        start: '2024-01-20',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-21',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-21',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-21',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-21',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'rise-data',
+                        title: '+100,000',
+                        start: '2024-01-21',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-24',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-24',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-24',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+100,000',
+                        start: '2024-01-24',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-1,000,000',
+                        start: '2024-01-24',
+                    },
+                    {
+                        eventOrder: 1,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-26',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-26',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-26',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'rise-data',
+                        title: '+100,000',
+                        start: '2024-01-26',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-1,000,000',
+                        start: '2024-01-26',
+                    },
+
+                    {
+                        eventOrder: 1,
+                        className: 'schedule schedule-green',
+                        title: ["러닝👟"],
+                        start: '2024-01-30',
+                    },
+                    {
+                        eventOrder: 2,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-30',
+                    },
+                    {
+                        eventOrder: 3,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-30',
+                    },
+                    {
+                        eventOrder: 4,
+                        className: 'empty-data',
+                        title: '',
+                        start: '2024-01-30',
+                    },
+                    {
+                        eventOrder: 5,
+                        className: 'fail-data',
+                        title: '-100,000',
+                        start: '2024-01-30',
+                    },
+                ],
+            });
+
+            calendar.render();
+        });
+
+
+        // 일자 카테고리 탭
+        $('._expenditureTab li a').on('click', function () {
+            $(this).parent().addClass('active').siblings().removeClass('active')
+        })
+    </script>
+
+</body>
+
+</html>

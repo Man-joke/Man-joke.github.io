@@ -150,8 +150,9 @@ function clickPop() {
 function pop_center(fname, wth, hgt) {
   var W = wth;
   var H = hgt;
-  var X = screen.availWidth / 2 - W / 2;
-  var Y = screen.availHeight / 2 - H / 2;
+  var X = screen.availWidth / 2 - W / 3;
+  var Y = screen.availHeight / 2 - H / 3;
+  
   var wname = fname.split(".")[0];
   while (wname.indexOf("/") != -1) {
     wname = wname.replace("/", "_");
