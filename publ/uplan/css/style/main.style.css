@@ -1,0 +1,151 @@
+*,
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Noto Sans KR, sans-serif;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.tag-green {
+  background: #f6ffed;
+  border-color: #b7eb8f;
+  color: #389e0d;
+}
+
+.upload_btn {
+  border: 1px dashed #d9d9d9;
+}
+
+.upload_btn:hover {
+  border: 1px dashed #001529;
+  cursor: pointer;
+}
+
+.tree-title {
+  display: inline-flex;
+  align-items: center;
+}
+
+.tree-title div.text {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.tree .tree-node-content-wrapper .tree-iconEle {
+  vertical-align: baseline;
+}
+
+.createBtn {
+  display: flex;
+  width: 100%;
+  margin-top: -3px;
+  margin-left: 16px;
+  text-align: right;
+  font-size: 16px;
+}
+
+.createBtn:hover {
+  color: #40a9ff;
+  font-weight: bold;
+}
+
+.createBtn .anticon {
+  line-height: 2;
+  font-weight: bold;
+}
+
+.tree-switcher {
+  width: 10px;
+}
+
+.tag {
+  min-width: 45px;
+  width: auto;
+  text-align: center;
+}
+
+.tree {
+  background: transparent;
+}
+
+.tree-treenode {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+.tree-treenode .treenode {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 4px 0;
+  background-color: transparent;
+}
+.tree-treenode .treenode:hover {
+  background-color: #53ab94;
+}
+.tree-treenode .treenode.focus {
+  background-color: #424d4a g;
+}
+.tree-treenode .treenode.focus .tree-content-list {
+  display: block;
+}
+
+.tree-treenode .treenode .anticon svg {
+  transform: rotate(0deg);
+  transition: all 0.3s;
+}
+
+.tree-treenode .treenode .anticon.open svg {
+  transform: rotate(-90deg);
+  transition: all 0.3s;
+}
+
+.tree-title {
+  margin-left: 4px;
+}
+
+.tree-title {
+  display: flex;
+  flex-direction: column;
+}
+.anticon-file {
+  display: flex;
+  align-items: center;
+  margin-right: 4px;
+}
+.tag {
+  padding: 0 8px;
+  min-width: 45px;
+  text-align: center;
+  border: 1px solid #389e0d;
+}
+.tree-content-list {
+  display: none;
+  padding-left: 0;
+}
+.tree-content-list li {
+  padding: 4px 0;
+  padding-left: 20px;
+  font-weight: bold;
+}
+.tree-content-list .tree-content-item:hover {
+  background-color: #b7eb8f;
+  cursor: pointer;
+}
+.tree-content-list .tree-content-item .content-title .text {
+  margin-top: 4px;
+  margin-left: 20px;
+  font-size: 14px;
+}
