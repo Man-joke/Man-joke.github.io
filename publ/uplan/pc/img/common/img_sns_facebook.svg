@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c0bfc6;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="img_sns_facebook" transform="translate(-182 -2270)">
+    <circle id="타원_1935" data-name="타원 1935" class="cls-1" cx="16" cy="16" r="16" transform="translate(182 2270)"/>
+    <path id="패스_24886" data-name="패스 24886" class="cls-2" d="M5.119,15.186V8.259H7.444l.348-2.7H5.119V3.836c0-.782.217-1.315,1.337-1.315H7.887V.106A19.369,19.369,0,0,0,5.8,0,3.253,3.253,0,0,0,2.331,3.568V5.559H0v2.7H2.331v6.927Z" transform="translate(194.057 2278.4)"/>
+  </g>
+</svg>

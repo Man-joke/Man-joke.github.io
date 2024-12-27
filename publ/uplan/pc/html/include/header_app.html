@@ -1,0 +1,33 @@
+<!-- s header-->
+<header class="header">
+    <div class="gnb-v3 bg-transparent" id="sticker">
+        <div>
+            <div class="logo">
+                <a href="#" class="black"><img src="../../img/common/logo_up@2x.png" width="128" alt="U플래너"></a>
+                <a href="#" class="white"><img src="../../img/common/logo_up_w_s@2x.png" width="128" alt="U플래너"></a>
+            </div>
+            <div class="btn_download">
+                <a href="#" class="app_link">앱 다운로드
+                    <img src="../../img/sprite/common/btn_arrow_small@2x.png" alt="화살표"
+                        class="d-pc-block d-tablet-block d-mobile-none">
+                </a>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(window).scroll(function () {
+            let st = $(this).scrollTop();
+            if (st > 0) {
+                $('header').addClass('fixed')
+                $('header .gnb-v3').removeClass('bg-transparent')
+                $('.section-90').addClass('up')
+            }
+            if (st === 0) {
+                $('header').removeClass('fixed')
+                $('header .gnb-v3').addClass('bg-transparent')
+                $('.section-90').removeClass('up')
+            }
+        })
+    </script>
+</header>
+<!-- e header-->

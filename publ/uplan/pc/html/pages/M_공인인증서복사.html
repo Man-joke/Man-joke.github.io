@@ -1,0 +1,89 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="종합금융정보서비스" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="description" content="종합금융정보서비스" />
+    <meta name="keywords" content="종합금융정보서비스" />
+    <title>종합금융정보서비스</title>
+    <link rel="stylesheet" href="../../css/style/style.css?v=4.0">
+    <link rel="shortcut icon" href="../../a-cha_favicon.ico">
+    <script src="../../js/lib/front.lib.js?v=4.0"></script>
+    <script src="../../js/ui/front.common.js?v=4.0"></script>
+
+</head>
+<body>
+<!-- s header-->
+<header class="fixed">
+    <div class="gnb-v3 " id="sticker">
+        <div>
+            <div class="logo">
+                <a href="#" class="black"><img src="../../img/common/logo_up@2x.png" width="128" alt="U플래너"></a>
+                <a href="#" class="white"><img src="../../img/common/logo_up_w_s@2x.png" width="128" alt="U플래너"></a>
+            </div>
+            <div class="menu d-lg-none">
+                <div class="black">
+                    <a href="#" class="m_open"><img src="../../img/common/btn_menu@2x.png" width="26" alt=""></a>
+                    <a href="#" class="m_close"><img src="../../img/common/btn_menu_close@2x.png" width="26" alt=""></a>
+                </div>
+                <div class="white">
+                    <a href="#" class="m_open"><img src="../../img/common/btn_menu_w@2x.png" width="26" alt=""></a>
+                    <a href="#" class="m_close"><img src="../../img/common/btn_menu_close__w@2x.png" width="26" alt=""></a>
+                </div>
+            </div>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">공동인증서 복사</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function () {
+            $("#sticker").sticky({topSpacing: 0});
+            var gnb = $('.gnb-v3');
+            gnb.find('.menu .m_open').click(function () {
+                gnb.addClass('active');
+                gnb.find('.menu .m_open').hide();
+                gnb.find('.menu .m_close').show();
+            });
+            gnb.find('.menu .m_close').click(function () {
+                gnb.removeClass('active');
+                gnb.find('.menu .m_close').hide();
+                gnb.find('.menu .m_open').show();
+            });
+        });
+    </script>
+</header>
+<!-- e header-->
+
+<div class="p-copy" style="padding-top: 160px;">
+<!--    <div class="logo">-->
+<!--        <a href="#">-->
+<!--            <img class="d-lg-none" src="../../img/common/m_err_logo.png" alt="">-->
+<!--            <img class="d-none d-lg-block" src="../../img/common/PC_err_logo.png" alt="">-->
+<!--        </a>-->
+<!--    </div>-->
+    <div class="content">
+        <div class="i-img">
+            <img class="d-lg-none" src="../../img/common/m_img_error_2.png" alt="">
+            <img class="d-none d-lg-block" src="../../img/common/pc_img_error.png" alt="">
+        </div>
+        <p>
+            PC 환경에서 공인인증서<br/>
+            복사를 진행해주세요
+        </p>
+    </div>
+</div>
+
+</body>
+</html>
+
+

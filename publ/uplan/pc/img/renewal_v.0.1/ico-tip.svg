@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="39" height="27" viewBox="0 0 39 27">
+    <g transform="translate(-448 -920)">
+        <path data-name="패스 25654" d="m0 0 7.94 6.843A.642.642 0 0 0 9 6.344V0" transform="translate(463 940)" style="fill:#6839d3"/>
+        <rect data-name="사각형 7561" width="39" height="22" rx="11" transform="translate(448 920)" style="fill:#6839d3"/>
+        <text data-name="Tip" transform="translate(459 935)" style="fill:#f8f5ff;font-size:12px;font-family:Roboto-Bold,Roboto;font-weight:700;letter-spacing:-.025em"><tspan x="0" y="0">Tip</tspan></text>
+    </g>
+</svg>

@@ -1,0 +1,530 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="종합금융정보서비스" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="description" content="종합금융정보서비스" />
+    <meta name="keywords" content="종합금융정보서비스" />
+    <title>종합금융정보서비스</title>
+    <link rel="stylesheet" href="../../css/style/style.css?v=4.0">
+    <link rel="shortcut icon" href="../../a-cha_favicon.ico">
+    <script src="../../js/lib/front.lib.js?v=4.0"></script>
+    <script src="../../js/ui/front.common.js?v=4.0"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- s header / renewal -- 2021.03.30 -->
+<header>
+    <div class="menu-wrap" id="headerSticky">
+        <div class="inner">
+            <h1><a href="#" class="logo"></a></h1>
+            <div class="menu-mobile _menuMobile">
+                <ul>
+                    <li><a href="#">가계부</a></li>
+                    <li><a href="#">공동관리</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">공동인증서 복사</a></li> <!-- active 시, 활성화 -->
+                </ul>
+            </div>
+            <div class="menu-pc _menuPC">
+                <ul>
+                    <li class="active"><a href="#">가계부</a></li>
+                    <li><a href="#">공동관리</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">공동인증서 복사</a></li> <!-- active 시, 활성화 -->
+                </ul>
+            </div>
+            <a class="btn-menu _btnMenu" href="javascript:void(0);"></a>
+        </div>
+    </div>
+    <script>
+        $('#headerSticky').sticky({ topSpacing: 0 })
+
+        $('._btnMenu').on('click', function (e) {
+            e.preventDefault();
+            if ($('._btnMenu').hasClass('close')) {
+                $(this).removeClass('close')
+                $('._menu').removeClass('open')
+                $('._menuMobile').hide()
+                $('#wrap').removeClass('dim')
+                $('body,html').removeClass('dim-scroll')
+            }
+            else {
+                $(this).addClass('close')
+                $('._menu').addClass('open')
+                $('._menuMobile').show()
+                $('#wrap').addClass('dim')
+                $('body,html').addClass('dim-scroll')
+            }
+        })
+
+        $('._menuPC li a').on('click', function () {
+            $(this).parent().addClass('active').siblings().removeClass('active')
+        })
+    </script>
+</header>
+        <div class="wrap">
+            <div class="breadcrumb-wrap d-none d-md-block">
+                <div class="inner">
+                    <ul>
+                        <li class="home"><a href="#" class="icon-home"></a></li>
+                        <li><a href="#" class="item">공동관리</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="join-control">
+                <h2 class="h2-title">쉽고 재미있게 함께하는 가계부! <br />
+                    지금 시작해보세요 😉</h2>
+
+                <section class="section section-01">
+                    <h3>혼자만 보는 가계부는 그만! <br />
+                        목적에 따라 함께 가계부 작성하기</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>공동관리 기능을 통해 <span class="font-weight-bold">가계부를 같이 작성</span>할 수 있어요</p>
+                                <p>우리의 수입·지출 관리부터 함께 공유한 카드, <br />계좌 및 투자와 보험 정보까지!</p>
+                                <p>공유하길 원하는 정보만 골라서 <span class="font-weight-bold">우리 함께 봐요</span> </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-01@2x.png" alt="이미지"
+                                class="d-mobile-none d-tablet-block">
+                            <img src="../../img/sprite/temp/joint-visual-01-m@2x.png" alt="이미지"
+                                class="d-mobile-block d-tablet-none">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    <span color="font-weight-bold">공유하고 싶지 않은 데이터가 있어도 걱정 없어요!</span><br />
+                                    함께 보고 싶은 데이터와 기간을 따로 선택할 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-02">
+                    <h3>다양한 방식으로 조회하는 <br class="d-mobile-block d-tablet-none" />우리의 수입과 지출</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    <span class="font-weight-bold">일자별, 카테고리별, 유형별</span>로 <br
+                                        class="d-mobile-block d-tablet-none" />우리 가계부를 볼 수 있어요 <br />
+                                    원하는 형태로 조회해 보세요
+                                </p>
+                                <p>
+                                    앞으로 예정된 수입 및 지출이 있으면 <br class="d-mobile-block d-tablet-none" />보여줄게요 <br
+                                        class="d-mobile-none d-tablet-block" />
+                                    예정 내역을 확인하고 <br class="d-mobile-block d-tablet-none" />체계적으로 지출 계획을 세워보세요
+                                </p>
+                            </div>
+                        </div>
+                        <div class="tip-box d-pc-none d-tablet-block d-mobile-block">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    공동으로 관리하지만, 개인별로 나눠서 볼 수도 있어요! <br />
+                                    <span class="f-point font-weight-bold">각자 이름 탭을 눌러서 확인해 보세요</span>
+                                </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-02@2x.png" alt="이미지"
+                                class="d-mobile-none d-tablet-none d-pc-block">
+                            <img src="../../img/sprite/temp/joint-visual-02-t@2x.png" alt="이미지"
+                                class="d-mobile-none d-tablet-block d-pc-none">
+                            <img src="../../img/sprite/temp/joint-visual-02-m@2x.png" alt="이미지"
+                                class="d-mobile-block d-tablet-none d-pc-none">
+                        </figure>
+                        <div class="tip-box d-pc-block d-tablet-none d-mobile-none">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    공동으로 관리하지만, 개인별로 나눠서 볼 수도 있어요! <br />
+                                    <span class="f-point font-weight-bold">각자 이름 탭을 눌러서 확인해 보세요</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-03 pc">
+                    <h3 class="visually_hidden">함께 보고 싶은 스토리 및 일정 조회</h3>
+                    <div class="box">
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-03@2x.png" alt="이미지">
+                        </figure>
+                        <div class="content">
+                            <h3>함께 보고 싶은 <br />스토리 및 일정 조회</h3>
+                            <div class="desc">
+                                <p>달력 형태로 우리의 수입 및 지출 내역을 볼 수 있어요</p>
+                                <p>월별로 우리가 남긴 스토리와 일정이 언제 있는지 <br />
+                                    <span class="font-weight-bold">한눈에 확인</span>하기 쉬워요!
+                                <p>
+                                <p>우리의 특별한 거래에 남긴 <span class="font-weight-bold">스토리만 따로 모아서</span> <br />
+                                    볼 수도 있어요
+                                <p>
+                                <p>이모티콘으로 그날의 기분을 표현하고, 의미 있는 <br />사진을 등록해서 <span class="font-weight-bold">우리만의 스토리를
+                                        기록</span>해 보세요
+                                <p>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        내 일정은 <span class="font-weight-bold f-point">가계부</span>에서 작성할 수 있어요! <br />
+                                        일정을 등록할 때, 공유 여부를 선택할 수 있어요
+                                    </p>
+                                    <p class="font-weight-bold f-point">가계부가 궁금하다면?</p>
+                                    <a href="#" class="service-link">서비스소개 바로보기
+                                        <img src="../../img/sprite/common/btn_arrow_small@2x.png" alt="화살표">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-03 tablet mo">
+                    <h3>함께 보고 싶은 <br class="d-pc-none" />스토리 및 일정 조회</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>달력 형태로 우리의 수입 및 <br class="d-tablet-none" />지출 내역을 볼 수 있어요</p>
+                                <p>월별로 우리가 남긴 스토리와 일정이 언제 있는지 <br class="d-tablet-none" />
+                                    <span class="font-weight-bold">한눈에 확인</span>하기 쉬워요!
+                                <p>
+                                <p>우리의 특별한 거래에 남긴 <span class="font-weight-bold">스토리만 <br class="d-tablet-none" />
+                                        따로 모아서</span> 볼 수도 있어요
+                                <p>
+                                <p>이모티콘으로 그날의 기분을 표현하고, 의미 있는 <br />사진을 등록해서 <span class="font-weight-bold">우리만의 스토리를
+                                        기록</span>해 보세요
+                                <p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-03-t@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <div class="group-box">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        내 일정은 <span class="font-weight-bold f-point">가계부</span>에서 작성할 수 있어요! <br />
+                                        일정을 등록할 때, 공유 여부를 선택할 수 있어요
+                                    </p>
+                                    <p class="font-weight-bold f-point">가계부가 궁금하다면?</p>
+                                </div>
+                                <a href="#" class="service-link">서비스소개 바로보기
+                                    <img src="../../img/sprite/common/btn_arrow_small@2x.png" alt="화살표">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-04">
+                    <h3>한눈에 보는 우리 가계부</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>우리의 최근 5개월 수입·지출 현황을 <br /><span class="font-weight-bold">그래프로 한눈에</span> 볼 수 있어요</p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-04@3x.png" alt="이미지"
+                                class="d-mobile-none d-tablet-none d-pc-block">
+                            <img src="../../img/sprite/temp/joint-visual-04-t@2x.png" alt="이미지"
+                                class="d-mobile-none d-tablet-block d-pc-none">
+                            <img src="../../img/sprite/temp/joint-visual-04-m@3x.png" alt="이미지"
+                                class="d-mobile-block d-tablet-none d-pc-none">
+                        </figure>
+                    </div>
+                </section>
+                <section class="section section-05">
+                    <h3>부부, 연인,친구끼리 <br class="d-tablet-none" />공동관리 활용하기</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    다양한 공동관리 활용방법을 소개할게요<br />
+                                    공동관리 이렇게 써보세요!
+                                </p>
+                            </div>
+                            <div class="apply">
+                                <div class="group">
+                                    <div class="item">
+                                        <h4>
+                                            <img src="../../img/sprite/temp/joint-icon-01@2x.png" alt="아이콘">
+                                            우리 집 가계 지출 관리하기
+                                        </h4>
+                                        <p>가계 지출을 효율적으로 관리하기 위해 <br class="d-tablet-none" />
+                                            <span class="font-weight-bold f-point">부부의 수입 지출을 한눈에
+                                                모아서 볼 때 유용</span>해요!</span> <br class="d-tablet-none" />
+                                            특히 우리 집의 정기 지출을 함께 보니까 편해요~
+                                        </p>
+                                    </div>
+                                    <div class="item">
+                                        <h4>
+                                            <img src="../../img/sprite/temp/joint-icon-02@2x.png" alt="아이콘">
+                                            가족 카드 사용 내역 함께 보기
+                                        </h4>
+                                        <p>전략적인 가계 관리를 위해 한사람 명의로 만든 <br class="d-tablet-none" />가족 카드를 사용해요.<br />
+                                            공동관리를 연결해서, 카드 명의자 뿐 아니라 <br class="d-tablet-none" /><span
+                                                class="font-weight-bold f-point">가족 카드
+                                                사용자도
+                                                이용 내역을 확인할 수 있어서 편리</span>해요!</p>
+                                    </div>
+                                    <img src="../../img/sprite/temp/joint-img-01@2x.png" alt="이미지">
+                                </div>
+                                <div class="group">
+                                    <div class="item">
+                                        <h4>
+                                            <img src="../../img/sprite/temp/joint-icon-03@2x.png" alt="아이콘">
+                                            여행 경비 정산하기
+                                        </h4>
+                                        <p>
+                                            같이 여행 다녀온 후, 일일이 사용내역 공유하고 <br class="d-tablet-none" />
+                                            정산하기 번거로워요😥<br class="d-tablet-block" />
+                                            공동관리로 여행 기간 동안 여행지에서 사용한<br class="d-tablet-none" />
+                                            카드/계좌만 공유해보세요.<br />
+                                            누가 얼마를 썼는지 한눈에 보이니까 정산하기도
+                                            간편해요!
+                                        </p>
+                                        <p class="font-weight-bold f-point">
+                                            여행 일정 공유와 여행의 추억을 담은 스토리<br class="d-tablet-none" />
+                                            공유도 유용해요~😆
+                                        </p>
+                                    </div>
+                                    <img src="../../img/sprite/temp/joint-img-02@2x.png" alt="이미지">
+                                </div>
+                                <div class="group">
+                                    <div class="item">
+                                        <h4>
+                                            <img src="../../img/sprite/temp/joint-icon-04@2x.png" alt="아이콘">
+                                            결혼 준비 함께하기
+                                        </h4>
+                                        <p>
+                                            예비 신혼부부입니다!<br class="d-tablet-none" />
+                                            예식장 예약, 스튜디오 예약, 신혼 가전 구매 등등<br />
+                                            결혼을 준비하면서 함께 하는 지출이 너무 많아요. <br class="d-mobile-none d-tablet-block" />
+                                            <span class="font-weight-bold f-point">공동관리를 통해서 누가 어디에 얼마를 지출했는지 보기 쉬워서
+                                                좋아요!</span>
+                                        </p>
+                                    </div>
+                                    <div class="item">
+                                        <h4>
+                                            <img src="../../img/sprite/temp/joint-icon-05@2x.png" alt="아이콘">
+                                            데이트 비용 파악하기
+                                        </h4>
+                                        <p>
+                                            데이트를 자주 하는데, 데이트를 위한 서로의 지출이 얼마인지 <br
+                                                class="d-mobile-none d-tablet-block" />잘 파악이 안돼서, 지출
+                                            계획을<br class="d-tablet-none" />
+                                            세울 때 불편했어요.<br />
+                                            <span class="font-weight-bold f-point">서로 데이트를 할 때 쓰는 카드를 공유해서 지출을 확인하니까 훨씬
+                                                편하네요~</span>
+                                        </p>
+                                    </div>
+                                    <img src="../../img/sprite/temp/joint-img-03@2x.png" alt="이미지">
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="section section-06 pc">
+                    <h3 class="visually_hidden">내맘대로 입력·수정하는 커스텀 가계부</h3>
+                    <div class="box">
+                        <div class="content">
+                            <h3>내맘대로 입력·수정하는 <br class="d-mobile-block d-tablet-none d-pc-block" />커스텀 가계부</h3>
+                            <div class="desc">
+                                <p>이제 공동관리를 <span class="font-weight-bold">함께 하고 싶은 사람을 초대</span>해 주세요!</p>
+                                <p>
+                                    상대방의 휴대폰 번호와 이름을 입력하고, <br />초대 수락을 받으면 공동관리 준비 끝!
+                                </p>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <div class="item">
+                                        <i class="ico_tip"></i>
+                                        <p>전화번호가 기억나지 않나요?<br /> 주소록에서 불러올 수 있으니, 걱정 마세요!</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <div class="item">
+                                        <i class="ico_tip"></i>
+                                        <p>
+                                            혹시 지금 함께 있나요?<br /> <span class="font-weight-bold">QR코드 인증</span>으로 공동관리를
+                                            시작할 수 있어요!
+                                        </p>
+                                        <img src="../../img/sprite/temp/tip-joint-info@2x.png" alt="이미지">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-05@2x.png" alt="이미지">
+                        </figure>
+                    </div>
+                </section>
+                <section class="section section-06 tablet mo">
+                    <h3 class="visually_hidden">내맘대로 입력·수정하는 커스텀 가계부</h3>
+                    <div class="box">
+                        <div class="content">
+                            <h3>내맘대로 입력·수정하는 <br class="d-mobile-block d-tablet-none d-pc-block" />커스텀 가계부</h3>
+                            <div class="desc">
+                                <p>이제 공동관리를 <span class="font-weight-bold">함께 하고 싶은 사람을 초대</span>해 주세요!</p>
+                                <p>
+                                    상대방의 휴대폰 번호와 이름을 입력하고, <br class="d-mobile-block d-tablet-none" />초대 수락을 받으면 공동관리 준비
+                                    끝!
+                                </p>
+                            </div>
+
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-05@2x.png" alt="이미지"
+                                class="d-mobile-none d-pc-block">
+                            <img src="../../img/sprite/temp/joint-visual-05-t@2x.png" alt="이미지"
+                                class="d-mobile-block d-pc-none">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <div class="item">
+                                    <i class="ico_tip"></i>
+                                    <p>전화번호가 기억나지 않나요?<br class="d-mobile-block d-tablet-none" /> 주소록에서 불러올 수 있으니, 걱정
+                                        마세요!</p>
+                                </div>
+                            </div>
+                            <div class="group">
+                                <div class="item">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        혹시 지금 함께 있나요?<br /> <span class="font-weight-bold">QR코드 인증</span>으로 공동관리를
+                                        시작할 수 있어요!
+                                    </p>
+                                    <img src="../../img/sprite/temp/tip-joint-info@2x.png" alt="이미지">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-07 pc">
+                    <h3 class="visually_hidden">같이 보고 싶은 데이터와 기간 선택하기</h3>
+                    <div class="box">
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-06@2x.png" alt="이미지">
+                        </figure>
+                        <div class="content">
+                            <h3>같이 보고 싶은 데이터와 <br />기간 선택하기</h3>
+                            <div class="desc">
+                                <p>직접 입력한 데이터와, 마이데이터로 연결한 <br />데이터를 공유할 수 있어요</p>
+                                <p>내 가계부 데이터 중에서 <span class="font-weight-bold">함께 보고 싶은 <br />데이터만 골라서 공유</span>해 보세요
+                                </p>
+                                <p>데이터마다 <span class="font-weight-bold">공유 시작일도 따로 </span>정할 수 있으니, 걱정 마세요~</p>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        내 데이터 공유 시작일과 데이터 공유 여부는
+                                        <span class="font-weight-bold">언제든지 변경</span>할 수 있어요!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-07 tablet mo">
+                    <h3>같이 보고 싶은 데이터와 <br />기간 선택하기</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    직접 입력한 데이터와, 마이데이터로 <br class="d-tablet-none" />연결한 데이터를 공유할 수 있어요
+                                </p>
+                                <p>
+                                    내 가계부 데이터 중에서 <span class="font-weight-bold">함께 보고 싶은 <br class="d-tablet-none" />
+                                        데이터만 골라서 공유</span>해 보세요
+                                </p>
+                                <p>
+                                    데이터마다 <span class="font-weight-bold">공유 시작일도 따로 </span>정할 수 있으니, <br
+                                        class="d-tablet-none" />
+                                    걱정 마세요~
+                                </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/joint-visual-06@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    내 데이터 공유 시작일과 데이터 공유 여부는 <br class="d-mobile-block d-tablet-none" />
+                                    <span class="font-weight-bold">언제든지 변경</span>할 수 있어요!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- footer -->
+<footer>
+    <div class="container">
+        <div class="info-wrap">
+            <ul class="service d-md-none">
+                <li><a href="#">서비스 이용약관</a></li>
+                <li><a href="#" class="font-weight-bold">개인정보 처리방침</a></li>
+                <li><a href="#">민원센터</a></li>
+            </ul>
+            <ul class="info">
+                <li class="company d-md-none">(주)유비벨록스</li>
+                <li><span>본사</span> 서울특별시 구로구 디지털로 26길 43, <br class="d-mobile-block d-tablet-none d-pc-none">대륭포스트타워8차
+                    엘동 15, 16층</li>
+                <li><span>대표이사</span> 이흥복</li>
+                <li><span>사업자등록번호</span> 119-81-41677</li>
+            </ul>
+            <div class="copyright">
+                <p>Ⓒ 2020 All rights reserved ㈜유비벨록스</p>
+            </div>
+            <ul class="service d-none d-md-block">
+                <li><a href="#">서비스 이용약관</a></li>
+                <li><a href="#" class="font-weight-bold">개인정보 처리방침</a></li>
+                <li><a href="#">민원 센터</a></li>
+            </ul>
+            <div class="sns-wrap">
+                <ul class="d-flex">
+                    <li><a href="#"><img src="../../img/common/img_sns_facebook.svg" width="32" height="32"
+                                alt="페이스북"></a></li>
+                    <li><a href="#"><img src="../../img/common/img_sns_insta.svg" width="32" height="32"
+                                alt="인스타그램"></a></li>
+                    <li><a href="#"><img src="../../img/common/img_sns_naver.svg" width="32" height="32" alt="네이버"></a>
+                    </li>
+                    <li><a href="#"><img src="../../img/common/img_sns_youtube.svg" width="32" height="32"
+                                alt="유튜브"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+</body>
+
+</html>

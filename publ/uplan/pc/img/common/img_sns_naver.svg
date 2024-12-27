@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #c0bfc6;
+      }
+
+      .cls-2 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <g id="img_sns_naver" transform="translate(-222 -2270)">
+    <circle id="타원_1936" data-name="타원 1936" class="cls-1" cx="16" cy="16" r="16" transform="translate(222 2270)"/>
+    <path id="패스_24889" data-name="패스 24889" class="cls-2" d="M8.231,0V6.465L3.731,0H0v12.08H3.908V5.614l4.5,6.465h3.731V0Z" transform="translate(231.931 2280)"/>
+  </g>
+</svg>

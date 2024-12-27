@@ -1,0 +1,594 @@
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="Referrer" content="origin">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-title" content="종합금융정보서비스" />
+    <meta name="robots" content="index,nofollow" />
+    <meta name="description" content="종합금융정보서비스" />
+    <meta name="keywords" content="종합금융정보서비스" />
+    <title>종합금융정보서비스</title>
+    <link rel="stylesheet" href="../../css/style/style.css?v=4.0">
+    <link rel="shortcut icon" href="../../a-cha_favicon.ico">
+    <script src="../../js/lib/front.lib.js?v=4.0"></script>
+    <script src="../../js/ui/front.common.js?v=4.0"></script>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- s header / renewal -- 2021.03.30 -->
+<header>
+    <div class="menu-wrap" id="headerSticky">
+        <div class="inner">
+            <h1><a href="#" class="logo"></a></h1>
+            <div class="menu-mobile _menuMobile">
+                <ul>
+                    <li><a href="#">가계부</a></li>
+                    <li><a href="#">공동관리</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">공동인증서 복사</a></li> <!-- active 시, 활성화 -->
+                </ul>
+            </div>
+            <div class="menu-pc _menuPC">
+                <ul>
+                    <li class="active"><a href="#">가계부</a></li>
+                    <li><a href="#">공동관리</a></li>
+                    <li><a href="#">공지사항</a></li>
+                    <li><a href="#">이벤트</a></li>
+                    <li><a href="#">공동인증서 복사</a></li> <!-- active 시, 활성화 -->
+                </ul>
+            </div>
+            <a class="btn-menu _btnMenu" href="javascript:void(0);"></a>
+        </div>
+    </div>
+    <script>
+        $('#headerSticky').sticky({ topSpacing: 0 })
+
+        $('._btnMenu').on('click', function (e) {
+            e.preventDefault();
+            if ($('._btnMenu').hasClass('close')) {
+                $(this).removeClass('close')
+                $('._menu').removeClass('open')
+                $('._menuMobile').hide()
+                $('#wrap').removeClass('dim')
+                $('body,html').removeClass('dim-scroll')
+            }
+            else {
+                $(this).addClass('close')
+                $('._menu').addClass('open')
+                $('._menuMobile').show()
+                $('#wrap').addClass('dim')
+                $('body,html').addClass('dim-scroll')
+            }
+        })
+
+        $('._menuPC li a').on('click', function () {
+            $(this).parent().addClass('active').siblings().removeClass('active')
+        })
+    </script>
+</header>
+        <div class="wrap">
+            <div class="breadcrumb-wrap d-none d-md-block">
+                <div class="inner">
+                    <ul>
+                        <li class="home"><a href="#" class="icon-home"></a></li>
+                        <li><a href="#" class="item">가계부</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="cashbook">
+                <h2 class="h2-title">U플래너로 작성하는<br class="d-mobile-block d-tablet-none" />쉽고 편한 가계부!<br />
+                    지금 알아보세요 😃</h2>
+
+                <section class="section section-01">
+                    <h3>자동으로 불러오는 거래내역</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>더 이상 일일이 입력하지 마세요</p>
+                                <p>
+                                    간단한 인증을 거쳐 마이데이터를 연결하면,<br />
+                                    내 수입·지출 내역을 카테고리별로 <br class="d-mobile-block d-tablet-none d-pc-none" />한 번에 불러올 수
+                                    있어요!
+                                </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-01@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    <span>원하는 기관</span>만 선택해서 <span>마이데이터를 연결</span>할 수 있어요
+                                </p>
+                            </div>
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    <span>불러온 거래내역 정리</span>도 걱정 마세요!<br />
+                                    U플래너만의 로직으로 카테고리별로 자동 분류해 줘요
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-02">
+                    <h3>다양한 방식으로 <br class="d-mobile-block d-tablet-none d-pc-none" />조회하는 수입과 지출</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    매월 총 수입/총 지출 구분은 기본!<br />
+                                    주기 및 수단에 따른 지출을 모아서 보여줄게요
+                                </p>
+                                <p>
+                                    지출 주기에 따라 정기/변동/할부 지출로<br class="d-mobile-block d-tablet-none" />
+                                    구분해서 조회할 수 있어요
+                                </p>
+                                <p>
+                                    그래프를 통해 카테고리 별 지출 비율도 확인할 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-02@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    ‘오늘’을 기준으로 예정된 지출이 있는 경우 알려 줄게요! <br
+                                        class="d-mobile-block d-tablet-none d-pc-block" />
+                                    <span class="f-point font-weight-bold">예정된 지출을 미리미리 챙겨보세요</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-03">
+                    <h3>예산 설정하고 계획적인 지출 하기</h3>
+                    <div class="content"></div>
+                    <div class="box">
+                        <div class="desc">
+                            <p>
+                                예산을 설정하면 설정한<br class="d-mobile-block d-tablet-none" />
+                                예산 대비 지출 현황을 알려줘요
+                            </p>
+                        </div>
+                    </div>
+                    <figure class="img-box">
+                        <img src="../../img/sprite/temp/moneybook-visual-03@2x.png" alt="이미지"
+                            class="d-pc-block d-tablet-none d-mobile-none">
+                        <img src="../../img/sprite/temp/moneybook-visual-03-t@2x.png" alt="이미지"
+                            class="d-pc-none d-tablet-block d-mobile-none">
+                        <img src="../../img/sprite/temp/moneybook-visual-03-m@2x.png" alt="이미지"
+                            class="d-pc-none d-tablet-none d-mobile-block">
+                    </figure>
+                    <div class="tip-box">
+                        <div class="group">
+                            <i class="ico_tip"></i>
+                            <p>
+                                <span class="font-weight-bold">카테고리별로 예산을 설정</span>할 수 있어요! <br
+                                    class="d-mobile-block d-tablet-none d-pc-block" />
+                                구체적으로 지출 계획을 세워보세요
+                            </p>
+                        </div>
+                        <div class="group">
+                            <i class="ico_tip"></i>
+                            <p>
+                                <span class="font-weight-bold">구체적인 예산 설정이 어렵다면?</span> <br
+                                    class="d-mobile-block d-tablet-none d-pc-block" />
+                                U플래너가 지난달 지출 기준으로 자동으로 설정해 줄게요!
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-04 pc">
+                    <h3 class="visually_hidden">매달 고정적인 지출 놓치지 않고 관리하기</h3>
+                    <div class="box">
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-04@2x.png" alt="이미지">
+                        </figure>
+                        <div class="content">
+                            <h3>매달 고정적인 지출<br class="d-mobile-block d-tablet-none d-pc-block" />
+                                놓치지 않고 관리하기</h3>
+                            <div class="desc">
+                                <p>
+                                    정기적으로 나가는 지출만 모아서 보여줄게요<br />
+                                    일자별 또는 카테고리별, 원하는 분류로<br class="d-pc-block d-tablet-none d-mobile-none" /> 확인할 수 있어요
+                                </p>
+                                <p>
+                                    예정된 지출 뿐만 아니라 미지출된 내역까지 <br class="d-mobile-block d-tablet-none" />
+                                    보여줘서, 정기 지출 관리에 유용해요
+                                </p>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        불규칙적으로 나가는 지출을 정기적으로 <br class="d-mobile-block d-tablet-none" />
+                                        나가는 지출로 <span class="font-weight-bold">바꿔서 관리</span>할 수도 있어요!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-04 tablet mo">
+                    <h3>매달 고정적인 지출<br class="d-mobile-block d-tablet-none" />
+                        놓치지 않고 관리하기</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    정기적으로 나가는 지출만 모아서 보여줄게요<br />
+                                    일자별 또는 카테고리별, 원하는 분류로 확인할 수 있어요
+                                </p>
+                                <p>
+                                    예정된 지출 뿐만 아니라 미지출된 내역까지 <br class="d-mobile-block d-tablet-none" />
+                                    보여줘서, 정기 지출 관리에 유용해요
+                                </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-04@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    불규칙적으로 나가는 지출을 정기적으로 <br class="d-mobile-block d-tablet-none" />
+                                    나가는 지출로 <span class="font-weight-bold">바꿔서 관리</span>할 수도 있어요!
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-05 pc">
+                    <h3 class="visually_hidden">내맘대로 입력·수정하는 커스텀 가계부</h3>
+                    <div class="box">
+                        <div class="content">
+                            <h3>내맘대로 입력·수정하는 <br class="d-mobile-block d-tablet-none d-pc-block" />커스텀 가계부</h3>
+                            <div class="desc">
+                                <p>
+                                    등록하고 싶은 수입 · 지출을 <span class="font-weight-bold">직접 입력</span>할 수 있어요
+                                </p>
+                                <p>
+                                    다양한 기본 카테고리를 활용할 뿐 아니라,<br />
+                                    <span class="font-weight-bold">필요한 카테고리를 직접 만들어서 사용</span>할 수 있어요
+                                </p>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <div class="item">
+                                        <i class="ico_tip"></i>
+                                        <p>
+                                            지출 수정하기 화면에서 <span class="font-weight-bold">‘매월 지출로 등록’</span> 여부를 선택할 수
+                                            있어요
+                                        </p>
+                                        <img src="../../img/sprite/temp/tip-moneybook-info@2x.png" alt="이미지">
+                                        <p class="d-mobile-block d-tablet-none d-pc-block">
+                                            <span class="font-weight-bold">ON으로 설정</span>하면 해당 <span
+                                                class="font-weight-bold">지출은
+                                                정기지출로 등록</span>돼요!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-05@2x.png" alt="이미지">
+                        </figure>
+                    </div>
+
+                </section>
+                <section class="section section-05 tablet mo">
+                    <h3>내맘대로 입력·수정하는 <br class="d-mobile-block d-tablet-none" />
+                        커스텀 가계부</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    등록하고 싶은 수입 · 지출을 <span class="font-weight-bold">직접 입력</span>할 수 있어요
+                                </p>
+                                <p>
+                                    다양한 기본 카테고리를 활용할 뿐 아니라,<br />
+                                    <span class="font-weight-bold">필요한 카테고리를 직접 만들어서 사용</span>할 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-05@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <div class="item">
+                                    <div>
+                                        <i class="ico_tip"></i>
+                                        <p>
+                                            지출 수정하기 화면에서 <span class="font-weight-bold">‘매월 지출로 등록’</span> 여부를 선택할 수
+                                            있어요<br />
+                                            <span class="font-weight-bold">ON으로 설정</span>하면 해당 지출은 <span
+                                                class="font-weight-bold">정기지출로
+                                                등록</span>돼요!
+                                        </p>
+                                    </div>
+                                    <img src="../../img/sprite/temp/tip-moneybook-info-t@2x.png" alt="이미지">
+                                </div>
+                                <div class="item">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        지출 수정하기 화면에서 <span class="font-weight-bold">‘매월 지출로 등록’</span> 여부를 선택할 수
+                                        있어요
+                                    </p>
+                                    <img src="../../img/sprite/temp/tip-moneybook-info@2x.png" alt="이미지">
+                                    <p class="d-mobile-block d-tablet-none">
+                                        <span class="font-weight-bold">ON으로 설정</span>하면 해당 <span
+                                            class="font-weight-bold">지출은
+                                            정기지출로 등록</span>돼요!
+                                    </p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-06 pc">
+                    <h3 class="visually_hidden">일별 수입·지출을 한 눈에</h3>
+                    <div class="box">
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-06@2x.png" alt="이미지">
+                        </figure>
+                        <div class="content">
+                            <h3>일별 수입·지출을 한 눈에</h3>
+                            <div class="desc">
+                                <p>가계부 메뉴의 [일일] 탭에서 거래 내역을 <br />확인해 보세요</p>
+                                <p>
+                                    일자별 수입/지출 금액을 한 눈에 볼 수 있고 <br />
+                                    카테고리 등 수정하고 싶은 내용은 바로 수정 <br />
+                                    할 수 있어요
+                                </p>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        거래 상세화면에서 ‘가계부 내역 포함’
+                                        여부를 선택할 수 있어요
+                                    </p>
+                                    <p>
+                                        OFF로 설정하면 해당 거래는 목록에서
+                                        숨겨져요!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-06 tablet mo">
+                    <h3>일별 수입·지출을 한 눈에</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    가계부 메뉴의 [일일] 탭에서 거래 내역을 확인해 보세요
+                                </p>
+                                <p>
+                                    일자별 수입/지출 금액을 한 눈에 볼 수 있고 카테고리 등<br />
+                                    수정하고 싶은 내용은 바로 수정할 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-06@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="box">
+                                <div class="group">
+                                    <i class="ico_tip"></i>
+                                    <div class="d-flex flex-column">
+                                        <p>
+                                            거래 상세화면에서 ‘가계부 내역 포함’ 여부를 선택할 수 있어요
+                                        </p>
+                                        <p>
+                                            OFF로 설정하면 해당 거래는 목록에서 숨겨져요!
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <div class="group">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        거래 상세화면에서 ‘가계부 내역 포함’ 여부를<br />
+                                        선택할 수 있어요
+                                    </p>
+                                </div>
+                                <div class="group">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        OFF로 설정하면 해당 거래는 목록에서 숨겨져요!
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </section>
+
+                <section class="section section-07 pc">
+                    <h3 class="visually_hidden">주간 수입·지출 흐름 파악</h3>
+                    <div class="box">
+                        <div class="content">
+                            <h3>주간 수입·지출 흐름 파악</h3>
+                            <div class="desc">
+                                <p>[주간] 탭에서 주별 수입·지출 합계와 내역을 모아서 볼 수 있어요</p>
+                                <p>그래프를 통해서 주간 수입·지출의 흐름을 <br />확인해 보세요</p>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <div class="item">
+                                        <i class="ico_tip"></i>
+                                        <p>
+                                            그래프에서는 주별로 수입과 지출을 <br />비교한 정보를 확인할 수 있어요
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-07@2x.png" alt="이미지">
+                        </figure>
+                    </div>
+
+                </section>
+                <section class="section section-07 tablet mo">
+                    <h3>주간 수입·지출 흐름 파악</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    [주간] 탭에서 주별 수입·지출 합계와 <br class="d-mobile-block d-tablet-none" />내역을 모아서 볼 수 있어요
+                                </p>
+                                <p>그래프를 통해서 주간 수입·지출의 흐름을 확인해 보세요</p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-07@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    그래프에서는 주별로 수입과 지출을 비교한 <br class="d-mobile-block d-tablet-none" />
+                                    정보를 확인할 수 있어요
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="section section-08 pc">
+                    <h3 class="visually_hidden">기억하고 싶은 스토리 및 일정 등록</h3>
+                    <div class="box">
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-08@2x.png" alt="이미지">
+                        </figure>
+                        <div class="content">
+                            <h3>기억하고 싶은 <br />스토리 및 일정 등록</h3>
+                            <div class="desc">
+                                <p><span class="font-weight-bold">달력 형태</span>로 월별 거래 내역을 모아서 보세요</p>
+                                <p>기억하고 싶은 거래에는 <span class="font-weight-bold">스토리</span>를 남길 수 있어요</p>
+                                <p>이모티콘으로 그날의 기분을 표현하고, 의미 있는 사진을 등록해서 스토리를 저장해 보세요</p>
+                            </div>
+                            <div class="tip-box">
+                                <div class="group">
+                                    <i class="ico_tip"></i>
+                                    <p>
+                                        <span class="f-point">공동관리</span>를 이용하고 있다면,<br />
+                                        등록한 스토리와 일정을 공유할 수 있어요!
+                                    </p>
+                                    <p class="font-weight-bold f-point">
+                                        공동관리가 궁금하다면?
+                                    </p>
+                                </div>
+                                <a href="#" class="service-link">
+                                    서비스 소개 바로보기<img src="../../img/sprite/common/btn_arrow_small@2x.png" alt="화살표">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="section section-08 tablet mo">
+                    <h3>기억하고 싶은 스토리 및 일정 등록</h3>
+                    <div class="content">
+                        <div class="box">
+                            <div class="desc">
+                                <p>
+                                    <span class="font-weight-bold">달력 형태</span>로 월별 거래 내역을 모아서 보세요
+                                </p>
+                                <p>
+                                    기억하고 싶은 거래에는 <span class="font-weight-bold">스토리</span>를 남길 수 있어요
+                                </p>
+                                <p>
+                                    이모티콘으로 그날의 기분을 표현하고, <br class="d-mobile-block d-tablet-none" />
+                                    의미 있는 사진을 등록해서 스토리를 저장해 보세요
+                                </p>
+                            </div>
+                        </div>
+                        <figure class="img-box">
+                            <img src="../../img/sprite/temp/moneybook-visual-08@2x.png" alt="이미지">
+                        </figure>
+                        <div class="tip-box">
+                            <div class="group">
+                                <i class="ico_tip"></i>
+                                <p>
+                                    <span class="f-point">공동관리</span>를 이용하고 있다면,<br />
+                                    등록한 스토리와 일정을 공유할 수 있어요!
+                                </p>
+                                <p class="font-weight-bold f-point">
+                                    공동관리가 궁금하다면?
+                                </p>
+                            </div>
+                            <a href="#" class="service-link">
+                                서비스 소개 바로보기<img src="../../img/sprite/common/btn_arrow_small@2x.png" alt="화살표">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <!-- footer -->
+<footer>
+    <div class="container">
+        <div class="info-wrap">
+            <ul class="service d-md-none">
+                <li><a href="#">서비스 이용약관</a></li>
+                <li><a href="#" class="font-weight-bold">개인정보 처리방침</a></li>
+                <li><a href="#">민원센터</a></li>
+            </ul>
+            <ul class="info">
+                <li class="company d-md-none">(주)유비벨록스</li>
+                <li><span>본사</span> 서울특별시 구로구 디지털로 26길 43, <br class="d-mobile-block d-tablet-none d-pc-none">대륭포스트타워8차
+                    엘동 15, 16층</li>
+                <li><span>대표이사</span> 이흥복</li>
+                <li><span>사업자등록번호</span> 119-81-41677</li>
+            </ul>
+            <div class="copyright">
+                <p>Ⓒ 2020 All rights reserved ㈜유비벨록스</p>
+            </div>
+            <ul class="service d-none d-md-block">
+                <li><a href="#">서비스 이용약관</a></li>
+                <li><a href="#" class="font-weight-bold">개인정보 처리방침</a></li>
+                <li><a href="#">민원 센터</a></li>
+            </ul>
+            <div class="sns-wrap">
+                <ul class="d-flex">
+                    <li><a href="#"><img src="../../img/common/img_sns_facebook.svg" width="32" height="32"
+                                alt="페이스북"></a></li>
+                    <li><a href="#"><img src="../../img/common/img_sns_insta.svg" width="32" height="32"
+                                alt="인스타그램"></a></li>
+                    <li><a href="#"><img src="../../img/common/img_sns_naver.svg" width="32" height="32" alt="네이버"></a>
+                    </li>
+                    <li><a href="#"><img src="../../img/common/img_sns_youtube.svg" width="32" height="32"
+                                alt="유튜브"></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+    </div>
+</body>
+
+</html>

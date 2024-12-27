@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="32" height="32" viewBox="0 0 32 32">
+  <defs>
+    <style>
+      .cls-1, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-1 {
+        stroke: rgba(0,0,0,0);
+        stroke-miterlimit: 10;
+      }
+
+      .cls-2 {
+        fill: #c0bfc6;
+      }
+
+      .cls-3 {
+        clip-path: url(#clip-path);
+      }
+    </style>
+    <clipPath id="clip-path">
+      <path id="합치기_200" data-name="합치기 200" class="cls-1" d="M4.478,15.514A4.478,4.478,0,0,1,0,11.035V4.478A4.478,4.478,0,0,1,4.478,0h6.557a4.478,4.478,0,0,1,4.478,4.478v6.557a4.478,4.478,0,0,1-4.478,4.478ZM1.428,4.44v6.711A2.973,2.973,0,0,0,4.4,14.124h6.712a2.972,2.972,0,0,0,2.972-2.973V4.44a2.972,2.972,0,0,0-2.972-2.973H4.4A2.973,2.973,0,0,0,1.428,4.44ZM3.731,7.8a4.026,4.026,0,1,1,4.026,4.025A4.026,4.026,0,0,1,3.731,7.8Zm1.417,0A2.61,2.61,0,1,0,7.757,5.186,2.609,2.609,0,0,0,5.148,7.8Zm5.831-4.178a.938.938,0,1,1,.938.937A.937.937,0,0,1,10.979,3.617Z"/>
+    </clipPath>
+  </defs>
+  <g id="img_sns_insta" transform="translate(-259.058 -2269.058)">
+    <circle id="타원_1937" data-name="타원 1937" class="cls-2" cx="16" cy="16" r="16" transform="translate(259.058 2269.058)"/>
+    <g id="마스크_그룹_28" data-name="마스크 그룹 28" class="cls-3" transform="translate(267.301 2277.287)">
+      <rect id="사각형_7546" data-name="사각형 7546" class="cls-4" width="18.851" height="18.851" transform="translate(-1.593 -1.593)"/>
+    </g>
+  </g>
+</svg>
