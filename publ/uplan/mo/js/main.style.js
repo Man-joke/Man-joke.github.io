@@ -29,6 +29,9 @@ $(".tree-content-item").click(function (e) {
 
   $(".iframe-wrap iframe").attr(
     "src",
-    "/publ/uplan/html/" + path + "/" + $TextHREF + ".html"
+    "/publ/uplan/mo/html/" + path + "/" + $TextHREF + ".html"
   );
+
 });
+
+
