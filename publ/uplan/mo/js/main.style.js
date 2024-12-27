@@ -1,17 +1,20 @@
 $(".treenode").click(function () {
   const $this = $(this);
   const $svg = $(this).find(".anticon");
+
   if ($svg.hasClass("open")) {
     $svg.removeClass("open");
     $this.siblings(".tree-content-list").hide(100);
-    $this.removeClass("focus");
+    $this.removeClass("focus");    
     return;
+  }else{
+    $(".tree-content-list").hide(100);
+    $(".anticon").removeClass("open")
+    $svg.addClass("open");
+    $this.siblings(".tree-content-list").show(150);
+    $this.addClass("focus");
   }
 
-  $(".tree-content-list").hide(100);
-  $svg.addClass("open");
-  $this.siblings(".tree-content-list").show(150);
-  $(this).addClass("focus");
 });
 
 const $listLength = $(".tree-treenode");
@@ -30,8 +33,11 @@ $(".tree-content-item").click(function (e) {
 
   $(".iframe-wrap iframe").attr(
     "src",
-    "/publ/uplan/mo/html/" + path + "/" + $TextHREF + ".html"
+    "./html/" + path + "/" + $TextHREF + ".html"
   );
+
+  console.log("./publ/uplan/mo/html/" + path + "/" + $TextHREF + ".html");
+  
 
 });
 
