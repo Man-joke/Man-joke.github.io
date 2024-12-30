@@ -469,7 +469,7 @@ h2 span {
   height: 24rem;
   font-size: 1.8rem;
   color: #9e9e9e;
-  box-shadow: 0 0 1px 1px rgba(100, 100, 100, 0.1);
+  box-shadow: 0 0 1px 1px rgba(100, 100, 100, 0.2);
   text-align: center;
   font-weight: bold;
   line-height: 1;
@@ -499,7 +499,7 @@ h2 span {
 }
 
 .mainContents .living:hover {
-  box-shadow: 0.5rem 0.7rem 2rem rgb(0 81 255 / 10%);
+  box-shadow: 0.5rem 0.7rem 2rem rgb(222 111 10 / 14%);
   transition: 0.4s;
 }
 
