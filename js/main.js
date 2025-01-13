@@ -209,7 +209,7 @@ function workImgLength() {
   let etcLi = $("#etc .etc-list li");
   let itemMaxLength = etcLi.length;
   
-  etcLi.hide().slice(0, 8).show();
+  etcLi.hide().slice(0, 12).show();
 
   let count = 9;
   $("#etc .more").click(function () {
