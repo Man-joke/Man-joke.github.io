@@ -9,7 +9,7 @@ body.over {
   overflow: hidden;
 }
 
-/* 공통 */  
+/* 공통 */
 hr {
   display: block;
 }
@@ -27,14 +27,14 @@ hr {
 header {
   position: fixed;
   top: 0;
-  background: #f1eded;
-  width: 100%;
-  z-index: 5;
   margin: 0 auto;
+  width: 100%;
+  background: rgba(241, 237, 237, 0.8);
+  z-index: 5;
 }
 
 header.on {
-  background: #fff;
+  /* background: #fff; */
   transition: 0.3s;
 }
 
@@ -46,7 +46,7 @@ header.scroll {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 2.2rem;
+  padding: 0.6rem 2.2rem;
   box-sizing: border-box;
   max-width: 140rem;
   margin: 0 auto;
@@ -211,12 +211,12 @@ h2 span {
 }
 
 .container .typeH {
-  font-size: 4rem;
+  font-size: 6rem;
 }
 
 .typeH span {
   color: #dd7732;
-  font-size: 6rem;
+  font-size: 8rem;
 }
 
 .typed-text {
@@ -340,7 +340,7 @@ h2 span {
   }
 
   76.66% {
-    transform: translateY(-10.4rem)
+    transform: translateY(-10.4rem);
   }
 
   100% {
@@ -708,7 +708,7 @@ h2 span {
 }
 
 /* work_section */
-#etc{
+#etc {
   background: #eee;
 }
 
@@ -931,7 +931,7 @@ h2 span {
     padding: 12rem 0 12rem;
   }
 
-  .etc-list li{
+  .etc-list li {
     width: calc(33.3333% - 0.75rem);
   }
 
