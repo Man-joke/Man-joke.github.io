@@ -1,4 +1,4 @@
-::-webkit-scrollbar{
+::-webkit-scrollbar {
   display: none;
 }
 body {
@@ -168,15 +168,30 @@ header ul li.on a {
 }
 
 #home {
+  position: relative;
   background: #f1eded;
 }
 
+.bg-text {
+  position: absolute;
+  left: 0;
+  top: 45%;
+  transform: translate(-45%, 0) rotate(90deg);
+  width: 100%;
+  height: auto;
+  font-size: 16rem;
+  color: rgba(153, 153, 153, 0.1);
+  text-align: center;
+  line-height: 1;
+  font-weight: bold;
+}
 .front {
   position: relative;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 2;
 }
 
 .container {
@@ -896,12 +911,31 @@ h2 span {
     top: 53%;
   }
 
+  .front {
+    height: 80vh;
+  }
+
+  .bg-text {
+    font-size: 10rem;
+  }
+
   .title {
     padding: 12rem 0 12rem;
   }
 
+  .container p {
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+  .container .cursor {
+    top: 0;
+    height: 3rem;
+  }
   .container .typeH {
     font-size: 2rem;
+  }
+  .container .typeH span {
+    font-size: 3rem;
   }
 
   .experience {
@@ -983,12 +1017,37 @@ h2 span {
 }
 
 @media screen and (max-width: 768px) {
+  .scroll_induce {
+    font-size: 1.2rem;
+  }
+  .scroll_induce:before {
+    font-size: 2rem;
+  }
+
+  @keyframes move {
+    0% {
+      bottom: 1rem;
+    }
+
+    50% {
+      bottom: 1.5rem;
+    }
+
+    100% {
+      bottom: 1rem;
+    }
+  }
+
   header ul li {
     padding: 0.8rem;
   }
 
   header ul li a {
     font-size: 1.4rem;
+  }
+
+  .bg-text {
+    display: none;
   }
 
   .personal ul {
