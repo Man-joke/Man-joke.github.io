@@ -174,15 +174,15 @@ header ul li.on a {
 
 .bg-text {
   position: absolute;
-  left: 0;
-  top: 45%;
-  transform: translate(-45%, 0) rotate(90deg);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
   height: auto;
-  font-size: 16rem;
-  color: rgba(153, 153, 153, 0.1);
+  font-size: 14vw;
+  color: rgba(153, 153, 153, 0.05);
   text-align: center;
-  line-height: 1;
+  line-height: 1.4;
   font-weight: bold;
 }
 .front {
@@ -912,7 +912,7 @@ h2 span {
   }
 
   .front {
-    height: 80vh;
+    height: 90vh;
   }
 
   .bg-text {
